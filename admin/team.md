@@ -9,7 +9,7 @@ Tungsten
 
 ### Roster
 ##### Aaron Arrellano
-https://github.com/aarellano0
+https://github.com/aarellan0
 * Prefers Asynchronous Asssignments because of living situation
 * Likes drawing and videogames
   
