@@ -16,6 +16,7 @@
 **Members Absent:**
 - Parnav
 - Aaron
+- Ben
 
 ### Retro
 
