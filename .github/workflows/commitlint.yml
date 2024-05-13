@@ -1,7 +1,9 @@
 jobs:
   run-commitlint-on-pr:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: application
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,8 +17,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: application  # Ensure this is the correct path to where package.json is located
 
       - name: Validate all commits from PR
         run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
-        working-directory: application  # Repeat the correct path for consistency in command execution
