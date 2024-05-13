@@ -15,7 +15,6 @@ jobs:
     - name: Install Dependencies
       run: npm install
       working-directory: application
-      
     - name: Lint Code
       run: npm run lint
       working-directory: application
