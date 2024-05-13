@@ -11,7 +11,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18'
-    
+    - name: Change to application directory
+        run: cd application
     - name: Install Dependencies
       run: npm install
       working-directory: application
