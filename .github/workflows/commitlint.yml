@@ -1,3 +1,7 @@
+name: Check Commit Style
+
+on: [pull_request]
+
 jobs:
   run-commitlint-on-pr:
     runs-on: ubuntu-latest
