@@ -1,17 +1,21 @@
-name: Commit Linting
+name: Continuous Integration
 
-on:
-  pull_request:
-    branches:
-      - main  # Adjust this as needed for your target branch(es)
+on: [pull_request]
 
 jobs:
-  commitlint:
+  lint-and-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Fetch all history for all tags and branches
-      run: git fetch --prune --unshallow
-    - uses: wagoid/commitlint-github-action@v4
+    - name: Setup Node
+      uses: actions/setup-node@v2
       with:
-        configFile: application/.commitlintrc.json  # Ensure this points to your commitlint config if it's not at the root
+        node-version: '16'
+    
+    - name: Install Dependencies
+      run: npm install
+      working-directory: application
+      
+    - name: Lint Code
+      run: npm run lint
+      working-directory: application
