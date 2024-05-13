@@ -1,8 +1,3 @@
-name: CommitLint
-
-on:
-  pull_request:
-
 jobs:
   run-commitlint-on-pr:
     runs-on: ubuntu-latest
@@ -16,11 +11,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: '18.x'  # Updated to Node.js 18
-      - name: Change to application directory
-        run: cd application
+          node-version: '18.x'
+
       - name: Install dependencies
         run: npm install
+        working-directory: application  # Ensure this is the correct path to where package.json is located
 
       - name: Validate all commits from PR
         run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+        working-directory: application  # Repeat the correct path for consistency in command execution
