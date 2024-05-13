@@ -14,6 +14,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.3
       with:
         branch: gh-pages  # The branch the action should deploy to.
-        folder: applications/web  # The folder the action should deploy.
+        folder: application/web  # The folder the action should deploy.
         single-commit: true
         commit-message: "Deploying to gh-pages"
