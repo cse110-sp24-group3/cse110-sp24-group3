@@ -13,7 +13,7 @@
 - [Logan C]
 - [Nicholas Q]
 - [Pranav R]
-- [Rei S]
+- [Rei L]
 - [Sean T]
 
 **Members Absent:**
