@@ -1,19 +1,19 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   push:
     branches:
-      - main  # Adjust this as needed for your main branch
+      - main
+  pull_request:
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages  # The branch the action should deploy to.
-        folder: application/web  # The folder the action should deploy.
-        single-commit: true
-        commit-message: "Deploying to gh-pages"
+      - uses: actions/checkout@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/web
