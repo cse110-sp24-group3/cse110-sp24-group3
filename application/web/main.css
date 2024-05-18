@@ -1,0 +1,50 @@
+:root {
+    --journal-entry: #F3F3F3;
+    --sliding-shelf: #EBEBEB;
+    --main-stroke-color: #A1A1A1;
+    --grey-text-color: #404040;
+    --icon-color: #D7D7D7;
+    --font-family: 'Dosis', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--grey-text-color); 
+}
+
+header {
+    background-color: var(--sliding-shelf); 
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--main-stroke-color);
+    height: 56px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+sidebar {
+    width: 213px;
+    background-color: var(--sliding-shelf);
+    border-right: 1px solid var(--main-stroke-color);
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 0 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+homepage {
+    flex: 1;
+    background-color: var(--journal-entry);
+    padding: 10px;
+    box-sizing: border-box;
+}
