@@ -1,3 +1,9 @@
+   /* ___ _       _           _                   _       _     _           
+  / _ \ | ___ | |__   __ _| | /\   /\__ _ _ __(_) __ _| |__ | | ___  ___ 
+ / /_\/ |/ _ \| '_ \ / _` | | \ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+/ /_\\| | (_) | |_) | (_| | |  \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+\____/|_|\___/|_.__/ \__,_|_|   \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+                                                                          */
 :root {
     --journal-entry: #F3F3F3;
     --sliding-shelf: #EBEBEB;
@@ -6,33 +12,37 @@
     --icon-color: #D7D7D7;
     --font-family: 'Dosis', sans-serif;
 }
-
+ /* _____                __                _ 
+/__   \___  _ __     / /  _____   _____| |
+  / /\/ _ \| '_ \   / /  / _ \ \ / / _ \ |
+ / / | (_) | |_) | / /__|  __/\ V /  __/ |
+ \/   \___/| .__/  \____/\___| \_/ \___|_|
+           |_|                             */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     display: flex;
     flex-direction: column;
     height: 100vh;
-    color: var(--grey-text-color); 
+    color: var(--grey-text-color);
 }
-
-header {
-    background-color: var(--sliding-shelf); 
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid var(--main-stroke-color);
-    height: 56px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .container {
     display: flex;
+    flex-direction: column;
     flex: 1;
+    height: 100%;
 }
 
+#app-wrapper {
+    display: flex;
+    height: 100%;
+}
+ /* __ _     _      _                
+/ _(_) __| | ___| |__   __ _ _ __ 
+\ \| |/ _` |/ _ \ '_ \ / _` | '__|
+_\ \ | (_| |  __/ |_) | (_| | |   
+\__/_|\__,_|\___|_.__/ \__,_|_|   
+                                   */
 sidebar {
     width: 213px;
     background-color: var(--sliding-shelf);
@@ -40,11 +50,42 @@ sidebar {
     padding: 10px;
     box-sizing: border-box;
     box-shadow: 2px 0 2px -2px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    position: relative;
+    z-index: 2;
 }
-
+                      /* _           
+  /\  /\___  __ _  __| | ___ _ __ 
+ / /_/ / _ \/ _` |/ _` |/ _ \ '__|
+/ __  /  __/ (_| | (_| |  __/ |   
+\/ /_/ \___|\__,_|\__,_|\___|_|   
+                                   */
+header {
+    background-color: var(--sliding-shelf);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--main-stroke-color);
+    height: 62px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*                                                    
+  /\  /\___  _ __ ___   ___ _ __   __ _  __ _  ___ 
+ / /_/ / _ \| '_ ` _ \ / _ \ '_ \ / _` |/ _` |/ _ \
+/ __  / (_) | | | | | |  __/ |_) | (_| | (_| |  __/
+\/ /_/ \___/|_| |_| |_|\___| .__/ \__,_|\__, |\___|
+                           |_|          |___/       */
 homepage {
     flex: 1;
     background-color: var(--journal-entry);
     padding: 10px;
     box-sizing: border-box;
 }
+   /* __      _              
+  /__\ __ | |_ _ __ _   _ 
+ /_\| '_ \| __| '__| | | |
+//__| | | | |_| |  | |_| |
+\__/|_| |_|\__|_|   \__, |
+                    |___/  */
