@@ -122,8 +122,14 @@ header {
     height: 62px;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    font-family: var(--font-family);
+    font-size: large;
+}
+/* Rock Icon for Header*/
+.rock-icon{
+    padding-right: 25px;
 }
 /*                                                    
   /\  /\___  _ __ ___   ___ _ __   __ _  __ _  ___ 
