@@ -82,13 +82,13 @@ button.collapse-button {
 }
 
 button.collapse-button {
-    background-color: transparent; /* Remove background color */
-    border: none; /* Remove border */
-    padding: 0; /* Remove padding */
-    cursor: pointer; /* Pointer cursor on hover */
-    display: left; /* Flex display for alignment */
-    justify-content: left; /* Center the icon horizontally */
-    align-items: left; /* Center the icon vertically */
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: left;
+    justify-content: left;
+    align-items: left;
 }
 
 button.new-journal i.icon {
