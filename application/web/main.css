@@ -64,7 +64,8 @@ sidebar {
     width: 100%;
 }
 
-button.new-journal {
+button.new-journal,
+button.collapse-button {
     background-color: var(--new-journal-btn);
     color: white;
     border: none;
@@ -80,11 +81,22 @@ button.new-journal {
     font-size: 16px;
 }
 
+button.collapse-button {
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: left; /* Flex display for alignment */
+    justify-content: left; /* Center the icon horizontally */
+    align-items: left; /* Center the icon vertically */
+}
+
 button.new-journal i.icon {
     margin-left: 10px;
 }
 
-button.new-journal img.journal-icon {
+button.new-journal img.journal-icon,
+button.collapse-button img.collapse-button {
     margin-left: 10px;
     height: 20px;
     width: 20px;
