@@ -89,6 +89,8 @@ button.new-journal {
     min-height: 40px;
 }
 
+
+
 button.new-journal i.icon {
     margin-left: 10px;
 }
@@ -113,6 +115,7 @@ button.new-journal img.journal-icon {
     font-size: 16px;
     min-height: 40px;
 }
+
 
 .journal-entry i.icon {
     margin-left: 10px;
@@ -171,3 +174,38 @@ homepage {
 //__| | | | |_| |  | |_| |
 \__/|_| |_|\__|_|   \__, |
                     |___/  */
+
+.secondary {
+    background-color: #F3F3F3;
+    color: var(--grey-text-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 40px;
+}
+
+.primary {
+    background-color: #6FAE9D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 40px;
+}
+
+.save-or-exit {
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+    background-color: #F3F3F3;
+    padding: 10px;
+}
