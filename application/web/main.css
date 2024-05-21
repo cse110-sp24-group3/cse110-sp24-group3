@@ -57,6 +57,12 @@ sidebar {
     align-items: flex-start;
 }
 
+.sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 .sidebar-module {
     display: flex;
     flex-direction: column;
@@ -64,8 +70,7 @@ sidebar {
     width: 100%;
 }
 
-button.new-journal,
-button.collapse-button {
+button.new-journal {
     background-color: var(--new-journal-btn);
     color: white;
     border: none;
@@ -85,6 +90,8 @@ button.collapse-button {
     background-color: transparent;
     border: none;
     padding: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -98,7 +105,7 @@ button.new-journal i.icon {
 }
 
 button.new-journal img.journal-icon,
-button.collapse-button img.collapse-button {
+img.collapse-button {
     margin-left: 10px;
     height: 20px;
     width: 20px;
@@ -122,6 +129,15 @@ button.collapse-button img.collapse-button {
 .journal-entry i.icon {
     margin-left: 10px;
 }
+
+.sidebar-collapsed {
+    width: 50px;
+}
+
+.sidebar-collapsed button.collapse-button {
+    transform: rotate(180deg);
+}
+
                       /* _           
   /\  /\___  __ _  __| | ___ _ __ 
  / /_/ / _ \/ _` |/ _` |/ _ \ '__|
