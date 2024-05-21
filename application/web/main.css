@@ -62,6 +62,18 @@ sidebar {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+    /* overflow: scroll;  */
+    /* to make journal list for too many journals */
+    overflow-y: scroll;
+}
+
+.sidebar-module::-webkit-scrollbar {
+    width: 0px; 
+}
+
+
+.sidebar-module .fa.fa-ellipsis-v{
+    display:none;
 }
 
 button.new-journal {
@@ -103,6 +115,7 @@ button.new-journal img.journal-icon {
     align-items: center;
     cursor: pointer;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .journal-entry i.icon {
