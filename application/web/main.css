@@ -86,9 +86,11 @@ button.collapse-button {
     border: none;
     padding: 0;
     cursor: pointer;
-    display: left;
-    justify-content: left;
-    align-items: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
 }
 
 button.new-journal i.icon {
