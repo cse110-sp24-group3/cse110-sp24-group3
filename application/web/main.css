@@ -39,6 +39,14 @@ body {
     display: flex;
     height: 100%;
 }
+p, span {
+    font-weight: 300;
+}
+span {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    letter-spacing: -0.001cap;
+}
  /* __ _     _      _                
 / _(_) __| | ___| |__   __ _ _ __ 
 \ \| |/ _` |/ _ \ '_ \ / _` | '__|
@@ -90,6 +98,7 @@ button.new-journal {
     align-items: center;
     cursor: pointer;
     font-size: 16px;
+    min-height: 40px;
 }
 
 button.new-journal i.icon {
@@ -103,9 +112,8 @@ button.new-journal img.journal-icon {
 }
 
 .journal-entry {
-    background-color: var(--journal-entry-btn);
+    background-color: #cbcfce;
     color: var(--grey-text-color);
-    border: 1px solid var(--main-stroke-color);
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -115,11 +123,23 @@ button.new-journal img.journal-icon {
     align-items: center;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 10px;
 }
 
 .journal-entry i.icon {
     margin-left: 10px;
+}
+.vdots {
+    position: relative;
+    right: 12px;
+}
+.sidebar-drawer {
+    padding: none;
+    margin: none;
+    border: none;
+    background: none;
+    align-self: self-start;
+    margin-left: -8px;
+    margin-bottom: 7px;
 }
                       /* _           
   /\  /\___  __ _  __| | ___ _ __ 
@@ -142,7 +162,7 @@ header {
 }
 /* Rock Icon for Header*/
 .rock-icon{
-    padding-right: 25px;
+    padding-right: 10px;
 }
 /*                                                    
   /\  /\___  _ __ ___   ___ _ __   __ _  __ _  ___ 
