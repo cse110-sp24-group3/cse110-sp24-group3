@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="main.css">
     <!-- 3 Button Icon using <i class='fa fa-ellipsis-v'></i>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- loads scripts into doc-->
+    <script type="text/javascript" src="web.js"></script>
 </head>
 
 <body>
@@ -48,15 +50,6 @@
             </entry>
         </div>
     </div>
-    <script>
-        function newJournal() {
-            console.log('hi');
-            var container = document.getElementById("sidebar-module");
-            var journal = document.getElementById("journal-entries");
-            var newJournal = journal.cloneNode(true);
-            container.appendChild(newJournal);
-        }
-    </script>
 </body>
 
 </html>
