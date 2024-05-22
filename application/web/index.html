@@ -21,28 +21,39 @@
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 4C25.0203 3.99994 26.002 4.38977 26.7443 5.08971C27.4867 5.78966 27.9335 6.74681 27.9933 7.76533L28 8V24C28.0001 25.0203 27.6102 26.002 26.9103 26.7443C26.2103 27.4867 25.2532 27.9335 24.2347 27.9933L24 28H8C6.97972 28.0001 5.99798 27.6102 5.25565 26.9103C4.51332 26.2103 4.06652 25.2532 4.00667 24.2347L4 24V8C3.99994 6.97972 4.38977 5.99798 5.08971 5.25565C5.78966 4.51332 6.74681 4.06652 7.76533 4.00667L8 4H24ZM24 6.66667H12V25.3333H24C24.3266 25.3333 24.6418 25.2134 24.8858 24.9964C25.1299 24.7794 25.2858 24.4803 25.324 24.156L25.3333 24V8C25.3333 7.67342 25.2134 7.35822 24.9964 7.11417C24.7794 6.87012 24.4803 6.71421 24.156 6.676L24 6.66667ZM20.9427 12.3907C21.1722 12.6203 21.3101 12.9257 21.3305 13.2498C21.3509 13.5738 21.2523 13.8941 21.0533 14.1507L20.9427 14.276L19.22 16L20.9427 17.724C21.1722 17.9536 21.3101 18.2591 21.3305 18.5831C21.3509 18.9071 21.2523 19.2275 21.0533 19.484L20.9427 19.6093C20.7131 19.8389 20.4076 19.9768 20.0836 19.9972C19.7595 20.0176 19.4392 19.919 19.1827 19.72L19.0573 19.6093L16.3907 16.9427C16.1611 16.7131 16.0232 16.4076 16.0028 16.0836C15.9824 15.7595 16.081 15.4392 16.28 15.1827L16.3907 15.0573L19.0573 12.3907C19.3074 12.1407 19.6464 12.0003 20 12.0003C20.3536 12.0003 20.6926 12.1407 20.9427 12.3907Z" fill="#A1A1A1"/>
                     </svg>
+                <button class="sidebar-drawer">
+                    <img src="./assets/drawer.svg"></img>
                 </button>
                 <button class="new-journal">
                     <span>New Journal</span>
-                    <img src="assets/journal-icon.png" alt="Journal Icon" class="journal-icon">
+                    <img src="assets/journal-icon.svg" alt="Journal Icon" class="journal-icon">
                 </button>
                 <div class="journal-entry">
                     <span>My Journal</span>
                     <button class="edit-journal" id="edit-journal">
                         <i class='fa fa-ellipsis-v'></i>
                     </button>
+                    <img class='vdots' src='./assets/vdots.svg'></img>
                 </div>
             </div>
         </sidebar>
         <div class="container">
             <header role="banner">
                 <!--Header Modules-->
-                <img src = "assets/instone-rock.svg" alt="Rock Icone" class="rock-icon" height="25px" width="25px" >
-                Instone
+                <img src="assets/instone-rock.svg" alt="Rock Icon" class="rock-icon" height="25px" width="25px" >
+                <p>Instone</p>
             </header>
             <homepage role="main">
                 <!--Homepage Modules-->
             </homepage>
+            <entry class="save-or-exit">
+                <button class = 'secondary'>
+                    <span>Cancel Changes</span>
+                </button>
+                <button class = 'primary'>
+                    <span>Save Entry</span>
+                </button>
+            </entry>
         </div>
     </div>
 
