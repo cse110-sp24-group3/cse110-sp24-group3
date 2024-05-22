@@ -11,8 +11,8 @@
     --grey-text-color: #404040;
     --icon-color: #D7D7D7;
     --font-family: 'Dosis', sans-serif;
-    --new-journal-btn: #6FAE9D;
-    --journal-entry-btn: #E0E0E0;
+    --dark-green: #58A399;
+    --dark-blue: #496989
 }
  /* _____                __                _ 
 /__   \___  _ __     / /  _____   _____| |
@@ -81,7 +81,7 @@ sidebar {
 }
 
 button.new-journal {
-    background-color: var(--new-journal-btn);
+    background-color: var(--dark-green);
     color: white;
     border: none;
     border-radius: 5px;
@@ -206,6 +206,13 @@ homepage {
                     |___/  */
 
 
+.title-entry-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--journal-entry);
+    padding: 10px;
+}
 
 /* The actual popup */
 .popup {
@@ -216,18 +223,11 @@ homepage {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(
-        0,
-        0,
-        0,
-        0.4
-    );
+    background-color: rgba(0,0,0,0.4);
     display: none;
 }
 .popup-content {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     background-color: var(--sliding-shelf);
     margin: 15% auto;
     padding: 20px;
@@ -239,50 +239,79 @@ homepage {
 }
 .popup-content button {
     display: block;
-    /* margin: 0 auto; */
-    margin-left: 10px;
 }
 .show {
     display: block;
 }
 
 .secondary {
-    background-color: var(--sliding-shelf);
+    background-color: var(--journal-entry);
     color: var(--grey-text-color);
-    border-radius: 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     font-size: 15px;
     min-height: 40px;
+    margin-right: 10px;
 }
 
 .primary {
-    background-color: #6FAE9D;
+    background-color: var(--dark-green);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     font-size: 15px;
     min-height: 40px;
 }
 
-.save-or-exit {
+.title-entry {
+    margin: 0;
+}
+
+/* The div holding the buttons*/
+.buttons {
     display: flex;
     gap: 10px;
-    justify-content: right;
-    background-color: #F3F3F3;
-    padding: 10px;
 }
+
+#title-input {
+    font-size: 16px;
+    color: var(--dark-green);
+    background-color: var(--journal-entry);
+    border: none;
+    border-bottom: 2px solid var(--grey-text-color);
+    padding: 5px 0;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#title-input.placeholder {
+    color: var(--main-stroke-color);
+    border-bottom-color: var(--main-stroke-color);
+}
+
+#title-input.filled {
+    color: black;
+    border-bottom-color: var(--dark-blue);
+}
+
+#title-input:focus {
+    border-bottom-color: var(--dark-blue);
+}
+
 
 .discardCancelContainer {
     display:flex;
     flex-direction: row;
     padding-top: 60px;
-    padding-left: 95px;
+    padding-left: 118px;
 }
