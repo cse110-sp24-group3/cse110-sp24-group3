@@ -1,4 +1,5 @@
 window.onload = () => {
+    showDiscardChangePage();
     document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
 
     function toggleSidebar() {
@@ -12,3 +13,25 @@ window.onload = () => {
         journalEntryBtn.classList.toggle('toggled-journal-entry');
     }
 };
+    
+
+function showDiscardChangePage() {
+    const button = document.getElementById("myButton");
+    const myPopup = document.getElementById("myPopup");
+    const closePopup = document.getElementById("closePopup");
+    
+    button.addEventListener("click", () => {
+            myPopup.classList.add("show");
+        }
+    );
+    closePopup.addEventListener("click", () => {
+            myPopup.classList.remove("show");
+        }
+    );
+    window.addEventListener("click", (event) => {
+            if (event.target == myPopup) {
+                myPopup.classList.remove("show");
+            }
+        }
+    );
+}
