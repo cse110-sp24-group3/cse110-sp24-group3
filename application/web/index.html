@@ -7,6 +7,7 @@
     <meta name="description" content="Instone; an effective markdown editor.">
     <title>Instone</title>
     <link rel="stylesheet" href="main.css">
+    <script src="web.js" type="module"></script>
     <!-- 3 Button Icon using <i class='fa fa-ellipsis-v'></i>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="web.js"></script>
@@ -17,7 +18,7 @@
         <sidebar role="navigation" aria-label="Sidebar">
             <!--Sidebar Modules-->
             <div class="sidebar-module">
-                <button class="sidebar-drawer">
+                <button class="collapse-button" id="collapse-button">
                     <img src="./assets/drawer.svg"></img>
                 </button>
                 <button class="new-journal">
@@ -26,7 +27,9 @@
                 </button>
                 <div class="journal-entry">
                     <span>My Journal</span>
-                    <img class='vdots' src='./assets/vdots.svg'></img>
+                    <button class="edit-journal" id="edit-journal">
+                        <i class='fa fa-ellipsis-v'></i>
+                    </button>
                 </div>
             </div>
         </sidebar>
