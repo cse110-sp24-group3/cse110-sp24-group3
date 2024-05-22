@@ -163,20 +163,6 @@ img.collapse-button {
     transform: rotate(180deg);
 }
 
-.vdots {
-    position: relative;
-    right: 12px;
-}
-
-.sidebar-drawer {
-    padding: none;
-    margin: none;
-    border: none;
-    background: none;
-    align-self: self-start;
-    margin-left: -8px;
-    margin-bottom: 7px;
-}
                       /* _           
   /\  /\___  __ _  __| | ___ _ __ 
  / /_/ / _ \/ _` |/ _` |/ _ \ '__|
