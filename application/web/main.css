@@ -88,7 +88,12 @@ sidebar {
 }
 
 
-.sidebar-module .fa.fa-ellipsis-v{
+/* .sidebar-module .fa.fa-ellipsis-v{
+    display:none;
+    transition: width 0.3s ease;
+} */
+/* To counteract the swap from .fa to vdots, both will be here */
+.sidebar-module img[src="./assets/vdots.svg"]{
     display:none;
     transition: width 0.3s ease;
 }
