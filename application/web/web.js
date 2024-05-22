@@ -18,6 +18,7 @@ window.onload = () => {
 function showDiscardChangePage() {
     const button = document.getElementById("myButton");
     const myPopup = document.getElementById("myPopup");
+    const closePopup = document.getElementById("closePopup");
     
     button.addEventListener("click", () => {
             myPopup.classList.add("show");
