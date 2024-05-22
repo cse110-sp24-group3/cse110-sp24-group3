@@ -77,6 +77,7 @@ sidebar {
     flex-direction: column;
     justify-content: left;
     width: 100%;
+    transition: width 0.3s ease;
     /* overflow: scroll;  */
     /* to make journal list for too many journals */
     overflow-y: scroll;
