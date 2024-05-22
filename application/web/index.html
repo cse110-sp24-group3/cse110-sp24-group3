@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="main.css">
     <!-- 3 Button Icon using <i class='fa fa-ellipsis-v'></i>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="web.js"></script>
 </head>
 
 <body>
@@ -39,10 +40,21 @@
                 <!--Homepage Modules-->
             </homepage>
             <entry class="save-or-exit">
-                <button class = 'secondary'>
+                <button class='secondary' id="myButton">
                     <span>Cancel Changes</span>
                 </button>
-                <button class = 'primary'>
+                <div id="myPopup" class="popup">
+                    <div class="popup-content">
+                        <span>Discard Unsaved Entry Changes?</span>
+                        <button id="closePopup" class="primary">
+                            Cancel
+                        </button>
+                        <button id="" class="secondary">
+                            Discard
+                        </button>
+                    </div>
+                </div>
+                <button class='primary'>
                     <span>Save Entry</span>
                 </button>
             </entry>
