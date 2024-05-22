@@ -15,15 +15,15 @@
     <div id='app-wrapper'>
         <sidebar role="navigation" aria-label="Sidebar">
             <!--Sidebar Modules-->
-            <div class="sidebar-module">
+            <div id="sidebar-module" class="sidebar-module">
                 <button class="sidebar-drawer">
                     <img src="./assets/drawer.svg"></img>
                 </button>
-                <button class="new-journal">
+                <button id="new-journal-button" class="new-journal" contentEditable="true" onclick="newJournal()">
                     <span>New Journal</span>
                     <img src="assets/journal-icon.svg" alt="Journal Icon" class="journal-icon">
                 </button>
-                <div class="journal-entry">
+                <div id="journal-entries" class="journal-entry">
                     <span>My Journal</span>
                     <img class='vdots' src='./assets/vdots.svg'></img>
                 </div>
@@ -48,7 +48,15 @@
             </entry>
         </div>
     </div>
-
+    <script>
+        function newJournal() {
+            console.log('hi');
+            var container = document.getElementById("sidebar-module");
+            var journal = document.getElementById("journal-entries");
+            var newJournal = journal.cloneNode(true);
+            container.appendChild(newJournal);
+        }
+    </script>
 </body>
 
 </html>
