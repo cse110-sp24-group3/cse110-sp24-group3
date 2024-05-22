@@ -162,7 +162,14 @@ img.collapse-button {
 .sidebar-collapsed button.collapse-button {
     transform: rotate(180deg);
 }
-
+.edit-journal {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+.edit-journal > img {
+    cursor: pointer;
+}
                       /* _           
   /\  /\___  __ _  __| | ___ _ __ 
  / /_/ / _ \/ _` |/ _` |/ _ \ '__|
@@ -214,6 +221,36 @@ homepage {
     padding: 10px;
 }
 
+/* The actual popup */
+.popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+.popup-content {
+    display: block;
+    background-color: var(--sliding-shelf);
+    margin: 15% auto;
+    padding: 20px;
+    width: 13%;
+    height: 12%;
+    border-radius: 5px;
+    box-shadow: 2px 6px 5px 1px rgba(64,64,64,0.5);
+
+}
+.popup-content button {
+    display: block;
+}
+.show {
+    display: block;
+}
+
 .secondary {
     background-color: var(--journal-entry);
     color: var(--grey-text-color);
@@ -223,7 +260,7 @@ homepage {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     min-height: 40px;
     margin-right: 10px;
 }
@@ -238,7 +275,7 @@ homepage {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     min-height: 40px;
 }
 
@@ -276,4 +313,12 @@ homepage {
 
 #title-input:focus {
     border-bottom-color: var(--dark-blue);
+}
+
+
+.discardCancelContainer {
+    display:flex;
+    flex-direction: row;
+    padding-top: 60px;
+    padding-left: 118px;
 }
