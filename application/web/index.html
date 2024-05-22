@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="main.css">
     <!-- 3 Button Icon using <i class='fa fa-ellipsis-v'></i>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="assets/scripts/entry-title-script.js"> </script>
 </head>
 
 <body>
@@ -38,14 +39,21 @@
             <homepage role="main">
                 <!--Homepage Modules-->
             </homepage>
-            <entry class="save-or-exit">
-                <button class = 'secondary'>
-                    <span>Cancel Changes</span>
-                </button>
-                <button class = 'primary'>
-                    <span>Save Entry</span>
-                </button>
+            <entry class="title-entry-bar">
+                <div class="title-entry">
+                    <input type="text" id="title-input" value="Untitled" class="placeholder">
+                </div>
+                
+                <div class="buttons">
+                    <button class="secondary">
+                        <span>Cancel Changes</span>
+                    </button>
+                    <button class="primary">
+                        <span>Save Entry</span>
+                    </button>
+                </div>
             </entry>
+            
         </div>
     </div>
 
