@@ -19,11 +19,11 @@ function createSidebar() {
         });
         
      });
-     document.querySelector('.journal-entry').addEventListener('click', function(event) {
-        const targetElement = event.target.closest('.child-element');
-        if (targetElement) {
-            console.log('Child element clicked:', targetElement);
-        }
-     });
+    //  document.querySelector('.journal-entry').addEventListener('click', function(event) {
+    //     const targetElement = event.target.closest('.child-element');
+    //     if (targetElement) {
+    //         console.log('Child element clicked:', targetElement);
+    //     }
+    //  });
      
 };
