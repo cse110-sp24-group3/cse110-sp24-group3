@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const titleInput = document.getElementById('title-input');
 
     titleInput.addEventListener('focus', () => {
