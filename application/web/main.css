@@ -11,8 +11,8 @@
     --grey-text-color: #404040;
     --icon-color: #D7D7D7;
     --font-family: 'Dosis', sans-serif;
-    --new-journal-btn: #6FAE9D;
-    --journal-entry-btn: #E0E0E0;
+    --dark-green: #58A399;
+    --dark-blue: #496989
 }
  /* _____                __                _ 
 /__   \___  _ __     / /  _____   _____| |
@@ -63,12 +63,19 @@ sidebar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: width 0.3s ease;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .sidebar-module {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: left;
     width: 100%;
     /* overflow: scroll;  */
     /* to make journal list for too many journals */
@@ -82,10 +89,11 @@ sidebar {
 
 .sidebar-module .vdots{
     display:none;
+    transition: width 0.3s ease;
 }
 
 button.new-journal {
-    background-color: var(--new-journal-btn);
+    background-color: var(--dark-green);
     color: white;
     border: none;
     border-radius: 5px;
@@ -101,12 +109,26 @@ button.new-journal {
     min-height: 40px;
 }
 
+button.collapse-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+}
+
 button.new-journal i.icon {
     margin-left: 10px;
 }
 
-button.new-journal img.journal-icon {
-    margin-left: 10px;
+button.new-journal img.journal-icon,
+img.collapse-button {
     height: 20px;
     width: 20px;
 }
@@ -127,22 +149,33 @@ button.new-journal img.journal-icon {
     margin-bottom: 10px;
 }
 
+
 .journal-entry i.icon {
     margin-left: 10px;
 }
-.vdots {
-    position: relative;
-    right: 12px;
+
+.sidebar-collapsed {
+    width: 50px;
 }
-.sidebar-drawer {
-    padding: none;
-    margin: none;
-    border: none;
-    background: none;
-    align-self: self-start;
-    margin-left: -8px;
-    margin-bottom: 7px;
+
+.toggled-sidebar-module {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
+
+.toggled-new-journal,
+.toggled-journal-entry {
+    transition: width 0.3s ease;
+    visibility: hidden;
+}
+
+.sidebar-collapsed button.collapse-button {
+    transform: rotate(180deg);
+}
+
                       /* _           
   /\  /\___  __ _  __| | ___ _ __ 
  / /_/ / _ \/ _` |/ _` |/ _ \ '__|
@@ -184,3 +217,76 @@ homepage {
 //__| | | | |_| |  | |_| |
 \__/|_| |_|\__|_|   \__, |
                     |___/  */
+
+
+.title-entry-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--journal-entry);
+    padding: 10px;
+}
+
+.secondary {
+    background-color: var(--journal-entry);
+    color: var(--grey-text-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 40px;
+    margin-right: 10px;
+}
+
+.primary {
+    background-color: var(--dark-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 40px;
+}
+
+.title-entry {
+    margin: 0;
+}
+
+/* The div holding the buttons*/
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#title-input {
+    font-size: 16px;
+    color: var(--dark-green);
+    background-color: var(--journal-entry);
+    border: none;
+    border-bottom: 2px solid var(--grey-text-color);
+    padding: 5px 0;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#title-input.placeholder {
+    color: var(--main-stroke-color);
+    border-bottom-color: var(--main-stroke-color);
+}
+
+#title-input.filled {
+    color: black;
+    border-bottom-color: var(--dark-blue);
+}
+
+#title-input:focus {
+    border-bottom-color: var(--dark-blue);
+}
