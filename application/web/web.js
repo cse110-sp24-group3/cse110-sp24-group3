@@ -18,7 +18,7 @@ window.onload = () => {
 
 function createJournalEntries(){
     const journal = document.querySelector('.new-journal');
-    journal.addEventListener('click', (event) => {
+    journal.addEventListener('click', () => {
         const journalEntries = document.querySelector('.sidebar-module');
         const entryElement = document.createElement('div');
         entryElement.classList.add('journal-entry');
@@ -36,7 +36,7 @@ function createSidebar() {
     const journalEntries = document.querySelector('.sidebar-module');
     //grabs whole sidebar entry
 
-    journalEntries.addEventListener('mouseover', (event) => {
+    journalEntries.addEventListener('mouseover', () => {
         const targetEntry = event.target.closest('.journal-entry');
         //filter to just the new journals
         if(targetEntry){
@@ -45,7 +45,7 @@ function createSidebar() {
         }
     });
 
-    journalEntries.addEventListener('mouseout', (event) => {
+    journalEntries.addEventListener('mouseout', () => {
         const targetEntry = event.target.closest('.journal-entry');
         if(targetEntry){
             let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
