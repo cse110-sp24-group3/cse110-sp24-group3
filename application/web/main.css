@@ -88,7 +88,7 @@ sidebar {
 }
 
 
-.sidebar-module .vdots{
+.sidebar-module .fa.fa-ellipsis-v{
     display:none;
     transition: width 0.3s ease;
 }

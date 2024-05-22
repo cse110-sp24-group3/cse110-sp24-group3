@@ -8,8 +8,7 @@ function createSidebar() {
 
      journalEntries.forEach(entry => {
 
-        const faIcon = entry.querySelector('.vdots');
-
+        const faIcon = entry.querySelector('.fa.fa-ellipsis-v');
         entry.addEventListener('mouseover', () => {
             faIcon.style.display = 'block';
         });
@@ -19,12 +18,6 @@ function createSidebar() {
         });
         
      });
-    //  document.querySelector('.journal-entry').addEventListener('click', function(event) {
-    //     const targetElement = event.target.closest('.child-element');
-    //     if (targetElement) {
-    //         console.log('Child element clicked:', targetElement);
-    //     }
-    //  });
 
     document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
 
