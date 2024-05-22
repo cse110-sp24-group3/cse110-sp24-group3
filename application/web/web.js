@@ -25,7 +25,8 @@ function createSidebar() {
     //         console.log('Child element clicked:', targetElement);
     //     }
     //  });
-     document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
+
+    document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
 
     function toggleSidebar() {
         const sidebar = document.querySelector('sidebar');
