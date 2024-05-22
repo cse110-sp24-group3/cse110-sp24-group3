@@ -8,7 +8,7 @@ function createSidebar() {
 
      journalEntries.forEach(entry => {
 
-        const faIcon = entry.querySelector('.fa.fa-ellipsis-v');
+        const faIcon = entry.querySelector('.vdots');
 
         entry.addEventListener('mouseover', () => {
             faIcon.style.display = 'block';
@@ -19,4 +19,11 @@ function createSidebar() {
         });
         
      });
+     document.querySelector('.journal-entry').addEventListener('click', function(event) {
+        const targetElement = event.target.closest('.child-element');
+        if (targetElement) {
+            console.log('Child element clicked:', targetElement);
+        }
+     });
+     
 };
