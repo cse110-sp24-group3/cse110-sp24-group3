@@ -1,20 +1,35 @@
 window.onload = () => {
     createSidebar();
+    createJournalEntries();
     
     document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
 
     function toggleSidebar() {
-    const sidebar = document.querySelector('sidebar');
-    sidebar.classList.toggle('sidebar-collapsed');
-    
-    const newJournalBtn = document.querySelector('.new-journal');
-    newJournalBtn.classList.toggle('toggled-new-journal');
-    
-    const journalEntryBtn = document.querySelector('.journal-entry');
-    journalEntryBtn.classList.toggle('toggled-journal-entry');
-};
+        const sidebar = document.querySelector('sidebar');
+        sidebar.classList.toggle('sidebar-collapsed');
+        
+        const newJournalBtn = document.querySelector('.new-journal');
+        newJournalBtn.classList.toggle('toggled-new-journal');
+        
+        const journalEntryBtn = document.querySelector('.journal-entry');
+        journalEntryBtn.classList.toggle('toggled-journal-entry');
+    };
 };
 
+function createJournalEntries(){
+    const journal = document.querySelector('.new-journal');
+    journal.addEventListener('click', (event) => {
+        const journalEntries = document.querySelector('.sidebar-module');
+        const entryElement = document.createElement('div');
+        entryElement.classList.add('journal-entry');
+        entryElement.innerHTML = `
+            <span>My Journal</span>
+            <button class="edit-journal">
+                <i class='fa fa-ellipsis-v'></i>
+            </button>`;
+        journalEntries.appendChild(entryElement);
+    });
+};
 
 function createSidebar() {
 
