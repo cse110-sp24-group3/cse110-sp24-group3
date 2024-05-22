@@ -195,34 +195,36 @@ homepage {
     display: none;
 }
 .popup-content {
-    display:flex;
-    flex-direction: row;
-    background-color: white;
-    margin: 10% auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--sliding-shelf);
+    margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888888;
-    width: 60%;
-    font-weight: bolder;
+    width: 13%;
+    height: 12%;
     border-radius: 5px;
+    box-shadow: 2px 6px 5px 1px rgba(64,64,64,0.5);
+
 }
 .popup-content button {
     display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-left: 10px;
 }
 .show {
     display: block;
 }
 
 .secondary {
-    background-color: #F3F3F3;
+    background-color: var(--sliding-shelf);
     color: var(--grey-text-color);
     border-radius: 5px;
-    /* box-sizing: border-box; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     min-height: 40px;
 }
 
@@ -236,7 +238,7 @@ homepage {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     min-height: 40px;
 }
 
@@ -246,4 +248,11 @@ homepage {
     justify-content: right;
     background-color: #F3F3F3;
     padding: 10px;
+}
+
+.discardCancelContainer {
+    display:flex;
+    flex-direction: row;
+    padding-top: 60px;
+    padding-left: 95px;
 }
