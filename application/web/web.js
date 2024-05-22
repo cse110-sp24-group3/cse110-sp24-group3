@@ -2,33 +2,39 @@ window.onload = () => {
     createSidebar();
 };
 
+
 function createSidebar() {
 
-     const journalEntries = document.querySelectorAll('.journal-entry');
+    const journalEntries = document.querySelector('.sidebar-module');
+    //grabs whole sidebar entry
 
-     journalEntries.forEach(entry => {
-
-        const faIcon = entry.querySelector('.fa.fa-ellipsis-v');
-        entry.addEventListener('mouseover', () => {
+    journalEntries.addEventListener('mouseover', (event) => {
+        const targetEntry = event.target.closest('.journal-entry');
+        //filter to just the new journals
+        if(targetEntry){
+            let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
             faIcon.style.display = 'block';
-        });
+        }
+    });
 
-        entry.addEventListener('mouseout', () => {
+    journalEntries.addEventListener('mouseout', (event) => {
+        const targetEntry = event.target.closest('.journal-entry');
+        if(targetEntry){
+            let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
             faIcon.style.display = 'none';
-        });
-        
-     });
+        }
+    });
 
-    document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
+};
+document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
 
-    function toggleSidebar() {
-        const sidebar = document.querySelector('sidebar');
-        sidebar.classList.toggle('sidebar-collapsed');
-        
-        const newJournalBtn = document.querySelector('.new-journal');
-        newJournalBtn.classList.toggle('toggled-new-journal');
-        
-        const journalEntryBtn = document.querySelector('.journal-entry');
-        journalEntryBtn.classList.toggle('toggled-journal-entry');
-    }
+function toggleSidebar() {
+    const sidebar = document.querySelector('sidebar');
+    sidebar.classList.toggle('sidebar-collapsed');
+    
+    const newJournalBtn = document.querySelector('.new-journal');
+    newJournalBtn.classList.toggle('toggled-new-journal');
+    
+    const journalEntryBtn = document.querySelector('.journal-entry');
+    journalEntryBtn.classList.toggle('toggled-journal-entry');
 };
