@@ -78,6 +78,24 @@ sidebar {
     justify-content: left;
     width: 100%;
     transition: width 0.3s ease;
+    /* overflow: scroll;  */
+    /* to make journal list for too many journals */
+    overflow-y: scroll;
+}
+
+.sidebar-module::-webkit-scrollbar {
+    width: 0px; 
+}
+
+
+/* .sidebar-module .fa.fa-ellipsis-v{
+    display:none;
+    transition: width 0.3s ease;
+} */
+/* To counteract the swap from .fa to vdots, both will be here */
+.sidebar-module img[src="./assets/vdots.svg"]{
+    display:none;
+    transition: width 0.3s ease;
 }
 
 button.new-journal {
@@ -134,6 +152,7 @@ img.collapse-button {
     cursor: pointer;
     font-size: 16px;
     min-height: 40px;
+    margin-bottom: 10px;
 }
 
 
