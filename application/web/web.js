@@ -13,8 +13,10 @@ window.onload = () => {
         const newJournalBtn = document.querySelector('.new-journal');
         newJournalBtn.classList.toggle('toggled-new-journal');
         
-        const journalEntryBtn = document.querySelector('.journal-entry');
-        journalEntryBtn.classList.toggle('toggled-journal-entry');
+        const journalEntryBtn = document.querySelectorAll('.journal-entry');
+        journalEntryBtn.forEach(entry => {
+            entry.classList.toggle('toggled-journal-entry');
+        });
     };
 };
 
