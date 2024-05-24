@@ -41,7 +41,10 @@
 ###Spoken accomplishments
 
 Benjamin:
-sidebar
+- sidebar collapse journal entries
+- add journal entries on listings
+- hover feature for journal entries
+- applied event deligation to hover
 
 Jesus:
 design hussle
@@ -58,12 +61,11 @@ CSS sidebar collapsing
 - learned how to incorporate scripts through html file
 
 Nick
-new journal button html
-sidebar html
-exoskeltlon
-css js of sidebar
-transitions of sidebar
-learned how to use toggle so when sidebar closes, it goes to a difference css class
+- new journal button html
+- sidebar html, css, js
+- sidebar exoskeltlon
+- transitions of sidebar
+- learned how to use toggle so when sidebar closes, it goes to a difference css class
 
 james
 - worked on the cancel entries and save entries button 
