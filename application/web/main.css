@@ -300,9 +300,10 @@ homepage {
 
 .title-entry {
     margin: 0;
+    flex-grow: 1;
 }
 
-/* The div holding the buttons*/
+/* The div holding the buttons */
 .buttons {
     display: flex;
     gap: 10px;
@@ -336,8 +337,49 @@ homepage {
 
 
 .discardCancelContainer {
-    display:flex;
+    display: flex;
     flex-direction: row;
     padding-top: 60px;
     padding-left: 118px;
+}
+
+/* Three dots */
+.title-entry-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-entry {
+    flex-grow: 1;
+}
+
+.three-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none; /* Ensure it looks like an icon, not a standard button */
+    background: none; /* Remove default button background */
+    padding: 0; /* Remove default button padding */
+}
+
+.dots-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Default icon */
+.three-dots .dots-icon {
+    content: url('./assets/vdots-grey.svg');
+}
+
+/* Hover state */
+.three-dots:hover .dots-icon {
+    content: url('./assets/vdots-grey-active.svg');
+}
+
+/* Active state */
+.three-dots.active .dots-icon {
+    content: url('./assets/vdots-grey-active.svg');
 }
