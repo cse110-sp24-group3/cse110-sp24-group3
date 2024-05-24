@@ -106,20 +106,15 @@ function createHomepage() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.addEventListener('click', () => openEntryforEdit());
 
-    const cancelNoteButton = document.querySelector('.cancel-note');
+    const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.addEventListener('click', () => cancelEntry());
 
-    const saveNoteButton = document.querySelector('.save-note');
+    const saveNoteButton = document.getElementById('save-entry');
     saveNoteButton.addEventListener('click', () => saveCurrentEntry());
 
     // Clear entry text on page load
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.value = '';
-    entryTextArea.addEventListener('input', () => {
-        // event listener to show 'save note' button when text area is not empty
-        const saveNoteButton = document.querySelector('.save-note');
-        saveNoteButton.style.display = 'inline';
-    });
 
     // Clear title text on page load
     const titleTextArea = document.querySelector('.title-textarea');
@@ -132,10 +127,10 @@ function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
 
-    const cancelNoteButton = document.querySelector('.cancel-note');
+    const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.style.display = '';
 
-    const saveNoteButton = document.querySelector('.save-note');
+    const saveNoteButton = document.getElementById('save-entry');
     saveNoteButton.style.display = '';
 
     const titleTextArea = document.querySelector('.title-textarea');
@@ -154,6 +149,9 @@ function cancelEntry() {
     titleTextArea.style.display = '';
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.value = '';
+
+    const cancelNoteButton = document.getElementById('cancel-note');
+    myPopup.classList.remove("show");
 }
 
 /* Opens the text editor for use. Uses the CSS 'display' property to hide other elements. 'Inverse' of hideEntries() method
@@ -162,7 +160,7 @@ function openEntryforEdit() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = 'none';
 
-    const cancelNoteButton = document.querySelector('.cancel-note');
+    const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.style.display = 'inline';
     const titleTextArea = document.querySelector('.title-textarea');
     titleTextArea.style.display = 'inline';
