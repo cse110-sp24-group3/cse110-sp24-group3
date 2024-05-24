@@ -223,7 +223,76 @@ homepage {
     background-color: var(--journal-entry);
     padding: 10px;
     box-sizing: border-box;
+
+    &>.title-textarea {
+        display: none;
+    }
+    &>.entry-textarea {
+        display: none;
+    }
+    &>.save-note {
+        display: none;
+    }
+    &>.cancel-note {
+        display: none;
+    }
 }
+
+button.add-note {
+    background-color: white;
+    width: 60%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.add-note i.icon {
+    margin-left: 10px;
+}
+
+button.add-note img.add-entry-icon {
+    height: 20px;
+    width: 20px;
+}
+
+button.add-note:hover {
+    background-color: #A1A1A1;
+}
+
+.title-textarea {
+    /* background-color: #F3F3F3;
+    width: 20%;
+    min-height: 10px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 3px solid #e2dede;
+    border-radius: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--journal-entry);
+    padding: 10px;
+}
+
+.entry-textarea {
+    background-color: #e2dede;
+    width: 100%;
+    min-height: 400px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+}
+
    /* __      _              
   /__\ __ | |_ _ __ _   _ 
  /_\| '_ \| __| '__| | | |
