@@ -92,14 +92,6 @@ function showDiscardChangePage() {
     );
 }
 
-function onDiscardClickCancelPage() {
-    const button = document.getElementById("discard-button");
-    button.addEventListener("click", () => {
-        button.classList.remove("show");
-    }
-);
-}
-
 function createHomepage() {
 
     // Attach event functions to buttons and text areas
@@ -150,7 +142,7 @@ function cancelEntry() {
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.value = '';
 
-    const cancelNoteButton = document.getElementById('cancel-note');
+    const myPopup = document.getElementById("myPopup");
     myPopup.classList.remove("show");
 }
 
