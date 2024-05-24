@@ -327,6 +327,7 @@ button.add-note:hover {
     background-color: var(--sliding-shelf);
     margin: 15% auto;
     padding: 20px;
+    min-width: 200px;
     width: 13%;
     height: 12%;
     border-radius: 8px;
@@ -400,10 +401,15 @@ button.add-note:hover {
     border-bottom-color: var(--dark-blue);
 }
 
-.discardCancelContainer {
+.discard-cance-container {
     display:flex;
     flex-direction: row;
     padding-top: 60px;
     padding-left: 118px;
     gap:10px;
+}
+
+.three-dots-entry {
+    background-color: var(--journal-entry);
+    border: none;
 }
