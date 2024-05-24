@@ -7,6 +7,7 @@
     <meta name="description" content="Instone; an effective markdown editor.">
     <title>Instone</title>
     <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <script src="web.js" type="module"></script>
     <script src="assets/scripts/entry-title-script.js"> </script>
     <script src="web.js"></script>
@@ -40,9 +41,11 @@
                         <label class="new_entry">Create New Entry</label>
                     </div>
                 </button>
+
+                <!-- Entrypage Module -->
                 <div class="title-textarea">
-                    <input type="text" id="title-input" value="Untitled" class="placeholder">
                     <div class="cancel-save-container">  
+                        <input type="text" id="title-input" value="Untitled" class="placeholder">
                         <div class="buttons">
                             <button class="secondary" id="myButton">
                                 <span>Cancel Changes</span>
@@ -51,7 +54,7 @@
                                 <div class="popup-content">
                                     <span>Discard unsaved entry changes?</span>
                                     <div class="discardCancelContainer">
-                                        <button id="" class="cancel-note">
+                                        <button id="cancel-note" class="secondary">
                                             Discard
                                         </button>
                                         <button id="closePopup" class="primary">
@@ -60,46 +63,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="primary">
+                            <button id="save-entry" class="primary">
                                 <span>Save Entry</span>
                             </button>
                         </div>
                     </div>
                 </div>
-                
-                <button class="save-note">Save Entry</button>
-                <!-- <button class="cancel-note">Cancel</button> -->
-                <textarea class="entry-textarea" placeholder="Enter your thoughts here"></textarea>
 
+                <!-- Temporarily put textarea for the CodeMirror editor -->
+                <textarea class="entry-textarea" placeholder="Enter your thoughts here"></textarea>
                 <div class="past-entries"></div>
             </homepage>
-            <entry class="title-entry-bar">
-                <!-- <div class="title-entry">
-                    <input type="text" id="title-input" value="Untitled" class="placeholder">
-                </div>
-                
-                <div class="buttons">
-                    <button class="secondary" id="myButton">
-                        <span>Cancel Changes</span>
-                    </button>
-                    <div id="myPopup" class="popup">
-                        <div class="popup-content">
-                            <span>Discard unsaved entry changes?</span>
-                            <div class="discardCancelContainer">
-                                <button id="" class="secondary">
-                                    Discard
-                                </button>
-                                <button id="closePopup" class="primary">
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="primary">
-                        <span>Save Entry</span>
-                    </button>
-                </div> -->
-            </entry>
         </div>
     </div>
 
