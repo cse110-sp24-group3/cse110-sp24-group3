@@ -29,50 +29,49 @@
         <div class="container">
             <header role="banner">
                 <!--Header Modules-->
-                <img src="assets/instone-rock.svg" alt="Rock Icon" class="rock-icon" height="25px" width="25px" >
+                <img src="assets/instone-rock.svg" alt="Rock Icon" class="rock-icon" height="25px" width="25px">
                 <p>Instone</p>
             </header>
             <homepage role="main">
                 <!--Homepage Modules-->
                 <button class="add-note" type="button">
-                    Add Entry
-                    <img src="assets/add-entry-button-icon.svg" alt="Add Entry Icon" class="entry-icon" height="25px" width="25px" >
+                    <div class="entry-container">
+                        <img src="assets/addEntry-icon.png" alt="Add Entry Icon" class="entry-icon" height="25px" width="25px">
+                        <label class="new_entry">Create New Entry</label>
+                    </div>
                 </button>
-                <!-- <textarea class="title-textarea" placeholder="Title..."></textarea> -->
                 <div class="title-textarea">
                     <input type="text" id="title-input" value="Untitled" class="placeholder">
+                    <div class="cancel-save-container">  
+                        <div class="buttons">
+                            <button class="secondary" id="myButton">
+                                <span>Cancel Changes</span>
+                            </button>
+                            <div id="myPopup" class="popup">
+                                <div class="popup-content">
+                                    <span>Discard unsaved entry changes?</span>
+                                    <div class="discardCancelContainer">
+                                        <button id="" class="cancel-note">
+                                            Discard
+                                        </button>
+                                        <button id="closePopup" class="primary">
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="primary">
+                                <span>Save Entry</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+                
                 <button class="save-note">Save Entry</button>
                 <!-- <button class="cancel-note">Cancel</button> -->
                 <textarea class="entry-textarea" placeholder="Enter your thoughts here"></textarea>
 
                 <div class="past-entries"></div>
-
-                
-                <div class="buttons">
-                    <button class="secondary" id="myButton">
-                        <span>Cancel Changes</span>
-                    </button>
-                    <div id="myPopup" class="popup">
-                        <div class="popup-content">
-                            <span>Discard unsaved entry changes?</span>
-                            <div class="discardCancelContainer">
-                                <button id="" class="cancel-note">
-                                    Discard
-                                </button>
-                                <button id="closePopup" class="primary">
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="primary">
-                        <span>Save Entry</span>
-                    </button>
-                </div>
-
-
-
             </homepage>
             <entry class="title-entry-bar">
                 <!-- <div class="title-entry">
@@ -101,7 +100,6 @@
                     </button>
                 </div> -->
             </entry>
-            
         </div>
     </div>
 
