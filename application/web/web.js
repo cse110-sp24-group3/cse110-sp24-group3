@@ -1,4 +1,5 @@
 window.onload = () => {
+    createHomepage();
     createSidebar();
     createJournalEntries();
     
@@ -89,4 +90,109 @@ function showDiscardChangePage() {
             }
         }
     );
+}
+
+function onDiscardClickCancelPage() {
+    const button = document.getElementById("discard-button");
+    button.addEventListener("click", () => {
+        button.classList.remove("show");
+    }
+);
+}
+
+function createHomepage() {
+
+    // Attach event functions to buttons and text areas
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.addEventListener('click', () => openEntryforEdit());
+
+    const cancelNoteButton = document.querySelector('.cancel-note');
+    cancelNoteButton.addEventListener('click', () => cancelEntry());
+
+    const saveNoteButton = document.querySelector('.save-note');
+    saveNoteButton.addEventListener('click', () => saveCurrentEntry());
+
+    // Clear entry text on page load
+    const entryTextArea = document.querySelector('.entry-textarea');
+    entryTextArea.value = '';
+    entryTextArea.addEventListener('input', () => {
+        // event listener to show 'save note' button when text area is not empty
+        const saveNoteButton = document.querySelector('.save-note');
+        saveNoteButton.style.display = 'inline';
+    });
+
+    // Clear title text on page load
+    const titleTextArea = document.querySelector('.title-textarea');
+    titleTextArea.value = '';
+
+    // readEntriesFromStorage();
+}
+
+function hideTextEditor() {
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.style.display = '';
+
+    const cancelNoteButton = document.querySelector('.cancel-note');
+    cancelNoteButton.style.display = '';
+
+    const saveNoteButton = document.querySelector('.save-note');
+    saveNoteButton.style.display = '';
+
+    const titleTextArea = document.querySelector('.title-textarea');
+    titleTextArea.style.display = '';
+
+    const entryTextArea = document.querySelector('.entry-textarea');
+    entryTextArea.style.display = '';
+}
+
+/* Event listener to cancel entry. Identical to saveEntry for now, but more functionality can be added.
+*/
+function cancelEntry() {
+    hideTextEditor();
+
+    const titleTextArea = document.querySelector('.title-textarea');
+    titleTextArea.style.display = '';
+    const entryTextArea = document.querySelector('.entry-textarea');
+    entryTextArea.value = '';
+}
+
+/* Opens the text editor for use. Uses the CSS 'display' property to hide other elements. 'Inverse' of hideEntries() method
+ */
+function openEntryforEdit() {
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.style.display = 'none';
+
+    const cancelNoteButton = document.querySelector('.cancel-note');
+    cancelNoteButton.style.display = 'inline';
+    const titleTextArea = document.querySelector('.title-textarea');
+    titleTextArea.style.display = 'inline';
+    const entryTextArea = document.querySelector('.entry-textarea');
+    entryTextArea.style.display = 'inline';
+}
+
+/* Identical to cancelEntries() for now, more functionality to come. */
+function saveCurrentEntry() {
+    hideTextEditor();
+
+    const titleTextArea = document.querySelector('.title-textarea');
+    const title = titleTextArea.value;
+    titleTextArea.style.display = '';
+    const entryTextArea = document.querySelector('.entry-textarea');
+    const entry = entryTextArea.value;
+    entryTextArea.value = '';
+
+    const button_list = document.querySelector('.past-entries');
+    const newEntry = document.createElement('button');
+    newEntry.innerText = title;
+    const article = document.createElement('article');
+    article.setAttribute('id', new Date());
+    article.innerText = entry;
+    article.style.display = 'none';
+    newEntry.addEventListener('click', () => {
+        const article = document.querySelector(`#${new Date}`);
+        article.style.display = 'block';
+    });
+
+    button_list.append(newEntry);
+    button_list.append(article);
 }
