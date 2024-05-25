@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^30.0.3",
+    "fs": "^0.0.1-security",
     "jest": "^29.7.0",
     "jsdoc": "^4.0.3"
   },

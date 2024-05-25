@@ -293,4 +293,5 @@ error_log
 # _/      _/    _/_/      _/_/_/    _/_/_/     
 
 node_modules                                             
-                                             
+application/mock/*
+!application/mock/.gitkeep                                             
