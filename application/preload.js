@@ -27,8 +27,8 @@ else {
 contextBridge.exposeInMainWorld('fileAPI', {
     getJournals: async () => {
         try {
-            const journals = await fs.readdir(baseDir);
-            return journals.filter(name => fs.stat(path.join(baseDir, name)).then(stats => stats.isDirectory()));
+            const journals = await fs.readdir(baseDir, {withFileTypes: true});
+            return journals.filter(item => item.isDirectory() && !item.name.startsWith('.')).map(dirent => dirent.name);
         } catch (error) {
             throw new Error(`Error getting journals: ${error.message}`);
         }
@@ -77,7 +77,7 @@ contextBridge.exposeInMainWorld('fileAPI', {
         try {
             const dirPath = path.join(baseDir, journalName);
             const files = await fs.readdir(dirPath);
-            return files.filter(name => name.endsWith('.md'));
+            return files.filter(name => name.endsWith('.md')).map(entryName => entryName.replace(".md","").trim());
         } catch (error) {
             throw new Error(`Error getting entries: ${error.message}`);
         }
@@ -114,6 +114,16 @@ contextBridge.exposeInMainWorld('fileAPI', {
             await fs.rename(oldFilePath, newFilePath);
         } catch (error) {
             throw new Error(`Error updating entry name: ${error.message}`);
+        }
+    },
+    getEntryContent: async (journalName, entryName) => {
+        try {
+            const filePath = path.join(baseDir, journalName, `${entryName}.md`);
+            const dataBuffer = await fs.readFile(filePath);
+            return dataBuffer;
+        }
+        catch (error) {
+            throw new Error(`Error fetching journal content: ${error.message}`);
         }
     },
     updateJournalName: async (oldName, newName) => {
