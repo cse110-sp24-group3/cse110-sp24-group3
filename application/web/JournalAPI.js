@@ -1,3 +1,4 @@
+const decoder = new TextDecoder();
 /**
  * Represents a journal, which is a directory containing journal entries.
  */
@@ -80,6 +81,14 @@ class Entry {
     async updateName(newName) {
         await window.fileAPI.updateEntryName(this.journalName, this.name, newName);
         this.name = newName;
+    }
+    /**
+     * Get all the content from an entry
+     * @returns {Buffer} object containing the entries content
+     */
+    async getContent() {
+        const content = await window.fileAPI.getEntryContent(this.journalName, this.name);
+        return decoder.decode(content);
     }
 }
 
