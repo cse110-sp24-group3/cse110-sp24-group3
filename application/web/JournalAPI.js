@@ -118,5 +118,5 @@ class JournalAPI {
     async deleteJournal(journalName) {
         await window.fileAPI.deleteJournal(journalName);
     }
-}
-var api = new JournalAPI();
+} 
+var api = new JournalAPI(); // eslint-disable-line
