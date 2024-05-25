@@ -2,6 +2,7 @@ const { contextBridge } = require('electron');
 const fs = require('fs').promises;
 const path = require('path');
 const os = require('os');
+const { rejects } = require('assert');
 
 
 let baseDir;
@@ -44,6 +45,20 @@ contextBridge.exposeInMainWorld('fileAPI', {
                 dirPath = path.join(baseDir, journalName);
             }
 
+            await fs.mkdir(dirPath);
+            await fs.writeFile(path.join(dirPath, 'properties.json'), '{}', 'utf8');
+            return journalName;
+        } catch (error) {
+            throw new Error(`Error creating journal: ${error.message}`);
+        }
+    },
+    createJournal: async (name) => {
+        try {
+            let journalName = name;
+            let dirPath = path.join(baseDir, journalName);
+            while (await fs.access(dirPath).then(() => true).catch(() => false)) {
+                throw new Error("Journal name already used!");
+            }
             await fs.mkdir(dirPath);
             await fs.writeFile(path.join(dirPath, 'properties.json'), '{}', 'utf8');
             return journalName;

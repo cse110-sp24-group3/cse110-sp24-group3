@@ -1,4 +1,32 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: JournalAPI.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: JournalAPI.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * Represents a journal, which is a directory containing journal entries.
  */
 class Journal {
@@ -13,7 +41,7 @@ class Journal {
     /**
      * Update the name of the journal.
      * @param {string} newName - The new name for the journal.
-     * @returns {Promise<void>} A promise that resolves when the name has been updated.
+     * @returns {Promise&lt;void>} A promise that resolves when the name has been updated.
      */
     async updateName(newName) {
         await window.fileAPI.updateJournalName(this.name, newName);
@@ -22,7 +50,7 @@ class Journal {
 
     /**
      * Get all entries in the journal.
-     * @returns {Promise<Entry[]>} A promise that resolves to an array of Entry objects.
+     * @returns {Promise&lt;Entry[]>} A promise that resolves to an array of Entry objects.
      */
     async getEntries() {
         const entries = await window.fileAPI.getEntries(this.name);
@@ -32,7 +60,7 @@ class Journal {
     /**
      * Delete an entry from the journal.
      * @param {string} entryName - The name of the entry to delete.
-     * @returns {Promise<void>} A promise that resolves when the entry has been deleted.
+     * @returns {Promise&lt;void>} A promise that resolves when the entry has been deleted.
      */
     async deleteEntry(entryName) {
         await window.fileAPI.deleteEntry(this.name, entryName);
@@ -41,7 +69,7 @@ class Journal {
     /**
      * Create a new entry in the journal.
      * @param {string} entryName - The name of the new entry.
-     * @returns {Promise<Entry>} A promise that resolves to the newly created Entry object.
+     * @returns {Promise&lt;Entry>} A promise that resolves to the newly created Entry object.
      */
     async createEntry(entryName) {
         await window.fileAPI.createEntry(this.name, entryName);
@@ -66,7 +94,7 @@ class Entry {
     /**
      * Update the content of the entry.
      * @param {string} newContent - The new content for the entry.
-     * @returns {Promise<void>} A promise that resolves when the content has been updated.
+     * @returns {Promise&lt;void>} A promise that resolves when the content has been updated.
      */
     async updateContent(newContent) {
         await window.fileAPI.updateEntryContent(this.journalName, this.name, newContent);
@@ -75,7 +103,7 @@ class Entry {
     /**
      * Update the name of the entry.
      * @param {string} newName - The new name for the entry.
-     * @returns {Promise<void>} A promise that resolves when the name has been updated.
+     * @returns {Promise&lt;void>} A promise that resolves when the name has been updated.
      */
     async updateName(newName) {
         await window.fileAPI.updateEntryName(this.journalName, this.name, newName);
@@ -94,7 +122,7 @@ class JournalAPI {
 
     /**
      * Get all journals.
-     * @returns {Promise<Journal[]>} A promise that resolves to an array of Journal objects.
+     * @returns {Promise&lt;Journal[]>} A promise that resolves to an array of Journal objects.
      */
     async getJournals() {
         const journals = await window.fileAPI.getJournals();
@@ -104,7 +132,7 @@ class JournalAPI {
     /**
      * Create a new journal.
      * @param name The string name of the journal.
-     * @returns {Promise<Journal>} A promise that resolves to the newly created Journal object.
+     * @returns {Promise&lt;Journal>} A promise that resolves to the newly created Journal object.
      */
     async createJournal(name) {
         let journalName
@@ -118,10 +146,33 @@ class JournalAPI {
     /**
      * Delete a journal.
      * @param {string} journalName - The name of the journal to delete.
-     * @returns {Promise<void>} A promise that resolves when the journal has been deleted.
+     * @returns {Promise&lt;void>} A promise that resolves when the journal has been deleted.
      */
     async deleteJournal(journalName) {
         await window.fileAPI.deleteJournal(journalName);
     }
 } 
 var api = new JournalAPI(); // eslint-disable-line
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Entry.html">Entry</a></li><li><a href="Journal.html">Journal</a></li><li><a href="JournalAPI.html">JournalAPI</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri May 24 2024 23:09:17 GMT-0700 (Pacific Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
