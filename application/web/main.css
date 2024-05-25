@@ -11,6 +11,7 @@
     --grey-text-color: #404040;
     --icon-color: #D7D7D7;
     --font-family: 'Dosis', sans-serif;
+    --font-family-journals: 'Inter';
     --dark-green: #58A399;
     --dark-blue: #496989
 }
@@ -223,22 +224,91 @@ homepage {
     background-color: var(--journal-entry);
     padding: 10px;
     box-sizing: border-box;
+
+    &>.title-textarea {
+        display: none;
+    }
+    &>.entry-textarea {
+        display: none;
+    }
+    &>.save-note {
+        display: none;
+    }
+    &>.cancel-note {
+        display: none;
+    }
 }
+
+button.add-note {
+    background-color: var(--dark-green);
+    width: 100%;
+    border-radius: 8px;
+    min-width: 200px;
+    min-height: 60px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    font-family: var(--font-family);
+}
+
+button.add-note:hover {
+    background-color: #A1A1A1;
+}
+
+.title-textarea {
+    /* background-color: #F3F3F3;
+    width: 20%;
+    min-height: 10px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 3px solid #e2dede;
+    border-radius: 10px; */
+    background-color: var(--journal-entry);
+    padding: 10px;
+}
+
+.entry-textarea {
+    background-color: #e2dede;
+    width: 100%;
+    min-height: 400px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+}
+
+.new_entry {
+    color: #FFFFFF;
+    align-content: center;
+    font-family: var(--font-family-journals);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.entry-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cancel-save-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
    /* __      _              
   /__\ __ | |_ _ __ _   _ 
  /_\| '_ \| __| '__| | | |
 //__| | | | |_| |  | |_| |
 \__/|_| |_|\__|_|   \__, |
                     |___/  */
-
-
-.title-entry-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--journal-entry);
-    padding: 10px;
-}
 
 /* The actual popup */
 .popup {
@@ -257,9 +327,10 @@ homepage {
     background-color: var(--sliding-shelf);
     margin: 15% auto;
     padding: 20px;
+    min-width: 200px;
     width: 13%;
     height: 12%;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 2px 6px 5px 1px rgba(64,64,64,0.5);
 
 }
@@ -274,14 +345,14 @@ homepage {
     background-color: var(--journal-entry);
     color: var(--grey-text-color);
     border-radius: 8px;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     font-size: 15px;
     min-height: 40px;
-    margin-right: 10px;
+    border: 1px solid;
+    font-family: var(--font-family-journals);
 }
 
 .primary {
@@ -296,10 +367,7 @@ homepage {
     cursor: pointer;
     font-size: 15px;
     min-height: 40px;
-}
-
-.title-entry {
-    margin: 0;
+    font-family: var(--font-family-journals);
 }
 
 /* The div holding the buttons*/
@@ -314,10 +382,9 @@ homepage {
     background-color: var(--journal-entry);
     border: none;
     border-bottom: 2px solid var(--grey-text-color);
-    padding: 5px 0;
+    padding-left: 10px;
     width: 200px;
     outline: none;
-    transition: border-color 0.3s;
 }
 
 #title-input.placeholder {
@@ -334,10 +401,15 @@ homepage {
     border-bottom-color: var(--dark-blue);
 }
 
-
-.discardCancelContainer {
+.discard-cance-container {
     display:flex;
     flex-direction: row;
     padding-top: 60px;
     padding-left: 118px;
+    gap:10px;
+}
+
+.three-dots-entry {
+    background-color: var(--journal-entry);
+    border: none;
 }

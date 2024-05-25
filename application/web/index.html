@@ -7,8 +7,9 @@
     <meta name="description" content="Instone; an effective markdown editor.">
     <title>Instone</title>
     <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <script src="web.js" type="module"></script>
-    <script src="assets/scripts/entry-title-script.js"> </script>
+    <script src="../web/scripts/entry-title-script.js"> </script>
     <script src="JournalAPI.js"></script>
     <script src="web.js"></script>
 </head>
@@ -30,40 +31,53 @@
         <div class="container">
             <header role="banner">
                 <!--Header Modules-->
-                <img src="assets/instone-rock.svg" alt="Rock Icon" class="rock-icon" height="25px" width="25px" >
+                <img src="assets/instone-rock.svg" alt="Rock Icon" class="rock-icon" height="25px" width="25px">
                 <p>Instone</p>
             </header>
             <homepage role="main">
                 <!--Homepage Modules-->
-            </homepage>
-            <entry class="title-entry-bar">
-                <div class="title-entry">
-                    <input type="text" id="title-input" value="Untitled" class="placeholder">
-                </div>
-                
-                <div class="buttons">
-                    <button class="secondary" id="myButton">
-                        <span>Cancel Changes</span>
-                    </button>
-                    <div id="myPopup" class="popup">
-                        <div class="popup-content">
-                            <span>Discard unsaved entry changes?</span>
-                            <div class="discardCancelContainer">
-                                <button id="" class="secondary">
-                                    Discard
-                                </button>
-                                <button id="closePopup" class="primary">
-                                    Cancel
-                                </button>
+                <button class="add-note" type="button">
+                    <div class="entry-container">
+                        <img src="assets/addEntry-icon.png" alt="Add Entry Icon" class="entry-icon" height="25px" width="25px">
+                        <label class="new_entry">Create New Entry</label>
+                    </div>
+                </button>
+
+                <!-- Entrypage Module -->
+                <div class="title-textarea">
+                    <div class="cancel-save-container">  
+                        <input type="text" id="title-input" value="Untitled" class="placeholder">
+                        <div class="buttons">
+                            <button class="secondary" id="myButton">
+                                <span>Cancel Changes</span>
+                            </button>
+                            <div id="myPopup" class="popup">
+                                <div class="popup-content">
+                                    <span>Discard unsaved entry changes?</span>
+                                    <div class="discard-cance-container">
+                                        <button id="cancel-note" class="secondary">
+                                            Discard
+                                        </button>
+                                        <button id="closePopup" class="primary">
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
+                            <button id="save-entry" class="primary">
+                                <span>Save Entry</span>
+                            </button>
+                            <button class="three-dots-entry">
+                                <img src="./assets/vdots-entry-black.png" width="24" height="24">
+                            </button>
                         </div>
                     </div>
-                    <button class="primary">
-                        <span>Save Entry</span>
-                    </button>
                 </div>
-            </entry>
-            
+
+                <!-- Temporarily put textarea for the CodeMirror editor -->
+                <textarea class="entry-textarea" placeholder="Enter your thoughts here"></textarea>
+                <div class="past-entries"></div>
+            </homepage>
         </div>
     </div>
 
