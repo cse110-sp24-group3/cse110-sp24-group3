@@ -52,7 +52,7 @@ contextBridge.exposeInMainWorld('fileAPI', {
             throw new Error(`Error creating journal: ${error.message}`);
         }
     },
-    createJournal: async (name) => {
+    createNamedJournal: async (name) => {
         try {
             let journalName = name;
             let dirPath = path.join(baseDir, journalName);

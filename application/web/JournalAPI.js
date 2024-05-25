@@ -109,7 +109,7 @@ class JournalAPI {
     async createJournal(name) {
         let journalName
         if(name)
-            journalName = await window.fileAPI.createJournal(name);
+            journalName = await window.fileAPI.createNamedJournal(name);
         else
             journalName = await window.fileAPI.createJournal();
         return new Journal(journalName);
