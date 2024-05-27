@@ -22,11 +22,14 @@ window.onload = () => {
 };
 
 function createJournalEntries(){
+    //new journal entries created after
     const journal = document.querySelector('.new-journal');
     journal.addEventListener('click', () => {
+        //replicates the div module as it was in html
         const journalEntries = document.querySelector('.sidebar-module');
         const entryElement = document.createElement('div');
         entryElement.classList.add('journal-entry');
+
         // entryElement.innerHTML = `
         //     <span>My Journal</span>
         //     <button class="edit-journal">
@@ -45,9 +48,8 @@ function createJournalEntries(){
 };
 
 function createSidebar() {
-
-    const journalEntries = document.querySelector('.sidebar-module');
     //grabs whole sidebar entry
+    const journalEntries = document.querySelector('.sidebar-module');
 
     journalEntries.addEventListener('mouseover', (event) => {
         const targetEntry = event.target.closest('.journal-entry');
@@ -56,7 +58,7 @@ function createSidebar() {
             // let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
             let faIcon = targetEntry.querySelector('img[src="./assets/vdots.svg"]')
             faIcon.style.display = 'block';
-            console.log('enter');
+            targetEntry.style.backgroundColor = '#cbcfce';
         }
     });
 
@@ -66,6 +68,9 @@ function createSidebar() {
             // let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
             let faIcon = targetEntry.querySelector('img[src="./assets/vdots.svg"]')
             faIcon.style.display = 'none';
+            // targetEntry.style.backgroundColor = '#ffffff00'; //can use color or background
+            targetEntry.style.background='none';
+
         }
     });
 
