@@ -124,6 +124,10 @@ function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
 
+    const addEntryList = document.querySelector('.home-list');
+    addEntryList.style.display = '';
+
+    
     const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.style.display = '';
 
