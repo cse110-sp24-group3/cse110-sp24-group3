@@ -27,7 +27,7 @@ else {
 contextBridge.exposeInMainWorld('fileAPI', {
     getJournals: async () => {
         try {
-            const journals = await fs.readdir(baseDir, {withFileTypes: true});
+            const journals = await fs.readdir(baseDir, { withFileTypes: true });
             return journals.filter(item => item.isDirectory() && !item.name.startsWith('.')).map(dirent => dirent.name);
         } catch (error) {
             throw new Error(`Error getting journals: ${error.message}`);
@@ -77,7 +77,7 @@ contextBridge.exposeInMainWorld('fileAPI', {
         try {
             const dirPath = path.join(baseDir, journalName);
             const files = await fs.readdir(dirPath);
-            return files.filter(name => name.endsWith('.md')).map(entryName => entryName.replace(".md","").trim());
+            return files.filter(name => name.endsWith('.md')).map(entryName => entryName.replace(".md", "").trim());
         } catch (error) {
             throw new Error(`Error getting entries: ${error.message}`);
         }
