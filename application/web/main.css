@@ -273,12 +273,23 @@ button.add-note:hover {
 }
 
 .entry-textarea {
+    
     background-color: #e2dede;
     width: 100%;
     min-height: 400px;
     font-size: 15px;
-    padding: 10px;
-    box-sizing: border-box;
+    padding: 0px;
+    box-sizing: content-box;
+    border: none;
+    border-radius: 10px;
+}
+
+.CodeMirror {
+    background-color: #e2dede;
+    width: 100%;
+    min-height: 400px;
+    /*font-size: 15px;*/
+    box-sizing: content-box;
     border: none;
     border-radius: 10px;
 }

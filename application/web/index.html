@@ -8,6 +8,7 @@
     <title>Instone</title>
     <link rel="stylesheet" href="main.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.css" />
     <script src="web.js" type="module"></script>
     <script src="../web/scripts/entry-title-script.js"> </script>
     <script src="JournalAPI.js"></script>
@@ -75,12 +76,16 @@
                 </div>
 
                 <!-- Temporarily put textarea for the CodeMirror editor -->
-                <textarea class="entry-textarea" placeholder="Enter your thoughts here"></textarea>
+                <!-- <textarea id="entry-textarea" class="entry-textarea" placeholder="PEE your thoughts here"></textarea> -->
+                <div id="entry-textarea" class="entry-textarea"></div>
                 <div class="past-entries"></div>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/markdown/markdown.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/code-blocks/all.min.js"></script>
+                <script src="scripts/code-mirror-script.js"></script>
             </homepage>
         </div>
     </div>
-
 </body>
-
 </html>
