@@ -231,6 +231,7 @@ homepage {
     }
     &>.entry-textarea {
         display: none;
+        resize: none;
     }
     &>.save-note {
         display: none;
