@@ -44,20 +44,24 @@ function createJournalEntries() {
                 <img src="./assets/vdots.svg">
             </button>`;
 
-        entryElement.addEventListener('click', function (event) {
+        // event handler to deal with selecting a given journal
+        // updates page title and sidebar visuals
+        entryElement.addEventListener('click', function () {
             const journalEntries = document.querySelectorAll('.journal-entry');
             const journalTitle = document.querySelector('#journal-title');
             journalTitle.innerText = `${this.querySelector('span').innerText} Entries`;
 
+            // clear selection visuals on all elements
             journalEntries.forEach((entry) => {
                 let faIcon = entry.querySelector('img[src="./assets/vdots.svg"]')
                 faIcon.style.display = 'none';
                 entry.style.background = 'none';
                 entry.setAttribute('isSelected', '');
             });
+
+            // add styling for selected elements
             let faIcon = this.querySelector('img[src="./assets/vdots.svg"]')
             faIcon.style.display = 'block';
-            // targetEntry.style.backgroundColor = '#ffffff00'; //can use color or background
             this.style.backgroundColor = '#cbcfce';
 
             this.setAttribute('isSelected', true);
@@ -84,6 +88,7 @@ function createSidebar() {
 
     journalEntries.addEventListener('mouseout', (event) => {
         const targetEntry = event.target.closest('.journal-entry');
+        // check to make sure that hovered entry was not also selected
         if (targetEntry && targetEntry.getAttribute('isSelected') != 'true') {
             // let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
             let faIcon = targetEntry.querySelector('img[src="./assets/vdots.svg"]')
