@@ -345,6 +345,11 @@ button.add-note:hover {
     cursor: pointer;
 }
 
+.no-entry-text{
+    font-family: var(--font-family);
+    font-size: large;
+}
+
    /* __      _              
   /__\ __ | |_ _ __ _   _ 
  /_\| '_ \| __| '__| | | |
