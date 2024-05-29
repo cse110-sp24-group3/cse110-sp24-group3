@@ -233,6 +233,7 @@ homepage {
     }
     &>.entry-textarea {
         display: none;
+        resize: none;
     }
     &>.save-note {
         display: none;
@@ -304,13 +305,6 @@ button.add-note:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-/* No entry text for journal */
-.no-entry-text{
-    font-family: var(--font-family);
-    font-size: large;
-
 }
 
    /* __      _              
