@@ -2,12 +2,14 @@ window.onload = () => {
     createHomepage();
     createSidebar();
     createJournalEntries();
-    
+    toggleSidebar();
     showDiscardChangePage();
     
-    document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
+};
 
-    function toggleSidebar() {
+function toggleSidebar() {
+    const collapseButton = document.getElementById('collapse-button');
+    collapseButton.addEventListener('click', (event) => {
         const sidebar = document.querySelector('sidebar');
         sidebar.classList.toggle('sidebar-collapsed');
         
@@ -18,7 +20,7 @@ window.onload = () => {
         journalEntryBtn.forEach(entry => {
             entry.classList.toggle('toggled-journal-entry');
         });
-    };
+    });
 };
 
 function createJournalEntries(){
