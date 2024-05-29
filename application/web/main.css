@@ -306,20 +306,8 @@ button.add-note:hover {
 
 #no-entry-text {
     display: block;
-    font-family: var(--font-family-journals);
-    font-size: 20px;
     margin-top: 10px;
-}
-
-#no-entry-text strong {
-    font-family: var(--font-family-journals);
-    font-weight: bold;
-}
-
-#no-entry-text span {
-    font-family: var(--font-family-journals);
-    font-weight: normal;
-    font-size: 15px;
+    font-size: 24px;
 }
 
 .home-entry-descriptor {
