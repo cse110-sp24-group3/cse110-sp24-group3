@@ -2,18 +2,18 @@ window.onload = () => {
     createHomepage();
     createSidebar();
     createJournalEntries();
-    
+
     showDiscardChangePage();
-    
+
     document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
 
     function toggleSidebar() {
         const sidebar = document.querySelector('sidebar');
         sidebar.classList.toggle('sidebar-collapsed');
-        
+
         const newJournalBtn = document.querySelector('.new-journal');
         newJournalBtn.classList.toggle('toggled-new-journal');
-        
+
         const journalEntryBtn = document.querySelectorAll('.journal-entry');
         journalEntryBtn.forEach(entry => {
             entry.classList.toggle('toggled-journal-entry');
@@ -21,7 +21,7 @@ window.onload = () => {
     };
 };
 
-function createJournalEntries(){
+function createJournalEntries() {
     //new journal entries created after
     const journal = document.querySelector('.new-journal');
     journal.addEventListener('click', () => {
@@ -43,6 +43,30 @@ function createJournalEntries(){
             <button class="edit-journal">
                 <img src="./assets/vdots.svg">
             </button>`;
+
+        // event handler to deal with selecting a given journal
+        // updates page title and sidebar visuals
+        entryElement.addEventListener('click', function () {
+            const journalEntries = document.querySelectorAll('.journal-entry');
+            const journalTitle = document.querySelector('#journal-title');
+            journalTitle.innerText = `${this.querySelector('span').innerText} Entries`;
+
+            // clear selection visuals on all elements
+            journalEntries.forEach((entry) => {
+                let faIcon = entry.querySelector('img[src="./assets/vdots.svg"]')
+                faIcon.style.display = 'none';
+                entry.style.background = 'none';
+                entry.setAttribute('isSelected', '');
+            });
+
+            // add styling for selected elements
+            let faIcon = this.querySelector('img[src="./assets/vdots.svg"]')
+            faIcon.style.display = 'block';
+            this.style.backgroundColor = '#cbcfce';
+
+            this.setAttribute('isSelected', true);
+        });
+
         journalEntries.appendChild(entryElement);
     });
 };
@@ -54,7 +78,7 @@ function createSidebar() {
     journalEntries.addEventListener('mouseover', (event) => {
         const targetEntry = event.target.closest('.journal-entry');
         //filter to just the new journals
-        if(targetEntry){
+        if (targetEntry) {
             // let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
             let faIcon = targetEntry.querySelector('img[src="./assets/vdots.svg"]')
             faIcon.style.display = 'block';
@@ -64,37 +88,34 @@ function createSidebar() {
 
     journalEntries.addEventListener('mouseout', (event) => {
         const targetEntry = event.target.closest('.journal-entry');
-        if(targetEntry){
+        // check to make sure that hovered entry was not also selected
+        if (targetEntry && targetEntry.getAttribute('isSelected') != 'true') {
             // let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
             let faIcon = targetEntry.querySelector('img[src="./assets/vdots.svg"]')
             faIcon.style.display = 'none';
             // targetEntry.style.backgroundColor = '#ffffff00'; //can use color or background
-            targetEntry.style.background='none';
+            targetEntry.style.background = 'none';
 
         }
     });
-
 };
-    
+
 function showDiscardChangePage() {
     const button = document.getElementById("myButton");
     const myPopup = document.getElementById("myPopup");
     const closePopup = document.getElementById("closePopup");
-    
+
     button.addEventListener("click", () => {
-            myPopup.classList.add("show");
-        }
-    );
+        myPopup.classList.add("show");
+    });
     closePopup.addEventListener("click", () => {
+        myPopup.classList.remove("show");
+    });
+    window.addEventListener("click", (event) => {
+        if (event.target == myPopup) {
             myPopup.classList.remove("show");
         }
-    );
-    window.addEventListener("click", (event) => {
-            if (event.target == myPopup) {
-                myPopup.classList.remove("show");
-            }
-        }
-    );
+    });
 }
 
 function createHomepage() {
