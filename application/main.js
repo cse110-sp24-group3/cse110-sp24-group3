@@ -1,4 +1,4 @@
-const { app, BrowserWindow, screen } = require('electron'); // eslint-disable-line 
+ const { app, BrowserWindow, screen } = require('electron'); // eslint-disable-line 
 const path = require('path');
 
 function createWindow() {
