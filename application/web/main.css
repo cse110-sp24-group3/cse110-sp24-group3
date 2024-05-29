@@ -214,6 +214,8 @@ header {
 .rock-icon{
     padding-right: 10px;
 }
+
+
 /*                                                    
   /\  /\___  _ __ ___   ___ _ __   __ _  __ _  ___ 
  / /_/ / _ \| '_ ` _ \ / _ \ '_ \ / _` |/ _` |/ _ \
@@ -302,6 +304,13 @@ button.add-note:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+/* No entry text for journal */
+.no-entry-text{
+    font-family: var(--font-family);
+    font-size: large;
+
 }
 
    /* __      _              
