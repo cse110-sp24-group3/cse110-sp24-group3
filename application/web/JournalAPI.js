@@ -117,7 +117,7 @@ class JournalAPI {
      */
     async createJournal(name) {
         let journalName
-        if (name)
+        if(name)
             journalName = await window.fileAPI.createNamedJournal(name);
         else
             journalName = await window.fileAPI.createJournal();
@@ -132,5 +132,5 @@ class JournalAPI {
     async deleteJournal(journalName) {
         await window.fileAPI.deleteJournal(journalName);
     }
-}
+} 
 var api = new JournalAPI(); // eslint-disable-line
