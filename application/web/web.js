@@ -44,6 +44,7 @@ function createJournalEntries(){
                 <img src="./assets/vdots.svg">
             </button>`;
         journalEntries.appendChild(entryElement);
+        document.getElementById("no-entry-text").style.display = "none";
     });
 };
 

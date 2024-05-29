@@ -304,6 +304,24 @@ button.add-note:hover {
     justify-content: space-between;
 }
 
+#no-entry-text {
+    display: block;
+    font-family: var(--font-family-journals);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#no-entry-text strong {
+    font-family: var(--font-family-journals);
+    font-weight: bold;
+}
+
+#no-entry-text span {
+    font-family: var(--font-family-journals);
+    font-weight: normal;
+    font-size: 15px;
+}
+
    /* __      _              
   /__\ __ | |_ _ __ _   _ 
  /_\| '_ \| __| '__| | | |
