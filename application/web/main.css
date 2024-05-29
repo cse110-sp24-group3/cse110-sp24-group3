@@ -310,8 +310,8 @@ button.add-note:hover {
     justify-content: space-between;
     padding-right: 60px; 
     padding-bottom: 10px;
-    font-family: var(--font-family-journals);
 }
+
 .home-single-entry{
     display: flex;
     justify-content: space-between;
