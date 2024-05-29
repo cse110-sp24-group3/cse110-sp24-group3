@@ -148,6 +148,10 @@ function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
 
+    const addEntryList = document.querySelector('.home-list');
+    addEntryList.style.display = '';
+
+    
     const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.style.display = '';
 
@@ -180,6 +184,8 @@ function cancelEntry() {
 function openEntryforEdit() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = 'none';
+    const entryListing = document.querySelector('.home-list');
+    entryListing.style.display = 'none';
 
     const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.style.display = 'inline';
