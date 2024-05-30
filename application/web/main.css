@@ -116,6 +116,23 @@ button.new-journal {
     min-height: 40px;
 }
 
+.new-journal-name {
+    background-color: var(white);
+    color: var(--dark-green);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 40px;
+}
+
 button.collapse-button {
     background-color: transparent;
     border: none;

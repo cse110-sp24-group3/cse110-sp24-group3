@@ -21,13 +21,45 @@ window.onload = () => {
     };
 };
 
+function editData(e) {
+    const el = e.target;
+    const input = document.createElement("input");
+    input.setAttribute("value", el.textContent);
+    el.replaceWith(input);
+    
+    const save = function() {
+        const previous = document.createElement(el.tagName.toLowerCase());
+        previous.onclick = editData;
+        previous.textContent = input.value;
+        input.replaceWith(previous);
+    };
+
+    input.addEventListener('blur', save, {
+        once: true,
+    });
+    input.focus();
+}
+
 function createJournalEntries() {
     //new journal entries created after
     const journal = document.querySelector('.new-journal');
+    const collapseButton = document.getElementById('collapse-button');
     journal.addEventListener('click', () => {
         //replicates the div module as it was in html
+        journal.remove();
         const journalEntries = document.querySelector('.sidebar-module');
         const entryElement = document.createElement('div');
+        entryElement.classList.add('new-journal-name');
+        entryElement.innerHTML = `
+            <span contentEditable="true">Untitled</span>
+            <button class="edit-journal">
+                <img src="./assets/vdots.svg">
+            </button>`;
+            collapseButton.remove();
+            journalEntries.insertBefore(entryElement, journalEntries.firstChild);
+            journalEntries.insertBefore(collapseButton, journalEntries.firstChild);
+        /*
+
         entryElement.classList.add('journal-entry');
 
         // entryElement.innerHTML = `
@@ -43,6 +75,8 @@ function createJournalEntries() {
             <button class="edit-journal">
                 <img src="./assets/vdots.svg">
             </button>`;
+
+        */
 
         // event handler to deal with selecting a given journal
         // updates page title and sidebar visuals
@@ -66,8 +100,17 @@ function createJournalEntries() {
 
             this.setAttribute('isSelected', true);
         });
-
-        journalEntries.appendChild(entryElement);
+        
+        entryElement.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                collapseButton.remove();
+                entryElement.remove();
+                journalEntries.insertBefore(journal, journalEntries.firstChild);
+                journalEntries.insertBefore(collapseButton, journalEntries.firstChild);
+                journalEntries.appendChild(entryElement);
+            }
+        });
+        
     });
 };
 
