@@ -160,6 +160,17 @@ function hideTextEditor() {
 
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = '';
+
+    const noEntryText = document.querySelector('.no-entry-text');
+    noEntryText.style.display = 'block';
+
+    const prevEntries = document.querySelector('.past-entries');
+    const prevCount = prevEntries.querySelectorAll('article').length;
+    if(prevCount > 0){
+        noEntryText.style.display = 'none';
+    }
+
+    
 }
 
 /* Event listener to cancel entry. Identical to saveEntry for now, but more functionality can be added.
@@ -206,6 +217,10 @@ function openEntryforEdit() {
     titleTextArea.style.display = 'inline';
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = 'inline';
+
+    const noEntryText = document.querySelector('.no-entry-text');
+    noEntryText.style.display = 'none';
+    
 }
 
 /* Identical to cancelEntries() for now, more functionality to come. */
@@ -213,6 +228,7 @@ function saveCurrentEntry() {
     hideTextEditor();
 
     const titleTextArea = document.querySelector('#title-input');
+  
     const title = titleTextArea.value;
     titleTextArea.value = '';
     titleTextArea.style.display = '';
@@ -248,4 +264,5 @@ function saveCurrentEntry() {
 
     button_list.append(newEntry);
     button_list.append(article);
+    hideTextEditor();
 }
