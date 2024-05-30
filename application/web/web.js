@@ -205,8 +205,7 @@ function saveCurrentEntry() {
     titleButton.textContent = title;
     titleButton.classList.add('entry-button');
     titleButton.addEventListener('click', () => {
-        // Add functionality to handle the click event
-        console.log(`Entry clicked: ${title}`);
+    console.log(`Entry clicked: ${title}`);
     });
     titleCell.appendChild(titleButton);
     newRow.appendChild(titleCell);
