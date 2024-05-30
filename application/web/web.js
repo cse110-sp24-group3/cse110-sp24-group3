@@ -165,39 +165,71 @@ function openEntryforEdit() {
     titleTextArea.style.display = 'inline';
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = 'inline';
+    const entriesTable = document.getElementById('entries-table');
+    entriesTable.style.display = 'none';
 }
 
 /* Identical to cancelEntries() for now, more functionality to come. */
 function saveCurrentEntry() {
     hideTextEditor();
 
-    const titleTextArea = document.querySelector('.title-textarea');
+    const titleTextArea = document.querySelector('#title-input');
     const title = titleTextArea.value;
     titleTextArea.style.display = '';
     const entryTextArea = document.querySelector('.entry-textarea');
     const entry = entryTextArea.value;
     entryTextArea.value = '';
 
-    const button_list = document.querySelector('.past-entries');
-    const newEntry = document.createElement('button');
-    newEntry.innerText = title;
-    const article = document.createElement('article');
-    article.setAttribute('id', new Date());
-    article.innerText = entry;
-    article.style.display = 'none';
-    newEntry.addEventListener('click', () => {
-        const article = document.querySelector(`#${new Date}`);
-        article.style.display = 'block';
+    // const button_list = document.querySelector('.past-entries');
+    // const newEntry = document.createElement('button');
+    // newEntry.innerText = title;
+    // const article = document.createElement('article');
+    // article.setAttribute('id', new Date());
+    // article.innerText = entry;
+    // article.style.display = 'none';
+    // newEntry.addEventListener('click', () => {
+    //     const article = document.querySelector(`#${new Date}`);
+    //     article.style.display = 'block';
+    // });
+
+    // button_list.append(newEntry);
+    // button_list.append(article);
+
+
+    // Add the new entry to the entries table
+    const entriesTbody = document.getElementById('entries-tbody');
+    const newRow = document.createElement('tr');
+
+    const titleCell = document.createElement('td');
+    const titleButton = document.createElement('button');
+    titleButton.textContent = title;
+    titleButton.classList.add('entry-button');
+    titleButton.addEventListener('click', () => {
+        // Add functionality to handle the click event
+        console.log(`Entry clicked: ${title}`);
     });
+    titleCell.appendChild(titleButton);
+    newRow.appendChild(titleCell);
 
-    button_list.append(newEntry);
-    button_list.append(article);
+    const dateCell = document.createElement('td');
+    dateCell.classList.add('date-logged');
+    const date = new Date();
+    dateCell.textContent = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    newRow.appendChild(dateCell);
 
+    entriesTbody.appendChild(newRow);
 
+    const entriesTable = document.getElementById('entries-table');
+    entriesTable.style.removeProperty('display');
+
+    // Displays success message after an entry is saved
     const successMessage = document.getElementById('success-message');
     successMessage.style.display = 'block';
 
-    // Hides the success message after a few seconds
     setTimeout(() => {
         successMessage.style.display = 'none';
     }, 2000);

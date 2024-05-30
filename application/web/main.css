@@ -403,7 +403,7 @@ button.add-note:hover {
 }
 
 .discard-cance-container {
-    display:flex;
+    display: flex;
     flex-direction: row;
     padding-top: 60px;
     padding-left: 118px;
@@ -429,4 +429,35 @@ button.add-note:hover {
     left: 50%;
     width: 200px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+table#entries-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table#entries-table th, table#entries-table td {
+    font-family: var(--font-family-journals);
+    padding-top: 8px;
+    padding-left: 5%;
+    text-align: left;
+}
+
+table#entries-table th.date-logged, 
+table#entries-table td.date-logged {
+    text-align: right;
+    padding-right: 10%;
+}
+
+.entry-button {
+    font-family: var(--font-family-journals);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.entry-button:hover {
+    color: var(--dark-green);
 }
