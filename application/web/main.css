@@ -231,6 +231,7 @@ homepage {
     }
     &>.entry-textarea {
         display: none;
+        resize: none;
     }
     &>.save-note {
         display: none;
@@ -310,6 +311,44 @@ button.add-note:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.home-entry-descriptor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 60px; 
+    padding-bottom: 10px;
+}
+
+.home-single-entry{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px 2px; 
+    border-bottom: 2px solid var(--grey-text-color);
+}
+
+.home-single-entry-button {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--journal-entry);
+    border: none;
+    cursor: pointer;
+
+}
+
+.home-list img[src="../web/assets/vdots-entry-black.png"]{
+    background-color: var(--journal-entry);
+    border: none;
+    margin-left: 20px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
 }
                     
 .title-textarea {

@@ -37,16 +37,36 @@
             </header>
             <homepage role="main">
                 <!--Homepage Modules-->
+                <h2 id="journal-title"></h2>
                 <button class="add-note" type="button">
                     <div class="entry-container">
-                        <img src="assets/addEntry-icon.png" alt="Add Entry Icon" class="entry-icon" height="25px" width="25px">
+                        <img src="assets/addEntry-icon.png" alt="Add Entry Icon" class="entry-icon" height="25px"
+                            width="25px">
                         <label class="new_entry">Create New Entry</label>
                     </div>
                 </button>
+                <div class="home-list">
+                    <div class="home-entry-descriptor">
+                        <span style="font-family: 'Inter'">Entry Name</span>
+                        <span style="font-family: 'Inter'">Date Logged</span>
+                    </div>
+                    <div class="home-single-entry">
+                        <button class="home-single-entry-button">
+                            <span class="home-entry-name">My Journal</span>
+                            <span>Date Created</span>
+                            <!-- <img src="/application/web/assets/vdots-entry-black.png"> -->
+                            <!-- <img src="../web/assets/vdots-entry-black.png" width="20" height="20">                     -->
+                        </button>
+                        <button class="three-dots-entry">
+                            <img src="../web/assets/vdots-entry-black.png">
+                        </button>
+                    </div>
+
+                </div>
 
                 <!-- Entrypage Module -->
                 <div class="title-textarea">
-                    <div class="cancel-save-container">  
+                    <div class="cancel-save-container">
                         <input type="text" id="title-input" value="Untitled" class="placeholder">
                         <div class="buttons">
                             <button class="secondary" id="myButton">
