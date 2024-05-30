@@ -10,10 +10,10 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     
-    var textArea = document.getElementById("entry-textarea")
+    let textArea = document.getElementById("entry-textarea")
     
     // Create the CodeMirror Object
-    var editor = CodeMirror(textArea, {
+    let editor = CodeMirror(textArea, {
         mode: "gfm",
         lineNumbers: true,
         lineWrapping: true,
