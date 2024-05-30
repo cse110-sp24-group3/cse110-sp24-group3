@@ -414,3 +414,19 @@ button.add-note:hover {
     background-color: var(--journal-entry);
     border: none;
 }
+
+.success-message {
+    display: none;
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    text-align: center;
+    font-family: var(--font-family-journals);
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}

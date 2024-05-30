@@ -192,4 +192,13 @@ function saveCurrentEntry() {
 
     button_list.append(newEntry);
     button_list.append(article);
+
+
+    const successMessage = document.getElementById('success-message');
+    successMessage.style.display = 'block';
+
+    // Hides the success message after a few seconds
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 2000);
 }
