@@ -180,22 +180,6 @@ function saveCurrentEntry() {
     const entry = entryTextArea.value;
     entryTextArea.value = '';
 
-    // const button_list = document.querySelector('.past-entries');
-    // const newEntry = document.createElement('button');
-    // newEntry.innerText = title;
-    // const article = document.createElement('article');
-    // article.setAttribute('id', new Date());
-    // article.innerText = entry;
-    // article.style.display = 'none';
-    // newEntry.addEventListener('click', () => {
-    //     const article = document.querySelector(`#${new Date}`);
-    //     article.style.display = 'block';
-    // });
-
-    // button_list.append(newEntry);
-    // button_list.append(article);
-
-
     // Add the new entry to the entries table
     const entriesTbody = document.getElementById('entries-tbody');
     const newRow = document.createElement('tr');
