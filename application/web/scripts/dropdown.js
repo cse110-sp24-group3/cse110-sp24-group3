@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toggle the visibility of the dropdown menu when the button is clicked
         three_dots_button.addEventListener('click', () => {
-            console.log("this shit was clicked");
             // If the menu is currently displayed, hide it. Otherwise, show it.
             dropdownMenuEntry.style.display = dropdownMenuEntry.style.display === 'block' ? 'none' : 'block';
         });
