@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="main.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <script src="web.js" type="module"></script>
-    <script src="../web/scripts/entry-title-script.js"> </script>
+    <script src="scripts/entry-title-script.js"> </script>
     <script src="JournalAPI.js"></script>
     <script src="web.js"></script>
+    <script src="scripts/dropdown.js"></script>
 </head>
 
 <body>
@@ -67,9 +68,21 @@
                             <button id="save-entry" class="primary">
                                 <span>Save Entry</span>
                             </button>
-                            <button class="three-dots">
+                            <button id = "three-dots-entry" class="three-dots">
                                 <img src="./assets/vdots-grey.svg" alt="Three Dots" class="dots-icon">
                             </button>
+                            <div id="dropdown-menu-entry" class="dropdown-menu">
+                                <div class="dropdown-item" data-action="markdown">
+                                    <img src="./assets/markdown-icon.svg" alt="Markdown Icon" class="dropdown-icon"> Download as Markdown
+                                </div>
+                                <div class="dropdown-item" id="devModeToggle" data-action="devmode">
+                                    <img src="./assets/devmode-icon.svg" alt="Dev Icon" class="dropdown-icon"> Dev Mode
+                                    <img src="./assets/checkmark.svg" alt="Checkmark Icon" class="checkmark">
+                                </div>
+                                <div class="dropdown-item delete" data-action="delete">
+                                    <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

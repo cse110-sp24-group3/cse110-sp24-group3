@@ -467,22 +467,12 @@ button.add-note:hover {
     gap:10px;
 }
 
+/* Three dots */
 .three-dots-entry {
     background-color: var(--journal-entry);
     border: none;
 }
 
-.title-entry-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.title-entry {
-    flex-grow: 1;
-}
-
-/* Three dots */
 .three-dots {
     display: flex;
     align-items: center;
@@ -491,11 +481,6 @@ button.add-note:hover {
     border: none; /* Ensure it looks like an icon, not a standard button */
     background: none; /* Remove default button background */
     padding: 0; /* Remove default button padding */
-}
-
-.dots-icon {
-    width: 24px;
-    height: 24px;
 }
 
 /* Default icon */
@@ -514,7 +499,7 @@ button.add-note:hover {
 }
 
 .dropdown-menu {
-    display: none;
+    display: block;
     position: absolute;
     background-color: white;
     border: 1px solid #ccc;
@@ -551,45 +536,4 @@ button.add-note:hover {
 
 .dropdown-item.delete:hover {
     background-color: #f8d7da;
-}
-
-/* Three dots */
-.title-entry-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.title-entry {
-    flex-grow: 1;
-}
-
-.three-dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none; /* Ensure it looks like an icon, not a standard button */
-    background: none; /* Remove default button background */
-    padding: 0; /* Remove default button padding */
-}
-
-.dots-icon {
-    width: 24px;
-    height: 24px;
-}
-
-/* Default icon */
-.three-dots .dots-icon {
-    content: url('./assets/vdots-grey.svg');
-}
-
-/* Hover state */
-.three-dots:hover .dots-icon {
-    content: url('./assets/vdots-grey-active.svg');
-}
-
-/* Active state */
-.three-dots.active .dots-icon {
-    content: url('./assets/vdots-grey-active.svg');
 }
