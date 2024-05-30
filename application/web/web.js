@@ -165,6 +165,9 @@ function hideTextEditor() {
 /* Event listener to cancel entry. Identical to saveEntry for now, but more functionality can be added.
 */
 function cancelEntry() {
+
+    hideTextEditor();
+    
     const titleTextArea = document.querySelector('#title-input');
     const entryTextArea = document.querySelector('.entry-textarea');
 
