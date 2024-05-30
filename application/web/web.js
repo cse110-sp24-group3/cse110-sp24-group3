@@ -21,25 +21,6 @@ window.onload = () => {
     };
 };
 
-function editData(e) {
-    const el = e.target;
-    const input = document.createElement("input");
-    input.setAttribute("value", el.textContent);
-    el.replaceWith(input);
-    
-    const save = function() {
-        const previous = document.createElement(el.tagName.toLowerCase());
-        previous.onclick = editData;
-        previous.textContent = input.value;
-        input.replaceWith(previous);
-    };
-
-    input.addEventListener('blur', save, {
-        once: true,
-    });
-    input.focus();
-}
-
 function createJournalEntries() {
     //new journal entries created after
     const journal = document.querySelector('.new-journal');
@@ -58,25 +39,6 @@ function createJournalEntries() {
             collapseButton.remove();
             journalEntries.insertBefore(entryElement, journalEntries.firstChild);
             journalEntries.insertBefore(collapseButton, journalEntries.firstChild);
-        /*
-
-        entryElement.classList.add('journal-entry');
-
-        // entryElement.innerHTML = `
-        //     <span>My Journal</span>
-        //     <button class="edit-journal">
-        //         <i class='fa fa-ellipsis-v'></i>
-        //     </button>`; 
-
-        //NOT USING fa fa-ellipsis in this iteration
-        //using vdots
-        entryElement.innerHTML = `
-            <span>My Journal</span>
-            <button class="edit-journal">
-                <img src="./assets/vdots.svg">
-            </button>`;
-
-        */
 
         // event handler to deal with selecting a given journal
         // updates page title and sidebar visuals
