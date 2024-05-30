@@ -241,24 +241,12 @@ function saveCurrentEntry() {
     newEntry.innerText = title;
     const article = document.createElement('article');
 
-    const date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth() + 1;
-    let year = date.getFullYear();
-
-    newEntry.setAttribute('id', `${year}-${month}-${day}-title`);
-    article.setAttribute('id', `${year}-${month}-${day}`);
     article.innerText = entry;
     article.style.display = 'none';
 
     // TODO: Replace with function to load from storage
     newEntry.addEventListener('click', () => {
-        const date = new Date();
-        let day = date.getDate();
-        let month = date.getMonth() + 1;
-        let year = date.getFullYear();
 
-        const article = document.querySelector(`[id='${year}-${month}-${day}']`);
         article.style.display = 'block';
     });
 
