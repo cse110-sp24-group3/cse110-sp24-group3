@@ -16,7 +16,13 @@
     "fs": "^0.0.1-security",
     "jest": "^29.7.0",
     "jsdoc": "^4.0.3",
-    "codemirror": "^6.65.7"
+    "@codemirror/autocomplete": "^6.0.0",
+    "@codemirror/commands": "^6.0.0",
+    "@codemirror/language": "^6.0.0",
+    "@codemirror/lint": "^6.0.0",
+    "@codemirror/search": "^6.0.0",
+    "@codemirror/state": "^6.0.0",
+    "@codemirror/view": "^6.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
