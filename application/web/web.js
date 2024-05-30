@@ -148,7 +148,7 @@ function hideTextEditor() {
     const addEntryList = document.querySelector('.home-list');
     addEntryList.style.display = '';
 
-    
+
     const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.style.display = '';
 
@@ -165,13 +165,26 @@ function hideTextEditor() {
 /* Event listener to cancel entry. Identical to saveEntry for now, but more functionality can be added.
 */
 function cancelEntry() {
-    hideTextEditor();
-
-    const titleTextArea = document.querySelector('.title-textarea');
-    titleTextArea.style.display = '';
+    const titleTextArea = document.querySelector('#title-input');
     const entryTextArea = document.querySelector('.entry-textarea');
-    entryTextArea.value = '';
 
+    const date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    const article = document.querySelector(`[id='${year}-${month}-${day}']`);
+
+    if (article) {
+        const oldEntryValue = article.innerText;
+        const oldEntryTitle = document.querySelector(`[id='${year}-${month}-${day}-title']`);
+
+        entryTextArea.value = oldEntryValue;
+        titleTextArea.value = oldEntryTitle.innerText;
+    } else {
+        titleTextArea.value = '';
+        entryTextArea.value = '';
+    }
     const myPopup = document.getElementById("myPopup");
     myPopup.classList.remove("show");
 }
@@ -196,8 +209,9 @@ function openEntryforEdit() {
 function saveCurrentEntry() {
     hideTextEditor();
 
-    const titleTextArea = document.querySelector('.title-textarea');
+    const titleTextArea = document.querySelector('#title-input');
     const title = titleTextArea.value;
+    titleTextArea.value = '';
     titleTextArea.style.display = '';
     const entryTextArea = document.querySelector('.entry-textarea');
     const entry = entryTextArea.value;
@@ -207,11 +221,25 @@ function saveCurrentEntry() {
     const newEntry = document.createElement('button');
     newEntry.innerText = title;
     const article = document.createElement('article');
-    article.setAttribute('id', new Date());
+
+    const date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    newEntry.setAttribute('id', `${year}-${month}-${day}-title`);
+    article.setAttribute('id', `${year}-${month}-${day}`);
     article.innerText = entry;
     article.style.display = 'none';
+
+    // TODO: Replace with function to load from storage
     newEntry.addEventListener('click', () => {
-        const article = document.querySelector(`#${new Date}`);
+        const date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        const article = document.querySelector(`[id='${year}-${month}-${day}']`);
         article.style.display = 'block';
     });
 
