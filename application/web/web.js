@@ -230,7 +230,6 @@ function saveCurrentEntry() {
     const titleTextArea = document.querySelector('#title-input');
   
     const title = titleTextArea.value;
-    titleTextArea.value = '';
     titleTextArea.style.display = '';
     const entryTextArea = document.querySelector('.entry-textarea');
     const entry = entryTextArea.value;
