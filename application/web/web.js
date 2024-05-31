@@ -68,6 +68,8 @@ function createJournalEntries() {
         });
 
         journalEntries.appendChild(entryElement);
+        // Once a journal is created, the "No Journals" text will disappear
+        document.getElementById("no-entry-text").style.display = "none";
     });
 };
 
@@ -162,15 +164,13 @@ function hideTextEditor() {
     entryTextArea.style.display = '';
 
     const noEntryText = document.querySelector('.no-entry-text');
-    noEntryText.style.display = 'block';
+    noEntryText.style.display = '';
 
     const prevEntries = document.querySelector('.past-entries');
     const prevCount = prevEntries.querySelectorAll('article').length;
     if(prevCount > 0){
         noEntryText.style.display = 'none';
     }
-
-    
 }
 
 /* Event listener to cancel entry. Identical to saveEntry for now, but more functionality can be added.

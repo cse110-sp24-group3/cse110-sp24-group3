@@ -307,6 +307,12 @@ button.add-note:hover {
     justify-content: space-between;
 }
 
+#no-entry-text {
+    display: block;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
 .home-entry-descriptor {
     display: flex;
     flex-direction: row;
@@ -347,6 +353,7 @@ button.add-note:hover {
 
 .no-entry-text{
     font-family: var(--font-family);
+    margin-top: 10px;
     font-size: 24px;
 }
 
