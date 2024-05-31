@@ -1,5 +1,6 @@
 /// <reference path="./JournalAPI.js" />
 window.onload = () => {
+    initializeHomepage();
     createHomepage();
     createSidebar();
     createJournalEntries();
@@ -21,6 +22,17 @@ window.onload = () => {
         });
     };
 };
+
+function initializeHomepage() {
+    // Hide the "Create New Entry" button until a journal is created
+    const entryButton = document.querySelector('.add-note');
+    entryButton.setAttribute("hidden", "hidden");
+
+    // Hide the "Entry Name" and "Date Logged" headers until a journal is created
+    const homeList = document.querySelector('.home-list');
+    console.log(homeList.textContent);
+    homeList.style.display = "none";
+}
 
 function createJournalEntries() {
     //new journal entries created after
@@ -71,6 +83,9 @@ function createJournalEntries() {
         journalEntries.appendChild(entryElement);
         // Once a journal is created, the "No Journals" text will disappear
         document.getElementById("no-entry-text").style.display = "none";
+
+        const entryButton = document.querySelector('.add-note');
+        entryButton.removeAttribute("hidden"); 
     });
 };
 
