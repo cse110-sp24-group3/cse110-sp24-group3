@@ -196,7 +196,8 @@ function cancelEntry() {
         entryTextArea.value = oldEntryValue;
         titleTextArea.value = oldEntryTitle.innerText;
     } else {
-        titleTextArea.value = '';
+        titleTextArea.value = 'Untitled';
+        titleTextArea.className = 'placeholder';
         entryTextArea.value = '';
     }
     const myPopup = document.getElementById("myPopup");
