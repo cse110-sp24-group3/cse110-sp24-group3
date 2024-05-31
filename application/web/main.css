@@ -214,6 +214,8 @@ header {
 .rock-icon{
     padding-right: 10px;
 }
+
+
 /*                                                    
   /\  /\___  _ __ ___   ___ _ __   __ _  __ _  ___ 
  / /_/ / _ \| '_ ` _ \ / _ \ '_ \ / _` |/ _` |/ _ \
@@ -305,6 +307,12 @@ button.add-note:hover {
     justify-content: space-between;
 }
 
+#no-entry-text {
+    display: block;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
 .home-entry-descriptor {
     display: flex;
     flex-direction: row;
@@ -341,6 +349,12 @@ button.add-note:hover {
     width: 22px;
     height: 22px;
     cursor: pointer;
+}
+
+.no-entry-text{
+    font-family: var(--font-family);
+    margin-top: 10px;
+    font-size: 24px;
 }
 
    /* __      _              
