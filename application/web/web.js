@@ -252,5 +252,7 @@ function saveCurrentEntry() {
 
     button_list.append(newEntry);
     button_list.append(article);
+    titleTextArea.value = 'Untitled';
+    titleTextArea.className = 'placeholder';
     hideTextEditor();
 }
