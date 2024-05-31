@@ -1,3 +1,4 @@
+/// <reference path="./JournalAPI.js" />
 window.onload = () => {
     createHomepage();
     createSidebar();
