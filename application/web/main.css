@@ -4,7 +4,7 @@
 / /_\\| | (_) | |_) | (_| | |  \ V / (_| | |  | | (_| | |_) | |  __/\__ \
 \____/|_|\___/|_.__/ \__,_|_|   \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
                                                                           */
-        :root {
+:root {
     --journal-entry: #F3F3F3;
     --sliding-shelf: #EBEBEB;
     --main-stroke-color: #A1A1A1;
@@ -522,7 +522,6 @@ button.add-note:hover {
     font-size: 15px;
     min-height: 40px;
     font-family: var(--font-family-journals);
-
 }
 
 .title-entry {
@@ -546,7 +545,6 @@ button.add-note:hover {
     width: 200px;
     outline: none;
     transition: border-color 0.3s;
-
 }
 
 #title-input.placeholder {
@@ -597,7 +595,6 @@ button.add-note:hover {
 .three-dots:hover .dots-icon {
     content: url('./assets/vdots-grey-active.svg');
 }
-
 
 .dropdown-menu {
     display: block;
