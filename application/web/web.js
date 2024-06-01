@@ -29,6 +29,31 @@ function initializeHomepage() {
     entryButton.setAttribute("hidden", "hidden");
 }
 
+function showNoEntriesText() {
+    const noJournalText = document.querySelector('.no-entry-text');
+    noJournalText.insertAdjacentHTML("beforeend",`
+        <b>You have no Journal Entries</b>
+        <p>Click "Create New Entry" on top to start your first entry.</p>`
+    );
+}
+
+function showHomepageHeaderInfo() {
+    // Show the "Create New Entry" button when a journal is selected
+    const entryButton = document.querySelector('.add-note');
+    entryButton.removeAttribute("hidden"); 
+
+    // Adds the "Entry Name" and "Date Logged" header when a journal is populated
+    const test = document.querySelector('.home-entry-descriptor');
+    test.insertAdjacentHTML("afterbegin", `
+        <span id="entry-name" style="font-family: 'Inter'">Entry Name</span>
+        <span id="date-logged"style="font-family: 'Inter'">Date Logged</span>`
+    );
+
+    // Adds the black line after the "Entry Name" and "Date Logged" header
+    test.insertAdjacentHTML("afterend", `
+        <div class="home-single-entry"></div>`
+    );
+}
 function createJournalEntries() {
     //new journal entries created after
     const journal = document.querySelector('.new-journal');
@@ -79,27 +104,8 @@ function createJournalEntries() {
         // Once a journal is created, the "No Journals" text will disappear
         document.getElementById("no-entry-text").style.display = "none";
 
-        // Show the "Create New Entry" button when a journal is selected
-        const entryButton = document.querySelector('.add-note');
-        entryButton.removeAttribute("hidden"); 
-
-        // Adds the "Entry Name" and "Date Logged" header when a journal is populated
-        const test = document.querySelector('.home-entry-descriptor');
-        test.insertAdjacentHTML("afterbegin", `
-            <span id="entry-name" style="font-family: 'Inter'">Entry Name</span>
-            <span id="date-logged"style="font-family: 'Inter'">Date Logged</span>`
-        );
-
-        // Adds the black line after the "Entry Name" and "Date Logged" header
-        test.insertAdjacentHTML("afterend", `
-            <div class="home-single-entry"></div>`
-        );
-
-        const noJournalText = document.querySelector('.no-entry-text');
-        noJournalText.insertAdjacentHTML("beforeend",`
-            <b>You have no Journal Entries</b>
-            <p>Click "Create New Entry" on top to start your first entry.</p>`
-        );
+        showHomepageHeaderInfo() 
+        showNoEntriesText();
     });
 };
 
