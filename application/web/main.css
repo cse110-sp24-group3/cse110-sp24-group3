@@ -598,20 +598,15 @@ button.add-note:hover {
     content: url('./assets/vdots-grey-active.svg');
 }
 
-/* Active state */
-.three-dots.active .dots-icon {
-    content: url('./assets/vdots-grey-active.svg');
-}
 
 .dropdown-menu {
     display: block;
     position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: var(--journal-entry);
+    border: 1px solid var(--icon-color);
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     margin-top: 10px;
-    width: 200px;
     z-index: 1000;
 }
 
@@ -623,7 +618,8 @@ button.add-note:hover {
 }
 
 .dropdown-item:hover {
-    background-color: #f0f0f0;
+    background-color: var(--icon-color);
+    border-radius: 5px;
 }
 
 .dropdown-icon {
