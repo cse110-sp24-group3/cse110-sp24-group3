@@ -317,7 +317,6 @@ button.add-note:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 60px; 
     padding-bottom: 10px;
 }
 
