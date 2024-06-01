@@ -261,6 +261,14 @@ button.add-note:hover {
     background-color: #A1A1A1;
 }
 
+   /* __      _              
+  /__\ __ | |_ _ __ _   _ 
+ /_\| '_ \| __| '__| | | |
+//__| | | | |_| |  | |_| |
+\__/|_| |_|\__|_|   \__, |
+                    |___/  */
+
+
 .title-textarea {
     /* background-color: #F3F3F3;
     width: 20%;
@@ -349,6 +357,52 @@ button.add-note:hover {
     height: 22px;
     cursor: pointer;
 }
+                    
+.title-textarea {
+    /* background-color: #F3F3F3;
+    width: 20%;
+    min-height: 10px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 3px solid #e2dede;
+    border-radius: 10px; */
+    background-color: var(--journal-entry);
+    padding: 10px;
+}
+
+.entry-textarea {
+    background-color: #e2dede;
+    width: 100%;
+    min-height: 400px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+}
+
+.new_entry {
+    color: #FFFFFF;
+    align-content: center;
+    font-family: var(--font-family-journals);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.entry-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cancel-save-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .no-entry-text{
     font-family: var(--font-family);
@@ -356,16 +410,62 @@ button.add-note:hover {
     font-size: 24px;
 }
 
+.no-entry-text{
+    font-family: var(--font-family);
+    margin-top: 10px;
+    font-size: 24px;
+}
+                    
 .no-display {
     display: none;
 }
 
-   /* __      _              
-  /__\ __ | |_ _ __ _   _ 
- /_\| '_ \| __| '__| | | |
-//__| | | | |_| |  | |_| |
-\__/|_| |_|\__|_|   \__, |
-                    |___/  */
+.title-textarea {
+    /* background-color: #F3F3F3;
+    width: 20%;
+    min-height: 10px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 3px solid #e2dede;
+    border-radius: 10px; */
+    background-color: var(--journal-entry);
+    padding: 10px;
+}
+
+.entry-textarea {
+    background-color: #e2dede;
+    width: 100%;
+    min-height: 400px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+}
+
+.new_entry {
+    color: #FFFFFF;
+    align-content: center;
+    font-family: var(--font-family-journals);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.entry-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cancel-save-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 /* The actual popup */
 .popup {
@@ -427,7 +527,12 @@ button.add-note:hover {
     font-family: var(--font-family-journals);
 }
 
-/* The div holding the buttons*/
+.title-entry {
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* The div holding the buttons */
 .buttons {
     display: flex;
     gap: 10px;
@@ -442,6 +547,7 @@ button.add-note:hover {
     padding-left: 10px;
     width: 200px;
     outline: none;
+    transition: border-color 0.3s;
 }
 
 #title-input.placeholder {
@@ -458,15 +564,77 @@ button.add-note:hover {
     border-bottom-color: var(--dark-blue);
 }
 
-.discard-cance-container {
-    display:flex;
+
+.discard-cancel-container {
+    display: flex;
     flex-direction: row;
     padding-top: 60px;
     padding-left: 118px;
     gap:10px;
 }
 
+/* Three dots */
 .three-dots-entry {
     background-color: var(--journal-entry);
     border: none;
+}
+
+.three-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none; /* Ensure it looks like an icon, not a standard button */
+    background: none; /* Remove default button background */
+    padding: 0; /* Remove default button padding */
+}
+
+/* Default icon */
+.three-dots .dots-icon {
+    content: url('./assets/vdots-grey.svg');
+}
+
+/* Hover state */
+.three-dots:hover .dots-icon {
+    content: url('./assets/vdots-grey-active.svg');
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    background-color: var(--journal-entry);
+    border: 1px solid var(--icon-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: var(--icon-color);
+    border-radius: 5px;
+}
+
+.dropdown-icon {
+    margin-right: 10px;
+}
+
+.checkmark {
+    margin-left: auto;
+    visibility: hidden;
+}
+
+.dropdown-item.delete {
+    color: red;
+}
+
+.dropdown-item.delete:hover {
+    background-color: #f8d7da;
 }
