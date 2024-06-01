@@ -325,7 +325,6 @@ button.add-note:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 60px; 
     padding-bottom: 10px;
 }
 
@@ -417,6 +416,10 @@ button.add-note:hover {
     font-size: 24px;
 }
                     
+.no-display {
+    display: none;
+}
+
 .title-textarea {
     /* background-color: #F3F3F3;
     width: 20%;
