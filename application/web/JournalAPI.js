@@ -139,5 +139,6 @@ class JournalAPI {
 var api = new JournalAPI(); // eslint-disable-line
 /**
  * Represents a global variable for the selected journal API.
+ * @type Journal
  */
 var selectedJournal = undefined; // eslint-disable-line

@@ -1,0 +1,46 @@
+/*                                                    
+  /\  /\___  _ __ ___   ___ _ __   __ _  __ _  ___ 
+ / /_/ / _ \| '_ ` _ \ / _ \ '_ \ / _` |/ _` |/ _ \
+/ __  / (_) | | | | | |  __/ |_) | (_| | (_| |  __/
+\/ /_/ \___/|_| |_| |_|\___| .__/ \__,_|\__, |\___|
+                           |_|          |___/       */
+homepage {
+    flex: 1;
+    background-color: var(--journal-entry);
+    padding: 10px;
+    box-sizing: border-box;
+
+    &>.title-textarea {
+        display: none;
+    }
+    &>.entry-textarea {
+        display: none;
+        resize: none;
+    }
+    &>.save-note {
+        display: none;
+    }
+    &>.cancel-note {
+        display: none;
+    }
+}
+
+button.add-note {
+    background-color: var(--dark-green);
+    width: 100%;
+    border-radius: 8px;
+    min-width: 200px;
+    min-height: 60px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    font-family: var(--font-family);
+}
+
+button.add-note:hover {
+    background-color: #A1A1A1;
+}
+
+
