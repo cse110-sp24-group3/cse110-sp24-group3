@@ -94,9 +94,16 @@ sidebar {
     transition: width 0.3s ease;
 } */
 /* To counteract the swap from .fa to vdots, both will be here */
-.sidebar-module img[src="./assets/vdots.svg"]{
+.sidebar-module #sidebar-dots{
     display:none;
     transition: width 0.3s ease;
+    height: 20px;
+    width: 20px;
+}
+
+.sidebar-module .journal-entry #sidebar-dots:hover {
+    display: block;
+    content: url('./assets/vdots-journal-white-active.svg'); /* New image for hover */
 }
 
 button.new-journal {

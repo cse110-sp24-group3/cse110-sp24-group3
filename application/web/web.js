@@ -63,18 +63,11 @@ function createJournalEntries() {
         const entryElement = document.createElement('div');
         entryElement.classList.add('journal-entry');
 
-        // entryElement.innerHTML = `
-        //     <span>My Journal</span>
-        //     <button class="edit-journal">
-        //         <i class='fa fa-ellipsis-v'></i>
-        //     </button>`; 
-
-        //NOT USING fa fa-ellipsis in this iteration
         //using vdots
         entryElement.innerHTML = `
             <span>My Journal</span>
             <button class="edit-journal">
-                <img src="./assets/vdots.svg">
+                <img id = "sidebar-dots" class = "dots" src="./assets/vdots-journal-white.svg">
             </button>`;
 
         // event handler to deal with selecting a given journal
@@ -86,14 +79,15 @@ function createJournalEntries() {
 
             // clear selection visuals on all elements
             journalEntries.forEach((entry) => {
-                let faIcon = entry.querySelector('img[src="./assets/vdots.svg"]')
+                let faIcon = entry.querySelector('#sidebar-dots')
                 faIcon.style.display = 'none';
                 entry.style.background = 'none';
                 entry.setAttribute('isSelected', '');
+                faIcon.srchow 
             });
 
             // add styling for selected elements
-            let faIcon = this.querySelector('img[src="./assets/vdots.svg"]')
+            let faIcon = this.querySelector('#sidebar-dots')
             faIcon.style.display = 'block';
             this.style.backgroundColor = '#cbcfce';
 
@@ -118,7 +112,7 @@ function createSidebar() {
         //filter to just the new journals
         if (targetEntry) {
             // let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
-            let faIcon = targetEntry.querySelector('img[src="./assets/vdots.svg"]')
+            let faIcon = targetEntry.querySelector('#sidebar-dots')
             faIcon.style.display = 'block';
             targetEntry.style.backgroundColor = '#cbcfce';
         }
@@ -129,7 +123,7 @@ function createSidebar() {
         // check to make sure that hovered entry was not also selected
         if (targetEntry && targetEntry.getAttribute('isSelected') != 'true') {
             // let faIcon = targetEntry.querySelector('.fa.fa-ellipsis-v');
-            let faIcon = targetEntry.querySelector('img[src="./assets/vdots.svg"]')
+            let faIcon = targetEntry.querySelector('#sidebar-dots')
             faIcon.style.display = 'none';
             // targetEntry.style.backgroundColor = '#ffffff00'; //can use color or background
             targetEntry.style.background = 'none';
