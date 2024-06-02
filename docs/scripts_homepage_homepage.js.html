@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: scripts/homepage/homepage.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: scripts/homepage/homepage.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/// &lt;reference path="../../JournalAPI.js" />
+
+/**
+ * Initializes the homepage by hiding the "Create New Entry" button until a journal is created.
+ */
+export function initializeHomepage() {
+    // Select the "Create New Entry" button element
+    const entryButton = document.querySelector('.add-note');
+    // Hide the button by setting the 'hidden' attribute
+    entryButton.setAttribute("hidden", "hidden");
+}
+
+/**
+ * Creates the homepage functionality by attaching event listeners to buttons and text areas.
+ * Initializes the entry and title text areas by clearing their contents on page load.
+ */
+export function createHomepage() {
+    // Attach event listener to the "Add Note" button
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.addEventListener('click', () => openEntryforEdit());
+
+    // Attach event listener to the "Cancel" button
+    const cancelNoteButton = document.getElementById('cancel-note');
+    cancelNoteButton.addEventListener('click', () => cancelEntry());
+
+    // Attach event listener to the "Save" button
+    const saveNoteButton = document.getElementById('save-entry');
+    saveNoteButton.addEventListener('click', () => saveCurrentEntry());
+
+    // Clear entry text on page load
+    const entryTextArea = document.querySelector('.entry-textarea');
+    entryTextArea.value = '';
+
+    // Clear title text on page load
+    const titleTextArea = document.querySelector('.title-textarea');
+    titleTextArea.value = '';
+
+    // Uncomment the line below if there is a function to read entries from storage
+    // readEntriesFromStorage();
+}
+
+
+/* Event listener to cancel entry. Identical to saveEntry for now, but more functionality can be added.
+*/
+/**
+ * Event listener function to cancel entry editing.
+ * Hides the text editor and restores previous entry content if available,
+ * otherwise sets default values.
+ */
+function cancelEntry() {
+    // Hide the text editor
+    hideTextEditor();
+
+    // Get references to the title and entry text areas
+    const titleTextArea = document.querySelector('#title-input');
+    const entryTextArea = document.querySelector('.entry-textarea');
+
+    // Get the current date
+    const date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    // Find the article element for the current date
+    const article = document.querySelector(`[id='${year}-${month}-${day}']`);
+
+    // Restore previous entry content if available
+    if (article) {
+        const oldEntryValue = article.innerText;
+        const oldEntryTitle = document.querySelector(`[id='${year}-${month}-${day}-title']`);
+
+        entryTextArea.value = oldEntryValue;
+        titleTextArea.value = oldEntryTitle.innerText;
+    } else {
+        // Set default values if no previous entry exists
+        titleTextArea.value = 'Untitled';
+        titleTextArea.className = 'placeholder';
+        entryTextArea.value = '';
+    }
+
+    // Close the popup if open
+    const myPopup = document.getElementById("myPopup");
+    myPopup.classList.remove("show");
+}
+/**
+ * Opens the text editor for editing an entry.
+ * Uses the CSS 'display' property to hide other elements.
+ * This function is the inverse of the hideEntries() method.
+ */
+function openEntryforEdit() {
+    // Hide the "Add Note" button and entry listing
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.style.display = 'none';
+    const entryListing = document.querySelector('.home-list');
+    entryListing.style.display = 'none';
+
+    // Display the "Cancel" button, title textarea, and entry textarea
+    const cancelNoteButton = document.getElementById('cancel-note');
+    cancelNoteButton.style.display = 'inline';
+    const titleTextArea = document.querySelector('.title-textarea');
+    titleTextArea.style.display = 'inline';
+    const entryTextArea = document.querySelector('.entry-textarea');
+    entryTextArea.style.display = 'inline';
+
+    // Hide the "No entries" text
+    const noEntryText = document.querySelector('.no-entry-text');
+    noEntryText.style.display = 'none';
+}
+
+/**
+ * Saves the current entry.
+ * Hides the text editor and prepares the entry to be displayed.
+ * This function is currently identical to cancelEntry() but will have more functionality added in the future.
+ */
+function saveCurrentEntry() {
+    // Hide the text editor
+    hideTextEditor();
+
+    // Get the title text area and extract the title
+    const titleTextArea = document.querySelector('#title-input');
+    const title = titleTextArea.value;
+    titleTextArea.style.display = '';
+
+    // Get the entry text area and extract the entry content
+    const entryTextArea = document.querySelector('.entry-textarea');
+    const entry = entryTextArea.value;
+    entryTextArea.value = '';
+
+    // Get the list of past entries and create a new button for the current entry
+    const buttonList = document.querySelector('.past-entries');
+    const newEntryButton = document.createElement('button');
+    newEntryButton.innerText = title;
+
+    // Create an article element to display the entry content
+    const article = document.createElement('article');
+    article.innerText = entry;
+    article.style.display = 'none';
+
+    // TODO: Replace with function to load entry from storage
+    newEntryButton.addEventListener('click', () => {
+        article.style.display = 'block';
+    });
+
+    // Append the new entry button and article to the list of past entries
+    buttonList.append(newEntryButton);
+    buttonList.append(article);
+
+    // Reset the title text area to default values and hide the text editor
+    titleTextArea.value = 'Untitled';
+    titleTextArea.className = 'placeholder';
+    hideTextEditor();
+}
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Entry.html">Entry</a></li><li><a href="Journal.html">Journal</a></li><li><a href="JournalAPI.html">JournalAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#api">api</a></li><li><a href="global.html#cancelEntry">cancelEntry</a></li><li><a href="global.html#createHomepage">createHomepage</a></li><li><a href="global.html#createSidebar">createSidebar</a></li><li><a href="global.html#initializeHomepage">initializeHomepage</a></li><li><a href="global.html#openEntryforEdit">openEntryforEdit</a></li><li><a href="global.html#saveCurrentEntry">saveCurrentEntry</a></li><li><a href="global.html#selectedJournal">selectedJournal</a></li><li><a href="global.html#toggleSidebar">toggleSidebar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Sat Jun 01 2024 20:01:29 GMT-0700 (Pacific Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
