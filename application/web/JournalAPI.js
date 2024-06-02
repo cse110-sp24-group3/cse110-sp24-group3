@@ -132,5 +132,12 @@ class JournalAPI {
     async deleteJournal(journalName) {
         await window.fileAPI.deleteJournal(journalName);
     }
-} 
+}
+/**
+ * Main api definition. Use this when accessing the API as we should only have one instance of JournalAPI in the project.
+ */ 
 var api = new JournalAPI(); // eslint-disable-line
+/**
+ * Represents a global variable for the selected journal API.
+ */
+var selectedJournal = undefined; // eslint-disable-line
