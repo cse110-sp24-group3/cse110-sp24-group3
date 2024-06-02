@@ -1,0 +1,23 @@
+                      /* _           
+  /\  /\___  __ _  __| | ___ _ __ 
+ / /_/ / _ \/ _` |/ _` |/ _ \ '__|
+/ __  /  __/ (_| | (_| |  __/ |   
+\/ /_/ \___|\__,_|\__,_|\___|_|   
+                                   */
+header {
+    background-color: var(--sliding-shelf);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--main-stroke-color);
+    height: 62px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: large;
+}
+/* Rock Icon for Header*/
+.rock-icon{
+    padding-right: 10px;
+}

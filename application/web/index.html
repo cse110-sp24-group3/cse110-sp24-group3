@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Instone; an effective markdown editor.">
     <title>Instone</title>
-    <link rel="stylesheet" href="main.css">
+    
+    <!-- Styles -->
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="style/global-variables.css">
+    <link rel="stylesheet" href="style/top-level.css">
+    <link rel="stylesheet" href="style/sidebar.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/homepage.css">
+    <link rel="stylesheet" href="style/entry.css">    
+
+    <!-- Script -->
     <script src="web.js" type="module"></script>
     <script src="scripts/entry-title-script.js"> </script>
     <script src="JournalAPI.js"></script>
-    <script src="web.js"></script>
     <script src="scripts/dropdown.js"></script>
 </head>
 
@@ -23,7 +31,7 @@
                 <button class="collapse-button" id="collapse-button">
                     <img src="./assets/drawer.svg"></img>
                 </button>
-                <button class="new-journal">
+                <button id="new-journal-button" class="new-journal">
                     <span>New Journal</span>
                     <img src="assets/journal-icon.svg" alt="Journal Icon" class="journal-icon">
                 </button>
