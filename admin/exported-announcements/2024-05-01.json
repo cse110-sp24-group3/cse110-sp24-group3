@@ -1,0 +1,147 @@
+[
+    {
+        "user": "U06TWN379CH",
+        "type": "message",
+        "ts": "1714601544.267049",
+        "client_msg_id": "0290075a-1b1e-46a3-95a8-b734661b8a4e",
+        "text": "I will unfortunately be in a meeting so I can't make this one.",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "ga03ec743431",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a03ec7434312c926f5bfd0b70aa24c41.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "Sean",
+            "real_name": "Sean Ting",
+            "display_name": "Sean Ting",
+            "team": "T06U6RD9T08",
+            "name": "sjting",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1714540581.917639",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1YrXd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I will unfortunately be in a meeting so I can't make this one."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06THU1RXRR"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714617771.907439",
+        "client_msg_id": "bd01bfe9-c299-421d-b2ec-a178f4b428c2",
+        "text": "<!channel> Here is the link for tonight's meeting: Reisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Brainstorm Part 2\nTime: May 1, 2024 08:00 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n<https:\/\/us05web.zoom.us\/j\/82928593706?pwd=CvuSAPCYLSjSxa9zn7LKg758bI7aLB.1>\n\nMeeting ID: 829 2859 3706\nPasscode: 9V0FZX",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2HHcY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Here is the link for tonight's meeting: Reisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Brainstorm Part 2\nTime: May 1, 2024 08:00 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/82928593706?pwd=CvuSAPCYLSjSxa9zn7LKg758bI7aLB.1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMeeting ID: 829 2859 3706\nPasscode: 9V0FZX"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714618260.812799",
+        "edited": {
+            "user": "U06THU1RXRR",
+            "ts": "1714618278.000000"
+        },
+        "client_msg_id": "20458610-f3a0-4892-884c-a3940d2d0b87",
+        "text": "<!channel> Meeting is canceled and will be postponed to tomorrow at 3:45 PM before lecture. Let's meet outside the lobby where the white tables are and good luck studying for the midterms!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q7X3U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Meeting is canceled and will be postponed to tomorrow at 3:45 PM before lecture. Let's meet outside the lobby where the white tables are and good luck studying for the midterms!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

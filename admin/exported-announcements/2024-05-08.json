@@ -1,0 +1,91 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1715197094.818129",
+        "client_msg_id": "81d40900-828d-4338-b2e3-25a9c053f917",
+        "text": "<!channel> Hi everyone! I wanted to say that our pitch was approved by Akshay! One thing he gave comment on was to make sure our website is responsive across all devices and dimension size.\n\nSome things that are due this Sunday\n1. Basic CI\/CD Pipeline\n2. Documentation - Internal Documentation: ADR (Architectural Decision Records)\nAlso, we are going to meet on Sunday, but the time is still TBD. We will discuss more in the Discussion channel",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OZf2F",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Hi everyone! I wanted to say that our pitch was approved by Akshay! One thing he gave comment on was to make sure our website is responsive across all devices and dimension size.\n\nSome things that are due this Sunday\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Basic CI\/CD Pipeline"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Documentation - Internal Documentation: ADR (Architectural Decision Records)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAlso, we are going to meet on Sunday, but the time is still TBD. We will discuss more in the Discussion channel"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06THUGKQPM",
+                    "U06TJ2NEP0S",
+                    "U06TWN379CH",
+                    "U06T3FJTE15"
+                ],
+                "count": 4
+            }
+        ]
+    }
+]

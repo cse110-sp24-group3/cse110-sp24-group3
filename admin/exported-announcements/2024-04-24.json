@@ -1,0 +1,153 @@
+[
+    {
+        "user": "U06U6RUESEL",
+        "type": "message",
+        "ts": "1713974813.099449",
+        "client_msg_id": "77fa6e21-ffbe-499e-a72a-c2c18ac2f1ff",
+        "text": "<https:\/\/forms.gle\/Po58btDYe6GLvsh5A>\n\nThis is the weekly feedback form, please fill this every week and these are due the Sunday of the week ie fill the form for week 4 by the Sunday of week 4.\n\nPlease verify all the names in the form are correct and let me know if there are any changes to be made ASAP!\n\n*Your responses will be confidential, so please be incredibly honest!*\n\n*<!channel>* ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "ga4db6fb03ec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a4db6fb03ec41038f7185328d59387c6.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Akshay",
+            "real_name": "Akshay Prabhu",
+            "display_name": "Akshay Prabhu",
+            "team": "T06U6RD9T08",
+            "name": "akprabhu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "image_url": "https:\/\/lh6.googleusercontent.com\/0jlySZk8M1EUGQ54Lf-DMlNuWWrdNvjCDOBhXf4teaoqYm_YhVvr2DMW35F_ZtoeOAxl71CpxuQ",
+                "image_width": 800,
+                "image_height": 600,
+                "image_bytes": 130047,
+                "from_url": "https:\/\/forms.gle\/Po58btDYe6GLvsh5A",
+                "service_icon": "http:\/\/ssl.gstatic.com\/docs\/forms\/device_home\/ios_120.png",
+                "id": 1,
+                "original_url": "https:\/\/forms.gle\/Po58btDYe6GLvsh5A",
+                "fallback": "Google Docs: Weekly Reflection Form - Team 3",
+                "title": "Weekly Reflection Form - Team 3",
+                "title_link": "https:\/\/forms.gle\/Po58btDYe6GLvsh5A",
+                "service_name": "Google Docs"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FxCiu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/forms.gle\/Po58btDYe6GLvsh5A"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThis is the weekly feedback form, please fill this every week and these are due the Sunday of the week ie fill the form for week 4 by the Sunday of week 4.\n\nPlease verify all the names in the form are correct and let me know if there are any changes to be made ASAP!\n\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Your responses will be confidential, so please be incredibly honest!",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "broadcast",
+                                "range": "channel",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ",
+                                "style": {
+                                    "bold": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713996172.765639",
+        "client_msg_id": "a75a0756-8de8-488c-b4db-9e9e887bca48",
+        "text": "<!channel>\n\nI have divided up the task such as Front End or Styling tasks to different User Stories for our Warm Up Activity. Please take a look at it, and assign yourself to one of them. Please do finish all of the styling by tonight or latest tomorrow night. If you have any questions or need any help, feel free to reach out to your team members.\n\n<https:\/\/github.com\/cse110-sp24-group3\/warmup-exercise\/issues>",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/github.com\/cse110-sp24-group3\/warmup-exercise\/issues",
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/github.png",
+                "id": 1,
+                "original_url": "https:\/\/github.com\/cse110-sp24-group3\/warmup-exercise\/issues",
+                "fallback": "GitHub: Issues · cse110-sp24-group3\/warmup-exercise",
+                "text": "Contribute to cse110-sp24-group3\/warmup-exercise development by creating an account on GitHub.",
+                "title": "Issues · cse110-sp24-group3\/warmup-exercise",
+                "title_link": "https:\/\/github.com\/cse110-sp24-group3\/warmup-exercise\/issues",
+                "service_name": "GitHub"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1bvqM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nI have divided up the task such as Front End or Styling tasks to different User Stories for our Warm Up Activity. Please take a look at it, and assign yourself to one of them. Please do finish all of the styling by tonight or latest tomorrow night. If you have any questions or need any help, feel free to reach out to your team members.\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/cse110-sp24-group3\/warmup-exercise\/issues"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06THUGKQPM"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

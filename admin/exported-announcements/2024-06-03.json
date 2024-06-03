@@ -1,0 +1,157 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1717435581.920589",
+        "edited": {
+            "user": "U06THU1RXRR",
+            "ts": "1717435606.000000"
+        },
+        "client_msg_id": "dcff3d00-4b94-474c-8c93-356a21ba1515",
+        "text": "<!channel> IMPORTANT ANNOUNCEMENT!! PLZZZ FILL OUT THE WHEN2MEET BELOW FOR THE FINALS INTERVIEW TIMING!!\n<https:\/\/www.when2meet.com\/?25218832-KUIIt>\n\nAkshay will dedicate a one hour window for our team and he will do the Finals Interview meeting then. He said that he wants at least 90% to attend. The sooner you guys will this out the sooner I can send to Akshay and let him know about our time",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1717435581.920589",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1717436942.779159",
+        "reply_users": [
+            "U06TLGA6XCL",
+            "U06THU1RXRR"
+        ],
+        "replies": [
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1717436532.832149"
+            },
+            {
+                "user": "U06THU1RXRR",
+                "ts": "1717436942.779159"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1717436942.779159",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ugVWd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " IMPORTANT ANNOUNCEMENT!! PLZZZ FILL OUT THE WHEN2MEET BELOW FOR THE FINALS INTERVIEW TIMING!!\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.when2meet.com\/?25218832-KUIIt"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAkshay will dedicate a one hour window for our team and he will do the Finals Interview meeting then. He said that he wants at least 90% to attend. The sooner you guys will this out the sooner I can send to Akshay and let him know about our time"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1717436532.832149",
+        "client_msg_id": "329D6737-5C1A-4B65-A22E-98258C4AB98E",
+        "text": "Is it like a virtual interview or in person? ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1717435581.920589",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2mOnv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is it like a virtual interview or in person? "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1717436942.779159",
+        "client_msg_id": "27AAE124-C352-479C-9E79-8A3AB0A92ADE",
+        "text": "Virtual",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1717435581.920589",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rqy8h",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Virtual"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

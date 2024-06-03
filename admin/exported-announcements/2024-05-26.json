@@ -1,0 +1,55 @@
+[
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1716788660.649799",
+        "client_msg_id": "e2d21002-20b4-48fa-861a-a49f811800cc",
+        "text": "*<!channel>* Don’t forget to submit your weekly check in form!\n<https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform>\n\nJust a gentle reminder that we are half way through the sprint! If you have not started yet I would recommend taking a peek at what you have to do!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WWcNP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " Don’t forget to submit your weekly check in form!\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nJust a gentle reminder that we are half way through the sprint! If you have not started yet I would recommend taking a peek at what you have to do!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
