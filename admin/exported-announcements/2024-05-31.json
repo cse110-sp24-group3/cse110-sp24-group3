@@ -1,0 +1,139 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1717213549.341559",
+        "client_msg_id": "8dd892b3-8610-4769-96a0-0a598885aa94",
+        "text": "<!channel> Zoom link for tonight's meeting\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Sprint 2 Review, Retrospective, and Sprint 3 Planning\nTime: May 31, 2024 09:30 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n<https:\/\/us05web.zoom.us\/j\/81270959193?pwd=m6Bgkgua1rqEW8Paihukhra5Y3IhKr.1>\n\nMeeting ID: 812 7095 9193\nPasscode: 1KM9E5",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "05Xan",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Zoom link for tonight's meeting\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Sprint 2 Review, Retrospective, and Sprint 3 Planning\nTime: May 31, 2024 09:30 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/81270959193?pwd=m6Bgkgua1rqEW8Paihukhra5Y3IhKr.1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMeeting ID: 812 7095 9193\nPasscode: 1KM9E5"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "flag-tt",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            },
+            {
+                "name": "no_bicycles",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            },
+            {
+                "name": "customs",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            },
+            {
+                "name": "ramen",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            },
+            {
+                "name": "level_slider",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1717221188.783439",
+        "client_msg_id": "1AF9EE67-E8A3-488B-AEB0-A996398550AA",
+        "text": "<!channel> Jesus has kindly created a <#C076GBQRQFK|useful-docs> channel for anything that we have discussed in terms of styling, merge main, comment style, etc ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/Y2vh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Jesus has kindly created a "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C076GBQRQFK"
+                            },
+                            {
+                                "type": "text",
+                                "text": " channel for anything that we have discussed in terms of styling, merge main, comment style, etc "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

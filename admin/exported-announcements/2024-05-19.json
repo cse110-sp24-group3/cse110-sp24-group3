@@ -1,0 +1,484 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1716170331.530769",
+        "client_msg_id": "26b1566f-d66b-4ba7-a7f1-0893261ea5a2",
+        "text": "<!channel> Don't forget to submit your weekly check in form!\n<https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform>\n\nAlso, please update the status of the issues you're working on to \"In Development\" so I know which issues you guys are working on",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rD7Vr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Don't forget to submit your weekly check in form!\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAlso, please update the status of the issues you're working on to \"In Development\" so I know which issues you guys are working on"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1716170938.331049",
+        "client_msg_id": "2b65911d-12b6-43ef-bba7-fee45e454de0",
+        "text": "Happy Sunday <!here>,\n\nJust a little primer on commit messages!\n\n\n\n\n\n\n\n\nThe commit message should be structured as follows:\n\n```&lt;type&gt;[optional scope]: &lt;description&gt;\n\n[optional body]\n\n[optional footer(s)]```\nExample: ‘git commit -m “feat: implemented JSDocs for backend”’\n\n\nThe commit contains the following structural elements, to communicate intent to the consumers of your library:\n\n\n1. fix: a commit of the _type_ `fix` patches a bug in your codebase (this correlates with *`PATCH`* in Semantic Versioning).\n2. feat: a commit of the _type_ `feat` introduces a new feature to the codebase (this correlates with *`MINOR`* in Semantic Versioning).\n3. BREAKING CHANGE: a commit that has a footer `BREAKING CHANGE:`, or appends a `!` after the type\/scope, introduces a breaking API change (correlating with *`MAJOR`* in Semantic Versioning). A BREAKING CHANGE can be part of commits of any _type_.\n4. _types_ other than `fix:` and `feat:` are allowed, for example *<https:\/\/github.com\/conventional-changelog\/commitlint\/tree\/master\/%40commitlint\/config-conventional|@commitlint\/config-conventional>* (based on the *<https:\/\/github.com\/angular\/angular\/blob\/22b96b9\/CONTRIBUTING.md#-commit-message-guidelines|Angular convention>*) recommends `build:`, `chore:`, `ci:`, `docs:`, `style:`, `refactor:`, `perf:`, `test:`, and others.\n5. _footers_ other than `BREAKING CHANGE: &lt;description&gt;` may be provided and follow a convention similar to *<https:\/\/git-scm.com\/docs\/git-interpret-trailers|git trailer format>*.\n",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GOOfO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Happy Sunday "
+                            },
+                            {
+                                "type": "broadcast",
+                                "range": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": ",\n\nJust a little primer on commit messages!\n\n\n\n\n\n\n\n\nThe commit message should be structured as follows:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "<type>[optional scope]: <description>\n\n[optional body]\n\n[optional footer(s)]"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Example: ‘git commit -m “feat: implemented JSDocs for backend”’\n\n\nThe commit contains the following structural elements, to communicate intent to the consumers of your library:\n\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "fix: a commit of the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "type",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "fix",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " patches a bug in your codebase (this correlates with "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "PATCH",
+                                        "style": {
+                                            "bold": true,
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " in Semantic Versioning)."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "feat: a commit of the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "type",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "feat",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " introduces a new feature to the codebase (this correlates with "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "MINOR",
+                                        "style": {
+                                            "bold": true,
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " in Semantic Versioning)."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "BREAKING CHANGE: a commit that has a footer "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "BREAKING CHANGE:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", or appends a "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "!",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " after the type\/scope, introduces a breaking API change (correlating with "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "MAJOR",
+                                        "style": {
+                                            "bold": true,
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " in Semantic Versioning). A BREAKING CHANGE can be part of commits of any "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "type",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "types",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " other than "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "fix:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " and "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "feat:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " are allowed, for example "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/github.com\/conventional-changelog\/commitlint\/tree\/master\/%40commitlint\/config-conventional",
+                                        "text": "@commitlint\/config-conventional",
+                                        "style": {
+                                            "bold": true
+                                        },
+                                        "unsafe": true
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " (based on the "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/github.com\/angular\/angular\/blob\/22b96b9\/CONTRIBUTING.md#-commit-message-guidelines",
+                                        "text": "Angular convention",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ") recommends "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "build:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "chore:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "ci:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "docs:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "style:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "refactor:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "perf:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "test:",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", and others."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "footers",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " other than "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "BREAKING CHANGE: <description>",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " may be provided and follow a convention similar to "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/git-scm.com\/docs\/git-interpret-trailers",
+                                        "text": "git trailer format",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06THU1RXRR"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

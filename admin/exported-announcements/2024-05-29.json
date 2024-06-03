@@ -1,0 +1,375 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1717017490.803309",
+        "edited": {
+            "user": "U06THU1RXRR",
+            "ts": "1717020198.000000"
+        },
+        "client_msg_id": "9cb05a48-9c77-4e88-a1c9-4c5f5a474d79",
+        "text": "<!channel> This is rather a long announcement but I will try to shorten it\n\n1. Meeting tomorrow, *May 30th* at *9 PM* on *Zoom*. We will have our second Retrospective, Sprint Review, and Sprint Planning for Sprint 3.\n2. After this message, I will send a message from Akshay regarding Final Interview and important deadline for the Final Project so please read it carefully.\n3. If you have not started your issues for this Sprint, please please start tonight, and commit something to our repo, or more importantly, please finish it by tonight.\n4. The commit style is different now for some reason, *DO NOT* add [], just do feat: or fix: or update:, etc or else your commit will result in an error in the commitlint check\n```Use one of these when committing: build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test\nexample  feat: added styling to header```\n5. You don't need to wait until you're done implementing your feature to create a PR. I recommend creating an PR once you create your branch so you can track your changes, and commits in the PR. All of your commits and changes will be visible on that PR.\n\nWith that, let me or your other team members know if you have any problems. I am currently reviewing any MR's and changes that you guys have implemented on your branches",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WHd3x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " This is rather a long announcement but I will try to shorten it\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Meeting tomorrow, "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "May 30th",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " at "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "9 PM ",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "on"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " Zoom",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". We will have our second Retrospective, Sprint Review, and Sprint Planning for Sprint 3."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "After this message, I will send a message from Akshay regarding Final Interview and important deadline for the Final Project so please read it carefully."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If you have not started your issues for this Sprint, please please start tonight, and commit something to our repo, or more importantly, please finish it by tonight."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The commit style is different now for some reason, "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "DO NOT",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " add [], just do feat: or fix: or update:, etc or else your commit will result in an error in the commitlint check"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Use one of these when committing: build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test\nexample  feat: added styling to header"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "5. You don't need to wait until you're done implementing your feature to create a PR. I recommend creating an PR once you create your branch so you can track your changes, and commits in the PR. All of your commits and changes will be visible on that PR.\n\nWith that, let me or your other team members know if you have any problems. I am currently reviewing any MR's and changes that you guys have implemented on your branches"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1717017512.762759",
+        "edited": {
+            "user": "U06THU1RXRR",
+            "ts": "1717017530.000000"
+        },
+        "client_msg_id": "495c36b5-b3ec-44f5-9000-db7783b42085",
+        "text": "Akshay's Message:\n1. From the team's side I expect the _vast majority_ of the code to be done and in the `main` branch of the repo by the time we meet for the next team lead meeting. Please prune branches that are not in active use (ie say no commits in two weeks)\n2. There will be an official code freeze sometime, likely Week 10 Saturday (not confirmed yet, waiting on the Prof and other TA's to confirm) post which the only commits allowed would be video submissions.\n3. Please update your `readme.md` with details about your project, it should include a link to your deployment if it's a website and installers in the releases if it's an electron application.\n4. Ensure you're planning to wrap up all assignments by the end of next week (and preferably wrap up everything but the second sprint related stuff by the time I meet the team leads, especially the CI\/CD part two, the ADRs, etc). We will brief you on the specifics if we're creating gradescope submissions for the project or no.\n5. I will be taking final interviews with your teams likely either later this week(unlikely) or next week (more likely). The details are yet to be finalized but likely going to be on:\n    a. What you did\n    b. What you think others did\n    c. Why certain decisions were made in the project\n    d. You need to have some high level idea of the project ie \"I was on the backend team, I dont know what CI is\" would be a negative, and you'd have to elaborate on how this doesn't worsen your team's bus factor\n6. Typically these interviews last around 5 minutes and will be holding 1:1s with everyone in your teams individually. These will be on zoom and timings will be announced later.\n7. Final interviews can have a major impact on your _individual_ project grade - as TAs we have many signals about your performance including but not limited to feedback forms, commits in the repo, participation, etc. Those along with the with the final interview let us get a deep insight into what your contributions were to the project. For example, it is possible to be on a underperforming team and get an A or be on the best team and get a B-.",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wVAej",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Akshay's Message:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "From the team's side I expect the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "vast majority",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " of the code to be done and in the "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "main",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " branch of the repo by the time we meet for the next team lead meeting. Please prune branches that are not in active use (ie say no commits in two weeks)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "There will be an official code freeze sometime, likely Week 10 Saturday (not confirmed yet, waiting on the Prof and other TA's to confirm) post which the only commits allowed would be video submissions."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Please update your "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "readme.md",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " with details about your project, it should include a link to your deployment if it's a website and installers in the releases if it's an electron application."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Ensure you're planning to wrap up all assignments by the end of next week (and preferably wrap up everything but the second sprint related stuff by the time I meet the team leads, especially the CI\/CD part two, the ADRs, etc). We will brief you on the specifics if we're creating gradescope submissions for the project or no."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I will be taking final interviews with your teams likely either later this week(unlikely) or next week (more likely). The details are yet to be finalized but likely going to be on:"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "What you did"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "What you think others did"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Why certain decisions were made in the project"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "You need to have some high level idea of the project ie \"I was on the backend team, I dont know what CI is\" would be a negative, and you'd have to elaborate on how this doesn't worsen your team's bus factor"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Typically these interviews last around 5 minutes and will be holding 1:1s with everyone in your teams individually. These will be on zoom and timings will be announced later."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Final interviews can have a major impact on your "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "individual",
+                                        "style": {
+                                            "italic": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " project grade - as TAs we have many signals about your performance including but not limited to feedback forms, commits in the repo, participation, etc. Those along with the with the final interview let us get a deep insight into what your contributions were to the project. For example, it is possible to be on a underperforming team and get an A or be on the best team and get a B-."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "offset": 5,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]
