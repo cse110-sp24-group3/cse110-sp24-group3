@@ -7,7 +7,11 @@
     "lint": "eslint . --config eslint.config.mjs --fix",
     "prod": "NODE_ENV=production electron .",
     "dev": "NODE_ENV=development electron .",
-    "generate-docs": "jsdoc web -r -d ../docs"
+    "generate-docs": "jsdoc web -r -d ../docs",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "Team 3",
   "license": "ISC",
