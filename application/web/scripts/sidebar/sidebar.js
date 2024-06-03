@@ -119,9 +119,10 @@ export function createJournalEntries() {
         journalEntries.appendChild(entryElement);
         // Once a journal is created, the "No Journals" text will disappear
         document.getElementById("no-entry-text").style.display = "none";
-
-        showHomepageHeaderInfo() 
-        showNoEntriesText();
+        if(!document.getElementById('entry-name')) {
+            showHomepageHeaderInfo(); 
+            showNoEntriesText();
+        }
     });
 };
 function showNoEntriesText() {
