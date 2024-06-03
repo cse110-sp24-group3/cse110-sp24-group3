@@ -53,7 +53,8 @@ sidebar {
 
 .sidebar-module .journal-entry #sidebar-dots:hover {
     display: block;
-    content: url('./assets/vdots-journal-white-active.svg'); /* New image for hover */
+    content: url('../assets/vdots-journal-white-active.svg'); 
+    /* New image for hover */
 }
 
 button.new-journal {
