@@ -26,9 +26,4 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Not sure why, but the formatting messes up without this
     editor.refresh();
-
-    // Style the editor
-    // I'm sure this could be moved to main.css 
-    // But its here for now
-    editor.style['border-radius'] = '10px';
 });
