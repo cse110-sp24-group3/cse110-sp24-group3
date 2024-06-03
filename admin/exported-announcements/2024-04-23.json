@@ -1,0 +1,385 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713902639.726149",
+        "client_msg_id": "5ff65c7d-ab11-4143-9a00-7e351976f067",
+        "text": "<!channel> Some announcement from the TA\n\nShare this message with your channels\n\n1. Your weekly \"what we did this week and what we plan to do next\" needs to be in your repo by the end of the day as team leads will discuss this in the weekly check in tomorrow\n2. #lab-4 is out. I would strongly recommend starting early as labs will become more involved going forward, labs 4, 5 and 6 will likely be higher workload than ones you have done so far. Make full use of tutor office hours!\n3. Review quizzes are coming out, these are completion based but make sure to do these in time since the midterm is tentatively in a week or two and often we use concepts from these quizzes\n4. For the warmup make sure to leverage browser APIs. For example,\n    a. Instead of rewriting a date picker from scratch use - <https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date>\n    b. If you want to build a CRUD app try LocalStorage - <https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/Window\/localStorage>\n5. For your warmup, make sure to start setting up and exploring Github actions and how they can be incorporated into your workflows\n6. Make sure to deploy your projects to Github Pages - <https:\/\/pages.github.com\/>\nPlease reach with a :white_check_mark: if you have shared the above message with your team\n*MDN Web Docs*\n*<https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date|- HTML: HyperText Markup Language | MDN>*\n\t<https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date>\n*MDN Web Docs*\n*<https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/Window\/localStorage|Window: localStorage property - Web APIs | MDN>*\nThe localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "image_url": "https:\/\/developer.mozilla.org\/mdn-social-share.cd6c4a5a.png",
+                "image_width": 1920,
+                "image_height": 1080,
+                "image_bytes": 23824,
+                "from_url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date",
+                "service_icon": "https:\/\/developer.mozilla.org\/apple-touch-icon.6803c6f0.png",
+                "id": 1,
+                "original_url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date",
+                "fallback": "MDN Web Docs: - HTML: HyperText Markup Language | MDN",
+                "title": "- HTML: HyperText Markup Language | MDN",
+                "title_link": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date",
+                "service_name": "MDN Web Docs"
+            },
+            {
+                "image_url": "https:\/\/developer.mozilla.org\/mdn-social-share.cd6c4a5a.png",
+                "image_width": 1920,
+                "image_height": 1080,
+                "image_bytes": 23824,
+                "from_url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/Window\/localStorage",
+                "service_icon": "https:\/\/developer.mozilla.org\/apple-touch-icon.6803c6f0.png",
+                "id": 2,
+                "original_url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/Window\/localStorage",
+                "fallback": "MDN Web Docs: Window: localStorage property - Web APIs | MDN",
+                "text": "The localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.",
+                "title": "Window: localStorage property - Web APIs | MDN",
+                "title_link": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/Window\/localStorage",
+                "service_name": "MDN Web Docs"
+            },
+            {
+                "from_url": "https:\/\/pages.github.com\/",
+                "service_icon": "https:\/\/pages.github.com\/favicon.ico",
+                "id": 3,
+                "original_url": "https:\/\/pages.github.com\/",
+                "fallback": "GitHub Pages",
+                "text": "Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.",
+                "title": "GitHub Pages",
+                "title_link": "https:\/\/pages.github.com\/",
+                "service_name": "pages.github.com"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dR4De",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Some announcement from the TA\n\nShare this message with your channels\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Your weekly \"what we did this week and what we plan to do next\" needs to be in your repo by the end of the day as team leads will discuss this in the weekly check in tomorrow"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "#lab-4 is out. I would strongly recommend starting early as labs will become more involved going forward, labs 4, 5 and 6 will likely be higher workload than ones you have done so far. Make full use of tutor office hours!"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Review quizzes are coming out, these are completion based but make sure to do these in time since the midterm is tentatively in a week or two and often we use concepts from these quizzes"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "For the warmup make sure to leverage browser APIs. For example,"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Instead of rewriting a date picker from scratch use - "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If you want to build a CRUD app try LocalStorage - "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/Window\/localStorage"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "For your warmup, make sure to start setting up and exploring Github actions and how they can be incorporated into your workflows"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Make sure to deploy your projects to Github Pages - "
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/pages.github.com\/"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "offset": 4,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nPlease reach with a "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "white_check_mark",
+                                "unicode": "2705"
+                            },
+                            {
+                                "type": "text",
+                                "text": " if you have shared the above message with your team\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "MDN Web Docs",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date",
+                                "text": "- HTML: HyperText Markup Language | MDN",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\t"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTML\/Element\/input\/date"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "MDN Web Docs",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/Window\/localStorage",
+                                "text": "Window: localStorage property - Web APIs | MDN",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThe localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713917462.994269",
+        "client_msg_id": "f2369af4-c49e-4c4b-8f2f-18144fc6ac6c",
+        "text": "<!channel>\n\nMake sure you guys join this organization, <https:\/\/github.com\/cse110-sp24-group3>. Let me know if you don't see the invitation.\n\nTo recap today's meeting about the Warmup exercise:\n1. There are 5 issues created on GitHub\n2. Assign yourself to one of the issues; we will work with a partner (Maximum 2 people per issue)\n3. If you are doing the Front End implementation, please finish it by tonight as this is the basic foundation of the whole activity\nThis assignment is due *Friday, April 26th 11:59 PM.*",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "image_url": "https:\/\/avatars.githubusercontent.com\/u\/167259380?s=280&v=4",
+                "image_width": 420,
+                "image_height": 420,
+                "image_bytes": 1563,
+                "from_url": "https:\/\/github.com\/cse110-sp24-group3",
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/github.png",
+                "id": 1,
+                "original_url": "https:\/\/github.com\/cse110-sp24-group3",
+                "fallback": "GitHub: cse110-sp24-group3",
+                "text": "cse110-sp24-group3 has 2 repositories available. Follow their code on GitHub.",
+                "title": "cse110-sp24-group3",
+                "title_link": "https:\/\/github.com\/cse110-sp24-group3",
+                "service_name": "GitHub"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LvZpl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMake sure you guys join this organization, "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/cse110-sp24-group3"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Let me know if you don't see the invitation.\n\nTo recap today's meeting about the Warmup exercise:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "There are 5 issues created on GitHub"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Assign yourself to one of the issues; we will work with a partner (Maximum 2 people per issue)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "If you are doing the Front End implementation, please finish it by tonight as this is the basic foundation of the whole activity"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThis assignment is due "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Friday, April 26th 11:59 PM.",
+                                "style": {
+                                    "bold": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

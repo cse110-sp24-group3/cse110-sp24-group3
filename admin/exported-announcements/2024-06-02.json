@@ -1,0 +1,49 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1717395474.393959",
+        "client_msg_id": "E84D8B52-E71D-4DFD-974E-3451C89937F3",
+        "text": "<!channel> don’t forget the weekly check in form\n\n<https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform|https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform>",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "M8GGm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " don’t forget the weekly check in form\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform",
+                                "text": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

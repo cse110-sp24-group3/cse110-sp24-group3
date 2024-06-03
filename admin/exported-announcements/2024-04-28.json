@@ -1,0 +1,77 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714363006.237439",
+        "edited": {
+            "user": "U06THU1RXRR",
+            "ts": "1714363016.000000"
+        },
+        "client_msg_id": "3d54df7d-c5b4-4130-96ff-01f0eae1c6de",
+        "text": "<!channel> Don't forget to fill out this weekly feedback form! It's due tonight\n<https:\/\/forms.gle\/Po58btDYe6GLvsh5A>",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "image_url": "https:\/\/lh6.googleusercontent.com\/0jlySZk8M1EUGQ54Lf-DMlNuWWrdNvjCDOBhXf4teaoqYm_YhVvr2DMW35F_ZtoeOAxl71CpxuQ",
+                "image_width": 800,
+                "image_height": 600,
+                "image_bytes": 130186,
+                "from_url": "https:\/\/forms.gle\/Po58btDYe6GLvsh5A",
+                "service_icon": "http:\/\/ssl.gstatic.com\/docs\/forms\/device_home\/ios_120.png",
+                "id": 1,
+                "original_url": "https:\/\/forms.gle\/Po58btDYe6GLvsh5A",
+                "fallback": "Google Docs: Weekly Reflection Form - Team 3",
+                "title": "Weekly Reflection Form - Team 3",
+                "title_link": "https:\/\/forms.gle\/Po58btDYe6GLvsh5A",
+                "service_name": "Google Docs"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LbbCk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Don't forget to fill out this weekly feedback form! It's due tonight\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/forms.gle\/Po58btDYe6GLvsh5A"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

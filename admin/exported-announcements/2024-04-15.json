@@ -1,0 +1,949 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713204212.205099",
+        "client_msg_id": "B2B7BB54-77B9-4177-8629-4E7398ABCADF",
+        "text": "<!channel> we will meet with the TA at 3:30 PM today. I will send the link later. If you could join please join even if you can’t stay for the whole time. I believe it’ll be a short meeting. We’ll take some notes and send it on slack for those that cannot make it to the meeting at all",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "II5hN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " we will meet with the TA at 3:30 PM today. I will send the link later. If you could join please join even if you "
+                            },
+                            {
+                                "type": "text",
+                                "text": "can’t"
+                            },
+                            {
+                                "type": "text",
+                                "text": " stay for the whole time. I believe "
+                            },
+                            {
+                                "type": "text",
+                                "text": "it’ll"
+                            },
+                            {
+                                "type": "text",
+                                "text": " be a short meeting. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "We’ll"
+                            },
+                            {
+                                "type": "text",
+                                "text": " take some notes and send it on slack for those that cannot make it to the meeting at all"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "100",
+                "users": [
+                    "U06TJ2NEP0S",
+                    "U06T3FJTE15",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 3
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U06TLGA6XCL",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713219335.440549",
+        "client_msg_id": "e7692afc-4701-436c-97e2-558d0c9e5f21",
+        "text": "<!channel> this is the link to our zoom link, Reisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: CSE 110 Kickoff Meeting with TA\nTime: Apr 15, 2024 03:30 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n<https:\/\/us05web.zoom.us\/j\/89129605238?pwd=4FirdIyobtkKFi3mTacZLbirnMKvQV.1>\n\nMeeting ID: 891 2960 5238\nPasscode: 4m2ziK",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+hS7R",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " this is the link to our zoom link, Reisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: CSE 110 Kickoff Meeting with TA\nTime: Apr 15, 2024 03:30 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/89129605238?pwd=4FirdIyobtkKFi3mTacZLbirnMKvQV.1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMeeting ID: 891 2960 5238\nPasscode: 4m2ziK"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713219377.332779",
+        "client_msg_id": "1745e306-0271-437f-982d-1f1ed4ded1e3",
+        "text": "I'm not sure how long the meeting will be but for some reason my account only has the 40 mins limit. I can make a new one if it goes over that",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5w4E9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm not sure how long the meeting will be but for some reason my account only has the 40 mins limit. I can make a new one if it goes over that"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713220281.265349",
+        "client_msg_id": "6f7e10d3-25ef-4b8d-a0d6-e8ebecee7009",
+        "text": "We're in the meeting already! Please join us",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "t9AF5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We're in the meeting already! Please join us"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713221922.889019",
+        "client_msg_id": "3160f6fd-b655-4522-91cd-3b25f4994612",
+        "text": "These are the notes from today's meeting with the TA. I will put this in our github repo under meetings for future references\nKickoff Meeting with TA 04\/15\/2024\nMembers Attended\n• Aaron\n• Reisandy\n• Cameron\n• Isabelle\n• Benjamin\nAgenda\n1. Introductions\n2. Future meetings it will just be with the team lead\n• if James is missing from the video\n3. Repo briefing\n    a. excluding information such as DS-Store\n    b. create .gitignore file\n    c. if you are new, play around with the features\n4. Create meeting minutes every week with the rest of the meeting\n    a. what meeting minutes format that we want to do as a team\n5. Bring your placard to class\nNext time\n• Future meeting will be with team leads, but others can join as well\n    ◦ will be on the weekdays, same time\n    ◦ Team leads will give updates to the TA\n• Other members will submit a form that will be sent to our TA (anonymous to the team)\n• text based answer\n    ◦ ex. What did you do that week? How did the team leads perform that week?\n• recommendations:\n• have one person from a group join the Professor’s office hours on Wednesday if the team have questions regarding the project\n    ◦ to get a second opinion\n",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6XUZ0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "These are the notes from today's meeting with the TA. I will put this in our github repo under meetings for future references\nKickoff Meeting with TA 04\/15\/2024\nMembers Attended\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Aaron"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Reisandy"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Cameron"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Isabelle"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Benjamin"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Agenda\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Introductions"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Future meetings it will just be with the team lead"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "if James is missing from the video"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Repo briefing"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "offset": 2,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "excluding information such as DS-Store"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "create .gitignore file"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "if you are new, play around with the features"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Create meeting minutes every week with the rest of the meeting"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "offset": 3,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "what meeting minutes format that we want to do as a team"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Bring your placard to class"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "offset": 4,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Next time\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Future meeting will be with team leads, but others can join as well"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "will be on the weekdays, same time"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Team leads will give updates to the TA"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Other members will submit a form that will be sent to our TA (anonymous to the team)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "text based answer"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "ex. What did you do that week? How did the team leads perform that week?"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "recommendations:"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "have one person from a group join the Professor’s office hours on Wednesday if the team have questions regarding the project"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "to get a second opinion"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1713241370.129789",
+        "edited": {
+            "user": "U06T3FJTE15",
+            "ts": "1713241407.000000"
+        },
+        "client_msg_id": "d35a72de-aa77-4edf-a7aa-e6f0bf67e735",
+        "text": ":loudspeaker: *Announcement for This Week* <!here>\n\n\n\n\n\n\n\n:sparkles: *Weekly Appreciation*\n\nThank you to everyone for your flexibility during our first week. I’m stoked to announce that our first three assignments have been successfully submitted!\n\n\n\n\n\n\n\n:books: *Recommended Prep Work*\n\nAs advised by our TA team, it’s recommended we begin exploratory work on CI\/CD and other foundational concepts essential for our course progression. Please focus on the following areas before Thursday:\n\n- *Linting & Code Style Enforcement*: Consider integration in both pipelines and editors.\n- *Code Quality Tools*: Explore tools like Codeclimate and Codacy.\n- *Code Reviews*: Enhance quality through human oversight, e.g., *Pull Requests*.\n- *Automated Testing*: Familiarize yourself with frameworks like *Jest*, ~Cypress, and Mocha\/Chai~.\n- *Documentation Automation*: Look into tools such as *JSDocs*.\n- *Advanced Concepts*: Dive into code coverage reporting, packaging, deployment, minification, etc.\n\nThere are a lot of topics to digest. We do not need to know every bit and piece of all these frameworks \/ technologies. I recommend that we all just have a general overview of what is to come!\n\n\n\n\n\n\n\n\n:page_facing_up: *Week’s Assignment: Create a Group Contract*\n\nTo be a successful team we need to have some ground rules. This week, we’re tasked with drafting a Group Contract that outlines our rules and expectations. This contract should be detailed in a team working agreement, stored in our repository. Key points to include:\n\n- *Expectations and Responsibilities*: Define clear roles and responsibilities.\n- *Rule Enforcement*: Outline procedures for addressing violations.\n\n **Action Required**: Each member must upload a signed PDF copy of the agreement to the repository. Our TAs will review these documents to ensure compliance. Please check the canvas assignment for more details.\n\n\n\n\n\n\n\nLet’s keep the momentum rolling! :rocket:",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "503LO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "loudspeaker",
+                                "unicode": "1f4e2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Announcement for This Week",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "broadcast",
+                                "range": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "sparkles",
+                                "unicode": "2728"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Weekly Appreciation",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThank you to everyone for your flexibility during our first week. I’m stoked to announce that our first three assignments have been successfully submitted!\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "books",
+                                "unicode": "1f4da"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Recommended Prep Work",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAs advised by our TA team, it’s recommended we begin exploratory work on CI\/CD and other foundational concepts essential for our course progression. Please focus on the following areas before Thursday:\n\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Linting & Code Style Enforcement",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Consider integration in both pipelines and editors.\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Code Quality Tools",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Explore tools like Codeclimate and Codacy.\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Code Reviews",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Enhance quality through human oversight, e.g., "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Pull Requests",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Automated Testing",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Familiarize yourself with frameworks like "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Jest",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Cypress, and Mocha\/Chai",
+                                "style": {
+                                    "strike": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Documentation Automation",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Look into tools such as "
+                            },
+                            {
+                                "type": "text",
+                                "text": "JSDocs",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Advanced Concepts",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Dive into code coverage reporting, packaging, deployment, minification, etc.\n\nThere are a lot of topics to digest. We do not need to know every bit and piece of all these frameworks \/ technologies. I recommend that we all just have a general overview of what is to come!\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "page_facing_up",
+                                "unicode": "1f4c4"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Week’s Assignment: Create a Group Contract",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nTo be a successful team we need to have some ground rules. This week, we’re tasked with drafting a Group Contract that outlines our rules and expectations. This contract should be detailed in a team working agreement, stored in our repository. Key points to include:\n\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Expectations and Responsibilities",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Define clear roles and responsibilities.\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Rule Enforcement",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Outline procedures for addressing violations.\n\n *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Action Required",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Each member must upload a signed PDF copy of the agreement to the repository. Our TAs will review these documents to ensure compliance. Please check the canvas assignment for more details.\n\n\n\n\n\n\n\nLet’s keep the momentum rolling! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rocket",
+                                "unicode": "1f680"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06THU1RXRR",
+                    "U06TWN379CH",
+                    "U06TJ2NEP0S"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713244942.452369",
+        "client_msg_id": "2ac39dba-ba2d-4c64-b7fa-9228c72c915e",
+        "text": "<!channel> Alright I submitted everything and added everyone on the submission. Let me or Cameron know if you don't see the two submissions on Gradescope",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2ZKQR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Alright I submitted everything and added everyone on the submission. Let me or Cameron know if you don't see the two submissions on Gradescope"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
