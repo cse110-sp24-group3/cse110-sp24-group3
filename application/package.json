@@ -4,14 +4,23 @@
   "description": "Electron based dev journal app",
   "main": "main.js",
   "scripts": {
-    "lint": "eslint . --config eslint.config.mjs --fix",
+    "lint": "eslint . --config eslint.config.mjs",
     "prod": "NODE_ENV=production electron .",
     "dev": "NODE_ENV=development electron .",
-    "generate-docs": "jsdoc web -r -d ../docs"
+    "generate-docs": "jsdoc web -r -d ../docs",
+    "test": "jest",
+    "clean": "rm -rf dist output",
+    "prebuild": "mkdir dist output",
+    "package-osx": "npm run clean && npm run prebuild && npx electron-packager . --platform=darwin --arch=x64 --out=./dist --overwrite --icon=instone-rock.icns --app-bundle-id=team3.instone --app-version=1.0.0 --electron-version=14.0.0 --ignore=node_modules",
+    "package-win": "npm run clean && npm run prebuild && npx electron-packager . --platform=win32 --arch=x64 --out=./dist --overwrite --icon=instone-rock.icns --app-bundle-id=team3.instone --app-version=1.0.0 --electron-version=14.0.0 --ignore=node_modules"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "Team 3",
   "license": "ISC",
   "dependencies": {
+    "@electron/packager": "^18.3.2",
     "electron": "^30.0.3",
     "fs": "^0.0.1-security",
     "jest": "^29.7.0",
