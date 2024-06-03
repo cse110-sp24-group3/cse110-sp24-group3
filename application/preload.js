@@ -21,6 +21,9 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
         default:
             throw new Error('Unsupported platform');
     }
+    if (!fs.existsSync(baseDir)) {
+        fs.mkdirSync(baseDir, { recursive: true });
+    }
 }
 
 const fileAPI = {
@@ -36,7 +39,7 @@ const fileAPI = {
             throw new Error(`Error getting journals: ${error.message}`);
         }
     },
-    
+
     /**
      * Create a new journal with a default name.
      * @returns {Promise<string>} The name of the created journal.
@@ -59,7 +62,7 @@ const fileAPI = {
             throw new Error(`Error creating journal: ${error.message}`);
         }
     },
-    
+
     /**
      * Create a new journal with a specified name.
      * @param {string} name - The name of the new journal.
@@ -79,7 +82,7 @@ const fileAPI = {
             throw new Error(`Error creating journal: ${error.message}`);
         }
     },
-    
+
     /**
      * Delete a journal by name.
      * @param {string} journalName - The name of the journal to delete.
@@ -93,7 +96,7 @@ const fileAPI = {
             throw new Error(`Error deleting journal: ${error.message}`);
         }
     },
-    
+
     /**
      * Get all entries in a journal.
      * @param {string} journalName - The name of the journal.
@@ -108,7 +111,7 @@ const fileAPI = {
             throw new Error(`Error getting entries: ${error.message}`);
         }
     },
-    
+
     /**
      * Create a new entry in a journal.
      * @param {string} journalName - The name of the journal.
@@ -124,7 +127,7 @@ const fileAPI = {
             throw new Error(`Error creating entry: ${error.message}`);
         }
     },
-    
+
     /**
      * Delete an entry from a journal.
      * @param {string} journalName - The name of the journal.
@@ -139,7 +142,7 @@ const fileAPI = {
             throw new Error(`Error deleting entry: ${error.message}`);
         }
     },
-    
+
     /**
      * Update the content of an entry.
      * @param {string} journalName - The name of the journal.
@@ -155,7 +158,7 @@ const fileAPI = {
             throw new Error(`Error updating entry content: ${error.message}`);
         }
     },
-    
+
     /**
      * Update the name of an entry.
      * @param {string} journalName - The name of the journal.
@@ -172,7 +175,7 @@ const fileAPI = {
             throw new Error(`Error updating entry name: ${error.message}`);
         }
     },
-    
+
     /**
      * Get the content of an entry.
      * @param {string} journalName - The name of the journal.
@@ -188,7 +191,7 @@ const fileAPI = {
             throw new Error(`Error fetching journal content: ${error.message}`);
         }
     },
-    
+
     /**
      * Update the name of a journal.
      * @param {string} oldName - The current name of the journal.
