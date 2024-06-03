@@ -1,0 +1,418 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713309344.831759",
+        "client_msg_id": "9df2a720-8a37-40e4-ae13-0eea5bc52f03",
+        "text": "<!channel> I've created an organization on GitHub and have invited all of you. Lmk if you didn't receive it.",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713309344.831759",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1713312026.106549",
+        "reply_users": [
+            "U06THU1RXRR"
+        ],
+        "replies": [
+            {
+                "user": "U06THU1RXRR",
+                "ts": "1713312026.106549"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1713312026.106549",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yECtY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I've created an organization on GitHub and have invited all of you. Lmk if you didn't receive it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06TJ2NEP0S",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713312026.106549",
+        "client_msg_id": "e692e57e-5ac5-44c8-8921-6d2167d79d58",
+        "text": "Ignore my latest github invitation",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713309344.831759",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/FOp1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ignore my latest github invitation"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1713312536.283399",
+        "client_msg_id": "7d82d2c9-34a7-4df0-ad86-7c835bff2061",
+        "text": "<!channel> alright I sent the right github repo invitation. I will update it tonight with our files that we created already from previous assignments",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "p7JzX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " alright I sent the right github repo invitation. I will update it tonight with our files that we created already from previous assignments"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "rocket",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1713325464.728479",
+        "client_msg_id": "4235c936-d449-48fe-9224-318eba7c04c2",
+        "text": "<!everyone>\n\n\n:mega: **Team Updates &amp; OC Announcements**\n\n\n\n\n\n\n\n\n\n\n\n\n:page_facing_up: **Finalized Team Contract**\nWe have finalized our team contract! A huge shoutout to Logan for creating the template. You can view and interact with the contract here: <https:\/\/docs.google.com\/document\/d\/1cOtDEIiRTPtyNMNb2l6i6sA3kZjXjpNhIycVP0eO5tw\/edit?pli=1|Team Contract>. If you’re satisfied with the contract, please make your own copy, sign, and print your name in the designated area.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:link: **Join Our GitHub Organization**\nIt is imperative that everyone is added to the correct repository. Please join our organization at `cse110-sp24-group3` using this link: <https:\/\/github.com\/settings\/organizations|Join GitHub Organization>. If you haven’t received an invitation yet, let us know immediately so we can add you.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:computer: **Uploading Your Signed Contract**\nTo upload your signed document, you’ll need to clone the repo. Please use SSH or HTTPS for cloning (if you need help setting up SSH for GitHub, please reach out to me in a private thread—it will save you time in the future):\n\n```bash\ngit clone git@github.com:cse110-sp24-group3\/cse110-sp24-group3.git```\nOnce cloned, upload your signed PDF to the `admin\/misc` directory. Name your file as follows:\n\n```rules-firstnamelastname.pdf```\nAfter uploading, create a new commit and push to the main branch with these commands:\n\n```bash\ngit add .\ngit commit -m \"[feat] added my signed rules doc\"\ngit push # use this if you're using SSH```\n---\n\n:star2: **Assignment Completion**\nOnce you’ve pushed your signed document, you have completed your part of this assignment!\n\n\n\n\n\n\n\n\nLet’s ensure everyone completes these steps promptly! :rocket:",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NZDoN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "everyone"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "mega",
+                                "unicode": "1f4e3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Team Updates & OC Announcements",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "page_facing_up",
+                                "unicode": "1f4c4"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Finalized Team Contract",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nWe have finalized our team contract! A huge shoutout to Logan for creating the template. You can view and interact with the contract here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/document\/d\/1cOtDEIiRTPtyNMNb2l6i6sA3kZjXjpNhIycVP0eO5tw\/edit?pli=1",
+                                "text": "Team Contract"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". If you’re satisfied with the contract, please make your own copy, sign, and print your name in the designated area.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "link",
+                                "unicode": "1f517"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Join Our GitHub Organization",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nIt is imperative that everyone is added to the correct repository. Please join our organization at "
+                            },
+                            {
+                                "type": "text",
+                                "text": "cse110-sp24-group3",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " using this link: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/settings\/organizations",
+                                "text": "Join GitHub Organization"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". If you haven’t received an invitation yet, let us know immediately so we can add you.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "computer",
+                                "unicode": "1f4bb"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Uploading Your Signed Contract",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nTo upload your signed document, you’ll need to clone the repo. Please use SSH or HTTPS for cloning (if you need help setting up SSH for GitHub, please reach out to me in a private thread—it will save you time in the future):\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "bash\ngit clone git@github.com:cse110-sp24-group3\/cse110-sp24-group3.git"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nOnce cloned, upload your signed PDF to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "admin\/misc",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " directory. Name your file as follows:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "rules-firstnamelastname.pdf"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nAfter uploading, create a new commit and push to the main branch with these commands:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "bash\ngit add .\ngit commit -m \"[feat] added my signed rules doc\"\ngit push # use this if you're using SSH"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n---\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "star2",
+                                "unicode": "1f31f"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Assignment Completion",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nOnce you’ve pushed your signed document, you have completed your part of this assignment!\n\n\n\n\n\n\n\n\nLet’s ensure everyone completes these steps promptly! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rocket",
+                                "unicode": "1f680"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06THU1RXRR",
+                    "U06TJ2NEP0S",
+                    "U06THUGKQPM",
+                    "U06TJ2MHT8A",
+                    "U06TWN379CH"
+                ],
+                "count": 5
+            }
+        ]
+    }
+]

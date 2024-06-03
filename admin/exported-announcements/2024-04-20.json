@@ -1,0 +1,370 @@
+[
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1713652640.960819",
+        "client_msg_id": "83c2d207-a943-4f74-a74c-782f093a2e73",
+        "text": "<!everyone>\n\n:loudspeaker: **Weekend Updates and Guidelines**\n\n\n\n\n\n\n\n\n\n\n:books: **Updated README.md Across All Repositories**\n\n\n\nWe have updated the README.md in all repositories to include our team’s commit rules. These rules are crucial for maintaining an organized repository, which is a significant part of our grade. Please familiarize yourself with these guidelines:\n\n**Commit Message Guidelines:**\n- *[feat]*: New feature addition\n- *[fix]*: Bug fix\n- *[docs]*: Changes to documentation\n- *[style]*: Formatting, linting, and similar non-code changes\n- *[refactor]*: Code restructuring without changing external behavior\n- *[test]*: Adding missing tests or correcting existing tests\n- *[chore]*: Routine maintenance tasks\n- *[init]*: Initial commit of new files or projects\n- *[rearrange]*: Files moved, added, or deleted\n- *[update]*: Updates to code (e.g., versions, library compatibility)\n\n\n\n**Example Commit Message:**\n```[chore] remove .DS_Store\nRemoved the .DS_Store files that were accidentally committed in previous commits, to clean up the repository and maintain a more professional codebase.```\n**Branch Naming Conventions:**\nCreate new branches for each piece of work, using names that provide a clear, short description of the work without including the type prefix. This approach ensures branches are straightforward and focused on specific tasks or features.\n\n\n\n\n**Example Branch Names:**\n- `login-system`: Branch for implementing the login system.\n- `memory-leak-fix`: Branch dedicated to fixing a memory leak issue.\n- `update-readme`: Branch for updating the README documentation.\n- `code-formatting`: Branch for applying code formatting rules.\n\n\n\n\n\n\n\n\n\n\n:mag: **Warmup Exercise: Familiarization**\nFor our warmup exercise, let’s all ensure we can clone and access the `warmup-exercise` repo. Please take some time to read over `tasks.md`.\n\n\n\n\n\n\n\n**Today’s Goal:**\nThe objective is not to complete any projects today but to plan for and familiarize ourselves with what’s to come.\n\n\n\n\n\n\nLet’s ensure that everyone is up to speed and ready for the upcoming tasks. If you have any questions or need assistance, feel free to reach out! :rocket:",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XBW5l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "everyone"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "loudspeaker",
+                                "unicode": "1f4e2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Weekend Updates and Guidelines",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "books",
+                                "unicode": "1f4da"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Updated README.md Across All Repositories",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n\n\n\nWe have updated the README.md in all repositories to include our team’s commit rules. These rules are crucial for maintaining an organized repository, which is a significant part of our grade. Please familiarize yourself with these guidelines:\n\n*"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Commit Message Guidelines:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[feat]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": New feature addition\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[fix]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Bug fix\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[docs]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Changes to documentation\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[style]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Formatting, linting, and similar non-code changes\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[refactor]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Code restructuring without changing external behavior\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[test]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Adding missing tests or correcting existing tests\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[chore]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Routine maintenance tasks\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[init]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Initial commit of new files or projects\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[rearrange]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Files moved, added, or deleted\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "[update]",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Updates to code (e.g., versions, library compatibility)\n\n\n\n*"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Example Commit Message:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[chore] remove .DS_Store\nRemoved the .DS_Store files that were accidentally committed in previous commits, to clean up the repository and maintain a more professional codebase."
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n*"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Branch Naming Conventions:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nCreate new branches for each piece of work, using names that provide a clear, short description of the work without including the type prefix. This approach ensures branches are straightforward and focused on specific tasks or features.\n\n\n\n\n*"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Example Branch Names:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "login-system",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Branch for implementing the login system.\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "memory-leak-fix",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Branch dedicated to fixing a memory leak issue.\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "update-readme",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Branch for updating the README documentation.\n- "
+                            },
+                            {
+                                "type": "text",
+                                "text": "code-formatting",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ": Branch for applying code formatting rules.\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "mag",
+                                "unicode": "1f50d"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Warmup Exercise: Familiarization",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nFor our warmup exercise, let’s all ensure we can clone and access the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "warmup-exercise",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " repo. Please take some time to read over "
+                            },
+                            {
+                                "type": "text",
+                                "text": "tasks.md",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\n\n\n\n\n\n\n*"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Today’s Goal:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nThe objective is not to complete any projects today but to plan for and familiarize ourselves with what’s to come.\n\n\n\n\n\n\nLet’s ensure that everyone is up to speed and ready for the upcoming tasks. If you have any questions or need assistance, feel free to reach out! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rocket",
+                                "unicode": "1f680"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06THUGKQPM",
+                    "U06THU1RXRR",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 3
+            }
+        ]
+    }
+]

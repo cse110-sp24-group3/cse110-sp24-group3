@@ -1,0 +1,219 @@
+[
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1715837242.479539",
+        "client_msg_id": "2ea25458-3e15-474c-8121-7380e94e2069",
+        "text": ":loudspeaker: Team Preparation for Tomorrow’s Meeting\n<!here>\n\n\n\n\n\n\n\n\n\n\n:male-technologist: Repository Setup\nTo ensure everyone is ready for our meeting tomorrow, please familiarize yourself with our main repository:\n\n\n\n\n\n\n\n• Clone the Repo: If you haven’t already, please clone our main repository.\n• Update Your Local Repo: For those who have it cloned, run `git pull` to refresh.\n• Initialize NPM Packages: Use `npm init` to set up npm packages.\n• Run Development Environment: Start the development environment with: npm run dev \n\n\n\n:desktop_computer: Electron Framework\nWe are using Electron as our framework to serve our application. This choice allows us to build desktop apps using web technologies, offering a robust platform for integrating HTML, CSS, and JavaScript into native apps.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:page_facing_up: Commit Structure Guidelines\nPlease refresh your knowledge of our commit structure by reviewing the guidelines at <https:\/\/www.conventionalcommits.org\/en\/v1.0.0\/|Conventional Commits>.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s ensure we’re all on the same page and ready to dive deep into our project work during tomorrow’s meeting. If you cannot attend this meeting please respond to this thread ASAP; *attendance is highly recommended.*",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1715837242.479539",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1715870838.413509",
+        "reply_users": [
+            "U06TLGA6XCL"
+        ],
+        "replies": [
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1715870838.413509"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "attachments": [
+            {
+                "from_url": "https:\/\/www.conventionalcommits.org\/en\/v1.0.0\/",
+                "service_icon": "https:\/\/www.conventionalcommits.org\/favicon.ico",
+                "id": 1,
+                "original_url": "https:\/\/www.conventionalcommits.org\/en\/v1.0.0\/",
+                "fallback": "Conventional Commits",
+                "text": "A specification for adding human and machine readable meaning to commit messages",
+                "title": "Conventional Commits",
+                "title_link": "https:\/\/www.conventionalcommits.org\/en\/v1.0.0\/",
+                "service_name": "conventionalcommits.org"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "K5Hh5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "loudspeaker",
+                                "unicode": "1f4e2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Team Preparation for Tomorrow’s Meeting\n"
+                            },
+                            {
+                                "type": "broadcast",
+                                "range": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "male-technologist",
+                                "unicode": "1f468-200d-1f4bb"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Repository Setup\nTo ensure everyone is ready for our meeting tomorrow, please familiarize yourself with our main repository:\n\n\n\n\n\n\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Clone the Repo: If you haven’t already, please clone our main repository."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Update Your Local Repo: For those who have it cloned, run "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "git pull",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " to refresh."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Initialize NPM Packages: Use "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "npm init",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " to set up npm packages."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Run Development Environment: Start the development environment with: npm run dev "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "desktop_computer",
+                                "unicode": "1f5a5-fe0f"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Electron Framework\nWe are using Electron as our framework to serve our application. This choice allows us to build desktop apps using web technologies, offering a robust platform for integrating HTML, CSS, and JavaScript into native apps.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "page_facing_up",
+                                "unicode": "1f4c4"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Commit Structure Guidelines\nPlease refresh your knowledge of our commit structure by reviewing the guidelines at "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.conventionalcommits.org\/en\/v1.0.0\/",
+                                "text": "Conventional Commits"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s ensure we’re all on the same page and ready to dive deep into our project work during tomorrow’s meeting. If you cannot attend this meeting please respond to this thread ASAP; "
+                            },
+                            {
+                                "type": "text",
+                                "text": "attendance is highly recommended.",
+                                "style": {
+                                    "bold": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06TWN379CH",
+                    "U06THUGKQPM"
+                ],
+                "count": 3
+            },
+            {
+                "name": "muscle",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06TWN379CH",
+                    "U06THUGKQPM"
+                ],
+                "count": 3
+            }
+        ]
+    }
+]

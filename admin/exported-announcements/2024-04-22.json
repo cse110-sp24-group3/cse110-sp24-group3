@@ -1,0 +1,396 @@
+[
+    {
+        "user": "U06U6RUESEL",
+        "type": "message",
+        "ts": "1713822069.989359",
+        "client_msg_id": "f22aa470-1233-4292-bcdc-c000a656e791",
+        "text": "<!channel>\n\nHopefully, your team teams have settled down and you know who has and who hasn't dropped the course. Any one member of the team (preferably the team leads) send me the following details in my DMs on the main slack:\n\n1. List of team members who are still present in your team after drops\n2. Their name, their UCSD email, their github username\n3. Any members that havent dropped but are inactive and\/or not responding. Please do so preferably by the end of the day\n4. Which warmup project your team is doing\nPlease share this by the end of the day",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "ga4db6fb03ec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a4db6fb03ec41038f7185328d59387c6.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Akshay",
+            "real_name": "Akshay Prabhu",
+            "display_name": "Akshay Prabhu",
+            "team": "T06U6RD9T08",
+            "name": "akprabhu",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "g8IBr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nHopefully, your team teams have settled down and you know who has and who hasn't dropped the course. Any one member of the team (preferably the team leads) send me the following details in my DMs on the main slack:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "List of team members who are still present in your team after drops"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Their name, their UCSD email, their github username"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Any members that havent dropped but are inactive and\/or not responding. Please do so preferably by the end of the day"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Which warmup project your team is doing"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nPlease share this by the end of the day"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1713842893.967469",
+        "edited": {
+            "user": "U06T3FJTE15",
+            "ts": "1713842948.000000"
+        },
+        "client_msg_id": "702198ee-7420-4dba-9b4d-db6011a90a2a",
+        "text": "<!everyone>\n\n:loudspeaker: Weekly Announcement\n\n\n\n\n\n\n\n\n\n\n\n:rocket: *Project Kickoff Tomorrow*\nWe are excited to begin work on our project tomorrow. The task we have selected is the rating widget (task #1). This project will give everyone the chance to get hands-on experience with HTML, CSS, and JavaScript.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:mag: *GitHub Organization Membership*\nPlease make sure you are a part of our GitHub organization. If you find that you are not included, please reach out to me and Rei immediately.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:clock4: *Pre-Class Team Meeting*\nTo better coordinate our efforts for this first warm-up exercise, we will all meet before class near the grass at 4:15 PM tomorrow. We’ll discuss task delegation and other important details.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s make a strong start and get everyone up to speed! If you have any questions or need additional information, feel free to ask. Let’s have a productive week! :star2:",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713842893.967469",
+        "reply_count": 3,
+        "reply_users_count": 3,
+        "latest_reply": "1713843886.314909",
+        "reply_users": [
+            "U06T3FJTE15",
+            "U06TLGA6XCL",
+            "U06TWN2LJJD"
+        ],
+        "replies": [
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1713842998.189829"
+            },
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1713843165.163779"
+            },
+            {
+                "user": "U06TWN2LJJD",
+                "ts": "1713843886.314909"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "suMav",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "everyone"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "loudspeaker",
+                                "unicode": "1f4e2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Weekly Announcement\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rocket",
+                                "unicode": "1f680"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Project Kickoff Tomorrow",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nWe are excited to begin work on our project tomorrow. The task we have selected is the rating widget (task #1). This project will give everyone the chance to get hands-on experience with HTML, CSS, and JavaScript.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "mag",
+                                "unicode": "1f50d"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "GitHub Organization Membership",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nPlease make sure you are a part of our GitHub organization. If you find that you are not included, please reach out to me and Rei immediately.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "clock4",
+                                "unicode": "1f553"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Pre-Class Team Meeting",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nTo better coordinate our efforts for this first warm-up exercise, we will all meet before class near the grass at 4:15 PM tomorrow. We’ll discuss task delegation and other important details.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s make a strong start and get everyone up to speed! If you have any questions or need additional information, feel free to ask. Let’s have a productive week! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "star2",
+                                "unicode": "1f31f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06TJ2NEP0S",
+                    "U06THU1RXRR",
+                    "U06THUGKQPM",
+                    "U06T3FJTE15",
+                    "U06TWN379CH",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 6
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1713842998.189829",
+        "client_msg_id": "e6fc4589-747e-4242-a6fd-6c515189d582",
+        "text": "If you cannot make tomorrow’s meeting please respond in this thread here.  Unfortunately I am a culprit. I have a work meeting that I cannot miss!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713842893.967469",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5TvJB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you cannot make tomorrow’s meeting please respond in this thread here.  Unfortunately I am a culprit. I have a work meeting that I cannot miss!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1713843165.163779",
+        "client_msg_id": "F818D11F-6D96-4A78-9189-560B2AA8049A",
+        "text": "Is it ok if I arrive a little late? I usually get there like 4:35 ish",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713842893.967469",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HHS+D",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is it ok if I arrive a little late? I usually get there like 4:35 ish"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06T3FJTE15",
+                    "U06THU1RXRR"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U06TWN2LJJD",
+        "type": "message",
+        "ts": "1713843886.314909",
+        "client_msg_id": "9553c426-666e-4398-8daa-0104e8345aa6",
+        "text": "I cannot arrive before because I have my CSE 105 class right before this one",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g72bc8ff9227",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/72bc8ff92278427200842caad547f60d.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "Benjamin",
+            "real_name": "Benjamin Nhan",
+            "display_name": "Benjamin Nhan",
+            "team": "T06U6RD9T08",
+            "name": "bnhan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1713842893.967469",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pTFET",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I cannot arrive before because I have my CSE 105 class right before this one"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U06T3FJTE15",
+                    "U06THU1RXRR"
+                ],
+                "count": 2
+            }
+        ]
+    }
+]

@@ -1,0 +1,496 @@
+[
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1715870838.413509",
+        "client_msg_id": "256B4903-B075-4905-995D-A366C9EA7D0A",
+        "text": "I’ll try my best to make it, but if I can’t, I’m still leaning towards front end development. I can also help out with any backend stuff later in the project if needed",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1715837242.479539",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iKwmH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I’ll try my best to make it, but if "
+                            },
+                            {
+                                "type": "text",
+                                "text": "I can’t"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", I’m still leaning towards front end development. I can also help out with any backend stuff later in the project if needed"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1715917773.543419",
+        "client_msg_id": "65bd6c6b-9eb7-4adb-8c88-9df303526436",
+        "text": "<!channel> Hi everyone! This is the zoom link for tonight's Sprint #1 Planning. Please do make it as this is a very important factor in our project. See you guys at 9 PM!\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Sprint #1 Planning\nTime: May 16, 2024 09:00 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n<https:\/\/us05web.zoom.us\/j\/88419739523?pwd=x7RpCYqc4rbbLmbfszN7ESqWQAoU0n.1>\n\nMeeting ID: 884 1973 9523\nPasscode: 8ce8tg",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "H8yBs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Hi everyone! This is the zoom link for tonight's Sprint #1 Planning. Please do make it as this is a very important factor in our project. See you guys at 9 PM!\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Sprint #1 Planning\nTime: May 16, 2024 09:00 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/88419739523?pwd=x7RpCYqc4rbbLmbfszN7ESqWQAoU0n.1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMeeting ID: 884 1973 9523\nPasscode: 8ce8tg"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1715921840.082749",
+        "client_msg_id": "0a4b463e-d50d-4d43-841c-67899903addc",
+        "text": ":loudspeaker: **Team Meeting Recap**\n<!everyone>\n\n\n\n\n\n\n\n\n\n\n:rocket: **Sprint #1 Kickoff**\nToday we discussed the details of Sprint #1, which starts now and ends next Wednesday. We’ve assigned roles and set priorities as a team.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:pushpin: **GitHub Kanban Board**\nTo begin working on the project, please refer to your role and access our GitHub Kanban board to see your tickets: <https:\/\/github.com\/orgs\/cse110-sp24-group3\/projects\/2\/views\/1|Sprint #1 Kanban Board>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:computer: **Initialize the Codebase**\nTo set up your local development environment, please follow these steps:\n\n```bash\n# Clone the repo (if you haven't already)\ngit clone [the repo]\n\n# If already cloned, update your local code\ngit pull\n\n# Change directory to the application\ncd application\n\n# Install required packages\nnpm install\n\n# Run our development environment\nnpm run dev```\n\n\n\n\n\n\n\n\n\n\n\n\n\n:busts_in_silhouette: **Roles for Sprint #1**\nHere are the specified team roles for Sprint #1:\n\n\n\n\n\n\n\n\n\n# **Sidebar**\n- Sean Ting (Front End)\n- Ben Nhan\n- Nicholas Quach\n\n# **Homepage**\n- Isabelle Layon (Front End)\n- Pranav Reddy\n\n# **Header**\n- Aaron A (Front End)\n\n# **Entry Page**\n- James Ouyang (Front End)\n- Rei \/ Cameron\n\n# **Full Stack (Contributing to Every Component)**\n- Cameron\n- Rei\n- Logan (Backend)\n- Jesus (Designer)\n\n\n\n\n\n\n\n\n\n\n\n:link: **Development Workflow**\n- **Create a New Branch**: For any new changes, please create a new branch with the format `component-ticketnumber`.\n- **Ensure Code Quality**: Make sure your code passes all tests by running `npm run lint`.\n- **Commit Your Changes**: Use the conventional commits style for your commits.\n- **Open a Pull Request**: Link your issue\/ticket to the pull request.\n- **Update Issue**: Please update the status of your issue and assign a bucket.\n\n\n\n\n\n\n\n\n\n:loudspeaker: **New Communication Channels**\nWe have created five new channels to help us stay organized:\n- <#C073W0S8UQ2|sprint1>\n- <#C0748VC9LQ1|sidebar-component>\n- <#C073TCF66RK|homepage-component>\n- <#C073W9MHSV8|header-component>\n- <#C073W6BPHAP|entry-component>\n\n\n\n\n\n\n\n\n\nLet’s dive into Sprint #1 with enthusiasm and focus! If you have any questions or need help with setup, please reach out. Let’s make this a productive sprint! :star2:",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sUqef",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "loudspeaker",
+                                "unicode": "1f4e2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Team Meeting Recap",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n"
+                            },
+                            {
+                                "type": "broadcast",
+                                "range": "everyone"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rocket",
+                                "unicode": "1f680"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Sprint #1 Kickoff",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nToday we discussed the details of Sprint #1, which starts now and ends next Wednesday. We’ve assigned roles and set priorities as a team.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pushpin",
+                                "unicode": "1f4cc"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "GitHub Kanban Board",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nTo begin working on the project, please refer to your role and access our GitHub Kanban board to see your tickets: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/orgs\/cse110-sp24-group3\/projects\/2\/views\/1",
+                                "text": "Sprint #1 Kanban Board"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "computer",
+                                "unicode": "1f4bb"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Initialize the Codebase",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nTo set up your local development environment, please follow these steps:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "bash\n# Clone the repo (if you haven't already)\ngit clone [the repo]\n\n# If already cloned, update your local code\ngit pull\n\n# Change directory to the application\ncd application\n\n# Install required packages\nnpm install\n\n# Run our development environment\nnpm run dev"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "busts_in_silhouette",
+                                "unicode": "1f465"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Roles for Sprint #1",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nHere are the specified team roles for Sprint #1:\n\n\n\n\n\n\n\n\n\n# *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Sidebar",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n- Sean Ting (Front End)\n- Ben Nhan\n- Nicholas Quach\n\n# *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Homepage",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n- Isabelle Layon (Front End)\n- Pranav Reddy\n\n# *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Header",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n- Aaron A (Front End)\n\n# *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Entry Page",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n- James Ouyang (Front End)\n- Rei \/ Cameron\n\n# *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Full Stack (Contributing to Every Component)",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n- Cameron\n- Rei\n- Logan (Backend)\n- Jesus (Designer)\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "link",
+                                "unicode": "1f517"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Development Workflow",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Create a New Branch",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: For any new changes, please create a new branch with the format "
+                            },
+                            {
+                                "type": "text",
+                                "text": "component-ticketnumber",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Ensure Code Quality",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Make sure your code passes all tests by running "
+                            },
+                            {
+                                "type": "text",
+                                "text": "npm run lint",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Commit Your Changes",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Use the conventional commits style for your commits.\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Open a Pull Request",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Link your issue\/ticket to the pull request.\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Update Issue",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Please update the status of your issue and assign a bucket.\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "loudspeaker",
+                                "unicode": "1f4e2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "New Communication Channels",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nWe have created five new channels to help us stay organized:\n- "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C073W0S8UQ2"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n- "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C0748VC9LQ1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n- "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C073TCF66RK"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n- "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C073W9MHSV8"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n- "
+                            },
+                            {
+                                "type": "channel",
+                                "channel_id": "C073W6BPHAP"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n\n\n\n\n\nLet’s dive into Sprint #1 with enthusiasm and focus! If you have any questions or need help with setup, please reach out. Let’s make this a productive sprint! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "star2",
+                                "unicode": "1f31f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

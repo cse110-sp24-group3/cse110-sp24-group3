@@ -1,0 +1,249 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714150937.674439",
+        "client_msg_id": "427a8696-3c5c-4231-af59-32bde7761522",
+        "text": "<!channel> We're about to start the meeting. This is the link: <https:\/\/us05web.zoom.us\/j\/89634147798?pwd=a0eDLiaxWsMwGb9oPbC5mERatxJhx3.1>",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PBhby",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " We're about to start the meeting. This is the link: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/89634147798?pwd=a0eDLiaxWsMwGb9oPbC5mERatxJhx3.1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714153896.526339",
+        "client_msg_id": "23b1b82e-f5c3-488c-a1d0-11429bffdcfa",
+        "text": "<!channel> This is the link for our team to get an understanding of when people are free to create the Weekly Standup meetings:\n<https:\/\/lettucemeet.com\/l\/LX8VA>\n\nAlso, we have two assignments on Monday: Retrospective, and Sprint Review Meetings that will be due *Monday, April 29th @ 11:59 PM*. Since, we also want some brainstorming time for our main project, we will do that after these meetings. I have also made a lettucemeet link for Monday to see when people are free:\n<https:\/\/lettucemeet.com\/l\/M0b4r>\n\nPlease react to this if you have read this, and submitted your availabilities for both lettucemeet",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/lettucemeet.com\/l\/LX8VA",
+                "service_icon": "https:\/\/lettucemeet.com\/.\/favicon\/apple-icon-57x57.png",
+                "id": 1,
+                "original_url": "https:\/\/lettucemeet.com\/l\/LX8VA",
+                "fallback": "LettuceMeet - Easy Group Scheduling",
+                "text": "The easiest way to schedule group meetings.",
+                "title": "LettuceMeet - Easy Group Scheduling",
+                "title_link": "https:\/\/lettucemeet.com\/l\/LX8VA",
+                "service_name": "lettucemeet.com"
+            },
+            {
+                "from_url": "https:\/\/lettucemeet.com\/l\/M0b4r",
+                "service_icon": "https:\/\/lettucemeet.com\/.\/favicon\/apple-icon-57x57.png",
+                "id": 2,
+                "original_url": "https:\/\/lettucemeet.com\/l\/M0b4r",
+                "fallback": "LettuceMeet - Easy Group Scheduling",
+                "text": "The easiest way to schedule group meetings.",
+                "title": "LettuceMeet - Easy Group Scheduling",
+                "title_link": "https:\/\/lettucemeet.com\/l\/M0b4r",
+                "service_name": "lettucemeet.com"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UgM42",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " This is the link for our team to get an understanding of when people are free to create the Weekly Standup meetings:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/lettucemeet.com\/l\/LX8VA"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nAlso, we have two assignments on Monday: Retrospective, and Sprint Review Meetings that will be due "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Monday, April 29th @ 11:59 PM",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Since, we also want some brainstorming time for our main project, we will do that after these meetings. I have also made a lettucemeet link for Monday to see when people are free:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/lettucemeet.com\/l\/M0b4r"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nPlease react to this if you have read this, and submitted your availabilities for both lettucemeet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714198710.063369",
+        "client_msg_id": "0f3a2188-9a9c-4acc-9dc8-bdd9946de2d0",
+        "text": "<!channel> just submitted our Warmup Activity! Great job everyone thank you for your contribution. Lmk if you don't see the submission",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1714198710.063369",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1714199280.816329",
+        "reply_users": [
+            "U06TLGA6XCL"
+        ],
+        "replies": [
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1714199280.816329"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1714199280.816329",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CpvLd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " just submitted our Warmup Activity! Great job everyone thank you for your contribution. Lmk if you don't see the submission"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06TLGA6XCL",
+                    "U06THUGKQPM"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1714199280.816329",
+        "client_msg_id": "69678162-76DE-470E-9465-3F4C3D756259",
+        "text": "Great job guys :) ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1714198710.063369",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rrxHp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great job guys :) "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,103 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714419109.814309",
+        "client_msg_id": "6B86080D-5D3D-4CD0-8DBB-1D25BF5926FC",
+        "text": "<!channel> let’s meet at 8:30 tonight ! Zoom link will be given closer to the meeting time ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PeLGW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " let’s meet at 8:30 tonight ! Zoom link will be given closer to the meeting time "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714446513.496409",
+        "client_msg_id": "5404f854-f9a7-48dd-8227-ae3d9bdff829",
+        "text": "<!channel> This is the zoom link for tonight's meeting:\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Agile &amp; Brainstorming Meeting\nTime: Apr 29, 2024 08:30 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n<https:\/\/us05web.zoom.us\/j\/83418293250?pwd=BJUgHgXqd63gR0TNndfj8K35Nl6C3S.1>\n\nMeeting ID: 834 1829 3250\nPasscode: 1J9U1V",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6nJxk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " This is the zoom link for tonight's meeting:\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Agile & Brainstorming Meeting\nTime: Apr 29, 2024 08:30 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/83418293250?pwd=BJUgHgXqd63gR0TNndfj8K35Nl6C3S.1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMeeting ID: 834 1829 3250\nPasscode: 1J9U1V"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
