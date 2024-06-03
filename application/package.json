@@ -4,7 +4,7 @@
   "description": "Electron based dev journal app",
   "main": "main.js",
   "scripts": {
-    "lint": "eslint . --config eslint.config.mjs --fix",
+    "lint": "eslint . --config eslint.config.mjs",
     "prod": "NODE_ENV=production electron .",
     "dev": "NODE_ENV=development electron .",
     "generate-docs": "jsdoc web -r -d ../docs",
