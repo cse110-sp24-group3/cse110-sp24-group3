@@ -1,0 +1,36 @@
+ /* _____                __                _ 
+/__   \___  _ __     / /  _____   _____| |
+  / /\/ _ \| '_ \   / /  / _ \ \ / / _ \ |
+ / / | (_) | |_) | / /__|  __/\ V /  __/ |
+ \/   \___/| .__/  \____/\___| \_/ \___|_|
+           |_|                             */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--grey-text-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+#app-wrapper {
+    display: flex;
+    height: 100%;
+}
+
+p, span {
+    font-weight: 300;
+}
+
+span {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    letter-spacing: -0.001cap;
+}

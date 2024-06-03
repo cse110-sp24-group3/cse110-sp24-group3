@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Instone; an effective markdown editor.">
     <title>Instone</title>
-    <link rel="stylesheet" href="main.css">
+    
+    <!-- Styles -->
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css" />
+    <link rel="stylesheet" href="style/global-variables.css">
+    <link rel="stylesheet" href="style/top-level.css">
+    <link rel="stylesheet" href="style/sidebar.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/homepage.css">
+    <link rel="stylesheet" href="style/entry.css">    
+
+    <!-- Script -->
     <script src="web.js" type="module"></script>
-    <script src="../web/scripts/entry-title-script.js"> </script>
+    <script src="scripts/entry-title-script.js"> </script>
     <script src="JournalAPI.js"></script>
-    <script src="web.js"></script>
+    <script src="scripts/dropdown.js"></script>
 </head>
 
 <body>
@@ -23,7 +32,7 @@
                 <button class="collapse-button" id="collapse-button">
                     <img src="./assets/drawer.svg"></img>
                 </button>
-                <button class="new-journal">
+                <button id="new-journal-button" class="new-journal">
                     <span>New Journal</span>
                     <img src="assets/journal-icon.svg" alt="Journal Icon" class="journal-icon">
                 </button>
@@ -47,26 +56,29 @@
                 </button>
                 <div class="home-list">
                     <div class="home-entry-descriptor">
-                        <span style="font-family: 'Inter'">Entry Name</span>
-                        <span style="font-family: 'Inter'">Date Logged</span>
+                        <!-- Text inside of this div will be populated when a journal is created -->
                     </div>
-                    <div class="home-single-entry">
-                        <button class="home-single-entry-button">
+                    <!-- <div class="home-single-entry"> -->
+                        <!-- The commented code will be used in web.js to populate the entries that are created-->
+                        <!-- <button class="home-single-entry-button">
                             <span class="home-entry-name">My Journal</span>
-                            <span>Date Created</span>
+                            <span>Date Created</span> -->
                             <!-- <img src="/application/web/assets/vdots-entry-black.png"> -->
-                            <!-- <img src="../web/assets/vdots-entry-black.png" width="20" height="20">                     -->
-                        </button>
-                        <button class="three-dots-entry">
+                            <!-- <img src="../web/assets/vdots-entry-black.png" width="20" height="20"> -->
+                        <!-- </button> -->
+                        <!-- <button class="three-dots-entry">
                             <img src="../web/assets/vdots-entry-black.png">
-                        </button>
-                    </div>
+                        </button> -->
+                    <!-- </div> -->
+                </div>
 
+                <div id="no-entry-text">
+                    <b>You have no Journals</b>
+                    <p>Create a new Journal with the "New Journal" button to the left.</p>
                 </div>
 
                 <div class="no-entry-text">
-                    <p style="font-weight: 500;">You have no Journal Entries</p>
-                    <p>Click "Create New Entry" on top to start your first entry.</p>
+                    <!-- Text inside this div will be populated when a journal is created -->
                 </div>
                 <!-- Entrypage Module -->
                 <div class="title-textarea">
@@ -79,7 +91,7 @@
                             <div id="myPopup" class="popup">
                                 <div class="popup-content">
                                     <span>Discard unsaved entry changes?</span>
-                                    <div class="discard-cance-container">
+                                    <div class="discard-cancel-container">
                                         <button id="cancel-note" class="secondary">
                                             Discard
                                         </button>
@@ -92,9 +104,21 @@
                             <button id="save-entry" class="primary">
                                 <span>Save Entry</span>
                             </button>
-                            <button class="three-dots-entry">
-                                <img src="./assets/vdots-entry-black.png" width="24" height="24">
+                            <button id="three-dots-entry" class="three-dots">
+                                <img src="./assets/vdots-grey.svg" alt="Three Dots" class="dots-icon">
                             </button>
+                            <div id="dropdown-menu-entry" class="dropdown-menu">
+                                <div class="dropdown-item" data-action="markdown">
+                                    <img src="./assets/markdown-icon.svg" alt="Markdown Icon" class="dropdown-icon"> Download as Markdown
+                                </div>
+                                <div class="dropdown-item" id="devModeToggle" data-action="devmode">
+                                    <img src="./assets/devmode-icon.svg" alt="Dev Icon" class="dropdown-icon"> Dev Mode
+                                    <img src="./assets/checkmark.svg" alt="Checkmark Icon" class="checkmark">
+                                </div>
+                                <div class="dropdown-item delete" data-action="delete">
+                                    <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
