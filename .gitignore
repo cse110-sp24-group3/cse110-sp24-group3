@@ -294,4 +294,5 @@ error_log
 
 node_modules                                             
 application/mock/*
-!application/mock/.gitkeep                                             
+!application/mock/.gitkeep 
+output                                            
