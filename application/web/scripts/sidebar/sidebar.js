@@ -76,22 +76,31 @@ async function createJournal() {
         console.error(`Error creating Journal with new Journal button :: ${error}`);
     }
 }
+
+// 
 export function createJournalEntries() {
-    //new journal entries created after
+    // new journal entries created after
     const journal = document.querySelector('.new-journal');
     journal.addEventListener('click', () => {
         //replicates the div module as it was in html
         const journalEntries = document.querySelector('.sidebar-module');
         const entryElement = document.createElement('div');
-        entryElement.classList.add('journal-entry');
+        entryElement.classList.add('journal');
 
         //using vdots
+        // <div class="journal">
+        //     <span>My Journal</span>
+        //     <button>
+        //         <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
+        //     </button>
+        // </div>
         entryElement.innerHTML = `
             <span>My Journal</span>
-            <button class="edit-journal">
-                <img id = "sidebar-dots" class = "dots" src="./assets/vdots-journal-white.svg">
+            <button>
+                <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
             </button>`;
 
+        journalEntries.appendChild(entryElement);
         // event handler to deal with selecting a given journal
         // updates page title and sidebar visuals
         entryElement.addEventListener('click', function () {
@@ -125,6 +134,8 @@ export function createJournalEntries() {
         }
     });
 };
+
+// inserts "no Journal Entries" text
 function showNoEntriesText() {
     const noJournalText = document.querySelector('.no-entry-text');
     noJournalText.insertAdjacentHTML("beforeend",`
@@ -133,6 +144,7 @@ function showNoEntriesText() {
     );
 }
 
+// Displays Create New Entry, Entry Name, 
 function showHomepageHeaderInfo() {
     // Show the "Create New Entry" button when a journal is selected
     const entryButton = document.querySelector('.add-note');
