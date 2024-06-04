@@ -4,7 +4,7 @@
   "description": "Electron based dev journal app",
   "main": "main.js",
   "scripts": {
-    "lint": "eslint . --config eslint.config.mjs",
+    "lint": "eslint . --ignore-pattern \"web/scripts/ajax/*\"",
     "prod": "NODE_ENV=production electron .",
     "dev": "NODE_ENV=development electron .",
     "generate-docs": "jsdoc web -r -d ../docs",
@@ -20,6 +20,13 @@
   "author": "Team 3",
   "license": "ISC",
   "dependencies": {
+    "@codemirror/autocomplete": "^6.0.0",
+    "@codemirror/commands": "^6.0.0",
+    "@codemirror/language": "^6.0.0",
+    "@codemirror/lint": "^6.0.0",
+    "@codemirror/search": "^6.0.0",
+    "@codemirror/state": "^6.0.0",
+    "@codemirror/view": "^6.0.0",
     "@electron/packager": "^18.3.2",
     "electron": "^30.0.3",
     "fs": "^0.0.1-security",
@@ -27,6 +34,7 @@
     "jsdoc": "^4.0.3"
   },
   "devDependencies": {
+    "@codemirror/buildhelper": "^1.0.0",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.2.0",
