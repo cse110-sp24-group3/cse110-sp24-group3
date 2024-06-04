@@ -83,13 +83,13 @@ export function createJournalEntries() {
         //replicates the div module as it was in html
         const journalEntries = document.querySelector('.sidebar-module');
         const entryElement = document.createElement('div');
-        entryElement.classList.add('journal-entry');
+        entryElement.classList.add('new-journal-name');
 
         //using vdots
         entryElement.innerHTML = `
-            <span>My Journal</span>
+            <span contentEditable="true">Untitled</span>
             <button class="edit-journal">
-                <img id = "sidebar-dots" class = "dots" src="./assets/vdots-journal-white.svg">
+                <img src="./assets/vdots.svg">
             </button>`;
 
         // event handler to deal with selecting a given journal
@@ -114,6 +114,15 @@ export function createJournalEntries() {
             this.style.backgroundColor = '#cbcfce';
 
             this.setAttribute('isSelected', true);
+       
+        });
+        entryElement.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                entryElement.remove();
+                journalEntries.appendChild(entryElement);
+                const newJournal = createJournal(entryElement.innerText);
+                selectedJournal = newJournal;
+            }
         });
 
         journalEntries.appendChild(entryElement);

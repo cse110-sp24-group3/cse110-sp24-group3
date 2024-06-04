@@ -5,6 +5,7 @@ window.onload = () => {
     initializeHomepage();
     createHomepage();
     createSidebar();
+    //createJournal();
     createJournalEntries();
     showDiscardChangePage();
     //Initalization ... maybe refactor this in the future
