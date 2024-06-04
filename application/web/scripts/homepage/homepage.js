@@ -1,13 +1,19 @@
 /// <reference path="../../JournalAPI.js" />
 
 /**
- * Initializes the homepage by hiding the "Create New Entry" button until a journal is created.
+ * Initializes the homepage by hiding the "Create New Entry" button until a journal is created
+ * and populates entries if a journal is selected.
  */
 export function initializeHomepage() {
     // Select the "Create New Entry" button element
     const entryButton = document.querySelector('.add-note');
     // Hide the button by setting the 'hidden' attribute
     entryButton.setAttribute("hidden", "hidden");
+
+    // Check if a journal is selected and populate entries
+    if (selectedJournal) {
+        populateEntries();
+    }
 }
 
 /**
@@ -39,9 +45,6 @@ export function createHomepage() {
     // readEntriesFromStorage();
 }
 
-
-/* Event listener to cancel entry. Identical to saveEntry for now, but more functionality can be added.
-*/
 /**
  * Event listener function to cancel entry editing.
  * Hides the text editor and restores previous entry content if available,
@@ -82,6 +85,7 @@ function cancelEntry() {
     const myPopup = document.getElementById("myPopup");
     myPopup.classList.remove("show");
 }
+
 /**
  * Opens the text editor for editing an entry.
  * Uses the CSS 'display' property to hide other elements.
@@ -110,53 +114,47 @@ function openEntryforEdit() {
 /**
  * Saves the current entry.
  * Hides the text editor and prepares the entry to be displayed.
- * This function is currently identical to cancelEntry() but will have more functionality added in the future.
+ * Displays a success message.
  */
-function saveCurrentEntry() {
-    // Hide the text editor
-    hideTextEditor();
-
+async function saveCurrentEntry() {
     // Get the title text area and extract the title
     const titleTextArea = document.querySelector('#title-input');
     const title = titleTextArea.value;
-    titleTextArea.style.display = '';
-
+    
     // Get the entry text area and extract the entry content
     const entryTextArea = document.querySelector('.entry-textarea');
     const entry = entryTextArea.value;
-    entryTextArea.value = '';
 
-    // Get the list of past entries and create a new button for the current entry
-    const buttonList = document.querySelector('.past-entries');
-    const newEntryButton = document.createElement('button');
-    newEntryButton.innerText = title;
+    // Save the entry to the backend
+    if (selectedJournal) {
+        try {
+            const newEntry = await selectedJournal.createEntry(title);
+            await newEntry.updateContent(entry);
+            displaySaveMessage();
+            populateEntries();
+        } catch (error) {
+            console.error('Error saving entry:', error);
+        }
+    }
+    else {
+        console.error('Selected journal undefined.');
+    }
 
-    // Create an article element to display the entry content
-    const article = document.createElement('article');
-    article.innerText = entry;
-    article.style.display = 'none';
-
-    // TODO: Replace with function to load entry from storage
-    newEntryButton.addEventListener('click', () => {
-        article.style.display = 'block';
-    });
-
-    // Append the new entry button and article to the list of past entries
-    buttonList.append(newEntryButton);
-    buttonList.append(article);
-
-    // Reset the title text area to default values and hide the text editor
+    // Reset the title and entry text areas
     titleTextArea.value = 'Untitled';
     titleTextArea.className = 'placeholder';
+    entryTextArea.value = '';
+
+    // Hide the text editor and go back to the homepage
     hideTextEditor();
 }
+
 function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
 
     const addEntryList = document.querySelector('.home-list');
     addEntryList.style.display = '';
-
 
     const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.style.display = '';
@@ -175,7 +173,43 @@ function hideTextEditor() {
 
     const prevEntries = document.querySelector('.past-entries');
     const prevCount = prevEntries.querySelectorAll('article').length;
-    if(prevCount > 0){
+    if (prevCount > 0) {
         noEntryText.style.display = 'none';
     }
+}
+
+function displaySaveMessage() {
+    const messageContainer = document.createElement('div');
+    messageContainer.className = 'save-message';
+    messageContainer.innerText = 'Entry Successfully Saved';
+
+    document.body.appendChild(messageContainer);
+
+    setTimeout(() => {
+        document.body.removeChild(messageContainer);
+    }, 3000);
+}
+
+async function populateEntries() {
+    if (!selectedJournal) return;
+
+    const entries = await selectedJournal.getEntries();
+    const entryContainer = document.querySelector('.home-list');
+    entryContainer.innerHTML = ''; // Clear previous entries
+
+    entries.forEach(async (entry) => {
+        const entryContent = await entry.getContent();
+
+        const entryElement = document.createElement('div');
+        entryElement.classList.add('home-single-entry');
+        
+        entryElement.innerHTML = `
+            <button class="home-single-entry-button">
+                <span class="home-entry-name">${entry.name}</span>
+            </button>
+            <div class="entry-content">${entryContent}</div>
+        `;
+
+        entryContainer.appendChild(entryElement);
+    });
 }
