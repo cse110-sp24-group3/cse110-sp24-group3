@@ -136,14 +136,18 @@ function saveCurrentEntry() {
     article.innerText = entry;
     article.style.display = 'none';
 
-    // TODO: Replace with function to load entry from storage
-    newEntryButton.addEventListener('click', () => {
-        article.style.display = 'block';
-    });
-
     // Append the new entry button and article to the list of past entries
     buttonList.append(newEntryButton);
     buttonList.append(article);
+
+    // TODO: Replace with function to load entry from storage
+    newEntryButton.addEventListener('click', (event) => {
+        article.style.display = 'block';
+        titleTextArea.value = newEntryButton.innerText;
+        const entryContent = document.querySelector('.CodeMirror-line');
+        entryTextArea.value = entryContent.innerText;
+        openEntryforEdit();
+    });
 
     // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
@@ -178,4 +182,22 @@ function hideTextEditor() {
     if(prevCount > 0){
         noEntryText.style.display = 'none';
     }
+}
+
+async function readEntriesFromStorage(){
+    try {
+        const journals = await api.getJournals();
+        console.log("out");
+
+        for(const journal of journals) {
+            const entries = await journal.getEntries();
+
+            entries.forEach(entry =>{
+                console.log(`Journal: ${journal.name}, Entry: ${entry.name}`);
+            });
+        }
+    }catch(error){
+        console.error('error getting journal entries from storage', error);
+    }
+
 }
