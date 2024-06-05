@@ -10,12 +10,12 @@ export function createSidebar() {
 
     // Event listener for mouseover events on journal entries
     journalEntries.addEventListener('mouseover', (event) => {
-        // Find the closest ancestor with the class 'journal-entry' that triggered the event
-        const targetEntry = event.target.closest('.journal-entry');
+        // Find the closest ancestor with the class '.journal' that triggered the event
+        const targetEntry = event.target.closest('.journal');
         // Filter to just the new journals
         if (targetEntry) {
             // Select the three dot button within the journal entry
-            let icon = targetEntry.querySelector('#sidebar-dots');
+            let icon = targetEntry.querySelector('.journal-vdots');
             // Display the three dots icon
             icon.style.display = 'block';
             // Highlight the journal entry by changing its background color
@@ -25,12 +25,12 @@ export function createSidebar() {
 
     // Event listener for mouseout events on journal entries
     journalEntries.addEventListener('mouseout', (event) => {
-        // Find the closest ancestor with the class 'journal-entry' that triggered the event
-        const targetEntry = event.target.closest('.journal-entry');
+        // Find the closest ancestor with the class '.journal' that triggered the event
+        const targetEntry = event.target.closest('.journal');
         // Check to make sure that hovered entry was not also selected
         if (targetEntry && targetEntry.getAttribute('isSelected') != 'true') {
             // Select the three dots icon within the journal entry
-            let icon = targetEntry.querySelector('#sidebar-dots');
+            let icon = targetEntry.querySelector('.journal-vdots');
             // Hide the three dots ellipsis icon
             icon.style.display = 'none';
             // Remove the background color highlighting
@@ -55,10 +55,10 @@ export function toggleSidebar() {
     newJournalBtn.classList.toggle('toggled-new-journal');
 
     // Select all journal entry buttons
-    const journalEntryBtn = document.querySelectorAll('.journal-entry');
-    // Toggle the 'toggled-journal-entry' class for each journal entry button
+    const journalEntryBtn = document.querySelectorAll('.journal');
+    // Toggle the 'toggled-.journal' class for each journal entry button
     journalEntryBtn.forEach(entry => {
-        entry.classList.toggle('toggled-journal-entry');
+        entry.classList.toggle('toggled-.journal');
     });
 };
 
@@ -89,14 +89,14 @@ export function createJournalEntries() {
         //         <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
         //     </div>
         // </div>`;
-        
+
         // Injects HTML above into journal entry
         sidebar.appendChild(journalDiv);
 
         // Adds toggle dropdown listener to new button.
         let dropdownButton = journalDiv.querySelector('.journal-dropdown-button');
         dropdownButton.addEventListener('click', window.toggleJournalDropdown);
-        
+
         journalDiv.addEventListener('click', function () {
             // Sets the displayed journal title to be the clicked journal title
             const displayedJournalTitle = document.querySelector('#journal-title');
@@ -105,17 +105,31 @@ export function createJournalEntries() {
             // Clear highlighted visuals on all journals
             sidebar.querySelectorAll(".journal").forEach(journal => {
                 // insert code here
-                journal.setAttribute('highlighted', false);
+                journal.setAttribute('isSelected', false);
+                // Select the three dots icon within the journal entry
+                let icon = journal.querySelector('.journal-vdots');
+                // Hide the three dots ellipsis icon
+                icon.style.display = 'none';
+                // Remove the background color highlighting
+                journal.style.background = 'none';
             });
-        
+
+
             // Highlights clicked journal
-            this.setAttribute('highlighted', true);
+            this.setAttribute('isSelected', true);
+            // Select the three dot button within the journal entry
+            let icon = this.querySelector('.journal-vdots');
+            // Display the three dots icon
+            icon.style.display = 'block';
+            // Highlight the journal entry by changing its background color
+            console.log('clicked here')
+            this.style.backgroundColor = '#cbcfce';
         });
 
         // Once a journal is created, the "No Journals" text will disappear
         document.getElementById("no-entry-text").style.display = "none";
-        if(!document.getElementById('entry-name')) {
-            showHomepageHeaderInfo(); 
+        if (!document.getElementById('entry-name')) {
+            showHomepageHeaderInfo();
             showNoEntriesText();
         }
     });
@@ -139,7 +153,7 @@ function showNoEntriesText() {
 function showHomepageHeaderInfo() {
     // Show the "Create New Entry" button when a journal is selected
     const entryButton = document.querySelector('.add-note');
-    entryButton.removeAttribute("hidden"); 
+    entryButton.removeAttribute("hidden");
 
     // Adds the "Entry Name" and "Date Logged" header when a journal is populated
     const test = document.querySelector('.home-entry-descriptor');
