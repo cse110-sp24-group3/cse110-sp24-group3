@@ -21,7 +21,9 @@
     <script src="web.js" type="module"></script>
     <script src="scripts/entry-title-script.js"> </script>
     <script src="JournalAPI.js"></script>
-    <script src="scripts/dropdown.js"></script>
+    <script src="scripts/editing-entry-dropdown.js"></script>
+    <script src="scripts/sidebar/sidebar.js" type="module"></script>
+    <script src="scripts/sidebar/sidebar-dropdown.js" type="module"></script>
 </head>
 
 <body>
@@ -36,7 +38,21 @@
                     <span>New Journal</span>
                     <img src="assets/journal-icon.svg" alt="Journal Icon" class="journal-icon">
                 </button>
+                <!-- <div class = "journal">
+                    <span>My Journal</span>
+                    <button class="journal-dropdown-button">
+                        <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
+                    </button>
+                </div> -->
+            </div>
 
+            <div class="sidebar-dropdown-menu">
+                <div class="sidebar-dropdown-item">
+                    <img src="./assets/addEntry-icon.png" alt="Edit Icon" class="dropdown-icon" width="24px"> Edit Journal Name
+                </div>
+                <div id="trash" class="sidebar-dropdown-item delete" >
+                    <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
+                </div>
             </div>
         </sidebar>
         <div class="container">
@@ -105,17 +121,10 @@
                             <button id="save-entry" class="primary">
                                 <span>Save Entry</span>
                             </button>
-                            <button id="three-dots-entry" class="three-dots">
-                                <img src="./assets/vdots-grey.svg" alt="Three Dots">
+                            <button id = "editing-entry-vdots-button">
+                                <img class = "editing-entry-vdots" src="./assets/vdots-grey.svg" alt="Three Dots">
                             </button>
                             <div id="dropdown-menu-entry" class="dropdown-menu">
-                                <div class="dropdown-item" data-action="markdown">
-                                    <img src="./assets/markdown-icon.svg" alt="Markdown Icon" class="dropdown-icon"> Download as Markdown
-                                </div>
-                                <div class="dropdown-item" id="devModeToggle" data-action="devmode">
-                                    <img src="./assets/devmode-icon.svg" alt="Dev Icon" class="dropdown-icon"> Dev Mode
-                                    <img src="./assets/checkmark.svg" alt="Checkmark Icon" class="checkmark">
-                                </div>
                                 <div class="dropdown-item delete" data-action="delete">
                                     <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
                                 </div>

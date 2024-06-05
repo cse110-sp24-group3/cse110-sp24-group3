@@ -24,6 +24,7 @@ sidebar {
 }
 
 .sidebar-module {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -32,15 +33,18 @@ sidebar {
     /* overflow: scroll;  */
     /* to make journal list for too many journals */
     overflow-y: scroll;
+    overflow-x: visible;
 }
 
 .sidebar-module::-webkit-scrollbar {
     width: 0px; 
 }
 
-/* styles for each journal */
+/* journal */
 .journal {
     color: var(--grey-text-color);
+    position: relative;
+    overflow: visible;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
@@ -58,17 +62,20 @@ sidebar {
 }
 
 .journal:hover{
-    background-color: #cbcfce;
+    background-color: var(--journal-highlight);
+}
+
+.journal[highlighted="true"] {
+    background-color: var(--journal-highlight);    
 }
 
 .journal button{
-    background-color: var(--sliding-shelf);
+    background-color: transparent;
     border: none;
     display: none;
 }
 
 .journal:hover button{
-    background-color: #cbcfce;
     display: block;
 }
 
@@ -76,6 +83,46 @@ sidebar {
     content: url('../assets/vdots-journal-white-active.svg');
 }
 
+/* dropdown */
+.sidebar-dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 200px;
+    z-index: 1000;
+    left: 80px;
+    background-color: var(--journal-entry);
+    border: 1px solid var(--icon-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+.sidebar-dropdown-item {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar-dropdown-item:hover {
+    background-color: var(--icon-color);
+    border-radius: 5px;
+}
+
+.dropdown-icon {
+    margin-right: 10px;
+}
+
+.sidebar-dropdown-item.delete {
+    color: red;
+}
+
+.sidebar-dropdown-item.delete:hover {
+    background-color: #f8d7da;
+}
+
+/* new journal button */
 button.new-journal {
     background-color: var(--dark-green);
     color: white;
