@@ -38,22 +38,40 @@ sidebar {
     width: 0px; 
 }
 
-
-/* .sidebar-module .fa.fa-ellipsis-v{
-    display:none;
-    transition: width 0.3s ease;
-} */
-/* To counteract the swap from .fa to vdots, both will be here */
-.sidebar-module #sidebar-dots{
-    display:none;
-    transition: width 0.3s ease;
-    height: 20px;
-    width: 20px;
+/* styles for each journal */
+.journal {
+    color: var(--grey-text-color);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 40px;
+    margin-bottom: 10px;
 }
 
-.sidebar-module .journal-entry #sidebar-dots:hover {
-    display: block;
-    content: url('./assets/vdots-journal-white-active.svg'); /* New image for hover */
+.journal span {
+    margin-left: 10px;
+}
+
+.journal:hover{
+    background-color: #cbcfce;
+}
+
+.journal button{
+    background-color: var(--sliding-shelf);
+    border: none;
+}
+
+.journal:hover button{
+    background-color: #cbcfce;
+}
+
+.journal-vdots:hover {
+    content: url('../assets/vdots-journal-white-active.svg');
 }
 
 button.new-journal {
@@ -87,36 +105,10 @@ button.collapse-button {
     width: 32px;
 }
 
-button.new-journal i.icon {
-    margin-left: 10px;
-}
-
 button.new-journal img.journal-icon,
 img.collapse-button {
     height: 20px;
     width: 20px;
-}
-
-.journal-entry {
-    background-color: #cbcfce;
-    color: var(--grey-text-color);
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 16px;
-    min-height: 40px;
-    margin-bottom: 10px;
-    background: none;
-}
-
-
-.journal-entry i.icon {
-    margin-left: 10px;
 }
 
 .sidebar-collapsed {
@@ -139,12 +131,4 @@ img.collapse-button {
 
 .sidebar-collapsed button.collapse-button {
     transform: rotate(180deg);
-}
-.edit-journal {
-    padding: 0;
-    border: none;
-    background: transparent;
-}
-.edit-journal > img {
-    cursor: pointer;
 }
