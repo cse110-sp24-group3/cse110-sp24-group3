@@ -64,10 +64,12 @@ sidebar {
 .journal button{
     background-color: var(--sliding-shelf);
     border: none;
+    display: none;
 }
 
 .journal:hover button{
     background-color: #cbcfce;
+    display: block;
 }
 
 .journal-vdots:hover {
