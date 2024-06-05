@@ -1,4 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
+
 /**
  * Creates the sidebar functionality, including mouseover and mouseout event listeners
  * for journal entries.
@@ -36,10 +37,6 @@ export function createSidebar() {
             targetEntry.style.background = 'none';
         }
     });
-    
-    //Event listener for new journal button
-    const newJournalButton = document.getElementById("new-journal-button");
-    newJournalButton.addEventListener('click', createJournal);
 };
 
 /**
@@ -64,20 +61,7 @@ export function toggleSidebar() {
         entry.classList.toggle('toggled-journal-entry');
     });
 };
-/**
- * 
- */
-async function createJournal() {
-    try {
-        const newJournal = await api.createJournal();
-        selectedJournal = newJournal;
-    }
-    catch(error) {
-        console.error(`Error creating Journal with new Journal button :: ${error}`);
-    }
-}
 
-// 
 export function createJournalEntries() {
     // new journal entries created after
     const journal = document.querySelector('.new-journal');
@@ -90,24 +74,49 @@ export function createJournalEntries() {
         entryElement.innerHTML = `
             <span contentEditable="true">Untitled</span>
             <button>
+    // Grabs new journal button
+    const newJournalButton = document.querySelector('.new-journal');
+
+    // Clicking new journal button should create a new journal
+    newJournalButton.addEventListener('click', () => {
+        // Grabs sidebar-module handle
+        const sidebar = document.querySelector('.sidebar-module');
+        // Creates div to insert journal and adds 'journal' class property
+        const journalDiv = document.createElement('div');
+        journalDiv.classList.add('journal');
+
+        // HTML to inject into journal div above
+        journalDiv.innerHTML = `
+            <span>My Journal</span>
+            <button class="journal-dropdown-button">
                 <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
             </button>`;
 
-        journalEntries.appendChild(entryElement);
-        // event handler to deal with selecting a given journal
-        // updates page title and sidebar visuals
-        entryElement.addEventListener('click', function () {
-            const journalEntries = document.querySelectorAll('.journal-entry');
-            const journalTitle = document.querySelector('#journal-title');
-            journalTitle.innerText = `${this.querySelector('span').innerText} Entries`;
+        // <div class="sidebar-dropdown-menu">
+        //     <div class="sidebar-dropdown-item">
+        //         <img src="./assets/addEntry-icon.png" alt="Edit Icon" class="dropdown-icon" width="24px"> Edit Journal Name
+        //     </div>
+        //     <div id="trash" class="sidebar-dropdown-item delete" >
+        //         <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
+        //     </div>
+        // </div>`;
+        
+        // Injects HTML above into journal entry
+        sidebar.appendChild(journalDiv);
 
-            // clear selection visuals on all elements
-            journalEntries.forEach((entry) => {
-                let faIcon = entry.querySelector('#sidebar-dots')
-                faIcon.style.display = 'none';
-                entry.style.background = 'none';
-                entry.setAttribute('isSelected', '');
-                faIcon.srchow 
+        // Adds toggle dropdown listener to new button.
+        let dropdownButton = journalDiv.querySelector('.journal-dropdown-button');
+        dropdownButton.addEventListener('click', window.toggleJournalDropdown);
+        
+        journalDiv.addEventListener('click', function () {
+            // Sets the displayed journal title to be the clicked journal title
+            const displayedJournalTitle = document.querySelector('#journal-title');
+            displayedJournalTitle.innerText = `${this.querySelector('span').innerText} Entries`;
+
+            // Clear highlighted visuals on all journals
+            sidebar.querySelectorAll(".journal").forEach(journal => {
+                // insert code here
+                journal.setAttribute('highlighted', false);
             });
 
             // add styling for selected elements
@@ -125,9 +134,11 @@ export function createJournalEntries() {
                 const newJournal = createJournal(entryElement.innerText);
                 selectedJournal = newJournal;
             }
+        
+            // Highlights clicked journal
+            this.setAttribute('highlighted', true);
         });
 
-        journalEntries.appendChild(entryElement);
         // Once a journal is created, the "No Journals" text will disappear
         document.getElementById("no-entry-text").style.display = "none";
         if(!document.getElementById('entry-name')) {
