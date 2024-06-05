@@ -59,8 +59,8 @@ sidebar {
 
 .journal:hover{
     background-color: #cbcfce;
-    
 }
+
 .journal button{
     background-color: var(--sliding-shelf);
     border: none;
@@ -71,7 +71,6 @@ sidebar {
 }
 
 .journal-vdots:hover {
-    
     content: url('../assets/vdots-journal-white-active.svg');
 }
 
@@ -105,8 +104,6 @@ button.collapse-button {
     height: 32px;
     width: 32px;
 }
-
-
 
 button.new-journal img.journal-icon,
 img.collapse-button {

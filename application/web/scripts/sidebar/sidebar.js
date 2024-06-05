@@ -87,13 +87,6 @@ export function createJournalEntries() {
         const entryElement = document.createElement('div');
         entryElement.classList.add('journal');
 
-        //using vdots
-        // <div class="journal">
-        //     <span>My Journal</span>
-        //     <button>
-        //         <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
-        //     </button>
-        // </div>
         entryElement.innerHTML = `
             <span>My Journal</span>
             <button>
@@ -135,16 +128,21 @@ export function createJournalEntries() {
     });
 };
 
-// inserts "no Journal Entries" text
+/**
+ * Inserts "No Journal Entries" text into the designated area.
+ */
 function showNoEntriesText() {
     const noJournalText = document.querySelector('.no-entry-text');
-    noJournalText.insertAdjacentHTML("beforeend",`
+    noJournalText.insertAdjacentHTML("beforeend", `
         <b>You have no Journal Entries</b>
         <p>Click "Create New Entry" on top to start your first entry.</p>`
     );
 }
 
-// Displays Create New Entry, Entry Name, 
+/**
+ * Displays the header information on the homepage including the "Create New Entry" button,
+ * "Entry Name", and "Date Logged" headers.
+ */
 function showHomepageHeaderInfo() {
     // Show the "Create New Entry" button when a journal is selected
     const entryButton = document.querySelector('.add-note');
@@ -154,7 +152,7 @@ function showHomepageHeaderInfo() {
     const test = document.querySelector('.home-entry-descriptor');
     test.insertAdjacentHTML("afterbegin", `
         <span id="entry-name" style="font-family: 'Inter'">Entry Name</span>
-        <span id="date-logged"style="font-family: 'Inter'">Date Logged</span>`
+        <span id="date-logged" style="font-family: 'Inter'">Date Logged</span>`
     );
 
     // Adds the black line after the "Entry Name" and "Date Logged" header
