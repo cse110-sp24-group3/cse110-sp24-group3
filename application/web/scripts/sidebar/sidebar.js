@@ -37,9 +37,6 @@ export function createSidebar() {
             targetEntry.style.background = 'none';
         }
     });
-    
-    //Event listener for new journal button
-    const newJournalButton = document.getElementById("new-journal-button");
 };
 
 /**
