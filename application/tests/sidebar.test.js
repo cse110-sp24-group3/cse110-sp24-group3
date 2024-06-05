@@ -1,32 +1,27 @@
-import puppeteer from 'puppeteer';
+const { test, expect, _electron: electron } = require('@playwright/test')
 
-(async () => {
-  // Launch the browser and open a new blank page
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+/** @type {import('@playwright/test').ElectronApplication} */
+let electronApp;
 
-  // Navigate the page to a URL
-  await page.goto('https://developer.chrome.com/');
+/** @type {import('@playwright/test').Page} */
+let page;
 
-  // Set screen size
-  await page.setViewport({ width: 1080, height: 1024 });
+test.beforeAll(async () => {
+  electronApp = await electron.launch({ args: ['.'] })
 
-  // Type into search box
-  await page.type('.devsite-search-field', 'automate beyond recorder');
 
-  // Wait and click on first result
-  const searchResultSelector = '.devsite-result-item-link';
-  await page.waitForSelector(searchResultSelector);
-  await page.click(searchResultSelector);
+  // Wait for the first BrowserWindow to open
+  // and return its Page object
+  page = await electronApp.firstWindow()
+  await new Promise(r => setTimeout(r, 2000));
+});
 
-  // Locate the full title with a unique string
-  const textSelector = await page.waitForSelector(
-    'text/Customize and automate'
-  );
-  const fullTitle = await textSelector?.evaluate(el => el.textContent);
+test.afterAll(async () => {
+  // close app
+  await electronApp.close()
+});
 
-  // Print the full title
-  console.log('The title of this blog post is "%s".', fullTitle);
-
-  await browser.close();
-})();
+test('No journals exist', async () => {
+  const text = await page.locator('.new-journal > span');
+  expect(await text.innerText()).toBe('New Journal')
+});
