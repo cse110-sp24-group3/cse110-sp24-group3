@@ -10,11 +10,11 @@ export function createSidebar() {
     // Event listener for mouseover events on journal entries
     journalEntries.addEventListener('mouseover', (event) => {
         // Find the closest ancestor with the class 'journal-entry' that triggered the event
-        const targetEntry = event.target.closest('.journal-entry');
+        const targetEntry = event.target.closest('.journal');
         // Filter to just the new journals
         if (targetEntry) {
             // Select the three dot button within the journal entry
-            let icon = targetEntry.querySelector('#sidebar-dots');
+            let icon = targetEntry.querySelector('.journal-vdots');
             // Display the three dots icon
             icon.style.display = 'block';
             // Highlight the journal entry by changing its background color
@@ -25,11 +25,11 @@ export function createSidebar() {
     // Event listener for mouseout events on journal entries
     journalEntries.addEventListener('mouseout', (event) => {
         // Find the closest ancestor with the class 'journal-entry' that triggered the event
-        const targetEntry = event.target.closest('.journal-entry');
+        const targetEntry = event.target.closest('.journal');
         // Check to make sure that hovered entry was not also selected
         if (targetEntry && targetEntry.getAttribute('isSelected') != 'true') {
             // Select the three dots icon within the journal entry
-            let icon = targetEntry.querySelector('#sidebar-dots');
+            let icon = targetEntry.querySelector('.journal-vdots');
             // Hide the three dots ellipsis icon
             icon.style.display = 'none';
             // Remove the background color highlighting
@@ -58,7 +58,7 @@ export function toggleSidebar() {
     newJournalBtn.classList.toggle('toggled-new-journal');
 
     // Select all journal entry buttons
-    const journalEntryBtn = document.querySelectorAll('.journal-entry');
+    const journalEntryBtn = document.querySelectorAll('.journal');
     // Toggle the 'toggled-journal-entry' class for each journal entry button
     journalEntryBtn.forEach(entry => {
         entry.classList.toggle('toggled-journal-entry');
@@ -97,13 +97,13 @@ export function createJournalEntries() {
         // event handler to deal with selecting a given journal
         // updates page title and sidebar visuals
         entryElement.addEventListener('click', function () {
-            const journalEntries = document.querySelectorAll('.journal-entry');
+            const journalEntries = document.querySelectorAll('.journal');
             const journalTitle = document.querySelector('#journal-title');
             journalTitle.innerText = `${this.querySelector('span').innerText} Entries`;
 
             // clear selection visuals on all elements
             journalEntries.forEach((entry) => {
-                let faIcon = entry.querySelector('#sidebar-dots')
+                let faIcon = entry.querySelector('.journal-vdots')
                 faIcon.style.display = 'none';
                 entry.style.background = 'none';
                 entry.setAttribute('isSelected', '');
@@ -111,7 +111,7 @@ export function createJournalEntries() {
             });
 
             // add styling for selected elements
-            let faIcon = this.querySelector('#sidebar-dots')
+            let faIcon = this.querySelector('.journal-vdots')
             faIcon.style.display = 'block';
             this.style.backgroundColor = '#cbcfce';
 
