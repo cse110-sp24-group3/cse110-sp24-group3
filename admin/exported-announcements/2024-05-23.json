@@ -1,0 +1,102 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1716522014.189119",
+        "client_msg_id": "e50e8667-b256-44e4-8c7f-d4e4a897b445",
+        "text": "<!channel> Hi everyone! This is the Zoom link for tonight's meeting. We will probably need another Zoom link later, but I'll send it later on\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Sprint Review, Planning, Retrospective\nTime: May 23, 2024 09:00 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n<https:\/\/us05web.zoom.us\/j\/86846704559?pwd=wZxC2kopMoNflBPJn1q5wcZYRP5hWw.1>\n\nMeeting ID: 868 4670 4559\nPasscode: 1xHiju\n\n\nSee you guys!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8Vvnt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Hi everyone! This is the Zoom link for tonight's meeting. We will probably need another Zoom link later, but I'll send it later on\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Sprint Review, Planning, Retrospective\nTime: May 23, 2024 09:00 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/86846704559?pwd=wZxC2kopMoNflBPJn1q5wcZYRP5hWw.1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMeeting ID: 868 4670 4559\nPasscode: 1xHiju\n\n\nSee you guys!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1716525401.124719",
+        "client_msg_id": "53ab9350-f192-4755-86de-3b98e56b4fa0",
+        "text": "<!channel> new Zoom link\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Reisandy Lamdjani's Zoom Meeting\nTime: May 23, 2024 09:45 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n<https:\/\/us05web.zoom.us\/j\/83352314956?pwd=xwVl6SK58XkrXE0FGfmOBUCiXHM22x.1>\n\nMeeting ID: 833 5231 4956\nPasscode: 3SFb5G",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ozQVL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " new Zoom link\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Reisandy Lamdjani's Zoom Meeting\nTime: May 23, 2024 09:45 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/83352314956?pwd=xwVl6SK58XkrXE0FGfmOBUCiXHM22x.1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMeeting ID: 833 5231 4956\nPasscode: 3SFb5G"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -6,6 +6,18 @@
                     |___/  */
 
 
+
+.CodeMirror{
+    background-color: #e2dede;
+    width: 100%;
+    min-height: 400px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+   }
+
 .title-textarea {
     /* background-color: #F3F3F3;
     width: 20%;
@@ -20,6 +32,11 @@
     padding: 10px;
 }
 
+   /* LRC  
+    * These are not needed, .CodeMirror defines
+    * the attributes
+
+   /*
 .entry-textarea {
     background-color: #e2dede;
     width: 100%;
@@ -30,6 +47,7 @@
     border: none;
     border-radius: 10px;
 }
+*/
 
 .new_entry {
     color: #FFFFFF;
@@ -109,6 +127,7 @@
     padding: 10px;
 }
 
+   /*
 .entry-textarea {
     background-color: #e2dede;
     width: 100%;
@@ -119,6 +138,7 @@
     border: none;
     border-radius: 10px;
 }
+*/
 
 .new_entry {
     color: #FFFFFF;
@@ -171,6 +191,7 @@
     padding: 10px;
 }
 
+   /*
 .entry-textarea {
     background-color: #e2dede;
     width: 100%;
@@ -181,6 +202,7 @@
     border: none;
     border-radius: 10px;
 }
+*/
 
 .new_entry {
     color: #FFFFFF;

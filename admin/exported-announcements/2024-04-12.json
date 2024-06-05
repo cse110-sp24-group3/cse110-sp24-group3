@@ -1,0 +1,157 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1712987913.679109",
+        "client_msg_id": "5a3cb51f-e214-4d8c-b12d-75ed19961ce4",
+        "text": "<@U06THUGKQPM> <@U06TWN2LJJD> could you guys put in your availability for TA kickoff meeting via the link above",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712867880.463969",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hnXuA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U06THUGKQPM"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U06TWN2LJJD"
+                            },
+                            {
+                                "type": "text",
+                                "text": " could you guys put in your availability for TA kickoff meeting via the link above"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1712988278.505919",
+        "client_msg_id": "0cd74de5-b616-4f84-9efd-6bcfb63d8c0c",
+        "text": "<@U06T3FJE76K> can I have your github username",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712719704.950439",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b7ZQ8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U06T3FJE76K"
+                            },
+                            {
+                                "type": "text",
+                                "text": " can I have your github username"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1712989205.362439",
+        "client_msg_id": "c1106d18-20fc-4849-a400-b5904f271c91",
+        "text": "I just sent github invitation to our project repo. Lmk if you haven't received it",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712989205.362439",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1713032049.925829",
+        "reply_users": [
+            "U06TLGA6XCL",
+            "U06THU1RXRR"
+        ],
+        "replies": [
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1713032003.182489"
+            },
+            {
+                "user": "U06THU1RXRR",
+                "ts": "1713032049.925829"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1713032049.925829",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yirPy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I just sent github invitation to our project repo. Lmk if you haven't received it"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

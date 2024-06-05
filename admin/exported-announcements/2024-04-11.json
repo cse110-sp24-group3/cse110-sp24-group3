@@ -1,0 +1,402 @@
+[
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1712865237.480709",
+        "client_msg_id": "6b1256b0-c5a3-4057-af33-1b762b2852de",
+        "text": ":loudspeaker: Hey <!everyone>!\n\nJust wanted to share a few updates about our upcoming team assignments.\n\n\n:handshake: Group Bonding Event\n:clock4: Today at 4:40 PM - We’re hosting a group bonding event! It’s a great opportunity for all of us to meet and establish how we want our team to function. We’ll discuss some logistical details and use this time as our initial ice-breaker event. This first meeting will be in person but we plan to host future ones via Zoom. Don’t miss it!\n\n\n\n\n\n:rocket: Group Kickoff Meeting\n:calendar: Date TBD - This meeting is crucial! We’ll assign roles, talk about the best development practices, and work on our team contract. Plus, we’ll be setting up our organization in GitHub. Let’s finalize the time during our bonding event today! This will be a zoom meeting.\n\n\n\n\n\n:art: Team Branding, Group Page, &amp; Video\n:link: Each team is tasked with creating a unique brand that includes a team name, colors, logo, and branding materials. Here’s what we need to prepare:\n• :page_facing_up: A Markdown page named `team.md` for internal documentation that features our team name, brand, values, and a roster of members with GitHub links.\n• :movie_camera: A 2.5-minute intro video in MP4 format, stored in `\/admin\/videos\/teamintro.mp4`, to introduce our team.\n• :file_folder: Branding materials should be stored in `\/admin\/branding`. Update our Slack icons and link the team page from the README.\n\n\n\n\n:trophy: Grading will be based on the completeness and creativity of each activity. Our TA mentors will assess the branding materials during check-ins.\nLet’s make this a great start! :star2:",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712865237.480709",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1712865321.624389",
+        "reply_users": [
+            "U06T3FJTE15"
+        ],
+        "replies": [
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1712865321.624389"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ff2yR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "loudspeaker",
+                                "unicode": "1f4e2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Hey "
+                            },
+                            {
+                                "type": "broadcast",
+                                "range": "everyone"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!\n\nJust wanted to share a few updates about our upcoming team assignments.\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "handshake",
+                                "unicode": "1f91d"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Group Bonding Event\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "clock4",
+                                "unicode": "1f553"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Today at 4:40 PM - We’re hosting a group bonding event! It’s a great opportunity for all of us to meet and establish how we want our team to function. We’ll discuss some logistical details and use this time as our initial ice-breaker event. This first meeting will be in person but we plan to host future ones via Zoom. Don’t miss it!\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rocket",
+                                "unicode": "1f680"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Group Kickoff Meeting\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "calendar",
+                                "unicode": "1f4c6"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Date TBD - This meeting is crucial! We’ll assign roles, talk about the best development practices, and work on our team contract. Plus, we’ll be setting up our organization in GitHub. Let’s finalize the time during our bonding event today! This will be a zoom meeting.\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "art",
+                                "unicode": "1f3a8"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Team Branding, Group Page, & Video\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "link",
+                                "unicode": "1f517"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Each team is tasked with creating a unique brand that includes a team name, colors, logo, and branding materials. Here’s what we need to prepare:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "emoji",
+                                        "name": "page_facing_up",
+                                        "unicode": "1f4c4"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " A Markdown page named "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "team.md",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " for internal documentation that features our team name, brand, values, and a roster of members with GitHub links."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "emoji",
+                                        "name": "movie_camera",
+                                        "unicode": "1f3a5"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " A 2.5-minute intro video in MP4 format, stored in "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "\/admin\/videos\/teamintro.mp4",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ", to introduce our team."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "emoji",
+                                        "name": "file_folder",
+                                        "unicode": "1f4c1"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " Branding materials should be stored in "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "\/admin\/branding",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ". Update our Slack icons and link the team page from the README."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "trophy",
+                                "unicode": "1f3c6"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Grading will be based on the completeness and creativity of each activity. Our TA mentors will assess the branding materials during check-ins.\nLet’s make this a great start! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "star2",
+                                "unicode": "1f31f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U06THUGKQPM",
+                    "U06THU1RXRR",
+                    "U06TLGA6XCL",
+                    "U06T3FJE76K",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 5
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1712865321.624389",
+        "client_msg_id": "c4652a03-c601-4db3-88ad-4dd5a113d6ad",
+        "text": "Also just wanted to mention the importance of us as a team finding time to work together that is suitable for everyones schedule. It might be funky just for this first week but we will work as a team to make sure we find a time that works for everyones busy schedules!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712865237.480709",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "I1SI0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also just wanted to mention the importance of us as a team finding time to work together that is suitable for everyones schedule. It might be funky just for this first week but we will work as a team to make sure we find a time that works for everyones busy schedules!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06T3FJE76K",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1712867880.463969",
+        "client_msg_id": "a7bdc870-3a34-4a04-8d37-2ad4ade1e3e1",
+        "text": "Also, for our Group Kickoff Meeting, we need to meet with the TA some time next week. Please fill out this availability sheet so we can give the time to the TA.\n\n<https:\/\/www.when2meet.com\/?24580017-cnTG6>",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712867880.463969",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1712987913.679109",
+        "reply_users": [
+            "U06THU1RXRR"
+        ],
+        "replies": [
+            {
+                "user": "U06THU1RXRR",
+                "ts": "1712987913.679109"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1712987913.679109",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "D7pdk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, for our Group Kickoff Meeting, we need to meet with the TA some time next week. Please fill out this availability sheet so we can give the time to the TA.\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.when2meet.com\/?24580017-cnTG6"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06T3FJTE15",
+                    "U06TJ2NEP0S",
+                    "U06T3FJE76K",
+                    "U06TLGA6XCL",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 5
+            }
+        ]
+    },
+    {
+        "user": "U06U1F7JJRJ",
+        "type": "message",
+        "ts": "1712894600.093559",
+        "client_msg_id": "2a7617a0-2bb6-4302-9f76-86541c90fc55",
+        "text": "ILayon",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g60f8761e058",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/60f8761e058896f2db79a567b6f046c3.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "Isabelle",
+            "real_name": "Isabelle Layon",
+            "display_name": "Isabelle Layon",
+            "team": "T06U6RD9T08",
+            "name": "ilayon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1712719704.950439",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ciZsg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ILayon"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

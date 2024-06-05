@@ -1,0 +1,424 @@
+[
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1717299963.662599",
+        "client_msg_id": "69a9562e-6815-4b06-8cfd-f2f3953b7f1e",
+        "text": ":rotating_light: *Breaking Change: Major Code Cleanup &amp; Refactor*\n<!channel>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:broom: *Repository Update*\nWe’ve completed a significant code cleanup and refactor to prepare for the upcoming days. This change will help streamline our development process and improve code management.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:file_folder: *Modular Structure Implementation*\nThe repository now includes separate modules based on the components for the sidebar, entry page, homepage, etc. This modular approach should make it easier to manage and work on individual components.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:art: *CSS File Changes*\nWe have organized CSS into different files corresponding to their specific scripts. This separation enhances our ability to maintain and update styles more efficiently.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:mag: *Action Required for Team Members*\n• *Familiarize Yourself*: Please take some time to familiarize yourself with the new repository structure and changes.\n• *Check Your Work*: Ensure that all your pull requests (PRs) and branches do not have merge issues due to these changes.\n",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1717299963.662599",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1717299990.139929",
+        "reply_users": [
+            "U06T3FJTE15"
+        ],
+        "replies": [
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1717299990.139929"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "79xYK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "rotating_light",
+                                "unicode": "1f6a8"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Breaking Change: Major Code Cleanup & Refactor",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "broom",
+                                "unicode": "1f9f9"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Repository Update",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nWe’ve completed a significant code cleanup and refactor to prepare for the upcoming days. This change will help streamline our development process and improve code management.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "file_folder",
+                                "unicode": "1f4c1"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Modular Structure Implementation",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nThe repository now includes separate modules based on the components for the sidebar, entry page, homepage, etc. This modular approach should make it easier to manage and work on individual components.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "art",
+                                "unicode": "1f3a8"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "CSS File Changes",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nWe have organized CSS into different files corresponding to their specific scripts. This separation enhances our ability to maintain and update styles more efficiently.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "mag",
+                                "unicode": "1f50d"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Action Required for Team Members",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Familiarize Yourself",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ": Please take some time to familiarize yourself with the new repository structure and changes."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Check Your Work",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": ": Ensure that all your pull requests (PRs) and branches do not have merge issues due to these changes."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "star2",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            },
+            {
+                "name": "large_purple_circle",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            },
+            {
+                "name": "rock",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            },
+            {
+                "name": "flag-wales",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "anguished",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "squirrel",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            },
+            {
+                "name": "warning",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "glitch_crab",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "cubimal_chick",
+                "users": [
+                    "U06T3FJTE15",
+                    "U06TJ2NEP0S"
+                ],
+                "count": 2
+            },
+            {
+                "name": "piggy",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "slack_call",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            },
+            {
+                "name": "dusty_stick",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "recycle",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "hammer_and_wrench",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "pushpin",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "woman-swimming",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "woman-woman-girl-boy",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "watermelon",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "radio_button",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            },
+            {
+                "name": "man-woman-girl-boy",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "flag-vi",
+                "users": [
+                    "U06T3FJTE15"
+                ],
+                "count": 1
+            },
+            {
+                "name": "dna",
+                "users": [
+                    "U06TJ2MHT8A",
+                    "U06T3FJTE15"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1717299990.139929",
+        "client_msg_id": "56377194-8a4d-4bc7-8a83-f930eaa03425",
+        "text": "Huge S\/O to <@U06TJ2MHT8A> for working on this with me tonight for multiple hours on end. Dude is a legend!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1717299963.662599",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SSqhU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Huge S\/O to "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U06TJ2MHT8A"
+                            },
+                            {
+                                "type": "text",
+                                "text": " for working on this with me tonight for multiple hours on end. Dude is a legend!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06THU1RXRR"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

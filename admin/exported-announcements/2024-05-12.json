@@ -1,0 +1,101 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1715546914.782759",
+        "client_msg_id": "9582c537-759a-4a0f-a39d-db2682a56013",
+        "text": "<!channel> Hello everyone! This is the Zoom link for our meeting. See you guys soon!\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Reisandy Lamdjani's Zoom Meeting\nTime: May 12, 2024 02:00 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n<https:\/\/us05web.zoom.us\/j\/84626068536?pwd=u4IcVQohcPPAmX184uBtaAwng46bsZ.1>\n\nMeeting ID: 846 2606 8536\nPasscode: 4xSeru",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+2RNU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Hello everyone! This is the Zoom link for our meeting. See you guys soon!\nReisandy Lamdjani is inviting you to a scheduled Zoom meeting.\n\nTopic: Reisandy Lamdjani's Zoom Meeting\nTime: May 12, 2024 02:00 PM Pacific Time (US and Canada)\n\nJoin Zoom Meeting\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/us05web.zoom.us\/j\/84626068536?pwd=u4IcVQohcPPAmX184uBtaAwng46bsZ.1"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMeeting ID: 846 2606 8536\nPasscode: 4xSeru"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1715580913.440079",
+        "client_msg_id": "c8447384-8034-432b-b990-4028041c7f92",
+        "text": "*<!channel>* Don’t forget to do the weekly google form for this week!\n<https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform>",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AcnHi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " Don’t forget to do the weekly google form for this week!\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSc3GVitCYJRKxpr1HZExy2ePSOMrC5kkoJpNAmiqvJ_TLbW3g\/viewform"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

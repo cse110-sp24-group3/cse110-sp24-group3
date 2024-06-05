@@ -1,0 +1,57 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1714961931.355849",
+        "client_msg_id": "f0e5a39b-0e09-4a6b-8fb8-9dc6822da18a",
+        "text": "<!channel> Hi everyone! I wanted to update everyone that I have pushed our Pitch document as well as any screenshots from the figma masterfile onto our github repo. Cameron and I will talk with the TA on Wednesday to discuss the pitch, and will let you guys know what he says. After the approval, we will schedule a meeting with everyone attending to discuss sprint planning as well as user stories. Have a good week!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "P8CY7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Hi everyone! I wanted to update everyone that I have pushed our Pitch document as well as any screenshots from the figma masterfile onto our github repo. Cameron and I will talk with the TA on Wednesday to discuss the pitch, and will let you guys know what he says. After the approval, we will schedule a meeting with everyone attending to discuss sprint planning as well as user stories. Have a good week!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06T3FJTE15",
+                    "U06TJ2NEP0S",
+                    "U06TWN379CH",
+                    "U06TLG8TRB6",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 5
+            }
+        ]
+    }
+]

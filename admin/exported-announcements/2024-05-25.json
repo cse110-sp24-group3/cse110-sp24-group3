@@ -1,0 +1,934 @@
+[
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1716671888.273829",
+        "client_msg_id": "f8ac127e-cee0-4879-86ac-e79b9a7db8a5",
+        "text": ":rocket: **Backend Update: Beta Stage Completion**\n<!everyone>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:tada: **Major Milestone Achieved**\nAs promised, we worked hard to get the backend to a ‘beta’ stage and it’s now ready for you to interface with as you code.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:mag: **Backend Breakdown**\nUnlike other groups, we’ve chosen not to use local storage for a few key reasons:\n- **Performance and Storage Limitations**: Local storage can have implications, especially when storing everything as a value.\n- **Direct Markdown File Access**: We want to enable users to access their markdown files directly.\n\nWe’ve opted to leverage Node and expose Electron’s FileAPI to our application. Data storage paths will vary by OS; for instance, on Windows, data is stored in `AppData\/Roaming`.\n\n**Data Model Simplicity**:\n- **Journals**: Represented as directories (folders).\n- **Entries**: Markdown files within these folders.\n\nWe have also built a lightweight “API” that you can use to interact with some of the more Node-based processes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:hammer_and_wrench: **Getting Started with the New Backend**\n1. **Update Your Local Repository**: Pull these changes with `git pull`.\n2. **Run Development Environment**: To test backend capabilities, run:\n\n```bash\n   npm run dev\n   ```\n   within the application directory. Remember, the live server will only show visual components, so testing in the ‘dev environment’ is crucial.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:books: **Accessing the API**\nYou can access the global `api` variable, declared at the top level of our project. If you’re exploring this for the first time, I highly recommend running `npm run dev` and using the dev tools to get acquainted.\n\n**Documentation**:\n- Check out the `docs` folder in the root directory.\n- Open and run the file `JournalAPI` with a live file viewer for comprehensive JSDocs on interfacing with the API.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n:stopwatch: **Async Operations Reminder**\nA quick reminder: every function in our API is asynchronous. It’s a good idea to review async\/await and promises in JavaScript to ensure smooth integration.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s take full advantage of these new capabilities to enhance our project! If you have any questions or need further clarification on the backend, please reach out. Let’s keep pushing forward! :star2:",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "reply_count": 11,
+        "reply_users_count": 2,
+        "latest_reply": "1716674704.143949",
+        "reply_users": [
+            "U06T3FJTE15",
+            "U06TLGA6XCL"
+        ],
+        "replies": [
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1716671972.301209"
+            },
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1716672413.492589"
+            },
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1716672418.134349"
+            },
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1716672536.845449"
+            },
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1716672799.540899"
+            },
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1716672832.242989"
+            },
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1716674580.019829"
+            },
+            {
+                "user": "U06T3FJTE15",
+                "ts": "1716674626.580959"
+            },
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1716674695.497729"
+            },
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1716674700.850179"
+            },
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1716674704.143949"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yZFWI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "rocket",
+                                "unicode": "1f680"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Backend Update: Beta Stage Completion",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n"
+                            },
+                            {
+                                "type": "broadcast",
+                                "range": "everyone"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "tada",
+                                "unicode": "1f389"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Major Milestone Achieved",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nAs promised, we worked hard to get the backend to a ‘beta’ stage and it’s now ready for you to interface with as you code.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "mag",
+                                "unicode": "1f50d"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Backend Breakdown",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nUnlike other groups, we’ve chosen not to use local storage for a few key reasons:\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Performance and Storage Limitations",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Local storage can have implications, especially when storing everything as a value.\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Direct Markdown File Access",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: We want to enable users to access their markdown files directly.\n\nWe’ve opted to leverage Node and expose Electron’s FileAPI to our application. Data storage paths will vary by OS; for instance, on Windows, data is stored in "
+                            },
+                            {
+                                "type": "text",
+                                "text": "AppData\/Roaming",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n\n*"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Data Model Simplicity",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*:\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Journals",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Represented as directories (folders).\n- *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Entries",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Markdown files within these folders.\n\nWe have also built a lightweight “API” that you can use to interact with some of the more Node-based processes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "hammer_and_wrench",
+                                "unicode": "1f6e0-fe0f"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Getting Started with the New Backend",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\n1. *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Update Your Local Repository",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: Pull these changes with "
+                            },
+                            {
+                                "type": "text",
+                                "text": "git pull",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n2. *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Run Development Environment",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*: To test backend capabilities, run:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "bash\n   npm run dev\n   "
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "   within the application directory. Remember, the live server will only show visual components, so testing in the ‘dev environment’ is crucial.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "books",
+                                "unicode": "1f4da"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Accessing the API",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nYou can access the global "
+                            },
+                            {
+                                "type": "text",
+                                "text": "api",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " variable, declared at the top level of our project. If you’re exploring this for the first time, I highly recommend running "
+                            },
+                            {
+                                "type": "text",
+                                "text": "npm run dev",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and using the dev tools to get acquainted.\n\n*"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Documentation",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*:\n- Check out the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "docs",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " folder in the root directory.\n- Open and run the file "
+                            },
+                            {
+                                "type": "text",
+                                "text": "JournalAPI",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with a live file viewer for comprehensive JSDocs on interfacing with the API.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "stopwatch",
+                                "unicode": "23f1-fe0f"
+                            },
+                            {
+                                "type": "text",
+                                "text": " *"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Async Operations Reminder",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "*\nA quick reminder: every function in our API is asynchronous. It’s a good idea to review async\/await and promises in JavaScript to ensure smooth integration.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s take full advantage of these new capabilities to enhance our project! If you have any questions or need further clarification on the backend, please reach out. Let’s keep pushing forward! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "star2",
+                                "unicode": "1f31f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06TJ2MHT8A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1716671972.301209",
+        "client_msg_id": "ee7ad11e-d613-432e-bd52-0dfcdfdbcf57",
+        "text": "Note: when you are running `npm run dev` any backend operations will be stored within the folder `application\/mock` which is excluded from the repo via .gitignore. This way we have a comfortable way to interface with the data we store directly from VSCode!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+KW6k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Note: when you are running "
+                            },
+                            {
+                                "type": "text",
+                                "text": "npm run dev",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " any backend operations will be stored within the folder "
+                            },
+                            {
+                                "type": "text",
+                                "text": "application\/mock",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " which is excluded from the repo via .gitignore. This way we have a comfortable way to interface with the data we store directly from VSCode!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1716672413.492589",
+        "client_msg_id": "ae6e8c57-5b1b-491e-bdd7-0a82aa926e65",
+        "text": "Snippets:",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RUic\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Snippets:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F075TGT7RDW",
+                "created": 1716672414,
+                "timestamp": 1716672414,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U06T3FJTE15",
+                "user_team": "T06U6RD9T08",
+                "editable": false,
+                "size": 65398,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T06U6RD9T08-F075TGT7RDW\/image.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T06U6RD9T08-F075TGT7RDW\/download\/image.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F075TGT7RDW-920762b039\/image_64.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F075TGT7RDW-920762b039\/image_80.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F075TGT7RDW-920762b039\/image_360.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_360_w": 360,
+                "thumb_360_h": 127,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F075TGT7RDW-920762b039\/image_480.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_480_w": 480,
+                "thumb_480_h": 169,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F075TGT7RDW-920762b039\/image_160.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F075TGT7RDW-920762b039\/image_720.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_720_w": 720,
+                "thumb_720_h": 254,
+                "original_w": 744,
+                "original_h": 262,
+                "thumb_tiny": "AwAQADCpzx0o59BRj\/Zox\/s0AGPYUbf9kUYHdaMD+7QAFT6U2nYHYGkwaAP\/2Q==",
+                "permalink": "https:\/\/cse110team3spring2024.slack.com\/files\/U06T3FJTE15\/F075TGT7RDW\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T06U6RD9T08-F075TGT7RDW-d5d4205049",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U06T3FJTE15",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1716672418.134349",
+        "client_msg_id": "af43d5a0-2d84-4c2c-929f-2346f09e690c",
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15"
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F074Y4D5UK0",
+                "created": 1716672534,
+                "timestamp": 1716672534,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U06T3FJTE15",
+                "user_team": "T06U6RD9T08",
+                "editable": false,
+                "size": 18276,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T06U6RD9T08-F074Y4D5UK0\/image.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T06U6RD9T08-F074Y4D5UK0\/download\/image.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F074Y4D5UK0-f22db82eb2\/image_64.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F074Y4D5UK0-f22db82eb2\/image_80.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F074Y4D5UK0-f22db82eb2\/image_360.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_360_w": 360,
+                "thumb_360_h": 160,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F074Y4D5UK0-f22db82eb2\/image_480.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_480_w": 480,
+                "thumb_480_h": 213,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F074Y4D5UK0-f22db82eb2\/image_160.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "original_w": 492,
+                "original_h": 218,
+                "thumb_tiny": "AwAVADCorj+6D9aC2TnAH40wdemaDgcFf1p3YrClsf8A66N\/1ppI7DFJRdhYfv8ArRv+tMoouwsOXBYAilO0g4Uj8aRPvUdj9KQxtFFFABRRRQB\/\/9k=",
+                "permalink": "https:\/\/cse110team3spring2024.slack.com\/files\/U06T3FJTE15\/F074Y4D5UK0\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T06U6RD9T08-F074Y4D5UK0-e98f76b828",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U06T3FJTE15",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1716672536.845449",
+        "client_msg_id": "bc109168-2efb-48bb-957c-2520b4980b6e",
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15"
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F07577PJ736",
+                "created": 1716672796,
+                "timestamp": 1716672796,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U06T3FJTE15",
+                "user_team": "T06U6RD9T08",
+                "editable": false,
+                "size": 22618,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T06U6RD9T08-F07577PJ736\/image.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T06U6RD9T08-F07577PJ736\/download\/image.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F07577PJ736-847f47801d\/image_64.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F07577PJ736-847f47801d\/image_80.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F07577PJ736-847f47801d\/image_360.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "thumb_360_w": 360,
+                "thumb_360_h": 112,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T06U6RD9T08-F07577PJ736-847f47801d\/image_160.png?t=xoxe-6958863333008-7216039511171-7213249559365-b29ceb233f686ed55f4069a6306f1ac9",
+                "original_w": 430,
+                "original_h": 134,
+                "thumb_tiny": "AwAOADCpuAH\/ANagkEe\/0oyMf\/WoyCvv9KAEwvqfyo+X1P5UuF9WpML6mkAHb2JpKX5fejC570wP\/9k=",
+                "permalink": "https:\/\/cse110team3spring2024.slack.com\/files\/U06T3FJTE15\/F07577PJ736\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T06U6RD9T08-F07577PJ736-4e7eae29bd",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U06T3FJTE15",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1716672799.540899",
+        "client_msg_id": "58453493-1158-42f3-a27b-af5de3dddcbb",
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15"
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1716672832.242989",
+        "client_msg_id": "eb4fd456-0091-43b3-9b61-1465e0a2ad8a",
+        "text": "Of course everything in this is still in testing mode we will need to create unit tests to verify all these functions. Bugs will come up but this is a great start!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "k+iAG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Of course everything in this is still in testing mode we will need to create unit tests to verify all these functions. Bugs will come up but this is a great start!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1716674580.019829",
+        "client_msg_id": "1CA4E99E-96C1-4656-85AA-F7EAE6FB14CD",
+        "text": "So in my case, I need to check that there are no journals. So in that case would I do await api.getJournals() and then check that it’s empty? Or would there be some sort of null values stored in there ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Wdt94",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "So in my case, I need to check that there are no journals. So in that case would I do await api.getJournals() and then check that it’s empty? Or would there be some sort of null values stored in there "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06T3FJTE15",
+        "type": "message",
+        "ts": "1716674626.580959",
+        "client_msg_id": "00F273FE-E6E8-43EA-8ED8-EE688310DACF",
+        "text": "Yep that’s perfect! If the array is empty there are no journals!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "g881dd52b540",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/881dd52b5401a25b31e571ba9d05387a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "Cameron",
+            "real_name": "Cameron Black",
+            "display_name": "Cameron Black",
+            "team": "T06U6RD9T08",
+            "name": "c3black",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "O7jGg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yep "
+                            },
+                            {
+                                "type": "text",
+                                "text": "that’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " perfect! If the array is empty there are no journals!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1716674695.497729",
+        "client_msg_id": "A9590685-5BFC-4CBE-8F3B-0E040C2F115A",
+        "text": "Cool",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4u7SE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Cool"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1716674700.850179",
+        "client_msg_id": "EC59BA47-C61A-49C1-95FC-EE5351074AAA",
+        "text": "Here you dropped this ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jmaXQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Here you dropped this "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1716674704.143949",
+        "client_msg_id": "7BA4C019-D10F-4162-AB59-35D1753856BE",
+        "text": ":crown: ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1716671888.273829",
+        "parent_user_id": "U06T3FJTE15",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1Fxcx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "crown",
+                                "unicode": "1f451"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U06T3FJTE15",
+                    "U06TJ2MHT8A"
+                ],
+                "count": 2
+            }
+        ]
+    }
+]

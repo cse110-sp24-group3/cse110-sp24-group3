@@ -1,0 +1,190 @@
+[
+    {
+        "user": "U06THU1RXRR",
+        "type": "message",
+        "ts": "1715715141.050059",
+        "client_msg_id": "c0c0cf77-7c25-460e-9156-689a0318e9c1",
+        "text": "<!channel> Please mark you calendar for *Thursday, May 16th @ 9 PM on Zoom*, for our Sprint Planning! This is where we will meet as a group to discuss the issues that Cameron and I have created and organized them into different Sprints until the end of the Quarter. This is also where we will start assigning issues to individuals so that we can get this project going!",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "gbecb34fc92d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/becb34fc92da1b697db50fd73966392a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-72.png",
+            "first_name": "Reisandy",
+            "real_name": "Reisandy Lamdjani",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "rlamdjani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1715715141.050059",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1715719821.753809",
+        "reply_users": [
+            "U06TLGA6XCL"
+        ],
+        "replies": [
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1715717976.331309"
+            },
+            {
+                "user": "U06TLGA6XCL",
+                "ts": "1715719821.753809"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1715719821.753809",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MAqNq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "channel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Please mark you calendar for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Thursday, May 16th @ 9 PM on Zoom",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", for our Sprint Planning! This is where we will meet as a group to discuss the issues that Cameron and I have created and organized them into different Sprints until the end of the Quarter. This is also where we will start assigning issues to individuals so that we can get this project going!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06THUGKQPM",
+                    "U06TJ2NEP0S",
+                    "U06TWN2LJJD",
+                    "U06TWN379CH",
+                    "U06T3FJTE15",
+                    "U06V422LP6U"
+                ],
+                "count": 6
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1715717976.331309",
+        "client_msg_id": "23F622C5-291A-4207-902D-7D7D46E10FC0",
+        "text": "I’m probably going to be in my music class still. It’s every Thursday for 3 hours starting at 6:40",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1715715141.050059",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "c7iPq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I’m"
+                            },
+                            {
+                                "type": "text",
+                                "text": " probably going to be in my music class still. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "It’s"
+                            },
+                            {
+                                "type": "text",
+                                "text": " every Thursday for 3 hours starting at 6:40"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U06THU1RXRR"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U06TLGA6XCL",
+        "type": "message",
+        "ts": "1715719821.753809",
+        "client_msg_id": "A5A9ED30-82E4-48BA-9666-8F5E47DAF760",
+        "text": "Shoot I forgot about that when listing my hours. My bad ",
+        "team": "T06U6RD9T08",
+        "user_team": "T06U6RD9T08",
+        "source_team": "T06U6RD9T08",
+        "user_profile": {
+            "avatar_hash": "5de1314d20c7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2024-04-09\/6921582554327_5de1314d20c73e93d27e_72.png",
+            "first_name": "Aaron",
+            "real_name": "Aaron Arellano",
+            "display_name": "",
+            "team": "T06U6RD9T08",
+            "name": "a3arellano",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1715715141.050059",
+        "parent_user_id": "U06THU1RXRR",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2cXoH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Shoot I forgot about that when listing my hours. My bad "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

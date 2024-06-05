@@ -76,22 +76,24 @@ async function createJournal() {
         console.error(`Error creating Journal with new Journal button :: ${error}`);
     }
 }
+
+// 
 export function createJournalEntries() {
-    //new journal entries created after
+    // new journal entries created after
     const journal = document.querySelector('.new-journal');
     journal.addEventListener('click', () => {
         //replicates the div module as it was in html
         const journalEntries = document.querySelector('.sidebar-module');
         const entryElement = document.createElement('div');
-        entryElement.classList.add('journal-entry');
+        entryElement.classList.add('journal');
 
-        //using vdots
         entryElement.innerHTML = `
             <span>My Journal</span>
-            <button class="edit-journal">
-                <img id = "sidebar-dots" class = "dots" src="./assets/vdots-journal-white.svg">
+            <button>
+                <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
             </button>`;
 
+        journalEntries.appendChild(entryElement);
         // event handler to deal with selecting a given journal
         // updates page title and sidebar visuals
         entryElement.addEventListener('click', function () {
@@ -119,19 +121,28 @@ export function createJournalEntries() {
         journalEntries.appendChild(entryElement);
         // Once a journal is created, the "No Journals" text will disappear
         document.getElementById("no-entry-text").style.display = "none";
-
-        showHomepageHeaderInfo() 
-        showNoEntriesText();
+        if(!document.getElementById('entry-name')) {
+            showHomepageHeaderInfo(); 
+            showNoEntriesText();
+        }
     });
 };
+
+/**
+ * Inserts "No Journal Entries" text into the designated area.
+ */
 function showNoEntriesText() {
     const noJournalText = document.querySelector('.no-entry-text');
-    noJournalText.insertAdjacentHTML("beforeend",`
+    noJournalText.insertAdjacentHTML("beforeend", `
         <b>You have no Journal Entries</b>
         <p>Click "Create New Entry" on top to start your first entry.</p>`
     );
 }
 
+/**
+ * Displays the header information on the homepage including the "Create New Entry" button,
+ * "Entry Name", and "Date Logged" headers.
+ */
 function showHomepageHeaderInfo() {
     // Show the "Create New Entry" button when a journal is selected
     const entryButton = document.querySelector('.add-note');
@@ -141,7 +152,7 @@ function showHomepageHeaderInfo() {
     const test = document.querySelector('.home-entry-descriptor');
     test.insertAdjacentHTML("afterbegin", `
         <span id="entry-name" style="font-family: 'Inter'">Entry Name</span>
-        <span id="date-logged"style="font-family: 'Inter'">Date Logged</span>`
+        <span id="date-logged" style="font-family: 'Inter'">Date Logged</span>`
     );
 
     // Adds the black line after the "Entry Name" and "Date Logged" header

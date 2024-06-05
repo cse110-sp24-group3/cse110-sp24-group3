@@ -9,6 +9,7 @@
     
     <!-- Styles -->
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="./scripts/ajax/libs/codemirror/6.65.7/codemirror.min.css" />
     <link rel="stylesheet" href="style/global-variables.css">
     <link rel="stylesheet" href="style/top-level.css">
     <link rel="stylesheet" href="style/sidebar.css">
@@ -35,6 +36,7 @@
                     <span>New Journal</span>
                     <img src="assets/journal-icon.svg" alt="Journal Icon" class="journal-icon">
                 </button>
+
             </div>
         </sidebar>
         <div class="container">
@@ -104,7 +106,7 @@
                                 <span>Save Entry</span>
                             </button>
                             <button id="three-dots-entry" class="three-dots">
-                                <img src="./assets/vdots-grey.svg" alt="Three Dots" class="dots-icon">
+                                <img src="./assets/vdots-grey.svg" alt="Three Dots">
                             </button>
                             <div id="dropdown-menu-entry" class="dropdown-menu">
                                 <div class="dropdown-item" data-action="markdown">
@@ -123,12 +125,24 @@
                 </div>
 
                 <!-- Temporarily put textarea for the CodeMirror editor -->
-                <textarea class="entry-textarea" placeholder="Enter your thoughts here"></textarea>
+                <!-- <textarea id="entry-textarea" class="entry-textarea" placeholder="PEE your thoughts here"></textarea> -->
+                <div id="entry-textarea" class="entry-textarea"></div>
                 <div class="past-entries"></div>
+                
+                <script src="./scripts/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/6.65.7/mode/markdown/markdown.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/6.65.7/mode/gfm/gfm.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/5.65.7/addon/mode/overlay.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/5.65.7/mode/meta.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/5.65.7/mode/xml/xml.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/5.65.7/mode/python/python.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/5.65.7/mode/javascript/javascript.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/5.65.7/mode/brainfuck/brainfuck.min.js"></script>
+                <script src="./scripts/ajax/libs/codemirror/5.65.7/mode/go/go.min.js"></script>
+                <script src="scripts/code-mirror-script.js"></script>
+                
             </homepage>
         </div>
     </div>
-
 </body>
-
 </html>

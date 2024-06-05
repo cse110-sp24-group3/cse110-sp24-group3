@@ -136,14 +136,45 @@ function saveCurrentEntry() {
     article.innerText = entry;
     article.style.display = 'none';
 
-    // TODO: Replace with function to load entry from storage
-    newEntryButton.addEventListener('click', () => {
-        article.style.display = 'block';
-    });
-
     // Append the new entry button and article to the list of past entries
     buttonList.append(newEntryButton);
     buttonList.append(article);
+
+    // TODO: Replace with function to load entry from storage
+    newEntryButton.addEventListener('click', (event) => {
+        // article.style.display = 'block';
+        // titleTextArea.value = newEntryButton.innerText;
+        // const entryContent = document.querySelector('.CodeMirror-line');
+        // entryTextArea.value = entryContent.innerText;
+        // openEntryforEdit();
+        editJournal(event);
+    });
+
+    async function editJournal(event){
+        try {
+            const journals = await api.getJournals();
+            const title = event.target.innerText;
+    
+            for(const journal of journals){
+                const entries = await journal.getEntries();
+                const matchingEntry = entries.find(entry => entry.name === title);
+    
+                if(matchingEntry){
+                    const content = await matchingEntry.getContent();
+    
+                    // const titleTextArea = document.querySelector('#title-input');
+                    // titleTextArea.value = entryTitle
+    
+                    const entryTextArea = document.querySelector('.entry-textarea');
+                    entryTextArea.value = content;
+    
+                    break;
+                }
+            }
+        }catch(error) {
+            console.error(`An error occured: ${error}`);
+        }
+    }
 
     // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
