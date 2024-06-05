@@ -91,7 +91,7 @@ function openEntryforEdit() {
     // Hide the "Add Note" button and entry listing
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = 'none';
-    const entryListing = document.querySelector('.home-list');
+    const entryListing = document.querySelector('.homepage-entry-list');
     entryListing.style.display = 'none';
 
     // Display the "Cancel" button, title textarea, and entry textarea
@@ -127,7 +127,7 @@ function saveCurrentEntry() {
     entryTextArea.value = '';
 
     // Get the list of past entries and create a new button for the current entry
-    const buttonList = document.querySelector('.past-entries');
+    const buttonList = document.querySelector('.homepage-entry-list');
     const newEntryButton = document.createElement('button');
     newEntryButton.innerText = title;
 
@@ -146,27 +146,45 @@ function saveCurrentEntry() {
         // titleTextArea.value = newEntryButton.innerText;
         // const entryContent = document.querySelector('.CodeMirror-line');
         // entryTextArea.value = entryContent.innerText;
-        // openEntryforEdit();
+
+        openEntryforEdit();
         editJournal(event);
     });
 
+    /**
+     * 
+     * @param {MouseEvent} event 
+     */
     async function editJournal(event){
+
         try {
-            const journals = await api.getJournals();
-            const title = event.target.innerText;
-    
+
+            const journals = await api.getJournals();  
+            //gets the div of entry
+            const title = event.target.closest('.homepage-entry-list');
+            console.log(title);
+
+
             for(const journal of journals){
+                //gets each entry of the journal
                 const entries = await journal.getEntries();
+                //searches of there is a valid entry
                 const matchingEntry = entries.find(entry => entry.name === title);
-    
+
+                //if entry matches
                 if(matchingEntry){
+                    //get the entry's content
                     const content = await matchingEntry.getContent();
-    
-                    // const titleTextArea = document.querySelector('#title-input');
-                    // titleTextArea.value = entryTitle
-    
+                    // console.log(title);
+
+                    //populate the title text to the text area
+                    const titleTextArea = document.querySelector('#title-input');
+                    titleTextArea.value = title;
+
                     const entryTextArea = document.querySelector('.entry-textarea');
                     entryTextArea.value = content;
+                    // console.log(entryTextArea);
+
     
                     break;
                 }
@@ -185,7 +203,7 @@ function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
 
-    const addEntryList = document.querySelector('.home-list');
+    const addEntryList = document.querySelector('.homepage-entry-list');
     addEntryList.style.display = '';
 
 
@@ -204,7 +222,7 @@ function hideTextEditor() {
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = '';
 
-    const prevEntries = document.querySelector('.past-entries');
+    const prevEntries = document.querySelector('.homepage-entry-list');
     const prevCount = prevEntries.querySelectorAll('article').length;
     if(prevCount > 0){
         noEntryText.style.display = 'none';
