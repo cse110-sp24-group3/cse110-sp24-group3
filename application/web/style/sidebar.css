@@ -70,16 +70,19 @@ sidebar {
 }
 
 .journal button{
-    background-color: transparent;
-    border: none;
-    display: none;
+    background-color: var(--sliding-shelf);
+    display:none;
+
 }
 
 .journal:hover button{
+    background-color: #cbcfce;
     display: block;
+    border: none;
 }
 
 .journal-vdots:hover {
+    display: block;
     content: url('../assets/vdots-journal-white-active.svg');
 }
 
