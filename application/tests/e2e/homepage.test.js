@@ -83,3 +83,51 @@ test('No entry text is absent after clicking new entry and saving a new entry', 
     await saveBtn.click();
     expect(await noEntryText.isHidden()).toBe(true);
 });
+
+// testing the past entries component
+
+test('Past entry component is correctly added to homepage with correct title', async() => {
+    const newJournalBtn = await page.locator('#new-journal-button');
+    await newJournalBtn.click();
+
+    const addEntryBtn = await page.locator('.add-note');
+    await addEntryBtn.click();
+
+    const titleInput = await page.locator('#title-input');
+    await titleInput.fill('test-title');
+
+    const saveBtn = await page.locator('#save-entry');
+    await saveBtn.click();
+
+    const pastEntries = await page.locator('.past-entries');
+    const entry = pastEntries.locator('button');
+    expect(await entry.innerText()).toBe('test-title');
+
+});
+
+test('Correct number of past entries are created and displayed', async() => {
+    const newJournalBtn = await page.locator('#new-journal-button');
+    await newJournalBtn.click();
+
+    const addEntryBtn = await page.locator('.add-note');
+    await addEntryBtn.click();
+
+    const titleInput = await page.locator('#title-input');
+    await titleInput.fill('test-title');
+
+    const saveBtn = await page.locator('#save-entry');
+    await saveBtn.click();
+
+    await addEntryBtn.click();
+    await titleInput.fill('test-title-2');
+    await saveBtn.click();
+
+    const pastEntries = await page.locator('.past-entries');
+    const entrySize = await pastEntries.locator('button').count();
+    //check that 2 entries are properly created in past-entries div
+    expect(entrySize).toBe(2);
+    //check that the entry buttons have the proper respective titles
+    expect(await pastEntries.locator('button').first().innerText()).toBe('test-title');
+    expect(await pastEntries.locator('button').nth(1).innerText()).toBe('test-title-2');
+
+});
