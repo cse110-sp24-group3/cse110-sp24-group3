@@ -55,35 +55,37 @@ sidebar {
     font-size: 16px;
     min-height: 40px;
     margin-bottom: 10px;
+
+    &:hover{
+        background-color: var(--journal-highlight);
+        button{
+            background-color: #cbcfce;
+            display: block;
+            border: none;
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+
+    button{
+        background-color: var(--sliding-shelf);
+        display:none;
+    }
+    
+    input[type='radio'] {
+        display: none;
+    }
+
+    .journal-vdots:hover {
+        display: block;
+        content: url('../assets/vdots-journal-white-active.svg');
+    }
 }
 
-.journal span {
-    margin-left: 10px;
-}
 
-.journal:hover{
+.journal:has(> input[type='radio']:checked) {
     background-color: var(--journal-highlight);
-}
-
-.journal[highlighted="true"] {
-    background-color: var(--journal-highlight);    
-}
-
-.journal button{
-    background-color: var(--sliding-shelf);
-    display:none;
-
-}
-
-.journal:hover button{
-    background-color: #cbcfce;
-    display: block;
-    border: none;
-}
-
-.journal-vdots:hover {
-    display: block;
-    content: url('../assets/vdots-journal-white-active.svg');
 }
 
 /* dropdown */
