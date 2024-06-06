@@ -1,4 +1,4 @@
-const { test, expect, _electron: electron } = require('@playwright/test')
+import { test, expect, _electron as electron } from '@playwright/test';
 
 /** @type {import('@playwright/test').ElectronApplication} */
 let electronApp;
@@ -13,7 +13,7 @@ test.beforeAll(async () => {
   // Wait for the first BrowserWindow to open
   // and return its Page object
   page = await electronApp.firstWindow()
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise(resolve => setTimeout(resolve, 2000));
 });
 
 test.afterAll(async () => {
