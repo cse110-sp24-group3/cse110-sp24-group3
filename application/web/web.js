@@ -1,10 +1,9 @@
 /// <reference path="./JournalAPI.js" />
-import { createSidebar, toggleSidebar, createJournalEntries } from "./scripts/sidebar/sidebar.js";
+import { toggleSidebar, createJournalEntries } from "./scripts/sidebar/sidebar.js";
 import { initializeHomepage, createHomepage } from "./scripts/homepage/homepage.js";
 window.onload = () => {
     initializeHomepage();
     createHomepage();
-    createSidebar();
     createJournalEntries();
     showDiscardChangePage();
     //Initalization ... maybe refactor this in the future
