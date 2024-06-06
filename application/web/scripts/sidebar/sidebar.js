@@ -27,6 +27,9 @@ export function createJournalEntries() {
     // Grabs new journal button
     const newJournalButton = document.querySelector('.new-journal');
 
+    const sidebar = document.querySelector('.journal-list');
+
+    sidebar.addEventListener('change', updateTitleText);
     // Clicking new journal button should create a new journal
     newJournalButton.addEventListener('click', () => {
         // Grabs sidebar-module handle
@@ -40,17 +43,12 @@ export function createJournalEntries() {
         // HTML to inject into journal div above
         journalDiv.innerHTML = `
             <label>
-                <input type="radio" id="journal-${numJournals}" name="journals" value="My Journal" checked />Journal #${numJournals}
+                <input type="radio" id="journal-${numJournals}" name="journals" value="Journal #${numJournals}" checked />Journal #${numJournals}
             </label>
             <button class="journal-dropdown-button">
                 <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
             </button>`;
 
-        sidebar.addEventListener('change', (event) => {
-            const titleText = event.target.closest('.journal').querySelector('label');
-            const titleHeader = document.querySelector('#journal-title');
-            titleHeader.innerText = titleText.innerText;
-        });
 
         // Injects HTML above into journal entry
         sidebar.appendChild(journalDiv);
@@ -65,8 +63,15 @@ export function createJournalEntries() {
             showHomepageHeaderInfo();
             showNoEntriesText();
         }
+        updateTitleText();
     });
 };
+
+function updateTitleText() {
+    const titleText = document.querySelector('input[name="journals"]:checked').value;
+    const titleHeader = document.querySelector('#journal-title');
+    titleHeader.innerText = titleText;
+}
 
 /**
  * Inserts "No Journal Entries" text into the designated area.
