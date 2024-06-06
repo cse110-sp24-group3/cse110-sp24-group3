@@ -39,8 +39,9 @@ export function createJournalEntries() {
 
         // HTML to inject into journal div above
         journalDiv.innerHTML = `
-        <input type="radio" id="journal-${numJournals}" name="journals" value="My Journal" checked />
-        <label for="journal-${numJournals}">Journal #${numJournals}</label>
+            <label>
+                <input type="radio" id="journal-${numJournals}" name="journals" value="My Journal" checked />Journal #${numJournals}
+            </label>
             <button class="journal-dropdown-button">
                 <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
             </button>`;
@@ -49,7 +50,6 @@ export function createJournalEntries() {
             const titleText = event.target.closest('.journal').querySelector('label');
             const titleHeader = document.querySelector('#journal-title');
             titleHeader.innerText = titleText.innerText;
-            console.log(titleText);
         });
 
         // Injects HTML above into journal entry

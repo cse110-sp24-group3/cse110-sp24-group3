@@ -51,7 +51,6 @@ sidebar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
     font-size: 16px;
     min-height: 40px;
     margin-bottom: 10px;
@@ -76,6 +75,11 @@ sidebar {
     input[type='radio'] {
         display: none;
     }
+    
+    label {
+        height: 100%;
+        cursor: pointer;
+    }
 
     .journal-vdots:hover {
         display: block;
@@ -83,8 +87,8 @@ sidebar {
     }
 }
 
-
-.journal:has(> input[type='radio']:checked) {
+/* for some reason nested selectors don't work with :has() */
+.journal:has(input[type='radio']:checked) {
     background-color: var(--journal-highlight);
 }
 
@@ -108,11 +112,11 @@ sidebar {
     display: flex;
     align-items: center;
     cursor: pointer;
-}
 
-.sidebar-dropdown-item:hover {
-    background-color: var(--icon-color);
-    border-radius: 5px;
+    :hover {
+        background-color: var(--icon-color);
+        border-radius: 5px;
+    }
 }
 
 .dropdown-icon {
@@ -121,10 +125,9 @@ sidebar {
 
 .sidebar-dropdown-item.delete {
     color: red;
-}
-
-.sidebar-dropdown-item.delete:hover {
-    background-color: #f8d7da;
+    :hover {
+        background-color: #f8d7da;
+    }
 }
 
 /* new journal button */
