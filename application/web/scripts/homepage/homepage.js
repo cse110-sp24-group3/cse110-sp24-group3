@@ -101,7 +101,8 @@ function openEntryforEdit() {
     titleTextArea.style.display = 'inline';
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = 'inline';
-
+    const livePreview = document.querySelector('.live-preview');
+    livePreview.style.display = 'inline';
     // Hide the "No entries" text
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = 'none';
@@ -206,7 +207,6 @@ function hideTextEditor() {
     const addEntryList = document.querySelector('.homepage-entry-list');
     addEntryList.style.display = '';
 
-
     const cancelNoteButton = document.getElementById('cancel-note');
     cancelNoteButton.style.display = '';
 
@@ -218,6 +218,11 @@ function hideTextEditor() {
 
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = '';
+   
+    // LRC 
+    // Need to hide the preview along with textArea
+    const livePreview = document.querySelector('.live-preview');
+    livePreview.style.display = '';
 
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = '';
