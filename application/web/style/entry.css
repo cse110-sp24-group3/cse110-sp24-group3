@@ -19,6 +19,14 @@
     border-radius: 10px;
    }
 
+.CodeMirror-linenumbers {
+    background-color: #e2dede;
+}
+
+.CodeMirror-gutters {
+     border-right: none;
+   }
+
 .live-preview {
      float: right;
      /*background-color: #e2dede;*/
