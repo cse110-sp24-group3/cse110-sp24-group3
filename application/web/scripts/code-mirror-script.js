@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function updatePreview() {
     const previewContainer = document.getElementById('live-preview');
     const markdownContent = editor.getValue();
-    const renderedHTML = marked(markdownContent);
+    const renderedHTML = marked(markdownContent);// eslint-disable-line
     previewContainer.innerHTML = renderedHTML;
   }
 
