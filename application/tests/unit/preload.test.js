@@ -11,13 +11,14 @@ jest.mock('electron', () => ({
 
 // Require the preload script to initialize the context bridge and global.fileAPI
 process.env.NODE_ENV = 'test';
-require('./preload.js');
+require('../../preload.js');
 
 describe('fileAPI', () => {
     let baseDir;
     const APP_NAME = "Instone";
     if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
-        baseDir = path.join(__dirname, 'mock');
+        // move up two levels to get path to mock
+        baseDir = path.join(__dirname, '..', '..', 'mock');
     } else {
         switch (process.platform) {
             case 'win32':
