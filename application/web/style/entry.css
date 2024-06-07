@@ -232,30 +232,17 @@
     gap:10px;
 }
 
-/* Three dots */
-.three-dots-entry {
-    background-color: var(--journal-entry);
+#editing-entry-vdots-button {
+    border: none;
+    background-color: transparent;
+}
+
+.editing-entry-vdots {
     border: none;
 }
 
-.three-dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none; /* Ensure it looks like an icon, not a standard button */
-    background: none; /* Remove default button background */
-    padding: 0; /* Remove default button padding */
-}
-
-/* Default icon */
-.three-dots .dots-icon {
-    content: url('./assets/vdots-grey.svg');
-}
-
-/* Hover state */
-.three-dots:hover .dots-icon {
-    content: url('./assets/vdots-grey-active.svg');
+.editing-entry-vdots:hover {
+    content: url('../assets/vdots-grey-active.svg');
 }
 
 .dropdown-menu {
@@ -283,11 +270,6 @@
 
 .dropdown-icon {
     margin-right: 10px;
-}
-
-.checkmark {
-    margin-left: auto;
-    visibility: hidden;
 }
 
 .dropdown-item.delete {

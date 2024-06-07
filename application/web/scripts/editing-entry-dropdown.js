@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     function setupDropdown() {
         // Get references to the dropdown button, menu, and Dev Mode toggle
-        const three_dots_button = document.getElementById('three-dots-entry');
+        const three_dots_button = document.getElementById('editing-entry-vdots-button');
         const dropdownMenuEntry = document.getElementById('dropdown-menu-entry');
         const devModeToggle = document.getElementById('devModeToggle');
         let devModeActive = false; // Initialize a flag to track Dev Mode status

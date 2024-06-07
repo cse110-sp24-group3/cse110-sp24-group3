@@ -24,6 +24,7 @@ sidebar {
 }
 
 .sidebar-module {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -32,50 +33,104 @@ sidebar {
     /* overflow: scroll;  */
     /* to make journal list for too many journals */
     overflow-y: scroll;
+    overflow-x: visible;
 }
 
 .sidebar-module::-webkit-scrollbar {
     width: 0px; 
 }
 
-/* styles for each journal */
+/* journal */
 .journal {
     color: var(--grey-text-color);
+    position: relative;
+    overflow: visible;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
     font-size: 16px;
     min-height: 40px;
     margin-bottom: 10px;
+
+    &:hover{
+        background-color: var(--journal-highlight);
+        button{
+            background-color: #cbcfce;
+            display: block;
+            border: none;
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+
+    button{
+        background-color: var(--sliding-shelf);
+        display:none;
+    }
+    
+    input[type='radio'] {
+        display: none;
+    }
+    
+    label {
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .journal-vdots:hover {
+        display: block;
+        content: url('../assets/vdots-journal-white-active.svg');
+    }
 }
 
-.journal span {
-    margin-left: 10px;
+/* for some reason nested selectors don't work with :has() */
+.journal:has(input[type='radio']:checked) {
+    background-color: var(--journal-highlight);
 }
 
-.journal:hover{
-    background-color: #cbcfce;
-}
-
-.journal button{
-    background-color: var(--sliding-shelf);
-    border: none;
+/* dropdown */
+.sidebar-dropdown-menu {
     display: none;
+    position: absolute;
+    width: 200px;
+    z-index: 1000;
+    left: 80px;
+    background-color: var(--journal-entry);
+    border: 1px solid var(--icon-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    z-index: 1000;
 }
 
-.journal:hover button{
-    background-color: #cbcfce;
-    display: block;
+.sidebar-dropdown-item {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    :hover {
+        background-color: var(--icon-color);
+        border-radius: 5px;
+    }
 }
 
-.journal-vdots:hover {
-    content: url('../assets/vdots-journal-white-active.svg');
+.dropdown-icon {
+    margin-right: 10px;
 }
 
+.sidebar-dropdown-item.delete {
+    color: red;
+    :hover {
+        background-color: #f8d7da;
+    }
+}
+
+/* new journal button */
 button.new-journal {
     background-color: var(--dark-green);
     color: white;
