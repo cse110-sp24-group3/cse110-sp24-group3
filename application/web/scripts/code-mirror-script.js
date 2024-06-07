@@ -12,48 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let textArea = document.getElementById("entry-textarea")
 
-
-  const md = window.markdownit();
-
-   //TEST
-
-CodeMirror.defineMode('markdown-preview', function (config) {
-  const markdownMode = CodeMirror.getMode(config, 'gfm');
-  const markdownOverlay = {
-    token: function (stream, state) { // Added the 'state' parameter here
-      const token = markdownMode.token(stream, state.base);
-      if (token.mode) {
-        stream.pos += token.value.length;
-        return null; // Skip the Markdown syntax
-      }
-      return token.style ? token.style + ' ' + token.type : token.type;
-    },
-    blankLine: function (state) {
-      markdownMode.blankLine(state.base);
-    },
-    startState: function () {
-      return {
-        base: CodeMirror.startState(markdownMode)
-      };
-    },
-    copyState: function (state) {
-      return {
-        base: CodeMirror.copyState(markdownMode, state.base)
-      };
-    }
-  };
-  return CodeMirror.multiplexingMode(markdownMode, markdownOverlay);
-});
-
   // Create the CodeMirror Object
   let editor = CodeMirror(textArea, {// eslint-disable-line
-    mode: {
-      name: "gfm",
-      overlay: {
-        name: 'markdown-preview',
-        combine: true
-      }
-    },
+    mode: "gfm",
     lineNumbers: true,
     lineWrapping: true,
     styleActiveLine: true,
@@ -63,6 +24,18 @@ CodeMirror.defineMode('markdown-preview', function (config) {
     fencedCodeBlockHighlighting: true,
   });
 
-  // Not sure why, but the formatting messes up without this
+  // Updates the live-preview div with rendered markdown
+  function updatePreview() {
+    const previewContainer = document.getElementById('live-preview');
+    const markdownContent = editor.getValue();
+    const renderedHTML = marked(markdownContent);
+    previewContainer.innerHTML = renderedHTML;
+  }
+
+  // When text is added, update the live preview
+  editor.on("change", updatePreview);
+
+  // If this line isn't here, the text box prays
+  // If you remove it I might cry
   editor.refresh();
 });
