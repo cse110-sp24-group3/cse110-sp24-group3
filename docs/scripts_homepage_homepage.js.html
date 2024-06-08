@@ -129,7 +129,8 @@ function openEntryforEdit() {
     titleTextArea.style.display = 'inline';
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = 'inline';
-
+    const livePreview = document.querySelector('.live-preview');
+    livePreview.style.display = 'inline';
     // Hide the "No entries" text
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = 'none';
@@ -164,11 +165,6 @@ function saveCurrentEntry() {
     article.innerText = entry;
     article.style.display = 'none';
 
-    // TODO: Replace with function to load entry from storage
-    newEntryButton.addEventListener('click', () => {
-        article.style.display = 'block';
-    });
-
     // Append the new entry button and article to the list of past entries
     buttonList.append(newEntryButton);
     buttonList.append(article);
@@ -176,9 +172,72 @@ function saveCurrentEntry() {
     // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
     titleTextArea.className = 'placeholder';
+
     hideTextEditor();
+
+    writeJournalEntryToStorage(entryTitle, entryContent, journalName);
 }
 
+/**
+ * Writes a new journal entry to storage with the given parameters.
+ * @param {string} entryTitle - The title of the entry.
+ * @param {string} entryContent - The markdown content of the entry.
+ * @param {string} journalName - The name of the journal this entry belongs to.
+ * @throws Will throw an error if write fails
+ */
+async function writeJournalEntryToStorage(entryTitle, entryContent, journalName) {
+    try {
+        const journalList = await api.getJournals();
+        const journal = journalList.find(journal => journal.name === journalName);
+
+        if (journal) {
+            const entries = await journal.getEntries();
+            const matchingEntry = entries.find(entry => entry.name === entryTitle);
+            if (matchingEntry) {
+                matchingEntry.updateContent(entryContent)
+            } else {
+                const newEntry = await journal.createEntry(entryTitle);
+                newEntry.updateContent
+            }
+        }
+    } catch (error) {
+        console.error(`An error occured: ${error}`);
+    }
+}
+
+function hideTextEditor() {
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.style.display = '';
+
+    const addEntryList = document.querySelector('.home-list');
+    addEntryList.style.display = '';
+
+    const cancelNoteButton = document.getElementById('cancel-note');
+    cancelNoteButton.style.display = '';
+
+    const saveNoteButton = document.getElementById('save-entry');
+    saveNoteButton.style.display = '';
+
+    const titleTextArea = document.querySelector('.title-textarea');
+    titleTextArea.style.display = '';
+
+    const entryTextArea = document.querySelector('.entry-textarea');
+    entryTextArea.style.display = '';
+
+    // LRC 
+    // Need to hide the preview along with textArea
+    const livePreview = document.querySelector('.live-preview');
+    livePreview.style.display = '';
+
+    const noEntryText = document.querySelector('.no-entry-text');
+    noEntryText.style.display = '';
+
+    const prevEntries = document.querySelector('.past-entries');
+    const prevCount = prevEntries.querySelectorAll('article').length;
+    if (prevCount > 0) {
+        noEntryText.style.display = 'none';
+    }
+}
 </code></pre>
         </article>
     </section>
@@ -189,13 +248,13 @@ function saveCurrentEntry() {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Entry.html">Entry</a></li><li><a href="Journal.html">Journal</a></li><li><a href="JournalAPI.html">JournalAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#api">api</a></li><li><a href="global.html#cancelEntry">cancelEntry</a></li><li><a href="global.html#createHomepage">createHomepage</a></li><li><a href="global.html#createSidebar">createSidebar</a></li><li><a href="global.html#initializeHomepage">initializeHomepage</a></li><li><a href="global.html#openEntryforEdit">openEntryforEdit</a></li><li><a href="global.html#saveCurrentEntry">saveCurrentEntry</a></li><li><a href="global.html#selectedJournal">selectedJournal</a></li><li><a href="global.html#toggleSidebar">toggleSidebar</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Entry.html">Entry</a></li><li><a href="Journal.html">Journal</a></li><li><a href="JournalAPI.html">JournalAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#api">api</a></li><li><a href="global.html#cancelEntry">cancelEntry</a></li><li><a href="global.html#createHomepage">createHomepage</a></li><li><a href="global.html#initializeHomepage">initializeHomepage</a></li><li><a href="global.html#openEntryforEdit">openEntryforEdit</a></li><li><a href="global.html#saveCurrentEntry">saveCurrentEntry</a></li><li><a href="global.html#selectedJournal">selectedJournal</a></li><li><a href="global.html#showHomepageHeaderInfo">showHomepageHeaderInfo</a></li><li><a href="global.html#showNoEntriesText">showNoEntriesText</a></li><li><a href="global.html#toggleSidebar">toggleSidebar</a></li><li><a href="global.html#writeJournalEntryToStorage">writeJournalEntryToStorage</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Sat Jun 01 2024 20:01:29 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri Jun 07 2024 19:58:40 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
