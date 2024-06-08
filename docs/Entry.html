@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Entry<span class="signature">(journalName, name)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Entry<span class="signature">(journalName, name, content<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
             <div class="class-description">Represents an entry in a journal, which is a markdown file.</div>
         
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="Entry"><span class="type-signature"></span>new Entry<span class="signature">(journalName, name)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Entry"><span class="type-signature"></span>new Entry<span class="signature">(journalName, name, content<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -77,7 +77,11 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -102,7 +106,19 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">The name of the journal this entry belongs to.</td>
@@ -125,10 +141,61 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">The name of the entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    ''
+                
+                </td>
+            
+
+            <td class="description last">The markdown content of the entry. By default the content is empty.</td>
         </tr>
 
     
@@ -277,7 +344,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="JournalAPI.js.html">JournalAPI.js</a>, <a href="JournalAPI.js.html#line89">line 89</a>
+        <a href="JournalAPI.js.html">JournalAPI.js</a>, <a href="JournalAPI.js.html#line90">line 90</a>
     </li></ul></dd>
     
 
@@ -436,7 +503,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="JournalAPI.js.html">JournalAPI.js</a>, <a href="JournalAPI.js.html#line72">line 72</a>
+        <a href="JournalAPI.js.html">JournalAPI.js</a>, <a href="JournalAPI.js.html#line73">line 73</a>
     </li></ul></dd>
     
 
@@ -595,7 +662,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="JournalAPI.js.html">JournalAPI.js</a>, <a href="JournalAPI.js.html#line81">line 81</a>
+        <a href="JournalAPI.js.html">JournalAPI.js</a>, <a href="JournalAPI.js.html#line82">line 82</a>
     </li></ul></dd>
     
 
@@ -663,13 +730,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Entry.html">Entry</a></li><li><a href="Journal.html">Journal</a></li><li><a href="JournalAPI.html">JournalAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#api">api</a></li><li><a href="global.html#cancelEntry">cancelEntry</a></li><li><a href="global.html#createHomepage">createHomepage</a></li><li><a href="global.html#createSidebar">createSidebar</a></li><li><a href="global.html#initializeHomepage">initializeHomepage</a></li><li><a href="global.html#openEntryforEdit">openEntryforEdit</a></li><li><a href="global.html#saveCurrentEntry">saveCurrentEntry</a></li><li><a href="global.html#selectedJournal">selectedJournal</a></li><li><a href="global.html#toggleSidebar">toggleSidebar</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Entry.html">Entry</a></li><li><a href="Journal.html">Journal</a></li><li><a href="JournalAPI.html">JournalAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#api">api</a></li><li><a href="global.html#cancelEntry">cancelEntry</a></li><li><a href="global.html#createHomepage">createHomepage</a></li><li><a href="global.html#initializeHomepage">initializeHomepage</a></li><li><a href="global.html#openEntryforEdit">openEntryforEdit</a></li><li><a href="global.html#saveCurrentEntry">saveCurrentEntry</a></li><li><a href="global.html#selectedJournal">selectedJournal</a></li><li><a href="global.html#showHomepageHeaderInfo">showHomepageHeaderInfo</a></li><li><a href="global.html#showNoEntriesText">showNoEntriesText</a></li><li><a href="global.html#toggleSidebar">toggleSidebar</a></li><li><a href="global.html#writeJournalEntryToStorage">writeJournalEntryToStorage</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Sat Jun 01 2024 20:01:29 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri Jun 07 2024 19:58:40 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

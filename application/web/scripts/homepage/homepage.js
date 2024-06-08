@@ -17,15 +17,15 @@ export function initializeHomepage() {
 export function createHomepage() {
     // Attach event listener to the "Add Note" button
     const addNoteButton = document.querySelector('.add-note');
-    addNoteButton.addEventListener('click', () => openEntryforEdit());
+    addNoteButton.addEventListener('click', openEntryforEdit);
 
     // Attach event listener to the "Cancel" button
     const cancelNoteButton = document.getElementById('cancel-note');
-    cancelNoteButton.addEventListener('click', () => cancelEntry());
+    cancelNoteButton.addEventListener('click', cancelEntry);
 
     // Attach event listener to the "Save" button
     const saveNoteButton = document.getElementById('save-entry');
-    saveNoteButton.addEventListener('click', () => saveCurrentEntry());
+    saveNoteButton.addEventListener('click', saveCurrentEntry);
 
     // Clear entry text on page load
     const entryTextArea = document.querySelector('.entry-textarea');
@@ -119,69 +119,116 @@ function saveCurrentEntry() {
 
     // Get the title text area and extract the title
     const titleTextArea = document.querySelector('#title-input');
-    const title = titleTextArea.value;
+    const entryTitle = titleTextArea.value;
     titleTextArea.style.display = '';
 
     // Get the entry text area and extract the entry content
-    const entryTextArea = document.querySelector('.entry-textarea');
-    const entry = entryTextArea.value;
+    // TODO: make selector cleaner
+    // const entryTextSelectorString = `#entry-textarea > div > div.CodeMirror-scroll > div.CodeMirror-sizer > div > div > div > div.CodeMirror-code > div > pre > span`;
+    const entryTextArea = document.querySelector('.CodeMirror').CodeMirror;
+    const entryContent = entryTextArea.getValue('\n');
     entryTextArea.value = '';
 
     // Get the list of past entries and create a new button for the current entry
     const buttonList = document.querySelector('.past-entries');
     const newEntryButton = document.createElement('button');
-    newEntryButton.innerText = title;
+    newEntryButton.innerText = entryTitle;
 
-    // Create an article element to display the entry content
-    const article = document.createElement('article');
-    article.innerText = entry;
-    article.style.display = 'none';
+    newEntryButton.addEventListener('click', updateArticleTextFromStorage)
 
-    // Append the new entry button and article to the list of past entries
-    buttonList.append(newEntryButton);
-    buttonList.append(article);
-
-    // TODO: Replace with function to load entry from storage
-    newEntryButton.addEventListener('click', (event) => {
-        // article.style.display = 'block';
-        // titleTextArea.value = newEntryButton.innerText;
-        // const entryContent = document.querySelector('.CodeMirror-line');
-        // entryTextArea.value = entryContent.innerText;
-        // openEntryforEdit();
-        editJournal(event);
-    });
-
-    async function editJournal(event){
-        try {
-            const journals = await api.getJournals();
-            const title = event.target.innerText;
-    
-            for(const journal of journals){
-                const entries = await journal.getEntries();
-                const matchingEntry = entries.find(entry => entry.name === title);
-    
-                if(matchingEntry){
-                    const content = await matchingEntry.getContent();
-    
-                    // const titleTextArea = document.querySelector('#title-input');
-                    // titleTextArea.value = entryTitle
-    
-                    const entryTextArea = document.querySelector('.entry-textarea');
-                    entryTextArea.value = content;
-    
-                    break;
-                }
-            }
-        }catch(error) {
-            console.error(`An error occured: ${error}`);
-        }
-    }
 
     // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
     titleTextArea.className = 'placeholder';
-    hideTextEditor();
+
+    const journalName = document.querySelector('input[name="journals"]:checked').value;
+
+    console.log('')
+    const newEntry = writeJournalEntryToStorage(entryTitle, entryContent, journalName);
+    if (newEntry)
+        // Append the new entry button and article to the list of past entries
+        buttonList.append(newEntryButton);
 }
+
+
+/**
+ * Writes a new journal entry to storage with the given parameters.
+ * @throws Will throw an error if read fails
+ */
+async function updateArticleTextFromStorage() {
+    try {
+        const currentJournalName = document.querySelector('input[name="journals"]:checked').value;
+        const entryTitle = this.innerText;
+
+        const journalList = await api.getJournals();
+        const journal = journalList.find(journal => journal.name === currentJournalName);
+        if (journal) {
+            const entries = await journal.getEntries();
+            const matchingEntry = entries.find(entry => entry.name === entryTitle);
+
+            // if the entry also exists, just update the content
+            if (matchingEntry) {
+                const content = await matchingEntry.getContent();
+                console.log(`Read Content: ${content} and ${typeof content} and ${content.length}`)
+                console.log(`Read Name: ${matchingEntry.name}`)
+                const entryArticle = document.querySelector('.selected-entry-article')
+                entryArticle.innerText = content;
+            } else {
+                throw new Error('Entry not found')
+            }
+            // if the journal doesn't exist, then create a new journal
+        } else {
+            throw new Error('Journal not found')
+        }
+
+    } catch (error) {
+        console.error(`An error occured: ${error}`);
+    }
+}
+
+/**
+ * Writes a new journal entry to storage with the given parameters.
+ * @param {string} entryTitle - The title of the entry.
+ * @param {string} entryContent - The markdown content of the entry.
+ * @param {string} journalName - The name of the journal this entry belongs to.
+ * @returns {boolean} true if a new entry was created, false otherwise
+ * @throws Will throw an error if write fails
+ */
+async function writeJournalEntryToStorage(entryTitle, entryContent, journalName) {
+    console.log('penis')
+    try {
+        const journalList = await api.getJournals();
+        const journal = journalList.find(journal => journal.name === journalName);
+        let newEntryCreated = true;
+        let matchingEntry;
+
+        console.log(`Write Content: ${entryContent}`)
+        console.log(`Write Name: ${entryTitle}`)
+        // if the journal exists, then access that journal 
+        if (journal) {
+            const entries = await journal.getEntries();
+            matchingEntry = entries.find(entry => entry.name === entryTitle);
+
+            // if the entry also exists, just update the content
+            if (matchingEntry) {
+                console.log('matched')
+                newEntryCreated = false;
+            } else {
+                // otherwise create a new entry in the journal
+                matchingEntry = await journal.createEntry(entryTitle, entryContent);
+            }
+            // if the journal doesn't exist, then create a new journal
+        } else {
+            const newJournal = await api.createJournal(journalName);
+            matchingEntry = await newJournal.createEntry(entryTitle, entryContent);
+        }
+        await matchingEntry.updateContent(entryContent)
+        return true;
+    } catch (error) {
+        console.error(`An error occured: ${error}`);
+    }
+}
+
 function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
@@ -200,7 +247,7 @@ function hideTextEditor() {
 
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = '';
-   
+
     // LRC 
     // Need to hide the preview along with textArea
     const livePreview = document.querySelector('.live-preview');
@@ -211,7 +258,7 @@ function hideTextEditor() {
 
     const prevEntries = document.querySelector('.past-entries');
     const prevCount = prevEntries.querySelectorAll('article').length;
-    if(prevCount > 0){
+    if (prevCount > 0) {
         noEntryText.style.display = 'none';
     }
 }
