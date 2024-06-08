@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@playwright/test": "^1.44.1",
-    "electron": "^30.1.0"
+    "marked": "^12.0.2"
   }
 }
