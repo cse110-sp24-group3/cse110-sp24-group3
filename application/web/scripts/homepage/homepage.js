@@ -11,9 +11,9 @@ export function initializeHomepage() {
     entryButton.setAttribute("hidden", "hidden");
 
     // Check if a journal is selected and populate entries
-    if (selectedJournal) {
-        populateEntries();
-    }
+    // if (selectedJournal) {
+    //     populateEntries();
+    // }
 }
 
 /**
@@ -141,32 +141,20 @@ async function saveCurrentEntry() {
 
     newEntryButton.addEventListener('click', updateArticleTextFromStorage)
 
-    // Get the title text area and extract the title
-    const titleTextArea = document.querySelector('#title-input');
-    const title = titleTextArea.value;
-    
-    // Get the entry text area and extract the entry content
-    const entryTextArea = document.querySelector('.entry-textarea');
-    const entry = entryTextArea.value;
-
-    // Save the entry to the backend
-    if (selectedJournal) {
-        try {
-            const newEntry = await selectedJournal.createEntry(title);
-            await newEntry.updateContent(entry);
-            displaySaveMessage();
-            populateEntries();
-        } catch (error) {
-            console.error('Error saving entry:', error);
-        }
-    }
-    else {
-        console.error('Selected journal undefined.');
-    }
-
-    // Append the new entry button and article to the list of past entries
-    buttonList.append(newEntryButton);
-    buttonList.append(article);
+    // // Save the entry to the backend
+    // if (selectedJournal) {
+    //     try {
+    //         const newEntry = await selectedJournal.createEntry(title);
+    //         await newEntry.updateContent(entry);
+    //         displaySaveMessage();
+    //         populateEntries();
+    //     } catch (error) {
+    //         console.error('Error saving entry:', error);
+    //     }
+    // }
+    // else {
+    //     console.error('Selected journal undefined.');
+    // }
 
     // TODO: Replace with function to load entry from storage
     newEntryButton.addEventListener('click', (event) => {
@@ -250,6 +238,7 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
 
             // if the entry also exists, just update the content
             if (matchingEntry) {
+                console.log('matched')
                 newEntryCreated = false;
             } else {
                 // otherwise create a new entry in the journal
@@ -261,29 +250,23 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
             matchingEntry = await newJournal.createEntry(entryTitle, entryContent);
         }
         await matchingEntry.updateContent(entryContent)
+        displaySaveMessage();
         return newEntryCreated;
     } catch (error) {
         console.error(`An error occured: ${error}`);
     }
 }
 
-
-    entryTextArea.value = '';
-
-    // Hide the text editor and go back to the homepage
-    hideTextEditor();
-}
-
-async function editJournal(event){
+async function editJournal(event) {
     try {
         const journals = await api.getJournals();
         const title = event.target.innerText;
 
-        for(const journal of journals){
+        for (const journal of journals) {
             const entries = await journal.getEntries();
             const matchingEntry = entries.find(entry => entry.name === title);
 
-            if(matchingEntry){
+            if (matchingEntry) {
                 const content = await matchingEntry.getContent();
 
                 // const titleTextArea = document.querySelector('#title-input');
@@ -295,7 +278,7 @@ async function editJournal(event){
                 break;
             }
         }
-    }catch(error) {
+    } catch (error) {
         console.error(`An error occured: ${error}`);
     }
 }
@@ -359,7 +342,7 @@ async function populateEntries() {
 
         const entryElement = document.createElement('div');
         entryElement.classList.add('home-single-entry');
-        
+
         entryElement.innerHTML = `
             <button class="home-single-entry-button">
                 <span class="home-entry-name">${entry.name}</span>
