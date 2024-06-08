@@ -27,6 +27,10 @@ export function createHomepage() {
     const saveNoteButton = document.getElementById('save-entry');
     saveNoteButton.addEventListener('click', () => saveCurrentEntry());
 
+    // Attach event listener to the "SaveOnly" button
+    const saveNoteOnlyButton = document.getElementById('save-entry-only');
+    saveNoteOnlyButton.addEventListener('click', () => saveCurrentEntryOnly());
+
     // Clear entry text on page load
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.value = '';
@@ -106,10 +110,13 @@ function openEntryforEdit() {
     // Hide the "No entries" text
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = 'none';
+    //hide the "save entry button" and keep the save entry only
+    const saveNoteButton = document.getElementById('save-entry-only');
+    saveNoteButton.style.display = 'none';
 }
 
 /**
- * Saves the current entry.
+ * Saves the current entry and adds a new button.
  * Hides the text editor and prepares the entry to be displayed.
  * This function is currently identical to cancelEntry() but will have more functionality added in the future.
  */
@@ -120,6 +127,7 @@ function saveCurrentEntry() {
     // Get the title text area and extract the title
     const titleTextArea = document.querySelector('#title-input');
     const title = titleTextArea.value;
+    console.log(title);
     titleTextArea.style.display = '';
 
     // Get the entry text area and extract the entry content
@@ -142,64 +150,88 @@ function saveCurrentEntry() {
     buttonList.append(article);
 
     // TODO: Replace with function to load entry from storage
-    newEntryButton.addEventListener('click', (event) => {
+    newEntryButton.addEventListener('click', () => {
         // article.style.display = 'block';
         // titleTextArea.value = newEntryButton.innerText;
         // const entryContent = document.querySelector('.CodeMirror-line');
         // entryTextArea.value = entryContent.innerText;
-
         openEntryforEdit();
-        editJournal(event);
+        unlockSaveOnlyButton();
+        editEntry(title,entry);
     });
+}
 
-    /**
-     * 
-     * @param {MouseEvent} event 
-     */
-    async function editJournal(event){
+/**
+ * Saves the current entry ONLY.
+ * Hides the text editor and prepares the entry to be displayed.
+ * This function is currently identical to cancelEntry() but will have more functionality added in the future.
+ */
+async function saveCurrentEntryOnly() {
+    // Hide the text editor
+    hideTextEditor();
 
-        try {
+    // Get the title text area and extract the title
+    const titleTextArea = document.querySelector('#title-input');
+    const title = titleTextArea.value;
+    titleTextArea.style.display = '';
+    // await api.updateName(title); //I cant get it to work
 
-            const journals = await api.getJournals();  
-            //gets the div of entry
-            const title = event.target.closest('.homepage-entry-list');
-            console.log(title);
+    // Get the entry text area and extract the entry content
+    const entryTextArea = document.querySelector('.entry-textarea');
+    const entry = entryTextArea.value;
+    entryTextArea.value = '';
+    // await api.updateEntry(entry);
+}
 
+function unlockSaveOnlyButton() {
+    console.log('changed');
+    const showSaveOnlyButton = document.getElementById('save-entry-only');
+    showSaveOnlyButton.style.display = 'inline';
+    const hideSaveAddButton = document.getElementById('save-entry');
+    hideSaveAddButton.style.display = 'none';
+}
 
-            for(const journal of journals){
-                //gets each entry of the journal
-                const entries = await journal.getEntries();
-                //searches of there is a valid entry
-                const matchingEntry = entries.find(entry => entry.name === title);
+/**
+ * 
+ * @param {MouseEvent} event 
+ */
+async function editEntry(title,entry){
 
-                //if entry matches
-                if(matchingEntry){
-                    //get the entry's content
-                    const content = await matchingEntry.getContent();
-                    // console.log(title);
+    try {
+        console.log(title);
+        console.log(entry);
+        const journals = await api.getJournals();  
 
-                    //populate the title text to the text area
-                    const titleTextArea = document.querySelector('#title-input');
-                    titleTextArea.value = title;
+        for(const journal of journals){
+            //gets each entry of the journal
+            const entries = await journal.getEntries();
+            //searches of there is a valid entry
+            const matchingEntry = entries.find(entry => entry.name === title);
 
-                    const entryTextArea = document.querySelector('.entry-textarea');
-                    entryTextArea.value = content;
-                    // console.log(entryTextArea);
+            //if entry matches
+            if(matchingEntry){
+                //get the entry's content
+                const content = await matchingEntry.getContent();
 
-    
-                    break;
-                }
+                //populate the title text to the text area
+                const titleTextArea = document.querySelector('#title-input');
+                titleTextArea.value = title;
+
+                const entryTextArea = document.querySelector('.entry-textarea');
+                entryTextArea.value = content;
+
+                break;
             }
-        }catch(error) {
-            console.error(`An error occured: ${error}`);
         }
+    }catch(error) {
+        console.error(`An error occured: ${error}`);
     }
 
     // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
-    titleTextArea.className = 'placeholder';
     hideTextEditor();
 }
+
 function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
@@ -212,6 +244,9 @@ function hideTextEditor() {
 
     const saveNoteButton = document.getElementById('save-entry');
     saveNoteButton.style.display = '';
+
+    const saveNoteOnlyButton = document.getElementById('save-entry-only');
+    saveNoteOnlyButton.style.display = '';
 
     const titleTextArea = document.querySelector('.title-textarea');
     titleTextArea.style.display = '';
