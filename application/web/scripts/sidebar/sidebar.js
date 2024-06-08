@@ -24,7 +24,6 @@ export function toggleSidebar() {
 };
 
 export function createJournalEntries() {
-    // Grabs new journal button
     const newJournalButton = document.querySelector('.new-journal');
 
     const sidebar = document.querySelector('.journal-list');

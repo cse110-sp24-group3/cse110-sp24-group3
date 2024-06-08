@@ -47,4 +47,15 @@ button.add-note:hover {
     background-color: #A1A1A1;
 }
 
-
+.save-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+}

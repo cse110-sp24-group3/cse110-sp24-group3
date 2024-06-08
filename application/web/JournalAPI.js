@@ -117,7 +117,7 @@ class JournalAPI {
      */
     async createJournal(name) {
         let journalName
-        if(name)
+        if (name)
             journalName = await window.fileAPI.createNamedJournal(name);
         else
             journalName = await window.fileAPI.createJournal();
@@ -135,7 +135,7 @@ class JournalAPI {
 }
 /**
  * Main api definition. Use this when accessing the API as we should only have one instance of JournalAPI in the project.
- */ 
+ */
 var api = new JournalAPI(); // eslint-disable-line
 /**
  * Represents a global variable for the selected journal API.
