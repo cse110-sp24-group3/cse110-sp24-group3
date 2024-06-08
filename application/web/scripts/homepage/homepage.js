@@ -135,9 +135,12 @@ async function saveCurrentEntry() {
      * @returns {Journal} The currently selected journal, or null if none exist
      */
 async function getCurrentJournal() {
-    const currentJournalName = document.querySelector('input[name="journals"]:checked').value;
-    const journalList = await api.getJournals();
-    return journalList.find(journal => journal.name === currentJournalName);
+    const currentJournal = document.querySelector('input[name="journals"]:checked');
+    if (currentJournal) {
+        const journalList = await api.getJournals();
+        return journalList.find(journal => journal.name === currentJournal.value);
+    }
+    return null;
 }
 
 /**
