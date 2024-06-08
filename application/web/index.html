@@ -38,6 +38,9 @@
                     <span>New Journal</span>
                     <img src="assets/journal-icon.svg" alt="Journal Icon" class="journal-icon">
                 </button>
+                <fieldset class="journal-list">
+                    
+                </fieldset>
                 <!-- <div class = "journal">
                     <span>My Journal</span>
                     <button class="journal-dropdown-button">
@@ -136,9 +139,12 @@
                 <!-- Temporarily put textarea for the CodeMirror editor -->
                 <!-- <textarea id="entry-textarea" class="entry-textarea" placeholder="PEE your thoughts here"></textarea> -->
                 <div id="entry-textarea" class="entry-textarea"></div>
+                <div id="live-preview" class="live-preview"></div>
                 <div class="past-entries"></div>
                 
+                
                 <script src="./scripts/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+                <script src="./scripts/ajax/libs/marked/3.0.0/marked.min.js"></script>
                 <script src="./scripts/ajax/libs/codemirror/6.65.7/mode/markdown/markdown.min.js"></script>
                 <script src="./scripts/ajax/libs/codemirror/6.65.7/mode/gfm/gfm.min.js"></script>
                 <script src="./scripts/ajax/libs/codemirror/5.65.7/addon/mode/overlay.min.js"></script>

@@ -51,39 +51,45 @@ sidebar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
     font-size: 16px;
     min-height: 40px;
     margin-bottom: 10px;
+
+    &:hover{
+        background-color: var(--journal-highlight);
+        button{
+            background-color: #cbcfce;
+            display: block;
+            border: none;
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+
+    button{
+        background-color: var(--sliding-shelf);
+        display:none;
+    }
+    
+    input[type='radio'] {
+        display: none;
+    }
+    
+    label {
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .journal-vdots:hover {
+        display: block;
+        content: url('../assets/vdots-journal-white-active.svg');
+    }
 }
 
-.journal span {
-    margin-left: 10px;
-}
-
-.journal:hover{
+/* for some reason nested selectors don't work with :has() */
+.journal:has(input[type='radio']:checked) {
     background-color: var(--journal-highlight);
-}
-
-.journal[highlighted="true"] {
-    background-color: var(--journal-highlight);    
-}
-
-.journal button{
-    background-color: var(--sliding-shelf);
-    display:none;
-
-}
-
-.journal:hover button{
-    background-color: #cbcfce;
-    display: block;
-    border: none;
-}
-
-.journal-vdots:hover {
-    display: block;
-    content: url('../assets/vdots-journal-white-active.svg');
 }
 
 /* dropdown */
@@ -106,11 +112,11 @@ sidebar {
     display: flex;
     align-items: center;
     cursor: pointer;
-}
 
-.sidebar-dropdown-item:hover {
-    background-color: var(--icon-color);
-    border-radius: 5px;
+    :hover {
+        background-color: var(--icon-color);
+        border-radius: 5px;
+    }
 }
 
 .dropdown-icon {
@@ -119,10 +125,9 @@ sidebar {
 
 .sidebar-dropdown-item.delete {
     color: red;
-}
-
-.sidebar-dropdown-item.delete:hover {
-    background-color: #f8d7da;
+    :hover {
+        background-color: #f8d7da;
+    }
 }
 
 /* new journal button */
