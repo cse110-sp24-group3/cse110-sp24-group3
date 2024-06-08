@@ -113,8 +113,6 @@ async function saveCurrentEntry() {
     titleTextArea.style.display = '';
 
     // Get the entry text area and extract the entry content
-    // TODO: make selector cleaner
-    // const entryTextSelectorString = `#entry-textarea > div > div.CodeMirror-scroll > div.CodeMirror-sizer > div > div > div > div.CodeMirror-code > div > pre > span`;
     const entryTextArea = document.querySelector('.CodeMirror').CodeMirror;
     const entryContent = entryTextArea.getValue('\n');
     entryTextArea.value = '';
@@ -125,6 +123,7 @@ async function saveCurrentEntry() {
 
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
+    console.log(entryTitle)
     await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
     populateEntries();
 }
@@ -231,8 +230,8 @@ async function editJournal(event) {
             if (matchingEntry) {
                 const content = await matchingEntry.getContent();
 
-                const entryTextArea = document.querySelector('.entry-textarea');
-                entryTextArea.value = content;
+
+                document.querySelector('.CodeMirror').CodeMirror.setValue(content);
 
                 const titleInputArea = document.querySelector('#title-input');
                 titleInputArea.value = matchingEntry.name;
@@ -335,14 +334,20 @@ export async function populateEntries() {
     entries.forEach(async (entry) => {
         const entryContent = await entry.getContent();
 
+        document.querySelector('.CodeMirror').CodeMirror.setValue(entryContent);
+
         const entryElement = document.createElement('div');
         entryElement.classList.add('home-single-entry');
+
+        const date = new Date();
+
+        // TODO: access last edited date
 
         entryElement.innerHTML = `
             <button class="home-single-entry-button">
                 <span class="home-entry-name">${entry.name}</span>
             </button>
-            <div class="entry-content">${entryContent}</div>
+            <div class="entry-content">${date.getMonth()}/${date.getDay()}/${date.getFullYear()}</div>
         `;
         // add event listener to open the editing interface
         const entryButton = entryElement.querySelector('button');
