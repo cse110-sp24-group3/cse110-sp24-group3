@@ -47,3 +47,25 @@ test('Can write and read 1 journal entry', async () => {
 	expect(await entryArticle.innerText()).toBe(TEXT_INPUT);
 });
 
+test('Can update journal entry', async () => {
+	test.slow();
+	const newJournalButton = await page.locator('.new-journal');
+	await newJournalButton.click();
+
+	const newEntryButton = await page.locator('.add-note');
+	await newEntryButton.click();
+
+	const textArea = await page.locator('.CodeMirror-lines');
+	await textArea.click();
+	await textArea.pressSequentially('123');
+
+	const saveJournalButton = await page.locator('#save-entry');
+	await saveJournalButton.click();
+
+	const oldJournalButton = await page.locator('.past-entries > button');
+	await oldJournalButton.click();
+
+	const entryArticle = await page.locator('.selected-entry-article')
+	expect(await entryArticle.innerText()).toBe(`${TEXT_INPUT}123`);
+});
+

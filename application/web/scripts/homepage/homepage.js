@@ -113,7 +113,7 @@ function openEntryforEdit() {
  * Hides the text editor and prepares the entry to be displayed.
  * This function is currently identical to cancelEntry() but will have more functionality added in the future.
  */
-function saveCurrentEntry() {
+async function saveCurrentEntry() {
     // Hide the text editor
     hideTextEditor();
 
@@ -136,17 +136,18 @@ function saveCurrentEntry() {
 
     newEntryButton.addEventListener('click', updateArticleTextFromStorage)
 
-
     // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
     titleTextArea.className = 'placeholder';
 
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
-    const newEntry = writeJournalEntryToStorage(entryTitle, entryContent, journalName);
-    if (newEntry)
+    const newEntry = await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
+
+    if (newEntry) {
         // Append the new entry button and article to the list of past entries
         buttonList.append(newEntryButton);
+    }
 }
 
 
@@ -168,8 +169,6 @@ async function updateArticleTextFromStorage() {
             // if the entry also exists, just update the content
             if (matchingEntry) {
                 const content = await matchingEntry.getContent();
-                console.log(`Read Content: ${content} and ${typeof content} and ${content.length}`)
-                console.log(`Read Name: ${matchingEntry.name}`)
                 const entryArticle = document.querySelector('.selected-entry-article')
                 entryArticle.innerText = content;
             } else {
@@ -194,15 +193,12 @@ async function updateArticleTextFromStorage() {
  * @throws Will throw an error if write fails
  */
 async function writeJournalEntryToStorage(entryTitle, entryContent, journalName) {
-    console.log('penis')
     try {
         const journalList = await api.getJournals();
         const journal = journalList.find(journal => journal.name === journalName);
         let newEntryCreated = true;
         let matchingEntry;
 
-        console.log(`Write Content: ${entryContent}`)
-        console.log(`Write Name: ${entryTitle}`)
         // if the journal exists, then access that journal 
         if (journal) {
             const entries = await journal.getEntries();
@@ -210,7 +206,6 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
 
             // if the entry also exists, just update the content
             if (matchingEntry) {
-                console.log('matched')
                 newEntryCreated = false;
             } else {
                 // otherwise create a new entry in the journal
