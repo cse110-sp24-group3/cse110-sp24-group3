@@ -59,34 +59,16 @@ function cancelEntry() {
     const entryTextArea = document.querySelector('.entry-textarea');
 
 
-    // TODO: clean this up to be consistent with loading old text
+    titleTextArea.value = 'Untitled';
+    titleTextArea.className = 'placeholder';
+    entryTextArea.value = '';
 
-    // Get the current date
-    const date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth() + 1;
-    let year = date.getFullYear();
-
-    // Find the article element for the current date
-    const article = document.querySelector(`[id='${year}-${month}-${day}']`);
-
-    // Restore previous entry content if available
-    if (article) {
-        const oldEntryValue = article.innerText;
-        const oldEntryTitle = document.querySelector(`[id='${year}-${month}-${day}-title']`);
-
-        entryTextArea.value = oldEntryValue;
-        titleTextArea.value = oldEntryTitle.innerText;
-    } else {
-        // Set default values if no previous entry exists
-        titleTextArea.value = 'Untitled';
-        titleTextArea.className = 'placeholder';
-        entryTextArea.value = '';
-    }
 
     // Close the popup if open
     const myPopup = document.getElementById("myPopup");
     myPopup.classList.remove("show");
+
+    populateEntries();
 }
 
 /**
@@ -323,7 +305,7 @@ async function populateEntries() {
     const entries = await journal.getEntries();
 
     // change no entry text if entries exist
-    if(entries.length > 0) {
+    if (entries.length > 0) {
         const noEntryText = document.querySelector('.no-entry-text');
         noEntryText.style.display = 'none';
     } else {
@@ -331,8 +313,11 @@ async function populateEntries() {
         noEntryText.style.display = '';
         return;
     }
+
     const entryContainer = document.querySelector('.home-list');
-    entryContainer.innerHTML = ''; // Clear previous entries
+
+    const entryButtonList = document.querySelectorAll('.home-single-entry');
+    entryButtonList.forEach(element => element.remove());
 
     // for each entry add HTML element and add event listener
     entries.forEach(async (entry) => {

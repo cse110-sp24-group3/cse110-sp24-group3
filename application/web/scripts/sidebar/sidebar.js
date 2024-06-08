@@ -57,7 +57,7 @@ export function createJournalEntries() {
         dropdownButton.addEventListener('click', window.toggleJournalDropdown);
 
         // Once a journal is created, the "No Journals" text will disappear
-        document.getElementById("no-entry-text").style.display = "none";
+        document.querySelector(".no-entry-text").style.display = "none";
         if (!document.getElementById('entry-name')) {
             showHomepageHeaderInfo();
             showNoEntriesText();
