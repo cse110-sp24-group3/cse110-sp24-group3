@@ -58,6 +58,9 @@ function cancelEntry() {
     const titleTextArea = document.querySelector('#title-input');
     const entryTextArea = document.querySelector('.entry-textarea');
 
+
+    // TODO: clean this up to be consistent with loading old text
+
     // Get the current date
     const date = new Date();
     let day = date.getDate();
@@ -318,6 +321,8 @@ function displaySaveMessage() {
 async function populateEntries() {
     const journal = await getCurrentJournal();
     const entries = await journal.getEntries();
+
+    // change no entry text if entries exist
     if(entries.length > 0) {
         const noEntryText = document.querySelector('.no-entry-text');
         noEntryText.style.display = 'none';
@@ -329,6 +334,7 @@ async function populateEntries() {
     const entryContainer = document.querySelector('.home-list');
     entryContainer.innerHTML = ''; // Clear previous entries
 
+    // for each entry add HTML element and add event listener
     entries.forEach(async (entry) => {
         const entryContent = await entry.getContent();
 
@@ -341,6 +347,7 @@ async function populateEntries() {
             </button>
             <div class="entry-content">${entryContent}</div>
         `;
+        // add event listener to open the editing interface
         const entryButton = entryElement.querySelector('button');
         entryButton.addEventListener('click', editJournal);
         entryContainer.appendChild(entryElement);
