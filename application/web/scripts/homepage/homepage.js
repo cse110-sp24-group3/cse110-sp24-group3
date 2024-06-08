@@ -126,7 +126,7 @@ async function saveCurrentEntry() {
 
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
-    const newEntry = await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
+    await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
     populateEntries();
 }
 
