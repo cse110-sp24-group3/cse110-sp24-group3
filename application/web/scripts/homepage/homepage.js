@@ -143,7 +143,6 @@ function saveCurrentEntry() {
 
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
-    console.log('')
     const newEntry = writeJournalEntryToStorage(entryTitle, entryContent, journalName);
     if (newEntry)
         // Append the new entry button and article to the list of past entries
