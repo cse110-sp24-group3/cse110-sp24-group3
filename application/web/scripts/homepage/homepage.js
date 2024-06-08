@@ -223,7 +223,7 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
             matchingEntry = await newJournal.createEntry(entryTitle, entryContent);
         }
         await matchingEntry.updateContent(entryContent)
-        return true;
+        return newEntryCreated;
     } catch (error) {
         console.error(`An error occured: ${error}`);
     }
