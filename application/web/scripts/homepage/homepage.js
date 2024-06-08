@@ -134,39 +134,6 @@ async function saveCurrentEntry() {
     const entryContent = entryTextArea.getValue('\n');
     entryTextArea.value = '';
 
-    // Get the list of past entries and create a new button for the current entry
-    const buttonList = document.querySelector('.past-entries');
-    const newEntryButton = document.createElement('button');
-    newEntryButton.innerText = entryTitle;
-
-    newEntryButton.addEventListener('click', updateArticleTextFromStorage)
-
-    // // Save the entry to the backend
-    // if (selectedJournal) {
-    //     try {
-    //         const newEntry = await selectedJournal.createEntry(title);
-    //         await newEntry.updateContent(entry);
-    //         displaySaveMessage();
-    //         populateEntries();
-    //     } catch (error) {
-    //         console.error('Error saving entry:', error);
-    //     }
-    // }
-    // else {
-    //     console.error('Selected journal undefined.');
-    // }
-
-    // TODO: Replace with function to load entry from storage
-    newEntryButton.addEventListener('click', (event) => {
-        // article.style.display = 'block';
-        // titleTextArea.value = newEntryButton.innerText;
-        // const entryContent = document.querySelector('.CodeMirror-line');
-        // entryTextArea.value = entryContent.innerText;
-        // openEntryforEdit();
-        editJournal(event);
-    });
-
-
     // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
     titleTextArea.className = 'placeholder';
@@ -175,25 +142,28 @@ async function saveCurrentEntry() {
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
     const newEntry = await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
-
-    if (newEntry) {
-        // Append the new entry button and article to the list of past entries
-        buttonList.append(newEntryButton);
-    }
+    populateEntries();
 }
 
+/**
+     * Gets the currently selected journal.
+     * @returns {Journal} The currently selected journal, or null if none exist
+     */
+async function getCurrentJournal() {
+    const currentJournalName = document.querySelector('input[name="journals"]:checked').value;
+    const journalList = await api.getJournals();
+    return journalList.find(journal => journal.name === currentJournalName);
+}
 
 /**
- * Writes a new journal entry to storage with the given parameters.
+ * Updates the current article display with the selected entry
  * @throws Will throw an error if read fails
  */
 async function updateArticleTextFromStorage() {
     try {
-        const currentJournalName = document.querySelector('input[name="journals"]:checked').value;
         const entryTitle = this.innerText;
+        const journal = await getCurrentJournal();
 
-        const journalList = await api.getJournals();
-        const journal = journalList.find(journal => journal.name === currentJournalName);
         if (journal) {
             const entries = await journal.getEntries();
             const matchingEntry = entries.find(entry => entry.name === entryTitle);
@@ -257,6 +227,10 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
     }
 }
 
+/**
+ * Callback function for entry buttons. Opens the editor on click
+ * @throws Will throw an error if read fails
+ */
 async function editJournal(event) {
     try {
         const journals = await api.getJournals();
@@ -269,12 +243,14 @@ async function editJournal(event) {
             if (matchingEntry) {
                 const content = await matchingEntry.getContent();
 
-                // const titleTextArea = document.querySelector('#title-input');
-                // titleTextArea.value = entryTitle
-
                 const entryTextArea = document.querySelector('.entry-textarea');
                 entryTextArea.value = content;
 
+                const titleInputArea = document.querySelector('#title-input');
+                titleInputArea.value = matchingEntry.name;
+                titleInputArea.classList.remove('placeholder');
+
+                openEntryforEdit();
                 break;
             }
         }
@@ -283,7 +259,9 @@ async function editJournal(event) {
     }
 }
 
-
+/**
+ * Hides the text editor from view
+ */
 function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
@@ -318,6 +296,9 @@ function hideTextEditor() {
     }
 }
 
+/**
+ * Displays a save message popup for 3 seconds on a successful save
+ */
 function displaySaveMessage() {
     const messageContainer = document.createElement('div');
     messageContainer.className = 'save-message';
@@ -330,10 +311,13 @@ function displaySaveMessage() {
     }, 3000);
 }
 
+/**
+ * Populates the current entries tab
+ * @throws Will throw an error if read fails
+ */
 async function populateEntries() {
-    if (!selectedJournal) return;
-
-    const entries = await selectedJournal.getEntries();
+    const journal = await getCurrentJournal();
+    const entries = await journal.getEntries();
     const entryContainer = document.querySelector('.home-list');
     entryContainer.innerHTML = ''; // Clear previous entries
 
@@ -349,7 +333,8 @@ async function populateEntries() {
             </button>
             <div class="entry-content">${entryContent}</div>
         `;
-
+        const entryButton = entryElement.querySelector('button');
+        entryButton.addEventListener('click', editJournal);
         entryContainer.appendChild(entryElement);
     });
 }
