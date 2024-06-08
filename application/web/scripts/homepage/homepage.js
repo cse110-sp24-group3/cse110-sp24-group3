@@ -105,7 +105,8 @@ function openEntryforEdit() {
     titleTextArea.style.display = 'inline';
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = 'inline';
-
+    const livePreview = document.querySelector('.live-preview');
+    livePreview.style.display = 'inline';
     // Hide the "No entries" text
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = 'none';
@@ -140,13 +141,53 @@ async function saveCurrentEntry() {
         console.error('Selected journal undefined.');
     }
 
-    // Reset the title and entry text areas
+    // Append the new entry button and article to the list of past entries
+    buttonList.append(newEntryButton);
+    buttonList.append(article);
+
+    // TODO: Replace with function to load entry from storage
+    newEntryButton.addEventListener('click', (event) => {
+        // article.style.display = 'block';
+        // titleTextArea.value = newEntryButton.innerText;
+        // const entryContent = document.querySelector('.CodeMirror-line');
+        // entryTextArea.value = entryContent.innerText;
+        // openEntryforEdit();
+        editJournal(event);
+    });
+
+    // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
     titleTextArea.className = 'placeholder';
     entryTextArea.value = '';
 
     // Hide the text editor and go back to the homepage
     hideTextEditor();
+}
+
+async function editJournal(event){
+    try {
+        const journals = await api.getJournals();
+        const title = event.target.innerText;
+
+        for(const journal of journals){
+            const entries = await journal.getEntries();
+            const matchingEntry = entries.find(entry => entry.name === title);
+
+            if(matchingEntry){
+                const content = await matchingEntry.getContent();
+
+                // const titleTextArea = document.querySelector('#title-input');
+                // titleTextArea.value = entryTitle
+
+                const entryTextArea = document.querySelector('.entry-textarea');
+                entryTextArea.value = content;
+
+                break;
+            }
+        }
+    }catch(error) {
+        console.error(`An error occured: ${error}`);
+    }
 }
 
 function hideTextEditor() {
@@ -167,6 +208,11 @@ function hideTextEditor() {
 
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = '';
+   
+    // LRC 
+    // Need to hide the preview along with textArea
+    const livePreview = document.querySelector('.live-preview');
+    livePreview.style.display = '';
 
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = '';

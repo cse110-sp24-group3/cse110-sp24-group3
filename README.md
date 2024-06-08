@@ -39,4 +39,5 @@ Create new branches for each piece of work, using names that provide a clear, sh
 Ensure that your branch names are descriptive, concise, and relevant to the changes you are making. This will facilitate better understanding and communication among team members.
 
 ---
-
+## Instone GitHub Wiki
+[GitHub Wiki](https://github.com/cse110-sp24-group3/cse110-sp24-group3/wiki)

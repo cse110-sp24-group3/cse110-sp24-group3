@@ -6,6 +6,7 @@
                                                                           */
 :root {
     --journal-entry: #F3F3F3;
+    --journal-highlight: #d1d1d1;
     --sliding-shelf: #EBEBEB;
     --main-stroke-color: #A1A1A1;
     --grey-text-color: #404040;

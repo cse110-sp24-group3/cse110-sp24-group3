@@ -24,6 +24,7 @@ sidebar {
 }
 
 .sidebar-module {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -32,30 +33,104 @@ sidebar {
     /* overflow: scroll;  */
     /* to make journal list for too many journals */
     overflow-y: scroll;
+    overflow-x: visible;
 }
 
 .sidebar-module::-webkit-scrollbar {
     width: 0px; 
 }
 
+/* journal */
+.journal {
+    color: var(--grey-text-color);
+    position: relative;
+    overflow: visible;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    min-height: 40px;
+    margin-bottom: 10px;
 
-/* .sidebar-module .fa.fa-ellipsis-v{
-    display:none;
-    transition: width 0.3s ease;
-} */
-/* To counteract the swap from .fa to vdots, both will be here */
-.sidebar-module #sidebar-dots{
-    display:none;
-    transition: width 0.3s ease;
-    height: 20px;
-    width: 20px;
+    &:hover{
+        background-color: var(--journal-highlight);
+        button{
+            background-color: #cbcfce;
+            display: block;
+            border: none;
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+
+    button{
+        background-color: var(--sliding-shelf);
+        display:none;
+    }
+    
+    input[type='radio'] {
+        display: none;
+    }
+    
+    label {
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .journal-vdots:hover {
+        display: block;
+        content: url('../assets/vdots-journal-white-active.svg');
+    }
 }
 
-.sidebar-module .journal-entry #sidebar-dots:hover {
-    display: block;
-    content: url('./assets/vdots-journal-white-active.svg'); /* New image for hover */
+/* for some reason nested selectors don't work with :has() */
+.journal:has(input[type='radio']:checked) {
+    background-color: var(--journal-highlight);
 }
 
+/* dropdown */
+.sidebar-dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 200px;
+    z-index: 1000;
+    left: 80px;
+    background-color: var(--journal-entry);
+    border: 1px solid var(--icon-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+.sidebar-dropdown-item {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    :hover {
+        background-color: var(--icon-color);
+        border-radius: 5px;
+    }
+}
+
+.dropdown-icon {
+    margin-right: 10px;
+}
+
+.sidebar-dropdown-item.delete {
+    color: red;
+    :hover {
+        background-color: #f8d7da;
+    }
+}
+
+/* new journal button */
 button.new-journal {
     background-color: var(--dark-green);
     color: white;
@@ -87,36 +162,10 @@ button.collapse-button {
     width: 32px;
 }
 
-button.new-journal i.icon {
-    margin-left: 10px;
-}
-
 button.new-journal img.journal-icon,
 img.collapse-button {
     height: 20px;
     width: 20px;
-}
-
-.journal-entry {
-    background-color: #cbcfce;
-    color: var(--grey-text-color);
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 16px;
-    min-height: 40px;
-    margin-bottom: 10px;
-    background: none;
-}
-
-
-.journal-entry i.icon {
-    margin-left: 10px;
 }
 
 .sidebar-collapsed {
@@ -139,12 +188,4 @@ img.collapse-button {
 
 .sidebar-collapsed button.collapse-button {
     transform: rotate(180deg);
-}
-.edit-journal {
-    padding: 0;
-    border: none;
-    background: transparent;
-}
-.edit-journal > img {
-    cursor: pointer;
 }

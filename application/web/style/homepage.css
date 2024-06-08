@@ -17,6 +17,10 @@ homepage {
         display: none;
         resize: none;
     }
+    &>.live-preview {
+        display: none;
+        resize: none;
+    }
     &>.save-note {
         display: none;
     }
