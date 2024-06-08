@@ -27,7 +27,7 @@ describe('Entry Component Tests', () => {
     //Wait for a new journal to be created
     await page.waitForSelector('.journal');
     //Click the 'create new entry button'
-    await page.click('#create-new-entry')
+    await page.click('#add-note');
     //Wait for the text entry area to be created
     await page.waitForSelector('.CodeMirror', {timeout:5000});
     //This test expects the text entry to not be null.
@@ -37,13 +37,24 @@ describe('Entry Component Tests', () => {
 
   test('Can a title be entered?', async () => {
     //Type 'Testing Title' into the title input box and save the entry
+    await page.waitForSelector('.title-textarea');
     await page.type('#title-input', 'Testing Title');
+    await page.waitForSelector('.cancel-save-container')
     await page.click('#save-entry');
 
     //Checks if the 'past entries' section contains a button named after the title
+    await page.waitForSelector('.past-entries');
     const titleSaved = await page.$eval('#past-entries', (div) => {
       return Array.from(div.querySelectorAll('button')).some(button => button.textContent === 'Testing Title');
     })
     expect(titleSaved).toBe(true);
+  });
+
+  test('Can an entry be canceled?', async () => {
+    await page.click('#add-note');
+    
+    await page.click('#myButton');
+    await page.click('#cancel-note');
+
   });
 });
