@@ -300,8 +300,17 @@ function displaySaveMessage() {
  * Populates the current entries tab
  * @throws Will throw an error if read fails
  */
-async function populateEntries() {
+export async function populateEntries() {
     const journal = await getCurrentJournal();
+    if (!journal) {
+        const noEntryText = document.querySelector('.no-entry-text');
+        noEntryText.style.display = '';
+
+        const entryButtonList = document.querySelectorAll('.home-single-entry');
+        entryButtonList.forEach(element => element.remove());
+
+        return;
+    }
     const entries = await journal.getEntries();
 
     // change no entry text if entries exist

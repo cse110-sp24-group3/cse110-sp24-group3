@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-
+import { populateEntries } from "../homepage/homepage.js";
 /**
  * Toggles the sidebar, new journal button, and journal entry buttons
  * between collapsed and expanded states.
@@ -29,6 +29,7 @@ export function createJournalEntries() {
     const sidebar = document.querySelector('.journal-list');
 
     sidebar.addEventListener('change', updateTitleText);
+    sidebar.addEventListener('change', populateEntries);
     // Clicking new journal button should create a new journal
     newJournalButton.addEventListener('click', () => {
         // Grabs sidebar-module handle
@@ -57,12 +58,13 @@ export function createJournalEntries() {
         dropdownButton.addEventListener('click', window.toggleJournalDropdown);
 
         // Once a journal is created, the "No Journals" text will disappear
-        document.querySelector(".no-entry-text").style.display = "none";
+        document.querySelector("#no-journal-text").style.display = "none";
         if (!document.getElementById('entry-name')) {
             showHomepageHeaderInfo();
             showNoEntriesText();
         }
         updateTitleText();
+        populateEntries();
     });
 };
 
