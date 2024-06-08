@@ -318,6 +318,14 @@ function displaySaveMessage() {
 async function populateEntries() {
     const journal = await getCurrentJournal();
     const entries = await journal.getEntries();
+    if(entries.length > 0) {
+        const noEntryText = document.querySelector('.no-entry-text');
+        noEntryText.style.display = 'none';
+    } else {
+        const noEntryText = document.querySelector('.no-entry-text');
+        noEntryText.style.display = '';
+        return;
+    }
     const entryContainer = document.querySelector('.home-list');
     entryContainer.innerHTML = ''; // Clear previous entries
 
