@@ -54,10 +54,12 @@ function createJournalButton(name) {
     const journalDiv = document.createElement('div');
     journalDiv.classList.add('journal');
 
+    document.querySelectorAll('input[type=radio]').forEach(button => button.checked = '');
+
     // HTML to inject into journal div above
     journalDiv.innerHTML = `
         <label>
-            <input type="radio" id='${name}' name="journals" value="${name}"/>${name}
+            <input type="radio" id='${name}' name="journals" value="${name}" checked='checked'/>${name}
         </label>
         <button class="journal-dropdown-button">
             <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
@@ -69,8 +71,6 @@ function createJournalButton(name) {
     // Adds toggle dropdown listener to new button.
     const dropdownButton = journalDiv.querySelector('.journal-dropdown-button');
     dropdownButton.addEventListener('click', window.toggleJournalDropdown);
-
-    const journalButton = journalDiv.querySelector('button');
 
     // Once a journal is created, the "No Journals" text will disappear
     document.querySelector("#no-journal-text").style.display = "none";
@@ -86,6 +86,7 @@ async function populateJournals() {
     journals.forEach(journal => {
         createJournalButton(journal.name);
     });
+    showHomepageHeaderInfo();
 }
 
 function updateTitleText() {
@@ -127,4 +128,5 @@ function showHomepageHeaderInfo() {
     test.insertAdjacentHTML("afterend", `
         <div class="home-single-entry"></div>`
     );
+    populateEntries();
 }

@@ -123,7 +123,6 @@ async function saveCurrentEntry() {
     titleTextArea.value = 'Untitled';
     titleTextArea.className = 'placeholder';
 
-
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
     await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
@@ -212,6 +211,7 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
         return newEntryCreated;
     } catch (error) {
         console.error(`An error occured: ${error}`);
+        console.trace();
     }
 }
 
