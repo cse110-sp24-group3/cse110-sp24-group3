@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const puppeteer = require('puppeteer');
 
 describe('Entry Component Tests', () => {
