@@ -152,9 +152,9 @@ test('Correct number of past entries are displayed when an entry is discarded', 
     
     const pastEntries = await page.locator('.past-entries');
     const entrySize = await pastEntries.locator('button').count();
-    //check that 2 entries are properly created in past-entries div
+    //check that one entry is properly created in past-entries div
     expect(entrySize).toBe(1);
-    //check that the entry buttons have the proper respective titles
+    //check that the entry button has the proper title
     expect(await pastEntries.locator('button').first().innerText()).toBe('test-title');
 });
 
@@ -183,4 +183,23 @@ test('Creating two entries with the same title should be allowed', async() => {
     expect(await pastEntries.locator('button').first().innerText()).toBe('test-title');
     expect(await pastEntries.locator('button').nth(1).innerText()).toBe('test-title');
 
+});
+
+test('Name of current journal should be reflected on homepage', async() => {
+    const newJournalBtn = await page.locator('#new-journal-button');
+    await newJournalBtn.click();
+    const JournalTitle = await page.locator('#journal-title');
+    await expect(JournalTitle).toHaveText('Journal #0');
+    await newJournalBtn.click();
+    const SecondJournalTitle = await page.locator('#journal-title');
+    await expect(SecondJournalTitle).toHaveText('Journal #1');
+});
+
+test('Entry Name and Date Logged text should appear after creating a journal', async() => {
+    const newJournalBtn = await page.locator('#new-journal-button');
+    await newJournalBtn.click();
+    const EntryNameText = await page.locator('entry-name');
+    const DateLoggedText = await page.locator('date-logged');
+    await expect(EntryNameText).toHaveText('Entry Name');
+    await expect(DateLoggedText).toHaveText('Date Logged');
 });
