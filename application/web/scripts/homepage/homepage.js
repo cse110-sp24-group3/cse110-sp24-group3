@@ -90,6 +90,12 @@ function openEntryforEdit() {
     titleTextArea.style.display = 'inline';
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = 'inline';
+
+    const codeMirror = document.querySelector('.CodeMirror').CodeMirror;
+    codeMirror.setValue('');
+    
+
+
     const livePreview = document.querySelector('.live-preview');
     livePreview.style.display = 'inline';
     // Hide the "No entries" text
@@ -194,7 +200,6 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
 
             // if the entry also exists, just update the content
             if (matchingEntry) {
-                console.log('matched')
                 newEntryCreated = false;
             } else {
                 // otherwise create a new entry in the journal
@@ -230,14 +235,15 @@ async function editJournal(event) {
             if (matchingEntry) {
                 const content = await matchingEntry.getContent();
 
-
-                document.querySelector('.CodeMirror').CodeMirror.setValue(content);
-
                 const titleInputArea = document.querySelector('#title-input');
                 titleInputArea.value = matchingEntry.name;
                 titleInputArea.classList.remove('placeholder');
 
                 openEntryforEdit();
+
+                document.querySelector('.CodeMirror').CodeMirror.setValue(content);
+                console.log(content)
+                console.log(document.querySelector('.CodeMirror').CodeMirror.getValue());
                 break;
             }
         }
