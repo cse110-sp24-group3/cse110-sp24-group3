@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to handle the dropdown toggle and positioning
     function toggleDropdown(event) {
+        console.log("toggled");
         const homeModule = document.querySelector('.home-list');
         const buttons = homeModule.querySelectorAll('.editing-entry-vdots');
         const button = event.currentTarget;
-        const dropdownMenu = document.querySelector('.sidebar-dropdown-menu');
+        const dropdownMenu = document.querySelector('.homepage-dropdown-menu');
 
         // Remove 'toggledDropdown' class from all buttons
         buttons.forEach(btn => {
