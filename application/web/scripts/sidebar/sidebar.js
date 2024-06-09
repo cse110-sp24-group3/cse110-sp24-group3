@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-import { populateEntries } from "../homepage/homepage.js";
+import { populateEntries, getCurrentJournal, updateHomepage} from "../homepage/homepage.js";
 /**
  * Toggles the sidebar, new journal button, and journal entry buttons
  * between collapsed and expanded states.
@@ -45,6 +45,9 @@ export async function createJournals() {
         if (!document.getElementById('entry-name')) {
             showHomepageHeaderInfo();
             showNoEntriesText();
+        } else {
+            const entryButton = document.querySelector('.add-note');
+            entryButton.style.display = '';
         }
     });
 
@@ -112,6 +115,7 @@ export async function populateJournals() {
     });
     // update the homepage after creating journals
     showHomepageHeaderInfo();
+    updateHomepage();
 }
 
 
@@ -144,7 +148,7 @@ function showNoEntriesText() {
 function showHomepageHeaderInfo() {
     // Show the "Create New Entry" button when a journal is selected
     const entryButton = document.querySelector('.add-note');
-    entryButton.removeAttribute("hidden");
+    entryButton.style.display = '';
 
     // Adds the "Entry Name" and "Date Logged" header when a journal is populated
     const test = document.querySelector('.home-entry-descriptor');

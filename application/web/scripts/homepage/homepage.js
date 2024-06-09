@@ -6,19 +6,19 @@
  */
 export function initializeHomepage() {
     // Select the "Create New Entry" button element
-    const entryButton = document.querySelector('.add-note');
-    // Hide the button by setting the 'hidden' attribute
-    entryButton.setAttribute("hidden", "hidden");
 }
 
 /**
  * Creates the homepage functionality by attaching event listeners to buttons and text areas.
  * Initializes the entry and title text areas by clearing their contents on page load.
  */
-export function createHomepage() {
+export async function createHomepage() {
     // Attach event listener to the "Add Note" button
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.addEventListener('click', openEntryforEdit);
+    // Hide the button by setting the 'hidden' attribute
+    if(!(await getCurrentJournal()))
+        addNoteButton.style.display = 'none';
 
     // Attach event listener to the "Cancel" button
     const cancelNoteButton = document.getElementById('cancel-note');
@@ -38,7 +38,7 @@ export function createHomepage() {
 
     // Uncomment the line below if there is a function to read entries from storage
     // readEntriesFromStorage();
-    populateEntries();
+    updateHomepage();
 }
 
 /**
@@ -74,8 +74,7 @@ function cancelEntry() {
  */
 function openEntryforEdit() {
     // Hide the "Add Note" button and entry listing
-    const addNoteButton = document.querySelector('.add-note');
-    addNoteButton.style.display = 'none';
+    hideAddNoteButton();
     const entryListing = document.querySelector('.home-list');
     entryListing.style.display = 'none';
 
@@ -93,8 +92,7 @@ function openEntryforEdit() {
     const livePreview = document.querySelector('.live-preview');
     livePreview.style.display = 'inline';
     // Hide the "No entries" text
-    const noEntryText = document.querySelector('.no-entry-text');
-    noEntryText.style.display = 'none';
+    hideNoEntriesText();
 }
 
 /**
@@ -131,7 +129,7 @@ async function saveCurrentEntry() {
      * Gets the currently selected journal.
      * @returns {Journal} The currently selected journal, or null if none exist
      */
-async function getCurrentJournal() {
+export async function getCurrentJournal() {
     const currentJournal = document.querySelector('input[name="journals"]:checked');
     if (currentJournal) {
         const journalList = await api.getJournals();
@@ -216,8 +214,7 @@ async function editJournal(event) {
  * Hides the text editor from view
  */
 function hideTextEditor() {
-    const addNoteButton = document.querySelector('.add-note');
-    addNoteButton.style.display = '';
+    hideAddNoteButton();
 
     const addEntryList = document.querySelector('.home-list');
     addEntryList.style.display = '';
@@ -239,14 +236,7 @@ function hideTextEditor() {
     const livePreview = document.querySelector('.live-preview');
     livePreview.style.display = '';
 
-    const noEntryText = document.querySelector('.no-entry-text');
-    noEntryText.style.display = '';
-
-    const prevEntries = document.querySelector('.past-entries');
-    const prevCount = prevEntries.querySelectorAll('article').length;
-    if (prevCount > 0) {
-        noEntryText.style.display = 'none';
-    }
+    updateHomepage();
 }
 
 /**
@@ -272,8 +262,7 @@ export async function populateEntries() {
     const journal = await getCurrentJournal();
     // change to no journal text if no journal is selected
     if (!journal) {
-        const noEntryText = document.querySelector('.no-entry-text');
-        noEntryText.style.display = '';
+        showNoJournalsText()
 
         const entryButtonList = document.querySelectorAll('.home-single-entry');
         entryButtonList.forEach(element => element.remove());
@@ -285,11 +274,9 @@ export async function populateEntries() {
 
     // change to no entry text if entries exist
     if (entries.length > 0) {
-        const noEntryText = document.querySelector('.no-entry-text');
-        noEntryText.style.display = 'none';
+        hideNoEntriesText()
     } else {
-        const noEntryText = document.querySelector('.no-entry-text');
-        noEntryText.style.display = '';
+        showNoEntriesText();
         return;
     }
 
@@ -322,4 +309,57 @@ export async function populateEntries() {
         entryButton.addEventListener('click', editJournal);
         entryContainer.appendChild(entryElement);
     });
+}
+
+
+/**
+ * Updates the homepage based on the current state of the app
+ */
+export async function updateHomepage() {
+    const journal = await getCurrentJournal();
+    if(!journal) {
+        showNoJournalsText();
+        hideNoEntriesText();
+        hideAddNoteButton();
+    } else {
+        const entries = await journal.getEntries();
+        if(entries.length > 0) {
+            hideNoEntriesText();
+        } else {
+            showNoEntriesText();
+        }
+        populateEntries();
+        hideNoJournalsText();
+        showAddNoteButton();
+    }
+}
+
+function showNoEntriesText() {
+    const noEntryText = document.querySelector('.no-entry-text');
+    noEntryText.style.display = '';
+}
+
+function hideNoEntriesText() {
+    const noEntryText = document.querySelector('.no-entry-text');
+    noEntryText.style.display = 'none';
+}
+
+function showNoJournalsText() {
+    const noJournalText = document.querySelector('#no-journal-text');
+    noJournalText.style.display = '';
+}
+
+function hideNoJournalsText() {
+    const noJournalText = document.querySelector('#no-journal-text');
+    noJournalText.style.display = 'none';
+}
+
+function showAddNoteButton() {
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.style.display = '';
+}
+
+function hideAddNoteButton() {
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.style.display = 'none';
 }
