@@ -15,7 +15,7 @@ test.beforeAll(async () => {
 	// Wait for the first BrowserWindow to open
 	// and return its Page object
 	page = await electronApp.firstWindow()
-	await new Promise(resolve => setTimeout(resolve, 2000));
+	await new Promise(resolve => setTimeout(resolve, 2000));// eslint-disable-line
 });
 
 test.afterAll(async () => {
@@ -43,7 +43,7 @@ test('Can write and read 1 journal entry', async () => {
 	await oldJournalButton.click();
 
 	// TODO: small bug where leading whitespace is stripped – not sure if bug or feature
-	const entryArticle = await page.locator('.selected-entry-article')
+	const entryArticle = await page.locator('.selected-entry-article');
 	expect(await entryArticle.innerText()).toBe(TEXT_INPUT);
 });
 
