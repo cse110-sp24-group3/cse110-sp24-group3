@@ -75,7 +75,6 @@ sidebar {
 
     input[type='radio'] {
         display: none;
-        margin: 0px;
     }
 
     .journal-vdots:hover {
@@ -86,7 +85,6 @@ sidebar {
 /* for some reason nested selectors don't work with :has() */
 .journal:has(input[type='radio']:checked) {
     background-color: var(--journal-highlight);
-    margin: 0px;
 }
 
 /* dropdown */
