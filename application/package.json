@@ -7,6 +7,7 @@
     "lint": "eslint . --ignore-pattern \"web/scripts/ajax/*\"",
     "prod": "NODE_ENV=production electron .",
     "dev": "NODE_ENV=development electron .",
+    "dev:windows":"SET NODE_ENV=development & electron .", 
     "generate-docs": "jsdoc web -r -d ../docs",
     "test": "jest --testPathPattern=./tests/unit/",
     "test:e2e": "npx playwright test tests/e2e/",
