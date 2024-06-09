@@ -1,0 +1,474 @@
+   /* ___ _       _           _                   _       _     _           
+  / _ \ | ___ | |__   __ _| | /\   /\__ _ _ __(_) __ _| |__ | | ___  ___ 
+ / /_\/ |/ _ \| '_ \ / _` | | \ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+/ /_\\| | (_) | |_) | (_| | |  \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+\____/|_|\___/|_.__/ \__,_|_|   \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+                                                                          */
+:root {
+    --journal-entry: #F3F3F3;
+    --sliding-shelf: #EBEBEB;
+    --main-stroke-color: #A1A1A1;
+    --grey-text-color: #404040;
+    --icon-color: #D7D7D7;
+    --font-family: 'Dosis', sans-serif;
+    --font-family-journals: 'Inter';
+    --dark-green: #58A399;
+    --dark-blue: #496989
+}
+ /* _____                __                _ 
+/__   \___  _ __     / /  _____   _____| |
+  / /\/ _ \| '_ \   / /  / _ \ \ / / _ \ |
+ / / | (_) | |_) | / /__|  __/\ V /  __/ |
+ \/   \___/| .__/  \____/\___| \_/ \___|_|
+           |_|                             */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--grey-text-color);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+#app-wrapper {
+    display: flex;
+    height: 100%;
+}
+p, span {
+    font-weight: 300;
+}
+span {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    letter-spacing: -0.001cap;
+}
+ /* __ _     _      _                
+/ _(_) __| | ___| |__   __ _ _ __ 
+\ \| |/ _` |/ _ \ '_ \ / _` | '__|
+_\ \ | (_| |  __/ |_) | (_| | |   
+\__/_|\__,_|\___|_.__/ \__,_|_|   
+                                   */
+sidebar {
+    width: 213px;
+    background-color: var(--sliding-shelf);
+    border-right: 1px solid var(--main-stroke-color);
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 0 2px -2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: width 0.3s ease;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.sidebar-module {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    transition: width 0.3s ease;
+    /* overflow: scroll;  */
+    /* to make journal list for too many journals */
+    overflow-y: scroll;
+}
+
+.sidebar-module::-webkit-scrollbar {
+    width: 0px; 
+}
+
+
+/* .sidebar-module .fa.fa-ellipsis-v{
+    display:none;
+    transition: width 0.3s ease;
+} */
+/* To counteract the swap from .fa to vdots, both will be here */
+.sidebar-module img[src="./assets/vdots.svg"]{
+    display:none;
+    transition: width 0.3s ease;
+}
+
+button.new-journal {
+    background-color: var(--dark-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 40px;
+}
+
+button.collapse-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+}
+
+button.new-journal i.icon {
+    margin-left: 10px;
+}
+
+button.new-journal img.journal-icon,
+img.collapse-button {
+    height: 20px;
+    width: 20px;
+}
+
+.journal-entry {
+    background-color: #cbcfce;
+    color: var(--grey-text-color);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    min-height: 40px;
+    margin-bottom: 10px;
+    background: none;
+}
+
+
+.journal-entry i.icon {
+    margin-left: 10px;
+}
+
+.sidebar-collapsed {
+    width: 50px;
+}
+
+.toggled-sidebar-module {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.toggled-new-journal,
+.toggled-journal-entry {
+    transition: width 0.3s ease;
+    visibility: hidden;
+}
+
+.sidebar-collapsed button.collapse-button {
+    transform: rotate(180deg);
+}
+.edit-journal {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+.edit-journal > img {
+    cursor: pointer;
+}
+                      /* _           
+  /\  /\___  __ _  __| | ___ _ __ 
+ / /_/ / _ \/ _` |/ _` |/ _ \ '__|
+/ __  /  __/ (_| | (_| |  __/ |   
+\/ /_/ \___|\__,_|\__,_|\___|_|   
+                                   */
+header {
+    background-color: var(--sliding-shelf);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--main-stroke-color);
+    height: 62px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: large;
+}
+/* Rock Icon for Header*/
+.rock-icon{
+    padding-right: 10px;
+}
+
+
+/*                                                    
+  /\  /\___  _ __ ___   ___ _ __   __ _  __ _  ___ 
+ / /_/ / _ \| '_ ` _ \ / _ \ '_ \ / _` |/ _` |/ _ \
+/ __  / (_) | | | | | |  __/ |_) | (_| | (_| |  __/
+\/ /_/ \___/|_| |_| |_|\___| .__/ \__,_|\__, |\___|
+                           |_|          |___/       */
+homepage {
+    flex: 1;
+    background-color: var(--journal-entry);
+    padding: 10px;
+    box-sizing: border-box;
+
+    &>.title-textarea {
+        display: none;
+    }
+    &>.entry-textarea {
+        display: none;
+        resize: none;
+    }
+    &>.save-note {
+        display: none;
+    }
+    &>.cancel-note {
+        display: none;
+    }
+}
+
+button.add-note {
+    background-color: var(--dark-green);
+    width: 100%;
+    border-radius: 8px;
+    min-width: 200px;
+    min-height: 60px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    font-family: var(--font-family);
+}
+
+button.add-note:hover {
+    background-color: #A1A1A1;
+}
+
+.title-textarea {
+    /* background-color: #F3F3F3;
+    width: 20%;
+    min-height: 10px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 3px solid #e2dede;
+    border-radius: 10px; */
+    background-color: var(--journal-entry);
+    padding: 10px;
+}
+
+.entry-textarea {
+    
+    background-color: #e2dede;
+    width: 100%;
+    min-height: 400px;
+    font-size: 15px;
+    padding: 0px;
+    box-sizing: content-box;
+    border: none;
+    border-radius: 10px;
+}
+
+.CodeMirror {
+    background-color: #e2dede;
+    width: 100%;
+    height: 100%;
+    /*min-height: 400px;
+    /*font-size: 15px;*/
+    box-sizing: content-box;
+    border: none;
+    border-radius: 10px;
+}
+
+.new_entry {
+    color: #FFFFFF;
+    align-content: center;
+    font-family: var(--font-family-journals);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.entry-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cancel-save-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-entry-descriptor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 60px; 
+    padding-bottom: 10px;
+}
+
+.home-single-entry{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px 2px; 
+    border-bottom: 2px solid var(--grey-text-color);
+}
+
+.home-single-entry-button {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--journal-entry);
+    border: none;
+    cursor: pointer;
+
+}
+
+.home-list img[src="../web/assets/vdots-entry-black.png"]{
+    background-color: var(--journal-entry);
+    border: none;
+    margin-left: 20px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.no-entry-text{
+    font-family: var(--font-family);
+    font-size: 24px;
+}
+
+   /* __      _              
+  /__\ __ | |_ _ __ _   _ 
+ /_\| '_ \| __| '__| | | |
+//__| | | | |_| |  | |_| |
+\__/|_| |_|\__|_|   \__, |
+                    |___/  */
+
+/* The actual popup */
+.popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+.popup-content {
+    display: block;
+    background-color: var(--sliding-shelf);
+    margin: 15% auto;
+    padding: 20px;
+    min-width: 200px;
+    width: 13%;
+    height: 12%;
+    border-radius: 8px;
+    box-shadow: 2px 6px 5px 1px rgba(64,64,64,0.5);
+
+}
+.popup-content button {
+    display: block;
+}
+.show {
+    display: block;
+}
+
+.secondary {
+    background-color: var(--journal-entry);
+    color: var(--grey-text-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    min-height: 40px;
+    border: 1px solid;
+    font-family: var(--font-family-journals);
+}
+
+.primary {
+    background-color: var(--dark-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    min-height: 40px;
+    font-family: var(--font-family-journals);
+}
+
+/* The div holding the buttons*/
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#title-input {
+    font-size: 16px;
+    color: var(--dark-green);
+    background-color: var(--journal-entry);
+    border: none;
+    border-bottom: 2px solid var(--grey-text-color);
+    padding-left: 10px;
+    width: 200px;
+    outline: none;
+}
+
+#title-input.placeholder {
+    color: var(--main-stroke-color);
+    border-bottom-color: var(--main-stroke-color);
+}
+
+#title-input.filled {
+    color: black;
+    border-bottom-color: var(--dark-blue);
+}
+
+#title-input:focus {
+    border-bottom-color: var(--dark-blue);
+}
+
+.discard-cance-container {
+    display:flex;
+    flex-direction: row;
+    padding-top: 60px;
+    padding-left: 118px;
+    gap:10px;
+}
+
+.three-dots-entry {
+    background-color: var(--journal-entry);
+    border: none;
+}
