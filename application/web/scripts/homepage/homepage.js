@@ -58,32 +58,17 @@ function cancelEntry() {
     const titleTextArea = document.querySelector('#title-input');
     const entryTextArea = document.querySelector('.entry-textarea');
 
-    // Get the current date
-    const date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth() + 1;
-    let year = date.getFullYear();
 
-    // Find the article element for the current date
-    const article = document.querySelector(`[id='${year}-${month}-${day}']`);
+    titleTextArea.value = 'Untitled';
+    titleTextArea.className = 'placeholder';
+    entryTextArea.value = '';
 
-    // Restore previous entry content if available
-    if (article) {
-        const oldEntryValue = article.innerText;
-        const oldEntryTitle = document.querySelector(`[id='${year}-${month}-${day}-title']`);
-
-        entryTextArea.value = oldEntryValue;
-        titleTextArea.value = oldEntryTitle.innerText;
-    } else {
-        // Set default values if no previous entry exists
-        titleTextArea.value = 'Untitled';
-        titleTextArea.className = 'placeholder';
-        entryTextArea.value = '';
-    }
 
     // Close the popup if open
     const myPopup = document.getElementById("myPopup");
     myPopup.classList.remove("show");
+
+    populateEntries();
 }
 
 /**
@@ -105,6 +90,12 @@ function openEntryforEdit() {
     titleTextArea.style.display = 'inline';
     const entryTextArea = document.querySelector('.entry-textarea');
     entryTextArea.style.display = 'inline';
+
+    const codeMirror = document.querySelector('.CodeMirror').CodeMirror;
+    codeMirror.setValue('');
+    
+
+
     const livePreview = document.querySelector('.live-preview');
     livePreview.style.display = 'inline';
     // Hide the "No entries" text
@@ -128,72 +119,43 @@ async function saveCurrentEntry() {
     titleTextArea.style.display = '';
 
     // Get the entry text area and extract the entry content
-    // TODO: make selector cleaner
-    // const entryTextSelectorString = `#entry-textarea > div > div.CodeMirror-scroll > div.CodeMirror-sizer > div > div > div > div.CodeMirror-code > div > pre > span`;
     const entryTextArea = document.querySelector('.CodeMirror').CodeMirror;
     const entryContent = entryTextArea.getValue('\n');
     entryTextArea.value = '';
-
-    // Get the list of past entries and create a new button for the current entry
-    const buttonList = document.querySelector('.past-entries');
-    const newEntryButton = document.createElement('button');
-    newEntryButton.innerText = entryTitle;
-
-    newEntryButton.addEventListener('click', updateArticleTextFromStorage)
-
-    // // Save the entry to the backend
-    // if (selectedJournal) {
-    //     try {
-    //         const newEntry = await selectedJournal.createEntry(title);
-    //         await newEntry.updateContent(entry);
-    //         displaySaveMessage();
-    //         populateEntries();
-    //     } catch (error) {
-    //         console.error('Error saving entry:', error);
-    //     }
-    // }
-    // else {
-    //     console.error('Selected journal undefined.');
-    // }
-
-    // TODO: Replace with function to load entry from storage
-    newEntryButton.addEventListener('click', (event) => {
-        // article.style.display = 'block';
-        // titleTextArea.value = newEntryButton.innerText;
-        // const entryContent = document.querySelector('.CodeMirror-line');
-        // entryTextArea.value = entryContent.innerText;
-        // openEntryforEdit();
-        editJournal(event);
-    });
-
 
     // Reset the title text area to default values and hide the text editor
     titleTextArea.value = 'Untitled';
     titleTextArea.className = 'placeholder';
 
-
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
-    const newEntry = await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
-
-    if (newEntry) {
-        // Append the new entry button and article to the list of past entries
-        buttonList.append(newEntryButton);
-    }
+    console.log(entryTitle)
+    await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
+    populateEntries();
 }
 
+/**
+     * Gets the currently selected journal.
+     * @returns {Journal} The currently selected journal, or null if none exist
+     */
+async function getCurrentJournal() {
+    const currentJournal = document.querySelector('input[name="journals"]:checked');
+    if (currentJournal) {
+        const journalList = await api.getJournals();
+        return journalList.find(journal => journal.name === currentJournal.value);
+    }
+    return null;
+}
 
 /**
- * Writes a new journal entry to storage with the given parameters.
+ * Updates the current article display with the selected entry
  * @throws Will throw an error if read fails
  */
 async function updateArticleTextFromStorage() {
     try {
-        const currentJournalName = document.querySelector('input[name="journals"]:checked').value;
         const entryTitle = this.innerText;
+        const journal = await getCurrentJournal();
 
-        const journalList = await api.getJournals();
-        const journal = journalList.find(journal => journal.name === currentJournalName);
         if (journal) {
             const entries = await journal.getEntries();
             const matchingEntry = entries.find(entry => entry.name === entryTitle);
@@ -238,7 +200,6 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
 
             // if the entry also exists, just update the content
             if (matchingEntry) {
-                console.log('matched')
                 newEntryCreated = false;
             } else {
                 // otherwise create a new entry in the journal
@@ -254,9 +215,14 @@ async function writeJournalEntryToStorage(entryTitle, entryContent, journalName)
         return newEntryCreated;
     } catch (error) {
         console.error(`An error occured: ${error}`);
+        console.trace();
     }
 }
 
+/**
+ * Callback function for entry buttons. Opens the editor on click
+ * @throws Will throw an error if read fails
+ */
 async function editJournal(event) {
     try {
         const journals = await api.getJournals();
@@ -269,12 +235,15 @@ async function editJournal(event) {
             if (matchingEntry) {
                 const content = await matchingEntry.getContent();
 
-                // const titleTextArea = document.querySelector('#title-input');
-                // titleTextArea.value = entryTitle
+                const titleInputArea = document.querySelector('#title-input');
+                titleInputArea.value = matchingEntry.name;
+                titleInputArea.classList.remove('placeholder');
 
-                const entryTextArea = document.querySelector('.entry-textarea');
-                entryTextArea.value = content;
+                openEntryforEdit();
 
+                document.querySelector('.CodeMirror').CodeMirror.setValue(content);
+                console.log(content)
+                console.log(document.querySelector('.CodeMirror').CodeMirror.getValue());
                 break;
             }
         }
@@ -283,7 +252,9 @@ async function editJournal(event) {
     }
 }
 
-
+/**
+ * Hides the text editor from view
+ */
 function hideTextEditor() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
@@ -318,6 +289,9 @@ function hideTextEditor() {
     }
 }
 
+/**
+ * Displays a save message popup for 3 seconds on a successful save
+ */
 function displaySaveMessage() {
     const messageContainer = document.createElement('div');
     messageContainer.className = 'save-message';
@@ -330,26 +304,60 @@ function displaySaveMessage() {
     }, 3000);
 }
 
-async function populateEntries() {
-    if (!selectedJournal) return;
+/**
+ * Populates the current entries tab
+ * @throws Will throw an error if read fails
+ */
+export async function populateEntries() {
+    const journal = await getCurrentJournal();
+    if (!journal) {
+        const noEntryText = document.querySelector('.no-entry-text');
+        noEntryText.style.display = '';
 
-    const entries = await selectedJournal.getEntries();
+        const entryButtonList = document.querySelectorAll('.home-single-entry');
+        entryButtonList.forEach(element => element.remove());
+
+        return;
+    }
+    const entries = await journal.getEntries();
+
+    // change no entry text if entries exist
+    if (entries.length > 0) {
+        const noEntryText = document.querySelector('.no-entry-text');
+        noEntryText.style.display = 'none';
+    } else {
+        const noEntryText = document.querySelector('.no-entry-text');
+        noEntryText.style.display = '';
+        return;
+    }
+
     const entryContainer = document.querySelector('.home-list');
-    entryContainer.innerHTML = ''; // Clear previous entries
 
+    const entryButtonList = document.querySelectorAll('.home-single-entry');
+    entryButtonList.forEach(element => element.remove());
+
+    // for each entry add HTML element and add event listener
     entries.forEach(async (entry) => {
         const entryContent = await entry.getContent();
 
+        document.querySelector('.CodeMirror').CodeMirror.setValue(entryContent);
+
         const entryElement = document.createElement('div');
         entryElement.classList.add('home-single-entry');
+
+        const date = new Date();
+
+        // TODO: access last edited date
 
         entryElement.innerHTML = `
             <button class="home-single-entry-button">
                 <span class="home-entry-name">${entry.name}</span>
             </button>
-            <div class="entry-content">${entryContent}</div>
+            <div class="entry-content">${date.getMonth()}/${date.getDay()}/${date.getFullYear()}</div>
         `;
-
+        // add event listener to open the editing interface
+        const entryButton = entryElement.querySelector('button');
+        entryButton.addEventListener('click', editJournal);
         entryContainer.appendChild(entryElement);
     });
 }
