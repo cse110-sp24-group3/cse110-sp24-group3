@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to handle the dropdown toggle and positioning
-    function toggleEntryDropdown(event) {
+    const dropdownMenu = document.querySelector('.homepage-dropdown-menu');
 
-        // console.log('toggleEntryDropdown')
+    function toggleHomepageDropdown(event) {
+
+        // console.log('toggleHomepageDropdown')
 
         const homeModule = document.querySelector('.home-list');
         const buttons = homeModule.querySelectorAll('.editing-entry-vdots');
         const button = event.currentTarget;
-        const dropdownMenu = document.querySelector('.homepage-dropdown-menu');
-
+        
         // Remove 'toggledDropdown' class from all buttons
         buttons.forEach(btn => {
             if (btn !== button) {
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         // Toggle 'toggledDropdown' class on the clicked button
-        button.classList.toggle('toggledEntryDropdown');
+        button.classList.toggle('toggleHomepageDropdown');
 
         // Get the position of the clicked button
         const rect = button.getBoundingClientRect();
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dropdownMenu.style.top = `${rect.bottom-120}px`;
 
         // Toggle the visibility of the dropdown menu
-        if (button.classList.contains('toggledEntryDropdown')) {
+        if (button.classList.contains('toggleHomepageDropdown')) {
             dropdownMenu.style.display = 'block';
             console.log(dropdownMenu.style.left)
             console.log(dropdownMenu.style.top)
@@ -38,29 +39,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to close the dropdown
     function closeDropdown() {
         buttons.forEach(btn => {
-            btn.classList.remove('toggledEntryDropdown');
+            btn.classList.remove('toggleHomepageDropdown');
         });
         dropdownMenu.style.display = 'none';
     }
+
+    // Event listener to close the dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+        // Check if the click is outside the button and dropdown menu
+        if (!event.target.closest('.editing-entry-vdots') && !event.target.closest('.homepage-dropdown-menu')) {
+            closeDropdown();
+        }
+    });
 
     // Attach the event listener to all journal-dropdown-buttons
     const homeModule = document.querySelector('.home-list');
     const buttons = homeModule.querySelectorAll('.editing-entry-vdots');
 
     buttons.forEach(button => {
-        button.addEventListener('click', toggleEntryDropdown);
+        button.addEventListener('click', toggleHomepageDropdown);
     });
 
-    document.addEventListener('click', function(event) {
-        const dropdownMenu = document.querySelector('.homepage-dropdown-menu');
-        if (!dropdownMenu.contains(event.target)) {
-            console.log(event.target);
-            closeDropdown();
-        }
-    });
-
-    console.log('homepage-dropdown.js')
-    window.toggleEntryDropdown = toggleEntryDropdown;
+    // console.log('homepage-dropdown.js')
+    window.toggleHomepageDropdown = toggleHomepageDropdown;
 
 
 });
