@@ -141,10 +141,13 @@ async function getCurrentJournal() {
     return null;
 }
 
+// LRC
+// Seems like this function is triggering a lint error
 /**
  * Updates the current article display with the selected entry
  * @throws Will throw an error if read fails
  */
+/*
 async function updateArticleTextFromStorage() {
     try {
         const entryTitle = this.innerText;
@@ -171,6 +174,7 @@ async function updateArticleTextFromStorage() {
         console.error(`An error occured: ${error}`);
     }
 }
+*/
 
 /**
  * Writes a new journal entry to storage with the given parameters.
