@@ -159,7 +159,7 @@ function showHomepageHeaderInfo() {
             <span id="date-logged" style="font-family: 'Inter'">Date Logged</span>`
         );
     }
-
+    const test = document.querySelector('.home-entry-descriptor');
     // Adds the black line after the "Entry Name" and "Date Logged" header
     test.insertAdjacentHTML("afterend", `
         <div class="home-single-entry"></div>`
