@@ -124,7 +124,6 @@ async function saveCurrentEntry() {
 
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
-    console.log(entryTitle)
     await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
     populateEntries();
 }
@@ -237,8 +236,6 @@ async function editJournal(event) {
                 openEntryforEdit();
 
                 document.querySelector('.CodeMirror').CodeMirror.setValue(content);
-                console.log(content)
-                console.log(document.querySelector('.CodeMirror').CodeMirror.getValue());
                 break;
             }
         }

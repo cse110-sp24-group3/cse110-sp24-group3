@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const journalName = journal.querySelector('input').value;
-            console.log(journalName)
             await api.deleteJournal(journalName);
         } catch (err) {
             console.err(`Error on deleting journal: ${err.message}`);
@@ -64,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.toggleJournalDropdown = toggleDropdown;
 
     const deleteJournalButton = document.querySelector('#trash');
-    console.log(deleteJournalButton.innerHTML);
     deleteJournalButton.addEventListener('click', deleteJournalOnDropdownMenuClick)
 });
 

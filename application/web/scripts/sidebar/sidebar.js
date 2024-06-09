@@ -85,7 +85,6 @@ function createJournalButton(name) {
 }
 
 export async function populateJournals() {
-    console.log('populate journals called')
     const journalList = document.querySelectorAll('.journal');
     journalList.forEach(journal => journal.remove());
     const journals = await api.getJournals();
