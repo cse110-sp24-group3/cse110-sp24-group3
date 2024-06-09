@@ -1,3 +1,6 @@
+import { populateJournals } from "./sidebar.js";
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // These variables are already declared in this scope:
     // const sidebarModule = document.querySelector('.sidebar-module');
@@ -21,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Get the position of the clicked button
         const rect = button.getBoundingClientRect();
-        
+
         // Position the dropdown menu
         dropdownMenu.style.left = `${rect.right}px`;
         dropdownMenu.style.top = `${rect.top}px`;
@@ -32,6 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             dropdownMenu.style.display = 'none';
         }
+    }
+
+    /**
+     * Callback function for the dropdown menu to allow for deleting of journal
+     */
+    async function deleteJournalOnDropdownMenuClick() {
+        // grab the toggled journal and then go to its sibling to extract the journal name
+        const journal = document.querySelector('.toggledDropdown').parentElement;
+
+        try {
+            const journalName = journal.querySelector('input').value;
+            await api.deleteJournal(journalName);
+        } catch (err) {
+            console.err(`Error on deleting journal: ${err.message}`);
+        }
+        const dropdownMenu = document.querySelector('.sidebar-dropdown-menu');
+        dropdownMenu.style.display = 'none';
+
+        populateJournals();
     }
 
     // Function to close the dropdown
@@ -58,4 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.toggleJournalDropdown = toggleDropdown;
+
+    const deleteJournalButton = document.querySelector('#trash');
+    deleteJournalButton.addEventListener('click', deleteJournalOnDropdownMenuClick)
 });
+

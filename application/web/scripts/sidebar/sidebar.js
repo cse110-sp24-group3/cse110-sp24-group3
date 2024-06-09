@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-import { populateEntries } from "../homepage/homepage.js";
+import { populateEntries, updateHomepage } from "../homepage/homepage.js";
 /**
  * Toggles the sidebar, new journal button, and journal entry buttons
  * between collapsed and expanded states.
@@ -23,13 +23,26 @@ export function toggleSidebar() {
     });
 };
 
-export async function createJournalEntries() {
+/**
+ * Creates the sidebar with journals and the new journal button.
+ */
+export async function createJournals() {
     const newJournalButton = document.querySelector('.new-journal');
 
     const sidebar = document.querySelector('.journal-list');
 
     sidebar.addEventListener('change', updateTitleText);
-    sidebar.addEventListener('change', populateEntries);
+    // not sure why there is a double update going on here, but a short timeout seems to fix it
+    // seems like there is an issue with synchronicity
+    sidebar.addEventListener('change', () => {
+        sleep(100).then(() => {
+            updateHomepage()
+        });
+    });
+    sidebar.addEventListener('change', () => {
+        const l = document.querySelectorAll('.home-single-entry');
+        console.log(l.length)
+    })
     // Clicking new journal button should create a new journal
     newJournalButton.addEventListener('click', () => {
 
@@ -37,18 +50,29 @@ export async function createJournalEntries() {
 
         createJournalButton(`Journal #${numJournals}`)
         updateTitleText();
-        populateEntries();
-
-        if (!document.getElementById('entry-name')) {
-            showHomepageHeaderInfo();
-            showNoEntriesText();
-        }
+        sleep(100).then(() => {
+            updateHomepage()
+        });
     });
 
     await populateJournals();
 };
 
-function createJournalButton(name) {
+/**
+ * Creates a button for a given journal name. If a journal with the name does not exist, it will create a new journal.
+ */
+async function createJournalButton(name) {
+    const journals = await api.getJournals();
+    const journal = journals.find(journal => journal.name === name);
+    if (!journal) {
+        try {
+            await api.createJournal(name);
+        } catch (err) {
+            if (err.message != 'Journal name already used!')
+                console.error(`could not create Journal: ${err.message}`)
+        }
+    }
+
     const sidebar = document.querySelector('.journal-list');
     // Creates div to insert journal and adds 'journal' class property
     const journalDiv = document.createElement('div');
@@ -75,20 +99,39 @@ function createJournalButton(name) {
     // Once a journal is created, the "No Journals" text will disappear
     document.querySelector("#no-journal-text").style.display = "none";
 
+    const journalButton = journalDiv.querySelector('label');
+    journalButton.addEventListener('click', updateHomepage);
+
 }
 
-async function populateJournals() {
-    console.log('populate journals called')
+/**
+ * Populates the sidebar with all existing journals
+ */
+export async function populateJournals() {
+    // first cleans out existing journals
+    const journalList = document.querySelectorAll('.journal');
+    journalList.forEach(journal => journal.remove());
     const journals = await api.getJournals();
+    // if no existing journals then stop
     if (!journals) {
         return;
     }
+    // otherwise create new button
     journals.forEach(journal => {
         createJournalButton(journal.name);
     });
+    // update the homepage after creating journals
     showHomepageHeaderInfo();
+
+    sleep(100).then(() => {
+        updateHomepage()
+    });
 }
 
+
+/**
+ * Updates the title text based on the currently selected journal
+ */
 function updateTitleText() {
     const titleText = document.querySelector('input[name="journals"]:checked');
     const titleHeader = document.querySelector('#journal-title');
@@ -98,24 +141,13 @@ function updateTitleText() {
 }
 
 /**
- * Inserts "No Journal Entries" text into the designated area.
- */
-function showNoEntriesText() {
-    const noJournalText = document.querySelector('.no-entry-text');
-    noJournalText.insertAdjacentHTML("beforeend", `
-        <b>You have no Journal Entries</b>
-        <p>Click "Create New Entry" on top to start your first entry.</p>`
-    );
-}
-
-/**
  * Displays the header information on the homepage including the "Create New Entry" button,
  * "Entry Name", and "Date Logged" headers.
  */
 function showHomepageHeaderInfo() {
     // Show the "Create New Entry" button when a journal is selected
     const entryButton = document.querySelector('.add-note');
-    entryButton.removeAttribute("hidden");
+    entryButton.style.display = '';
 
     // Adds the "Entry Name" and "Date Logged" header when a journal is populated
     const test = document.querySelector('.home-entry-descriptor');
@@ -129,4 +161,8 @@ function showHomepageHeaderInfo() {
         <div class="home-single-entry"></div>`
     );
     populateEntries();
+}
+
+export function sleep(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
 }

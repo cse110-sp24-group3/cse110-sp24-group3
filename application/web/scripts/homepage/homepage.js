@@ -1,29 +1,24 @@
 /// <reference path="../../JournalAPI.js" />
-
+import { sleep } from '../sidebar/sidebar.js';
 /**
  * Initializes the homepage by hiding the "Create New Entry" button until a journal is created
  * and populates entries if a journal is selected.
  */
 export function initializeHomepage() {
     // Select the "Create New Entry" button element
-    const entryButton = document.querySelector('.add-note');
-    // Hide the button by setting the 'hidden' attribute
-    entryButton.setAttribute("hidden", "hidden");
-
-    // Check if a journal is selected and populate entries
-    // if (selectedJournal) {
-    //     populateEntries();
-    // }
 }
 
 /**
  * Creates the homepage functionality by attaching event listeners to buttons and text areas.
  * Initializes the entry and title text areas by clearing their contents on page load.
  */
-export function createHomepage() {
+export async function createHomepage() {
     // Attach event listener to the "Add Note" button
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.addEventListener('click', openEntryforEdit);
+    // Hide the button by setting the 'hidden' attribute
+    if (!(await getCurrentJournal()))
+        addNoteButton.style.display = 'none';
 
     // Attach event listener to the "Cancel" button
     const cancelNoteButton = document.getElementById('cancel-note');
@@ -43,6 +38,7 @@ export function createHomepage() {
 
     // Uncomment the line below if there is a function to read entries from storage
     // readEntriesFromStorage();
+    updateHomepage();
 }
 
 /**
@@ -68,7 +64,9 @@ function cancelEntry() {
     const myPopup = document.getElementById("myPopup");
     myPopup.classList.remove("show");
 
-    populateEntries();
+    sleep(100).then(() => {
+        updateHomepage()
+    });
 }
 
 /**
@@ -78,8 +76,7 @@ function cancelEntry() {
  */
 function openEntryforEdit() {
     // Hide the "Add Note" button and entry listing
-    const addNoteButton = document.querySelector('.add-note');
-    addNoteButton.style.display = 'none';
+    hideAddNoteButton();
     const entryListing = document.querySelector('.home-list');
     entryListing.style.display = 'none';
 
@@ -93,14 +90,11 @@ function openEntryforEdit() {
 
     const codeMirror = document.querySelector('.CodeMirror').CodeMirror;
     codeMirror.setValue('');
-    
-
 
     const livePreview = document.querySelector('.live-preview');
     livePreview.style.display = 'inline';
     // Hide the "No entries" text
-    const noEntryText = document.querySelector('.no-entry-text');
-    noEntryText.style.display = 'none';
+    hideNoEntriesText();
 }
 
 /**
@@ -129,16 +123,15 @@ async function saveCurrentEntry() {
 
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
-    console.log(entryTitle)
     await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
-    populateEntries();
+    await updateHomepage();
 }
 
 /**
      * Gets the currently selected journal.
      * @returns {Journal} The currently selected journal, or null if none exist
      */
-async function getCurrentJournal() {
+export async function getCurrentJournal() {
     const currentJournal = document.querySelector('input[name="journals"]:checked');
     if (currentJournal) {
         const journalList = await api.getJournals();
@@ -146,41 +139,6 @@ async function getCurrentJournal() {
     }
     return null;
 }
-
-// LRC
-// Seems like this function is triggering a lint error
-/**
- * Updates the current article display with the selected entry
- * @throws Will throw an error if read fails
- */
-/*
-async function updateArticleTextFromStorage() {
-    try {
-        const entryTitle = this.innerText;
-        const journal = await getCurrentJournal();
-
-        if (journal) {
-            const entries = await journal.getEntries();
-            const matchingEntry = entries.find(entry => entry.name === entryTitle);
-
-            // if the entry also exists, just update the content
-            if (matchingEntry) {
-                const content = await matchingEntry.getContent();
-                const entryArticle = document.querySelector('.selected-entry-article')
-                entryArticle.innerText = content;
-            } else {
-                throw new Error('Entry not found')
-            }
-            // if the journal doesn't exist, then create a new journal
-        } else {
-            throw new Error('Journal not found')
-        }
-
-    } catch (error) {
-        console.error(`An error occured: ${error}`);
-    }
-}
-*/
 
 /**
  * Writes a new journal entry to storage with the given parameters.
@@ -246,8 +204,6 @@ async function editJournal(event) {
                 openEntryforEdit();
 
                 document.querySelector('.CodeMirror').CodeMirror.setValue(content);
-                console.log(content)
-                console.log(document.querySelector('.CodeMirror').CodeMirror.getValue());
                 break;
             }
         }
@@ -260,8 +216,7 @@ async function editJournal(event) {
  * Hides the text editor from view
  */
 function hideTextEditor() {
-    const addNoteButton = document.querySelector('.add-note');
-    addNoteButton.style.display = '';
+    hideAddNoteButton();
 
     const addEntryList = document.querySelector('.home-list');
     addEntryList.style.display = '';
@@ -283,14 +238,7 @@ function hideTextEditor() {
     const livePreview = document.querySelector('.live-preview');
     livePreview.style.display = '';
 
-    const noEntryText = document.querySelector('.no-entry-text');
-    noEntryText.style.display = '';
-
-    const prevEntries = document.querySelector('.past-entries');
-    const prevCount = prevEntries.querySelectorAll('article').length;
-    if (prevCount > 0) {
-        noEntryText.style.display = 'none';
-    }
+    updateHomepage();
 }
 
 /**
@@ -313,32 +261,25 @@ function displaySaveMessage() {
  * @throws Will throw an error if read fails
  */
 export async function populateEntries() {
+    clearEntries();
     const journal = await getCurrentJournal();
+    // change to no journal text if no journal is selected
     if (!journal) {
-        const noEntryText = document.querySelector('.no-entry-text');
-        noEntryText.style.display = '';
-
-        const entryButtonList = document.querySelectorAll('.home-single-entry');
-        entryButtonList.forEach(element => element.remove());
-
+        showNoJournalsText()
         return;
     }
+
     const entries = await journal.getEntries();
 
-    // change no entry text if entries exist
+    // change to no entry text if entries exist
     if (entries.length > 0) {
-        const noEntryText = document.querySelector('.no-entry-text');
-        noEntryText.style.display = 'none';
+        hideNoEntriesText()
     } else {
-        const noEntryText = document.querySelector('.no-entry-text');
-        noEntryText.style.display = '';
+        showNoEntriesText();
         return;
     }
 
     const entryContainer = document.querySelector('.home-list');
-
-    const entryButtonList = document.querySelectorAll('.home-single-entry');
-    entryButtonList.forEach(element => element.remove());
 
     // for each entry add HTML element and add event listener
     let counter = 1;
@@ -371,4 +312,89 @@ export async function populateEntries() {
         entryButton.addEventListener('click', editJournal);
         entryContainer.appendChild(entryElement);
     });
+}
+
+/**
+ * Updates the homepage based on the current state of the app
+ */
+export async function updateHomepage() {
+    const journal = await getCurrentJournal();
+    // if no journals, update homepage
+    // if there is a selected journal but no entries in that journal, show the no entries text
+    // otherwise fill in the homepage with the past entries
+    if (!journal) {
+        showNoJournalsText();
+        hideNoEntriesText();
+        hideAddNoteButton();
+    } else {
+        const entries = await journal.getEntries();
+        if (entries.length > 0) {
+            console.log(`has entries`)
+            hideNoEntriesText();
+        } else {
+            console.log(`has no entries`)
+            showNoEntriesText();
+        }
+        // console.log(`Journal: ${journal.name} has ${entries.length} entries`)
+        hideNoJournalsText();
+        showAddNoteButton();
+    }
+    populateEntries();
+}
+
+/**
+ * Clears all the prior entries on the homepage
+ */
+
+function clearEntries() {
+    const entryButtonList = document.querySelectorAll('.home-single-entry');
+    entryButtonList.forEach(element => element.remove());
+}
+
+/**
+ * Shows the no entries text on the homepage
+ */
+function showNoEntriesText() {
+    const noEntryText = document.querySelector('.no-entry-text');
+    noEntryText.style.display = '';
+}
+
+/**
+ * Hides the no entries text on the homepage
+ */
+function hideNoEntriesText() {
+    const noEntryText = document.querySelector('.no-entry-text');
+    noEntryText.style.display = 'none';
+}
+
+/**
+ * Shows the no journals text on the homepage
+ */
+function showNoJournalsText() {
+    const noJournalText = document.querySelector('#no-journal-text');
+    noJournalText.style.display = '';
+}
+
+/**
+ * Hides the no journals text on the homepage
+ */
+function hideNoJournalsText() {
+    const noJournalText = document.querySelector('#no-journal-text');
+    noJournalText.style.display = 'none';
+}
+
+/**
+ * Shows the create entry button on the homepage
+ */
+function showAddNoteButton() {
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.style.display = '';
+}
+
+/**
+ * Hides the create entry button on the homepage
+ */
+function hideAddNoteButton() {
+    const addNoteButton = document.querySelector('.add-note');
+    addNoteButton.style.display = 'none';
 }
