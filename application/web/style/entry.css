@@ -93,7 +93,7 @@
     align-items: center;
     width: 100%;
     padding: 10px 0px 2px; 
-    border-bottom: 2px solid var(--grey-text-color);
+    border-bottom: 2px solid var(--main-stroke-color);
 }
 
 .home-single-entry-button {
@@ -105,7 +105,7 @@
     background-color: var(--journal-entry);
     border: none;
     cursor: pointer;
-
+    
 }
 
 .home-list img[src="../web/assets/vdots-entry-black.png"]{

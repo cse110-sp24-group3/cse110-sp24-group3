@@ -354,6 +354,7 @@ export async function populateEntries() {
                 <span class="home-entry-name">${entry.name}</span>
             </button>
             <div class="entry-content">${date.getMonth()}/${date.getDay()}/${date.getFullYear()}</div>
+            <img class="editing-entry-vdots" src="../web/assets/vdots-entry-black.png" alt="Three Dots">
         `;
         // add event listener to open the editing interface
         const entryButton = entryElement.querySelector('button');
