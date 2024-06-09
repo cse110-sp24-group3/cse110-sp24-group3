@@ -19,9 +19,9 @@
 
     <!-- Script -->
     <script src="web.js" type="module"></script>
-    <script src="scripts/entry-title-script.js"> </script>
+    <script src="scripts/editing-entry/entry-title-script.js"> </script>
+    <script src="scripts/editing-entry/editing-entry-dropdown.js"></script>
     <script src="JournalAPI.js"></script>
-    <script src="scripts/editing-entry-dropdown.js"></script>
     <script src="scripts/sidebar/sidebar.js" type="module"></script>
     <script src="scripts/sidebar/sidebar-dropdown.js" type="module"></script>
 </head>
@@ -38,15 +38,9 @@
                     <span>New Journal</span>
                     <img src="assets/journal-icon.svg" alt="Journal Icon" class="journal-icon">
                 </button>
-                <fieldset class="journal-list">
+                <div class="journal-list">
                     
-                </fieldset>
-                <!-- <div class = "journal">
-                    <span>My Journal</span>
-                    <button class="journal-dropdown-button">
-                        <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
-                    </button>
-                </div> -->
+                </div>
             </div>
 
             <div class="sidebar-dropdown-menu">
@@ -54,7 +48,7 @@
                     <img src="./assets/addEntry-icon.png" alt="Edit Icon" class="dropdown-icon" width="24px"> Edit Journal Name
                 </div>
                 <div id="trash" class="sidebar-dropdown-item delete" >
-                    <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
+                    <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Journal
                 </div>
             </div>
         </sidebar>
