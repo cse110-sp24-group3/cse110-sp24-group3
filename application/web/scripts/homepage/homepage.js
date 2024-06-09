@@ -301,10 +301,10 @@ function displaySaveMessage() {
     messageContainer.className = 'save-message';
     messageContainer.innerText = 'Entry Successfully Saved';
 
-    document.body.appendChild(messageContainer);
+    document.querySelector('homepage').appendChild(messageContainer);
 
     setTimeout(() => {
-        document.body.removeChild(messageContainer);
+        document.querySelector('homepage').removeChild(messageContainer);
     }, 3000);
 }
 
@@ -341,6 +341,7 @@ export async function populateEntries() {
     entryButtonList.forEach(element => element.remove());
 
     // for each entry add HTML element and add event listener
+    let counter = 1;
     entries.forEach(async (entry) => {
         const entryContent = await entry.getContent();
 
@@ -359,6 +360,12 @@ export async function populateEntries() {
             </button>
             <div class="entry-content">${date.getMonth()}/${date.getDay()}/${date.getFullYear()}</div>
         `;
+
+        if (counter == entries.length) {
+            entryElement.style.borderBottom = '1px solid var(--grey-text-color)';
+        }
+        counter += 1;
+
         // add event listener to open the editing interface
         const entryButton = entryElement.querySelector('button');
         entryButton.addEventListener('click', editJournal);
