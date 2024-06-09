@@ -13,7 +13,7 @@ test.beforeAll(async () => {
   // Wait for the first BrowserWindow to open
   // and return its Page object
   page = await electronApp.firstWindow()
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 2000));// eslint-disable-line
 });
 
 test.afterAll(async () => {
