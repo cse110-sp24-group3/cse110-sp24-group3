@@ -51,7 +51,7 @@ sidebar {
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
-    min-height: 40px;
+    min-height: 50px;
     margin-top: 8px;
     margin-bottom: 8px;
     padding: 10px;
@@ -60,7 +60,7 @@ sidebar {
     button {
         background-color: transparent;
         display: none;
-        height: 20px;
+        height: auto;
     }
 
     &:hover {
