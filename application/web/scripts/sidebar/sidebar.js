@@ -32,7 +32,13 @@ export async function createJournals() {
     const sidebar = document.querySelector('.journal-list');
 
     sidebar.addEventListener('change', updateTitleText);
-    sidebar.addEventListener('change', updateHomepage);
+    // not sure why there is a double update going on here, but a short timeout seems to fix it
+    // seems like there is an issue with synchronicity
+    sidebar.addEventListener('change', () => {
+        sleep(100).then(() => {
+            updateHomepage()
+        });
+    });
     sidebar.addEventListener('change', () => {
         const l = document.querySelectorAll('.home-single-entry');
         console.log(l.length)
@@ -169,4 +175,8 @@ function showHomepageHeaderInfo() {
         <div class="home-single-entry"></div>`
     );
     populateEntries();
+}
+
+function sleep(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
 }
