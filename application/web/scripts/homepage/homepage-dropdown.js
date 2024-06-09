@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const homeModule = document.querySelector('.home-list');
         const buttons = homeModule.querySelectorAll('.editing-entry-vdots');
         const button = event.currentTarget;
-        const dropdownMenu = document.querySelector('#dropdown-menu-entry');
+        const dropdownMenu = document.querySelector('.homepage-dropdown-menu');
 
         // Remove 'toggledDropdown' class from all buttons
         buttons.forEach(btn => {
