@@ -37,14 +37,13 @@ sidebar {
 }
 
 .sidebar-module::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
 }
 
 /* journal */
 .journal {
     color: var(--grey-text-color);
     position: relative;
-    overflow: visible;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
@@ -53,33 +52,30 @@ sidebar {
     align-items: center;
     font-size: 16px;
     min-height: 40px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     padding: 10px;
+    cursor: pointer;
 
-    &:hover{
+    button {
+        background-color: transparent;
+        display: none;
+        height: 20px;
+    }
+
+    &:hover {
         background-color: var(--journal-highlight);
-        button{
-            background-color: #cbcfce;
+
+        button {
             display: block;
             border: none;
+            cursor: pointer;
         }
     }
-    span {
-        margin-left: 10px;
-    }
 
-    button{
-        background-color: var(--sliding-shelf);
-        display:none;
-    }
-    
     input[type='radio'] {
         display: none;
-    }
-    
-    label {
-        height: 100%;
-        cursor: pointer;
+        margin: 0px;
     }
 
     .journal-vdots:hover {
@@ -90,6 +86,7 @@ sidebar {
 /* for some reason nested selectors don't work with :has() */
 .journal:has(input[type='radio']:checked) {
     background-color: var(--journal-highlight);
+    margin: 0px;
 }
 
 /* dropdown */
@@ -112,11 +109,11 @@ sidebar {
     display: flex;
     align-items: center;
     cursor: pointer;
+}
 
-    :hover {
-        background-color: var(--icon-color);
-        border-radius: 5px;
-    }
+.sidebar-dropdown-item:hover {
+    background-color: var(--icon-color);
+    border-radius: 5px;
 }
 
 .dropdown-icon {
@@ -125,10 +122,12 @@ sidebar {
 
 .sidebar-dropdown-item.delete {
     color: red;
-    :hover {
-        background-color: #f8d7da;
-    }
 }
+
+.sidebar-dropdown-item.delete:hover {
+    background-color: #f8d7da;
+}
+
 
 /* new journal button */
 button.new-journal {
@@ -185,7 +184,7 @@ img.collapse-button {
 }
 
 .toggled-new-journal,
-.toggled-journal{
+.toggled-journal {
     transition: width 0.3s ease;
     visibility: hidden;
 }
