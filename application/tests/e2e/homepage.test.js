@@ -42,7 +42,7 @@ test('Can write and read 1 journal entry', async () => {
 	const oldJournalButton = await page.locator('.past-entries > button');
 	await oldJournalButton.click();
 
-	// TODO: small bug where leading whitespace is stripped not sure if bug or feature
+	/* TODO: small bug where leading whitespace is stripped not sure if bug or feature */
 	const entryArticle = await page.locator('.selected-entry-article');
 	expect(await entryArticle.innerText()).toBe(TEXT_INPUT);
 });
