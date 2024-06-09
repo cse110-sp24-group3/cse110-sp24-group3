@@ -124,7 +124,7 @@ async function saveCurrentEntry() {
     const journalName = document.querySelector('input[name="journals"]:checked').value;
 
     await writeJournalEntryToStorage(entryTitle, entryContent, journalName);
-    populateEntries();
+    await updateHomepage();
 }
 
 /**
@@ -322,8 +322,10 @@ export async function updateHomepage() {
     } else {
         const entries = await journal.getEntries();
         if (entries.length > 0) {
+            console.log(`has entries`)
             hideNoEntriesText();
         } else {
+            console.log(`has no entries`)
             showNoEntriesText();
         }
         // console.log(`Journal: ${journal.name} has ${entries.length} entries`)
@@ -341,6 +343,7 @@ function clearEntries() {
     const entryButtonList = document.querySelectorAll('.home-single-entry');
     entryButtonList.forEach(element => element.remove());
 }
+
 /**
  * Shows the no entries text on the homepage
  */
