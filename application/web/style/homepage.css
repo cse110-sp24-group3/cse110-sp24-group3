@@ -59,3 +59,7 @@ button.add-note:hover {
     z-index: 1000;
     font-family: 'Inter', sans-serif;
 }
+
+.no-journal-text, #no-journal-text {
+    font-size: 24px;
+}

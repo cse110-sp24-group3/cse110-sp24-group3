@@ -1,12 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
 import { sleep } from '../sidebar/sidebar.js';
-/**
- * Initializes the homepage by hiding the "Create New Entry" button until a journal is created
- * and populates entries if a journal is selected.
- */
-export function initializeHomepage() {
-    // Select the "Create New Entry" button element
-}
 
 /**
  * Creates the homepage functionality by attaching event listeners to buttons and text areas.
