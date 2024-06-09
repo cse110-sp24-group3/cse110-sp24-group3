@@ -1,10 +1,11 @@
 /// <reference path="./JournalAPI.js" />
-import { toggleSidebar, createJournalEntries } from "./scripts/sidebar/sidebar.js";
+import { toggleSidebar, createJournals } from "./scripts/sidebar/sidebar.js";
 import { initializeHomepage, createHomepage } from "./scripts/homepage/homepage.js";
 window.onload = () => {
-    createJournalEntries();
+    createJournals();
 
     // journal entries are created asynchronously, need to wait for resolution before creating homepage
+    // TODO: maybe refactor code to be asynchronous? This would eliminate the need for this kind of thing, we could just use 'await'
     sleep(100).then(() => {
         initializeHomepage();
         createHomepage();

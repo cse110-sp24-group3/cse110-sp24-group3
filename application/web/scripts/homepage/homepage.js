@@ -140,41 +140,6 @@ async function getCurrentJournal() {
     return null;
 }
 
-// LRC
-// Seems like this function is triggering a lint error
-/**
- * Updates the current article display with the selected entry
- * @throws Will throw an error if read fails
- */
-/*
-async function updateArticleTextFromStorage() {
-    try {
-        const entryTitle = this.innerText;
-        const journal = await getCurrentJournal();
-
-        if (journal) {
-            const entries = await journal.getEntries();
-            const matchingEntry = entries.find(entry => entry.name === entryTitle);
-
-            // if the entry also exists, just update the content
-            if (matchingEntry) {
-                const content = await matchingEntry.getContent();
-                const entryArticle = document.querySelector('.selected-entry-article')
-                entryArticle.innerText = content;
-            } else {
-                throw new Error('Entry not found')
-            }
-            // if the journal doesn't exist, then create a new journal
-        } else {
-            throw new Error('Journal not found')
-        }
-
-    } catch (error) {
-        console.error(`An error occured: ${error}`);
-    }
-}
-*/
-
 /**
  * Writes a new journal entry to storage with the given parameters.
  * @param {string} entryTitle - The title of the entry.
@@ -305,7 +270,7 @@ function displaySaveMessage() {
  */
 export async function populateEntries() {
     const journal = await getCurrentJournal();
-    console.log(journal)
+    // change to no journal text if no journal is selected
     if (!journal) {
         const noEntryText = document.querySelector('.no-entry-text');
         noEntryText.style.display = '';
@@ -315,9 +280,10 @@ export async function populateEntries() {
 
         return;
     }
+
     const entries = await journal.getEntries();
 
-    // change no entry text if entries exist
+    // change to no entry text if entries exist
     if (entries.length > 0) {
         const noEntryText = document.querySelector('.no-entry-text');
         noEntryText.style.display = 'none';

@@ -23,7 +23,10 @@ export function toggleSidebar() {
     });
 };
 
-export async function createJournalEntries() {
+/**
+ * Creates the sidebar with journals and the new journal button.
+ */
+export async function createJournals() {
     const newJournalButton = document.querySelector('.new-journal');
 
     const sidebar = document.querySelector('.journal-list');
@@ -48,6 +51,9 @@ export async function createJournalEntries() {
     await populateJournals();
 };
 
+/**
+ * Creates a button for a given journal name. If a journal with the name does not exist, it will create a new journal.
+ */
 async function createJournalButton(name) {
     const journals = await api.getJournals();
     const journal = journals.find(journal => journal.name === name);
@@ -88,19 +94,30 @@ async function createJournalButton(name) {
 
 }
 
+/**
+ * Populates the sidebar with all existing journals
+ */
 export async function populateJournals() {
+    // first cleans out existing journals
     const journalList = document.querySelectorAll('.journal');
     journalList.forEach(journal => journal.remove());
     const journals = await api.getJournals();
+    // if no existing journals then stop
     if (!journals) {
         return;
     }
+    // otherwise create new button
     journals.forEach(journal => {
         createJournalButton(journal.name);
     });
+    // update the homepage after creating journals
     showHomepageHeaderInfo();
 }
 
+
+/**
+ * Updates the title text based on the currently selected journal
+ */
 function updateTitleText() {
     const titleText = document.querySelector('input[name="journals"]:checked');
     const titleHeader = document.querySelector('#journal-title');
