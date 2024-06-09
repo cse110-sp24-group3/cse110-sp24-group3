@@ -50,15 +50,9 @@ export async function createJournals() {
 
         createJournalButton(`Journal #${numJournals}`)
         updateTitleText();
-        updateHomepage();
-
-        if (!document.getElementById('entry-name')) {
-            showHomepageHeaderInfo();
-            showNoEntriesText();
-        } else {
-            const entryButton = document.querySelector('.add-note');
-            entryButton.style.display = '';
-        }
+        sleep(100).then(() => {
+            updateHomepage()
+        });
     });
 
     await populateJournals();
@@ -128,7 +122,10 @@ export async function populateJournals() {
     });
     // update the homepage after creating journals
     showHomepageHeaderInfo();
-    updateHomepage();
+
+    sleep(100).then(() => {
+        updateHomepage()
+    });
 }
 
 
