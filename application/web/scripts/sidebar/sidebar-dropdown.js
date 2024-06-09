@@ -1,5 +1,4 @@
 import { populateJournals } from "./sidebar.js";
-import { updateHomepage } from "../homepage/homepage.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
