@@ -150,11 +150,15 @@ function showHomepageHeaderInfo() {
     entryButton.style.display = '';
 
     // Adds the "Entry Name" and "Date Logged" header when a journal is populated
-    const test = document.querySelector('.home-entry-descriptor');
-    test.insertAdjacentHTML("afterbegin", `
-        <span id="entry-name" style="font-family: 'Inter'">Entry Name</span>
-        <span id="date-logged" style="font-family: 'Inter'">Date Logged</span>`
-    );
+    const homeEntryDiv = document.querySelector('.home-entry-descriptor');
+    let spanExists = homeEntryDiv.querySelector('span') !== null;
+
+    if (!spanExists) {
+        homeEntryDiv.insertAdjacentHTML("afterbegin", `
+            <span id="entry-name" style="font-family: 'Inter'">Entry Name</span>
+            <span id="date-logged" style="font-family: 'Inter'">Date Logged</span>`
+        );
+    }
 
     // Adds the black line after the "Entry Name" and "Date Logged" header
     test.insertAdjacentHTML("afterend", `
