@@ -141,17 +141,6 @@ function updateTitleText() {
 }
 
 /**
- * Inserts "No Journal Entries" text into the designated area.
- */
-function showNoEntriesText() {
-    const noJournalText = document.querySelector('.no-entry-text');
-    noJournalText.insertAdjacentHTML("beforeend", `
-        <b>You have no Journal Entries</b>
-        <p>Click "Create New Entry" on top to start your first entry.</p>`
-    );
-}
-
-/**
  * Displays the header information on the homepage including the "Create New Entry" button,
  * "Entry Name", and "Date Logged" headers.
  */
