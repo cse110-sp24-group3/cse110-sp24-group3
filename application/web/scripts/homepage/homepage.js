@@ -317,6 +317,9 @@ export async function populateEntries() {
  */
 export async function updateHomepage() {
     const journal = await getCurrentJournal();
+    // if no journals, update homepage
+    // if there is a selected journal but no entries in that journal, show the no entries text
+    // otherwise fill in the homepage with the past entries
     if(!journal) {
         showNoJournalsText();
         hideNoEntriesText();
@@ -334,31 +337,49 @@ export async function updateHomepage() {
     }
 }
 
+/**
+ * Shows the no entries text on the homepage
+ */
 function showNoEntriesText() {
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = '';
 }
 
+/**
+ * Hides the no entries text on the homepage
+ */
 function hideNoEntriesText() {
     const noEntryText = document.querySelector('.no-entry-text');
     noEntryText.style.display = 'none';
 }
 
+/**
+ * Shows the no journals text on the homepage
+ */
 function showNoJournalsText() {
     const noJournalText = document.querySelector('#no-journal-text');
     noJournalText.style.display = '';
 }
 
+/**
+ * Hides the no journals text on the homepage
+ */
 function hideNoJournalsText() {
     const noJournalText = document.querySelector('#no-journal-text');
     noJournalText.style.display = 'none';
 }
 
+/**
+ * Shows the create entry button on the homepage
+ */
 function showAddNoteButton() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = '';
 }
 
+/**
+ * Hides the create entry button on the homepage
+ */
 function hideAddNoteButton() {
     const addNoteButton = document.querySelector('.add-note');
     addNoteButton.style.display = 'none';
