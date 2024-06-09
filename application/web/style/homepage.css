@@ -49,9 +49,9 @@ button.add-note:hover {
 
 .save-message {
     position: fixed;
-    top: 20px;
+    top: 85%; /* Adjusted value to move the message down */
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     background-color: #4caf50;
     color: white;
     padding: 10px 20px;
