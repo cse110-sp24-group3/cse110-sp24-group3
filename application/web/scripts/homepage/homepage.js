@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-
+import { sleep } from '../sidebar/sidebar.js';
 /**
  * Initializes the homepage by hiding the "Create New Entry" button until a journal is created
  * and populates entries if a journal is selected.
@@ -64,7 +64,9 @@ function cancelEntry() {
     const myPopup = document.getElementById("myPopup");
     myPopup.classList.remove("show");
 
-    populateEntries();
+    sleep(100).then(() => {
+        updateHomepage()
+    });
 }
 
 /**

@@ -50,7 +50,7 @@ export async function createJournals() {
 
         createJournalButton(`Journal #${numJournals}`)
         updateTitleText();
-        populateEntries();
+        updateHomepage();
 
         if (!document.getElementById('entry-name')) {
             showHomepageHeaderInfo();
@@ -177,6 +177,6 @@ function showHomepageHeaderInfo() {
     populateEntries();
 }
 
-function sleep(time) {
+export function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
