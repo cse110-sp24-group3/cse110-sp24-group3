@@ -49,6 +49,13 @@ export async function createJournalEntries() {
 };
 
 function createJournalButton(name) {
+
+    try {
+        api.createJournal(name);
+    } catch (err) {
+        console.error(`could not create Journal: ${error}`)
+    }
+
     const sidebar = document.querySelector('.journal-list');
     // Creates div to insert journal and adds 'journal' class property
     const journalDiv = document.createElement('div');
@@ -77,8 +84,10 @@ function createJournalButton(name) {
 
 }
 
-async function populateJournals() {
+export async function populateJournals() {
     console.log('populate journals called')
+    const journalList = document.querySelectorAll('.journal');
+    journalList.forEach(journal => journal.remove());
     const journals = await api.getJournals();
     if (!journals) {
         return;

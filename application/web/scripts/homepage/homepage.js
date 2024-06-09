@@ -9,11 +9,6 @@ export function initializeHomepage() {
     const entryButton = document.querySelector('.add-note');
     // Hide the button by setting the 'hidden' attribute
     entryButton.setAttribute("hidden", "hidden");
-
-    // Check if a journal is selected and populate entries
-    // if (selectedJournal) {
-    //     populateEntries();
-    // }
 }
 
 /**
