@@ -48,12 +48,16 @@ export async function createJournalEntries() {
     await populateJournals();
 };
 
-function createJournalButton(name) {
-
-    try {
-        api.createJournal(name);
-    } catch (err) {
-        console.error(`could not create Journal: ${error}`)
+async function createJournalButton(name) {
+    const journals = await api.getJournals();
+    const journal = journals.find(journal => journal.name === name);
+    if (!journal) {
+        try {
+            await api.createJournal(name);
+        } catch (err) {
+            if (err.message != 'Journal name already used!')
+                console.error(`could not create Journal: ${err.message}`)
+        }
     }
 
     const sidebar = document.querySelector('.journal-list');

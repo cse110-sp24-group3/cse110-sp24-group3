@@ -2,14 +2,16 @@
 import { toggleSidebar, createJournalEntries } from "./scripts/sidebar/sidebar.js";
 import { initializeHomepage, createHomepage } from "./scripts/homepage/homepage.js";
 window.onload = () => {
-    initializeHomepage();
-    createHomepage();
     createJournalEntries();
+
+    // journal entries are created asynchronously, need to wait for resolution before creating homepage
+    sleep(100).then(() => {
+        initializeHomepage();
+        createHomepage();
+    });
     showDiscardChangePage();
     //Initalization ... maybe refactor this in the future
     document.getElementById('collapse-button').addEventListener('click', toggleSidebar);
-
-    
 };
 
 //TODO: Implement this via modules
@@ -29,4 +31,8 @@ function showDiscardChangePage() {
             myPopup.classList.remove("show");
         }
     });
+}
+
+function sleep(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
 }

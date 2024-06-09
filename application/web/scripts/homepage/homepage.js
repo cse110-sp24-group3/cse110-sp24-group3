@@ -38,6 +38,7 @@ export function createHomepage() {
 
     // Uncomment the line below if there is a function to read entries from storage
     // readEntriesFromStorage();
+    populateEntries();
 }
 
 /**
@@ -89,8 +90,6 @@ function openEntryforEdit() {
     const codeMirror = document.querySelector('.CodeMirror').CodeMirror;
     codeMirror.setValue('');
     
-
-
     const livePreview = document.querySelector('.live-preview');
     livePreview.style.display = 'inline';
     // Hide the "No entries" text
@@ -306,6 +305,7 @@ function displaySaveMessage() {
  */
 export async function populateEntries() {
     const journal = await getCurrentJournal();
+    console.log(journal)
     if (!journal) {
         const noEntryText = document.querySelector('.no-entry-text');
         noEntryText.style.display = '';
