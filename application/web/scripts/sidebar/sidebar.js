@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-
+import { populateEntries } from "../homepage/homepage.js";
 /**
  * Toggles the sidebar, new journal button, and journal entry buttons
  * between collapsed and expanded states.
@@ -23,53 +23,78 @@ export function toggleSidebar() {
     });
 };
 
-export function createJournalEntries() {
+export async function createJournalEntries() {
     const newJournalButton = document.querySelector('.new-journal');
 
     const sidebar = document.querySelector('.journal-list');
 
     sidebar.addEventListener('change', updateTitleText);
+    sidebar.addEventListener('change', populateEntries);
     // Clicking new journal button should create a new journal
     newJournalButton.addEventListener('click', () => {
-        // Grabs sidebar-module handle
-        const sidebar = document.querySelector('.journal-list');
-        // Creates div to insert journal and adds 'journal' class property
-        const journalDiv = document.createElement('div');
-        journalDiv.classList.add('journal');
 
         const numJournals = document.querySelectorAll('.journal').length;
 
-        // HTML to inject into journal div above
-        journalDiv.innerHTML = `
-            <label>
-                <input type="radio" id="journal-${numJournals}" name="journals" value="Journal #${numJournals}" checked />Journal #${numJournals}
-            </label>
-            <button class="journal-dropdown-button">
-                <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
-            </button>`;
+        createJournalButton(`Journal #${numJournals}`)
+        updateTitleText();
+        populateEntries();
 
-
-        // Injects HTML above into journal entry
-        sidebar.appendChild(journalDiv);
-
-        // Adds toggle dropdown listener to new button.
-        let dropdownButton = journalDiv.querySelector('.journal-dropdown-button');
-        dropdownButton.addEventListener('click', window.toggleJournalDropdown);
-
-        // Once a journal is created, the "No Journals" text will disappear
-        document.getElementById("no-entry-text").style.display = "none";
         if (!document.getElementById('entry-name')) {
             showHomepageHeaderInfo();
             showNoEntriesText();
         }
-        updateTitleText();
     });
+
+    await populateJournals();
 };
 
+function createJournalButton(name) {
+    const sidebar = document.querySelector('.journal-list');
+    // Creates div to insert journal and adds 'journal' class property
+    const journalDiv = document.createElement('div');
+    journalDiv.classList.add('journal');
+
+    document.querySelectorAll('input[type=radio]').forEach(button => button.checked = '');
+
+    // HTML to inject into journal div above
+    journalDiv.innerHTML = `
+        <label>
+            <input type="radio" id='${name}' name="journals" value="${name}" checked='checked'/>${name}
+        </label>
+        <button class="journal-dropdown-button">
+            <img class = "journal-vdots" src="./assets/vdots-journal-white.svg">
+        </button>`;
+
+    // Injects HTML above into journal entry
+    sidebar.appendChild(journalDiv);
+
+    // Adds toggle dropdown listener to new button.
+    const dropdownButton = journalDiv.querySelector('.journal-dropdown-button');
+    dropdownButton.addEventListener('click', window.toggleJournalDropdown);
+
+    // Once a journal is created, the "No Journals" text will disappear
+    document.querySelector("#no-journal-text").style.display = "none";
+
+}
+
+async function populateJournals() {
+    console.log('populate journals called')
+    const journals = await api.getJournals();
+    if (!journals) {
+        return;
+    }
+    journals.forEach(journal => {
+        createJournalButton(journal.name);
+    });
+    showHomepageHeaderInfo();
+}
+
 function updateTitleText() {
-    const titleText = document.querySelector('input[name="journals"]:checked').value;
+    const titleText = document.querySelector('input[name="journals"]:checked');
     const titleHeader = document.querySelector('#journal-title');
-    titleHeader.innerText = titleText;
+    if (titleText) {
+        titleHeader.innerText = titleText.value;
+    }
 }
 
 /**
@@ -103,4 +128,5 @@ function showHomepageHeaderInfo() {
     test.insertAdjacentHTML("afterend", `
         <div class="home-single-entry"></div>`
     );
+    populateEntries();
 }
