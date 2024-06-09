@@ -363,6 +363,10 @@ export async function populateEntries() {
         // add event listener to open the editing interface
         const entryButton = entryElement.querySelector('button');
         entryButton.addEventListener('click', editJournal);
+        const vdots = entryElement.querySelector('img');
+        vdots.addEventListener('click', window.toggleEntryDropdown);
+        console.log(vdots);
+
         entryContainer.appendChild(entryElement);
     });
 }

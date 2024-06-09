@@ -24,6 +24,7 @@
     <script src="JournalAPI.js"></script>
     <script src="scripts/sidebar/sidebar.js" type="module"></script>
     <script src="scripts/sidebar/sidebar-dropdown.js" type="module"></script>
+    <script src="scripts/homepage/homepage-dropdown.js" type="module"></script>
 </head>
 
 <body>
@@ -109,11 +110,6 @@
                             <button id="editing-entry-vdots-button">
                                 <img class="editing-entry-vdots" src="./assets/vdots-grey.svg" alt="Three Dots">
                             </button>
-                            <div id="dropdown-menu-entry" class="dropdown-menu">
-                                <div class="dropdown-item delete" data-action="delete">
-                                    <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,8 +119,12 @@
                 <div id="entry-textarea" class="entry-textarea"></div>
                 <div id="live-preview" class="live-preview"></div>
                 <div class="past-entries"></div>
-                <article class="selected-entry-article"></article>
                 
+                <div id="dropdown-menu-entry" class="dropdown-menu">
+                    <div class="dropdown-item delete" data-action="delete">
+                        <img src="./assets/trashcan-red.svg" alt="Delete Icon" class="dropdown-icon"> Delete Entry
+                    </div>
+                </div>
                 
                 <script src="./scripts/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
                 <script src="./scripts/ajax/libs/marked/3.0.0/marked.min.js"></script>
