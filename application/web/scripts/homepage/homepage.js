@@ -365,7 +365,7 @@ export async function populateEntries() {
         entryButton.addEventListener('click', editJournal);
         const vdots = entryElement.querySelector('img');
         vdots.addEventListener('click', window.toggleEntryDropdown);
-        console.log(vdots);
+        // console.log(vdots);
 
         entryContainer.appendChild(entryElement);
     });

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to handle the dropdown toggle and positioning
     function toggleEntryDropdown(event) {
 
-        console.log('toggleEntryDropdown')
+        // console.log('toggleEntryDropdown')
 
         const homeModule = document.querySelector('.home-list');
         const buttons = homeModule.querySelectorAll('.editing-entry-vdots');
@@ -20,17 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Get the position of the clicked button
         const rect = button.getBoundingClientRect();
-        
+        // console.log(rect);
         // Position the dropdown menu
-        dropdownMenu.style.right = `${rect.left}px`;
-        dropdownMenu.style.top = `${rect.bottom}px`;
+        dropdownMenu.style.left = `${rect.left-200}px`;
+        dropdownMenu.style.top = `${rect.bottom-120}px`;
 
         // Toggle the visibility of the dropdown menu
         if (button.classList.contains('toggledEntryDropdown')) {
             dropdownMenu.style.display = 'block';
-            console.log(dropdownMenu.style.right)
+            console.log(dropdownMenu.style.left)
             console.log(dropdownMenu.style.top)
-            console.log(dropdownMenu.style.display)
+            // console.log(dropdownMenu.style.display)
         } else {
             dropdownMenu.style.display = 'none';
         }
@@ -46,11 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach the event listener to all journal-dropdown-buttons
     const homeModule = document.querySelector('.home-list');
     const buttons = homeModule.querySelectorAll('.editing-entry-vdots');
-    console.log(buttons);
+
     buttons.forEach(button => {
         button.addEventListener('click', toggleEntryDropdown);
     });
 
+    document.addEventListener('click', function(event) {
+        const dropdownMenu = document.querySelector('.homepage-dropdown-menu');
+        if (!dropdownMenu.contains(event.target)) {
+            console.log(event.target);
+            closeDropdown();
+        }
+    });
+
     console.log('homepage-dropdown.js')
     window.toggleEntryDropdown = toggleEntryDropdown;
+
+
 });
