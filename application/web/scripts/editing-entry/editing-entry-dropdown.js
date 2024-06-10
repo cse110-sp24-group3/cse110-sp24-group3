@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-import { getCurrentJournal, updateHomepage } from "../homepage/homepage.js"; 
+import { updateHomepage } from "../homepage/homepage.js"; 
 
 document.addEventListener('DOMContentLoaded', () => {
     /**
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currJournal.deleteEntry(currEntryTitle);
             }
             catch(err) {
-                alert( `No entry with the name: ${currEntryTitle} in journal: ${journalTitle}`);
+                alert( `Error: ${err} \n No entry with the name: ${currEntryTitle} in journal: ${journalTitle}`);
             }
             finally {
                 // Change the homepage after deleting
