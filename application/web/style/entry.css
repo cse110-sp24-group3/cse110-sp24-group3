@@ -87,12 +87,13 @@
     padding-bottom: 10px;
 }
 
-.home-single-entry{
+.home-single-entry {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px 0px 2px; 
+    padding: 10px 0px 2px;
+    transition: transform 0.3s ease;
 }
 
 .home-single-entry-button {
@@ -104,13 +105,19 @@
     background-color: var(--journal-entry);
     border: none;
     cursor: pointer;
-
+    transition: background-color 0.3s ease;
 }
 
 .home-single-entry-button:hover {
-    color: var(--grey-text-color);
+    background-color: var(--sliding-shelf);
 }
 
+.home-single-entry:hover {
+    transform: translateY(8px);
+}
+
+
+    
 .home-list img[src="../web/assets/vdots-entry-black.png"]{
     background-color: var(--journal-entry);
     border: none;
