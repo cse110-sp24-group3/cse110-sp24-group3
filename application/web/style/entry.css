@@ -107,6 +107,10 @@
 
 }
 
+.home-single-entry-button:hover {
+    color: var(--grey-text-color);
+}
+
 .home-list img[src="../web/assets/vdots-entry-black.png"]{
     background-color: var(--journal-entry);
     border: none;
