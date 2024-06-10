@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-import { populateEntries, updateHomepage } from "../homepage/homepage.js";
+import { updateHomepage } from "../homepage/homepage.js";
 /**
  * Toggles the sidebar, new journal button, and journal entry buttons
  * between collapsed and expanded states.
@@ -35,23 +35,21 @@ export async function createJournals() {
     // not sure why there is a double update going on here, but a short timeout seems to fix it
     // seems like there is an issue with synchronicity
     sidebar.addEventListener('change', () => {
+        console.log('here');
         sleep(100).then(() => {
-            updateHomepage()
+            updateHomepage();
+        }).then(() => {
+            showHomepageHeaderInfo();
         });
     });
-    sidebar.addEventListener('change', () => {
-        const l = document.querySelectorAll('.home-single-entry');
-        console.log(l.length)
-    })
     // Clicking new journal button should create a new journal
     newJournalButton.addEventListener('click', () => {
-
         const numJournals = document.querySelectorAll('.journal').length;
 
         createJournalButton(`Journal #${numJournals}`)
         updateTitleText();
         sleep(100).then(() => {
-            updateHomepage()
+            updateHomepage();
         });
     });
 
@@ -99,8 +97,11 @@ async function createJournalButton(name) {
     // Once a journal is created, the "No Journals" text will disappear
     document.querySelector("#no-journal-text").style.display = "none";
 
-    const journalButton = journalDiv.querySelector('label');
-    journalButton.addEventListener('click', updateHomepage);
+    // const journalButton = journalDiv.querySelector('label');
+    // journalButton.addEventListener('click', () => {
+    //     // console.log('here');
+    //     updateHomepage();
+    // });
 
 }
 
@@ -119,13 +120,6 @@ export async function populateJournals() {
     // otherwise create new button
     journals.forEach(journal => {
         createJournalButton(journal.name);
-    });
-    // update the homepage after creating journals
-    showHomepageHeaderInfo();
-
-    sleep(100).then(() => {
-        updateTitleText();
-        updateHomepage();
     });
 }
 
@@ -164,7 +158,7 @@ function showHomepageHeaderInfo() {
     homeEntryDiv.insertAdjacentHTML("afterend", `
         <div class="home-single-entry"></div>`
     );
-    populateEntries();
+    // populateEntries();
 }
 
 export function sleep(time) {
