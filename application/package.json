@@ -13,8 +13,8 @@
     "test:e2e": "npx playwright test tests/e2e/",
     "clean": "rm -rf dist output",
     "prebuild": "mkdir dist output",
-    "package-osx": "npm run clean && npm run prebuild && npx electron-packager . --platform=darwin --arch=x64 --out=./dist --overwrite --icon=instone-rock.icns --app-bundle-id=team3.instone --app-version=1.0.0 --electron-version=14.0.0 --ignore=node_modules",
-    "package-win": "npm run clean && npm run prebuild && npx electron-packager . --platform=win32 --arch=x64 --out=./dist --overwrite --icon=instone-rock.icns --app-bundle-id=team3.instone --app-version=1.0.0 --electron-version=14.0.0 --ignore=node_modules"
+    "package-osx": "npm run clean && npm run prebuild && npx electron-packager . --platform=darwin --arch=x64 --out=./dist --overwrite --icon=instone-rock.icns --app-bundle-id=team3.instone --app-version=1.0.0 --electron-version=14.0.0",
+    "package-win": "npm run clean && npm run prebuild && npx electron-packager . --platform=win32 --arch=x64 --out=./dist --overwrite --icon=instone-rock.icns --app-bundle-id=team3.instone --app-version=1.0.0 --electron-version=14.0.0"
   },
   "jest": {
     "testEnvironment": "node"
@@ -31,7 +31,8 @@
     "@codemirror/view": "^6.0.0",
     "@electron/packager": "^18.3.2",
     "electron": "^30.0.3",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0"
   },
   "devDependencies": {
     "@codemirror/buildhelper": "^1.0.0",

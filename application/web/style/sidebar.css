@@ -56,31 +56,32 @@ sidebar {
     margin-bottom: 8px;
     padding: 10px;
     cursor: pointer;
-
-    button {
-        background-color: transparent;
-        display: none;
-        height: auto;
-    }
-
-    &:hover {
-        background-color: var(--journal-highlight);
-
-        button {
-            display: block;
-            border: none;
-            cursor: pointer;
-        }
-    }
-
-    input[type='radio'] {
-        display: none;
-    }
-
-    .journal-vdots:hover {
-        content: url('../assets/vdots-journal-white-active.svg');
-    }
 }
+
+.journal button {
+    background-color: transparent;
+    display: none;
+    height: auto;
+}
+
+.journal:hover {
+    background-color: var(--journal-highlight);
+}
+
+.journal:hover button {
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+.journal input[type='radio'] {
+    display: none;
+}
+
+.journal .journal-vdots:hover {
+    content: url('../assets/vdots-journal-white-active.svg');
+}
+
 
 /* for some reason nested selectors don't work with :has() */
 .journal:has(input[type='radio']:checked) {
