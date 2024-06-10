@@ -124,7 +124,8 @@ export async function populateJournals() {
     showHomepageHeaderInfo();
 
     sleep(100).then(() => {
-        updateHomepage()
+        updateTitleText();
+        updateHomepage();
     });
 }
 

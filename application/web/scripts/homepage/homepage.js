@@ -215,7 +215,7 @@ async function editJournal(event) {
 /**
  * Hides the text editor from view
  */
-function hideTextEditor() {
+export function hideTextEditor() {
     hideAddNoteButton();
 
     const addEntryList = document.querySelector('.home-list');
