@@ -282,7 +282,6 @@ export async function populateEntries() {
     const entryContainer = document.querySelector('.home-list');
 
     // for each entry add HTML element and add event listener
-    let counter = 1;
     entries.forEach(async (entry) => {
         const entryContent = await entry.getContent();
         const entryDate = entry.getEntryDate();
@@ -301,11 +300,6 @@ export async function populateEntries() {
             </button>
             <div class="entry-content">${entryDate.month}/${entryDate.date}/${entryDate.year}</div>
         `;
-
-        if (counter == entries.length) {
-            entryElement.style.borderBottom = '1px solid var(--grey-text-color)';
-        }
-        counter += 1;
 
         // add event listener to open the editing interface
         const entryButton = entryElement.querySelector('button');
