@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-import { getCurrentJournal, populateEntries, updateHomepage } from "../homepage/homepage.js";
+import { updateHomepage } from "../homepage/homepage.js";
 /**
  * Toggles the sidebar, new journal button, and journal entry buttons
  * between collapsed and expanded states.
