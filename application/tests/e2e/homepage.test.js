@@ -250,3 +250,27 @@ test('Entry Name and Date Logged text should appear after creating a journal', a
     await expect(EntryNameText).toHaveText('Entry Name');
     await expect(DateLoggedText).toHaveText('Date Logged');
 });
+
+test('Cancel Changes button should be cancellable', async() => {
+    const newJournalBtn = await page.locator('#new-journal-button');
+    await newJournalBtn.click();
+
+    const addEntryBtn = await page.locator('.add-note');
+    await addEntryBtn.click();
+
+    const titleInput = await page.locator('#title-input');
+    await titleInput.fill('dont-delete-this');
+
+    const cancelChangesBtn = await page.locator('#myButton');
+    await cancelChangesBtn.click();
+
+    const cancelCancelChangesBtn = await page.locator('#closePopup');
+    await cancelCancelChangesBtn.click();
+
+    const saveBtn = await page.locator('#save-entry');
+    await saveBtn.click();
+    
+    const pastEntries = await page.locator('.past-entries');
+    //check that the entry button has the proper title
+    expect(await pastEntries.locator('button').first().innerText()).toBe('dont-delete-this');
+});
