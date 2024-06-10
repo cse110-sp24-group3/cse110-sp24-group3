@@ -12,6 +12,8 @@
     background-color: #e2dede;
     width: 50%;
     min-height: 400px;
+    max-width: 800px;
+    overflow-wrap: break-word;
     font-size: 15px;
     padding: 10px;
     box-sizing: border-box;
@@ -32,11 +34,19 @@
      /*background-color: #e2dede;*/
      width: 50%;
      min-height: 400px;
+    max-width: 800px;
+     overflow-wrap: break-word;
+     overflow: wrap;
      font-size: 15px;
      padding: 10px;
      box-sizing: border-box;
      border: none;
      border-radius: 10px;
+   }
+
+.entry-textarea {
+     overflow-wrap: break-word;
+    max-width: 800px;
    }
 
 .title-textarea {
