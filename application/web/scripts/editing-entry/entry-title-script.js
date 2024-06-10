@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * 
      * @param {Event} event - The input event.
      */
-    titleInput.addEventListener('input', (event) => {
+    titleInput.addEventListener('input', () => {
         const invalidChars = /[^a-zA-Z0-9-_]/g; // Regex to match invalid characters
         if (invalidChars.test(titleInput.value)) {
             titleInput.value = titleInput.value.replace(invalidChars, '');

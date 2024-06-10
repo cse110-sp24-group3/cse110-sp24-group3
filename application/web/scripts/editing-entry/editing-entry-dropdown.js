@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-import { updateHomepage } from "../homepage/homepage.js"; 
+import { updateHomepage, hideTextEditor} from "../homepage/homepage.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     /**
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get references to the dropdown button and menu
         const three_dots_button = document.getElementById('editing-entry-vdots-button');
         const dropdownMenuEntry = document.getElementById('dropdown-menu-entry');
-        
+
         // Attach event listeners
         attachToggleDropdownListener(three_dots_button, dropdownMenuEntry);
         attachOutsideClickListener(three_dots_button, dropdownMenuEntry);
@@ -56,29 +56,32 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.addEventListener('click', async (event) => {
             // Find the closest ancestor element with the class 'dropdown-item' and get its action attribute
             const action = event.target.closest('.dropdown-item').dataset.action;
-            
-            // Grabbing journal title from h2 element
-            const journalTitle = document.getElementById('journal-title').textContent;
-            // Fetching relevant current journal
-            const journalList = await api.getJournals();
-            let currJournal = journalList.find(journal => journal.name === journalTitle);
-            console.log(currJournal.name);
 
-            // Find current entry
-            const currEntryTitle = getEntryName();
-            
-            // Delete entry if it exists...Close page regardless
-            try {
-                currJournal.deleteEntry(currEntryTitle);
+            if (action === 'delete') {
+                // Grabbing journal title from h2 element
+                const journalTitle = document.getElementById('journal-title').textContent;
+                // Fetching relevant current journal
+                const journalList = await api.getJournals();
+                let currJournal = journalList.find(journal => journal.name === journalTitle);
+                console.log(currJournal.name);
+
+                // Find current entry
+                const currEntryTitle = getEntryName();
+
+                // Delete entry if it exists...Close page regardless
+                try {
+                    currJournal.deleteEntry(currEntryTitle);
+                }
+                catch (err) {
+                    alert(`Error: ${err} \n No entry with the name: ${currEntryTitle} in journal: ${journalTitle}`);
+                }
+                finally {
+                    // Change the homepage after deleting
+                    await hideTextEditor();
+                    await updateHomepage();
+                }
             }
-            catch(err) {
-                alert( `Error: ${err} \n No entry with the name: ${currEntryTitle} in journal: ${journalTitle}`);
-            }
-            finally {
-                // Change the homepage after deleting
-                await updateHomepage();
-            }
-            
+
             // Hide the dropdown menu after an item is clicked
             menu.style.display = 'none';
         });
