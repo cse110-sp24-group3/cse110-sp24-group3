@@ -2,31 +2,36 @@
   /\  /\___  _ __ ___   ___ _ __   __ _  __ _  ___ 
  / /_/ / _ \| '_ ` _ \ / _ \ '_ \ / _` |/ _` |/ _ \
 / __  / (_) | | | | | |  __/ |_) | (_| | (_| |  __/
-\/ /_/ \___/|_| |_| |_|\___| .__/ \__,_|\__, |\___|
+/\/ /_/ \___/|_| |_| |_|\___| .__/ \__,_|\__, |\___|
                            |_|          |___/       */
+
 homepage {
     flex: 1;
     background-color: var(--journal-entry);
     padding: 10px;
     box-sizing: border-box;
+}
 
-    &>.title-textarea {
-        display: none;
-    }
-    &>.entry-textarea {
-        display: none;
-        resize: none;
-    }
-    &>.live-preview {
-        display: none;
-        resize: none;
-    }
-    &>.save-note {
-        display: none;
-    }
-    &>.cancel-note {
-        display: none;
-    }
+homepage>.title-textarea {
+    display: none;
+}
+
+homepage>.entry-textarea {
+    display: none;
+    resize: none;
+}
+
+homepage>.live-preview {
+    display: none;
+    resize: none;
+}
+
+homepage>.save-note {
+    display: none;
+}
+
+homepage>.cancel-note {
+    display: none;
 }
 
 button.add-note {
@@ -49,7 +54,8 @@ button.add-note:hover {
 
 .save-message {
     position: fixed;
-    top: 85%; /* Adjusted value to move the message down */
+    top: 85%;
+    /* Adjusted value to move the message down */
     left: 50%;
     background-color: #4caf50;
     color: white;
@@ -59,6 +65,7 @@ button.add-note:hover {
     font-family: 'Inter', sans-serif;
 }
 
-.no-journal-text, #no-journal-text {
+.no-journal-text,
+#no-journal-text {
     font-size: 24px;
 }

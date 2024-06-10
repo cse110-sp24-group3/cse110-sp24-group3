@@ -19,7 +19,7 @@ function createWindow() {
         });
 
         mainWindow.loadFile(path.join(__dirname, 'web/index.html'));
-        if (process.env.NODE_ENV === 'development')
+        //if (process.env.NODE_ENV === 'development')
             mainWindow.webContents.openDevTools();
     });
 }
