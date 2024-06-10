@@ -121,12 +121,6 @@ export async function populateJournals() {
     journals.forEach(journal => {
         createJournalButton(journal.name);
     });
-    // update the homepage after creating journals
-
-    // sleep(100).then(() => {
-    //     console.log('here')
-    //     updateHomepage()
-    // });
 }
 
 
@@ -160,9 +154,8 @@ function showHomepageHeaderInfo() {
             <span id="date-logged" style="font-family: 'Inter'">Date Logged</span>`
         );
     }
-    const test = document.querySelector('.home-entry-descriptor');
     // Adds the black line after the "Entry Name" and "Date Logged" header
-    test.insertAdjacentHTML("afterend", `
+    homeEntryDiv.insertAdjacentHTML("afterend", `
         <div class="home-single-entry"></div>`
     );
     // populateEntries();

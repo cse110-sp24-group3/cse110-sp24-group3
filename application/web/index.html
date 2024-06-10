@@ -20,7 +20,7 @@
     <!-- Script -->
     <script src="web.js" type="module"></script>
     <script src="scripts/editing-entry/entry-title-script.js"> </script>
-    <script src="scripts/editing-entry/editing-entry-dropdown.js"></script>
+    <script src="scripts/editing-entry/editing-entry-dropdown.js" type="module"></script>
     <script src="JournalAPI.js"></script>
     <script src="scripts/sidebar/sidebar.js" type="module"></script>
     <script src="scripts/sidebar/sidebar-dropdown.js" type="module"></script>
@@ -80,7 +80,6 @@
                 </div>
 
                 <div class="no-entry-text">
-                    <!-- Text inside this div will be populated when a journal is created -->
                     <b>You have no Journal Entries</b>
                     <p>Create a new Entry with the button above.</p>
                 </div>
@@ -120,8 +119,6 @@
                     </div>
                 </div>
 
-                <!-- Temporarily put textarea for the CodeMirror editor -->
-                <!-- <textarea id="entry-textarea" class="entry-textarea" placeholder="PEE your thoughts here"></textarea> -->
                 <div id="entry-textarea" class="entry-textarea"></div>
                 <div id="live-preview" class="live-preview"></div>
                 <div class="past-entries"></div>

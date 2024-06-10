@@ -51,11 +51,14 @@ button.add-note:hover {
     position: fixed;
     top: 85%; /* Adjusted value to move the message down */
     left: 50%;
-    /* transform: translateX(-50%); */
     background-color: #4caf50;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     z-index: 1000;
     font-family: 'Inter', sans-serif;
+}
+
+.no-journal-text, #no-journal-text {
+    font-size: 24px;
 }

@@ -62,6 +62,10 @@ class Entry {
     constructor(journalName, name) {
         this.journalName = journalName;
         this.name = name;
+        const currentDate = new Date();
+        this.date = currentDate.getDate();
+        this.month = currentDate.getMonth() + 1; // Months are zero-based, so we add 1
+        this.year = currentDate.getFullYear();
     }
 
     /**
@@ -89,6 +93,18 @@ class Entry {
     async getContent() {
         const content = await window.fileAPI.getEntryContent(this.journalName, this.name);
         return decoder.decode(content);
+    }
+
+    /**
+     * Get the date, month, and year of the entry.
+     * @returns {{date: number, month: number, year: number}} An object containing the date, month, and year of the entry.
+     */
+    getEntryDate() {
+        return {
+            date: this.date,
+            month: this.month,
+            year: this.year
+        };
     }
 }
 
