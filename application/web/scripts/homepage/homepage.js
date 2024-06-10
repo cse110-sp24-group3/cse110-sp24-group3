@@ -49,6 +49,7 @@ export async function createHomepage() {
 function cancelEntry() {
     // Hide the text editor
     hideTextEditor();
+    updateHomepage();
 
     // Get references to the title and entry text areas
     const titleTextArea = document.querySelector('#title-input');
@@ -106,6 +107,7 @@ async function saveCurrentEntry() {
 
     // Hide the text editor
     hideTextEditor();
+    updateHomepage();
 
     // Get the title text area and extract the title
     const titleTextArea = document.querySelector('#title-input');
@@ -237,8 +239,6 @@ function hideTextEditor() {
     // Need to hide the preview along with textArea
     const livePreview = document.querySelector('.live-preview');
     livePreview.style.display = '';
-
-    updateHomepage();
 }
 
 /**
@@ -319,6 +319,7 @@ export async function populateEntries() {
  */
 export async function updateHomepage() {
     const journal = await getCurrentJournal();
+    hideTextEditor();
     // if no journals, update homepage
     // if there is a selected journal but no entries in that journal, show the no entries text
     // otherwise fill in the homepage with the past entries
