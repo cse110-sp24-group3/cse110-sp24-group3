@@ -282,16 +282,15 @@ export async function populateEntries() {
     const entryContainer = document.querySelector('.home-list');
 
     // for each entry add HTML element and add event listener
-    let counter = 1;
     entries.forEach(async (entry) => {
         const entryContent = await entry.getContent();
+        const entryDate = entry.getEntryDate();
 
         document.querySelector('.CodeMirror').CodeMirror.setValue(entryContent);
 
         const entryElement = document.createElement('div');
         entryElement.classList.add('home-single-entry');
 
-        const date = new Date();
 
         // TODO: access last edited date
 
@@ -299,13 +298,8 @@ export async function populateEntries() {
             <button class="home-single-entry-button">
                 <span class="home-entry-name">${entry.name}</span>
             </button>
-            <div class="entry-content">${date.getMonth()}/${date.getDay()}/${date.getFullYear()}</div>
+            <div class="entry-content">${entryDate.month}/${entryDate.date}/${entryDate.year}</div>
         `;
-
-        if (counter == entries.length) {
-            entryElement.style.borderBottom = '1px solid var(--grey-text-color)';
-        }
-        counter += 1;
 
         // add event listener to open the editing interface
         const entryButton = entryElement.querySelector('button');
