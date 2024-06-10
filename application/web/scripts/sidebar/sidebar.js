@@ -1,5 +1,5 @@
 /// <reference path="../../JournalAPI.js" />
-import { populateEntries, updateHomepage } from "../homepage/homepage.js";
+import { getCurrentJournal, populateEntries, updateHomepage } from "../homepage/homepage.js";
 /**
  * Toggles the sidebar, new journal button, and journal entry buttons
  * between collapsed and expanded states.
@@ -36,16 +36,14 @@ export async function createJournals() {
     // seems like there is an issue with synchronicity
     sidebar.addEventListener('change', () => {
         sleep(100).then(() => {
-            updateHomepage()
+            updateHomepage();
+        }).then(() => {
+
+            showHomepageHeaderInfo();
         });
     });
-    sidebar.addEventListener('change', () => {
-        const l = document.querySelectorAll('.home-single-entry');
-        console.log(l.length)
-    })
     // Clicking new journal button should create a new journal
     newJournalButton.addEventListener('click', () => {
-
         const numJournals = document.querySelectorAll('.journal').length;
 
         createJournalButton(`Journal #${numJournals}`)
@@ -121,11 +119,11 @@ export async function populateJournals() {
         createJournalButton(journal.name);
     });
     // update the homepage after creating journals
-    showHomepageHeaderInfo();
 
-    sleep(100).then(() => {
-        updateHomepage()
-    });
+    // sleep(100).then(() => {
+    //     console.log('here')
+    //     updateHomepage()
+    // });
 }
 
 

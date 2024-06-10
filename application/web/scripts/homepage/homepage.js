@@ -261,7 +261,7 @@ function displaySaveMessage() {
  * @throws Will throw an error if read fails
  */
 export async function populateEntries() {
-    clearEntries();
+    await clearEntries();
     const journal = await getCurrentJournal();
     // change to no journal text if no journal is selected
     if (!journal) {
@@ -340,7 +340,9 @@ export async function updateHomepage() {
         hideNoJournalsText();
         showAddNoteButton();
     }
-    populateEntries();
+    sleep(100).then(() => {
+        populateEntries();
+    });
 }
 
 /**
