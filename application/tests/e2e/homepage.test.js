@@ -26,7 +26,7 @@ test.afterAll(async () => {
 test.beforeEach(async () => {
     // Reload the page before each test
     await page.reload();
-    await new Promise(r => setTimeout(r, 2000)); // Wait for the page to fully reload
+    await new Promise(r => setTimeout(r, 2000)); // eslint-disable-line
   });
 
 
