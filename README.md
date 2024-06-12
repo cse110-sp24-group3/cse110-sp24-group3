@@ -41,3 +41,12 @@ Ensure that your branch names are descriptive, concise, and relevant to the chan
 ---
 ## Instone GitHub Wiki
 [GitHub Wiki](https://github.com/cse110-sp24-group3/cse110-sp24-group3/wiki)
+
+## Public Video
+[Public Video](https://youtu.be/MpPoWNt6b0E)
+
+## Private Video
+# GitHub Organizations & Other Misc Private Video
+[Private Video 1](https://youtu.be/HIy27LQauys)
+# Custom BackEnd API
+[BackEnd API](https://youtu.be/4qPbk8xlR7w)
